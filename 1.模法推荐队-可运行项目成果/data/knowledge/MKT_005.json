@@ -1,0 +1,63 @@
+{
+  "model_id": "MKT_005",
+  "model_name": "客户响应率预测模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "营销响应率预测"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "new_customer"
+  ],
+  "model_capability": [
+    "response_prediction",
+    "conversion_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "marketing_contact_history",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "product_holdings",
+    "demographics"
+  ],
+  "output_fields": [
+    "response_probability",
+    "response_channel_preference",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.82,
+    "ks": 0.37,
+    "precision": 0.74,
+    "recall": 0.72
+  },
+  "applicable_conditions": "适用于评估客户对各种营销渠道和营销内容的响应可能；支持短信、电话、APP推送、微信等渠道。",
+  "unsuitable_conditions": "不适用于已有明确购买意愿的客户（如主动咨询）；不适用于监管禁止营销的客群。",
+  "compliance_boundary": "营销触达需遵守客户意愿和退订机制；不得对拒绝营销的客户继续触达。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "用于筛选高响应客户进行精准营销。",
+      "effect": "营销响应率从4%提升至12%，营销成本降低40%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "individual",
+    "existing_customer",
+    "new_customer",
+    "response_prediction",
+    "conversion_prediction"
+  ],
+  "description": "基于历史营销响应数据和客户特征的响应率预测模型，使用逻辑回归和GBDT集成。"
+}

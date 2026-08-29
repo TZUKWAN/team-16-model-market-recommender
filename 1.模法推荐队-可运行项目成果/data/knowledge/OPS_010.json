@@ -1,0 +1,61 @@
+{
+  "model_id": "OPS_010",
+  "model_name": "客户洗钱风险评级模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "客户洗钱风险等级评定"
+  ],
+  "business_stage": [
+    "risk_management",
+    "compliance"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "credit_rating",
+    "risk_pricing"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "credit_report"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "risk_stratification_accuracy": 0.84,
+    "auc": 0.81
+  },
+  "applicable_conditions": "适用于银行客户洗钱风险等级评定（高风险/中风险/低风险）；支持新客户准入时的初始评级和老客户定期复审。",
+  "unsuitable_conditions": "不适用于PEP（政治人物）的专门评级；不适用于高风险国家的客户评级。",
+  "compliance_boundary": "评级流程需符合《金融机构洗钱和恐怖融资风险评估及客户分类管理指引》；评级结果作为风险管控参考，不得歧视性对待客户。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行合规部",
+      "description": "客户洗钱风险评级系统。",
+      "effect": "客户评级覆盖率100%，高风险客户识别准确率78%，监管检查零缺陷。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "risk_management",
+    "compliance",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "credit_rating",
+    "risk_pricing",
+    "anti_money_laundering"
+  ],
+  "description": "基于客户身份特征、交易行为和地域风险等维度的洗钱风险评级模型，采用评分卡方法进行风险等级划分。"
+}

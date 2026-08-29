@@ -1,0 +1,64 @@
+{
+  "model_id": "MKT_031",
+  "model_name": "企业开户转化模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "企业客户开户转化"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise",
+    "corporate",
+    "new_customer"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "response_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "business_income",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "supply_chain_data",
+    "credit_report",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "account_opening_probability",
+    "value_potential",
+    "preferred_branch",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.81,
+    "precision": 0.73,
+    "recall": 0.7,
+    "lift": 2.1
+  },
+  "applicable_conditions": "适用于识别有对公账户开户需求的企业客户；支持新注册企业、他行存量客户的转化。",
+  "unsuitable_conditions": "不适用于已有本行对公账户的客户；不适用于个体工商户（使用个人账户）。",
+  "compliance_boundary": "企业开户营销需符合反洗钱客户身份识别要求；不得以开户为条件搭售其他产品。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行公司金融部",
+      "description": "新注册企业开户营销。",
+      "effect": "新注册企业开户转化率从8%提升至18%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "small_micro_enterprise",
+    "corporate",
+    "new_customer",
+    "conversion_prediction",
+    "response_prediction"
+  ],
+  "description": "基于工商注册信息、企业经营预估和行业特征的企业开户转化预测模型。"
+}

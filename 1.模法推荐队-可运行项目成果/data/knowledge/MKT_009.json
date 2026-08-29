@@ -1,0 +1,68 @@
+{
+  "model_id": "MKT_009",
+  "model_name": "客户流失预警模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "客户流失预警"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "post_marketing"
+  ],
+  "customer_segment": [
+    "existing_customer",
+    "individual",
+    "churned_customer"
+  ],
+  "model_capability": [
+    "churn_prediction",
+    "early_warning",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "product_holdings"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "complaint_history",
+    "credit_report"
+  ],
+  "output_fields": [
+    "churn_probability",
+    "churn_risk_level",
+    "churn_reason",
+    "retention_suggestion"
+  ],
+  "performance_metrics": {
+    "auc": 0.85,
+    "precision": 0.78,
+    "recall": 0.76,
+    "f1": 0.77
+  },
+  "applicable_conditions": "适用于识别可能流失的银行客户；支持存款流失和全客户关系流失两种场景。",
+  "unsuitable_conditions": "不适用于新客户（开户不足3个月）；不适用于政策性客户。",
+  "compliance_boundary": "流失预警结果不得用于限制客户权利；挽留策略需合规。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行客户关系管理部",
+      "description": "按月生成流失预警名单。",
+      "effect": "提前30天预警高流失风险客户，客户留存率提升22%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "post_marketing",
+    "existing_customer",
+    "individual",
+    "churned_customer",
+    "churn_prediction",
+    "early_warning",
+    "value_assessment"
+  ],
+  "description": "基于客户交易频次变化、资产变动、渠道活跃度等行为特征的流失预警模型，使用时序异常检测+分类器混合方法。"
+}

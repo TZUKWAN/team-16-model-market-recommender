@@ -1,0 +1,16 @@
+﻿{
+    "delivery_format_version":  1,
+    "source_branch":  "audit/score-visibility-data-integrity",
+    "source_commit":  "1c25b35dbc28e36e4e80ff76e45f5c351895f991",
+    "source_worktree_dirty":  true,
+    "source_worktree_changes":  [
+                                    "?? .tmp/"
+                                ],
+    "source_worktree_note":  "仅余OpenCode遗留的.tmp pytest临时目录（权限受限未能删除），不属于交付内容；交付内容全部来自commit 1c25b35的已跟踪文件",
+    "built_at":  "2026-07-24T12:24:17.0765086Z",
+    "model_id":  "BAAI/bge-m3",
+    "model_revision":  "5617a9f61b028005a4858fdac845db406aefb181",
+    "model_dimension":  1024,
+    "model_file_count":  22,
+    "model_total_bytes":  2297551614
+}

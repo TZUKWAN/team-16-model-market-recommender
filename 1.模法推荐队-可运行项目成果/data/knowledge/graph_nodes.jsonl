@@ -1,0 +1,700 @@
+{"name": "admission_scoring", "node_id": "capability:admission_scoring", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "amount_calculation", "node_id": "capability:amount_calculation", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "anomaly_detection", "node_id": "capability:anomaly_detection", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "anti_fraud", "node_id": "capability:anti_fraud", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "anti_money_laundering", "node_id": "capability:anti_money_laundering", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "churn_prediction", "node_id": "capability:churn_prediction", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "compliance_check", "node_id": "capability:compliance_check", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "conversion_prediction", "node_id": "capability:conversion_prediction", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "credit_rating", "node_id": "capability:credit_rating", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "cross_selling", "node_id": "capability:cross_selling", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "customer_marketing", "node_id": "capability:customer_marketing", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "default_prediction", "node_id": "capability:default_prediction", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "demand_forecasting", "node_id": "capability:demand_forecasting", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "early_warning", "node_id": "capability:early_warning", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "lifetime_value", "node_id": "capability:lifetime_value", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "operation_management", "node_id": "capability:operation_management", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "preference_analysis", "node_id": "capability:preference_analysis", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "priority_ranking", "node_id": "capability:priority_ranking", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "resource_optimization", "node_id": "capability:resource_optimization", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "response_prediction", "node_id": "capability:response_prediction", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "risk_pricing", "node_id": "capability:risk_pricing", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "segmentation", "node_id": "capability:segmentation", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "value_assessment", "node_id": "capability:value_assessment", "node_type": "capability", "properties": {"source_field": "model_capability"}}
+{"name": "信贷全流程风控模板", "node_id": "composition:tmpl_001", "node_type": "composition", "properties": {"complexity": "high", "description": "覆盖贷前、贷中、贷后三个环节的标准化风控模型组合模板", "template_id": "TMPL_001", "typical_model_count": "4-6"}}
+{"name": "精准营销全链路模板", "node_id": "composition:tmpl_002", "node_type": "composition", "properties": {"complexity": "medium", "description": "从客群筛选、响应预测到渠道触达的标准化营销模型组合模板", "template_id": "TMPL_002", "typical_model_count": "3-5"}}
+{"name": "网点运营优化模板", "node_id": "composition:tmpl_003", "node_type": "composition", "properties": {"complexity": "medium", "description": "网点客流、排班、效能和流程优化的标准化运营模型组合模板", "template_id": "TMPL_003", "typical_model_count": "3-5"}}
+{"name": "反洗钱合规管理模板", "node_id": "composition:tmpl_004", "node_type": "composition", "properties": {"complexity": "high", "description": "反洗钱可疑交易监测、客户洗钱评级和合规管理的标准化模板", "template_id": "TMPL_004", "typical_model_count": "3-4"}}
+{"name": "客户全生命周期经营模板", "node_id": "composition:tmpl_005", "node_type": "composition", "properties": {"complexity": "high", "description": "从新客获取、交叉销售到流失预警的客户全生命周期模型组合模板", "template_id": "TMPL_005", "typical_model_count": "4-6"}}
+{"name": "人力资源管理数字化模板", "node_id": "composition:tmpl_006", "node_type": "composition", "properties": {"complexity": "medium", "description": "绩效预测、培训需求、人力资源规划和离职预警的人力资源管理模型组合", "template_id": "TMPL_006", "typical_model_count": "3-4"}}
+{"name": "asset_info", "node_id": "field:asset_info", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "asset_liability", "node_id": "field:asset_liability", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "branch_data", "node_id": "field:branch_data", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "business_cashflow", "node_id": "field:business_cashflow", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "business_income", "node_id": "field:business_income", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "business_operation", "node_id": "field:business_operation", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "campaign_response", "node_id": "field:campaign_response", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "channel_behavior", "node_id": "field:channel_behavior", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "collateral_info", "node_id": "field:collateral_info", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "complaint_history", "node_id": "field:complaint_history", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "contact_info", "node_id": "field:contact_info", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "credit_report", "node_id": "field:credit_report", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "customer_lifecycle", "node_id": "field:customer_lifecycle", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "customer_profile", "node_id": "field:customer_profile", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "debt_ratio", "node_id": "field:debt_ratio", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "demographics", "node_id": "field:demographics", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "employee_info", "node_id": "field:employee_info", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "guarantee_info", "node_id": "field:guarantee_info", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "income_expense", "node_id": "field:income_expense", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "loan_application", "node_id": "field:loan_application", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "loan_purpose", "node_id": "field:loan_purpose", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "marketing_contact_history", "node_id": "field:marketing_contact_history", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "marketing_history", "node_id": "field:marketing_history", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "product_holdings", "node_id": "field:product_holdings", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "repayment_history", "node_id": "field:repayment_history", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "repayment_record", "node_id": "field:repayment_record", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "risk_preference", "node_id": "field:risk_preference", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "supply_chain_data", "node_id": "field:supply_chain_data", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "tax_info", "node_id": "field:tax_info", "node_type": "field", "properties": {"source_field": "input_fields_optional"}}
+{"name": "transaction_data", "node_id": "field:transaction_data", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "transaction_flow", "node_id": "field:transaction_flow", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "transaction_history", "node_id": "field:transaction_history", "node_type": "field", "properties": {"source_field": "input_fields_required"}}
+{"name": "县域新客首贷转化预测模型", "node_id": "model:MKT_001", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_001", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "新客贷款意向识别模型", "node_id": "model:MKT_002", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_002", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "存量客户交叉销售模型", "node_id": "model:MKT_003", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["in_marketing"], "domain": "customer_marketing", "model_id": "MKT_003", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户产品偏好模型", "node_id": "model:MKT_004", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_004", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户响应率预测模型", "node_id": "model:MKT_005", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_005", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "营销名单排序模型", "node_id": "model:MKT_006", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_006", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "高价值客户识别模型", "node_id": "model:MKT_007", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_007", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "沉睡客户唤醒模型", "node_id": "model:MKT_008", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_008", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户流失预警模型", "node_id": "model:MKT_009", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "post_marketing"], "domain": "customer_marketing", "model_id": "MKT_009", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户生命周期阶段识别模型", "node_id": "model:MKT_010", "node_type": "model", "properties": {"api_available": true, "asset_status": "staging", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_010", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "农户金融服务需求预测模型", "node_id": "model:MKT_011", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_011", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "小微企业融资需求预测模型", "node_id": "model:MKT_012", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_012", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "对公客户综合贡献度模型", "node_id": "model:MKT_013", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["pre_marketing", "post_marketing"], "domain": "customer_marketing", "model_id": "MKT_013", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "代发客户转化模型", "node_id": "model:MKT_014", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_014", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "手机银行活跃度提升模型", "node_id": "model:MKT_015", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_015", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "信用卡分期营销模型", "node_id": "model:MKT_016", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_016", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "理财产品偏好模型", "node_id": "model:MKT_017", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_017", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "存款流失预警模型", "node_id": "model:MKT_018", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "post_marketing"], "domain": "customer_marketing", "model_id": "MKT_018", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "存款增长潜力模型", "node_id": "model:MKT_019", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_019", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户渠道偏好模型", "node_id": "model:MKT_020", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_020", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "营销触达时机模型", "node_id": "model:MKT_021", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["in_marketing"], "domain": "customer_marketing", "model_id": "MKT_021", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "营销频次优化模型", "node_id": "model:MKT_022", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["in_marketing", "post_marketing"], "domain": "customer_marketing", "model_id": "MKT_022", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "社群客户价值识别模型", "node_id": "model:MKT_023", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_023", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "县域商户客群拓展模型", "node_id": "model:MKT_024", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_024", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "首贷户白名单推荐模型", "node_id": "model:MKT_025", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_025", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "普惠客户产品匹配模型", "node_id": "model:MKT_026", "node_type": "model", "properties": {"api_available": true, "asset_status": "staging", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_026", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "贷款续贷营销模型", "node_id": "model:MKT_027", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_027", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户资产提升模型", "node_id": "model:MKT_028", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_028", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "跨产品协同推荐模型", "node_id": "model:MKT_029", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["in_marketing"], "domain": "customer_marketing", "model_id": "MKT_029", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户经理营销机会推荐模型", "node_id": "model:MKT_030", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_030", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "企业开户转化模型", "node_id": "model:MKT_031", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_031", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "农村电商客群识别模型", "node_id": "model:MKT_032", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_032", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "粮食种植户金融需求模型", "node_id": "model:MKT_033", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_033", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "农机经营户贷款需求模型", "node_id": "model:MKT_034", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "MKT_034", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户活动参与预测模型", "node_id": "model:MKT_035", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "MKT_035", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "30-50万中高端客群财富产品维稳增存模型", "node_id": "model:OFFICIAL_015", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_015", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "AUM10-30万客户维稳增存模型", "node_id": "model:OFFICIAL_002", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_002", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "AUM10万以上客户流失预警模型", "node_id": "model:OFFICIAL_027", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_027", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "ETC拓客模型", "node_id": "model:OFFICIAL_037", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_037", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个人中间业务推荐模型:E路有我新客促活模型", "node_id": "model:OFFICIAL_026", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_026", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个人存款提升预测模型", "node_id": "model:OFFICIAL_034", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_034", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个人客户保险产品推荐模型", "node_id": "model:OFFICIAL_006", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_006", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个人客户理财产品营销模型", "node_id": "model:OFFICIAL_014", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_014", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个人经营性贷款营销预测模型", "node_id": "model:OFFICIAL_032", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_032", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个人营销风险历史库", "node_id": "model:OFFICIAL_041", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "pre_marketing", "in_marketing", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_041", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个体工商户准入评分卡", "node_id": "model:OFFICIAL_051", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_051", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个贷全流程反欺诈机器学习模型", "node_id": "model:OFFICIAL_046", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "post_loan", "risk_management"], "domain": "operation_management", "model_id": "OFFICIAL_046", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个贷流失回捞算法模型", "node_id": "model:OFFICIAL_055", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_055", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "个贷逾期客群催收模型", "node_id": "model:OFFICIAL_013", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["in_loan", "post_loan"], "domain": "credit_risk", "model_id": "OFFICIAL_013", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "中小微企业资金流信用信息建模项目", "node_id": "model:OFFICIAL_022", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_022", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "中间业务产品营销模型（代扣）", "node_id": "model:OFFICIAL_003", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_003", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "代发低效留存客群营销预测模型", "node_id": "model:OFFICIAL_010", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_010", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "信用卡片拓客模型", "node_id": "model:OFFICIAL_036", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "pre_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_036", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "信用卡贷前反欺诈机器学习模型", "node_id": "model:OFFICIAL_049", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_049", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "信用卡贷前申请评分模型_无征信", "node_id": "model:OFFICIAL_048", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "post_loan", "risk_management", "compliance"], "domain": "credit_risk", "model_id": "OFFICIAL_048", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "信用卡贷前申请评分模型_有征信", "node_id": "model:OFFICIAL_047", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_047", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "信贷从业人员风险合规监测模型", "node_id": "model:OFFICIAL_024", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management", "compliance"], "domain": "operation_management", "model_id": "OFFICIAL_024", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "垒小户准入评分卡", "node_id": "model:OFFICIAL_040", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_040", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "垒小户违约概率模型", "node_id": "model:OFFICIAL_042", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_042", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "对公客户价值与风险评分模型", "node_id": "model:OFFICIAL_054", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_054", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "对私账户风控机器学习模型", "node_id": "model:OFFICIAL_050", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_050", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "小微企业1000万以下客户A卡模型", "node_id": "model:OFFICIAL_007", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_007", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "小微企业违约概率B卡模型", "node_id": "model:OFFICIAL_008", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_008", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "小微客户流失预警模型", "node_id": "model:OFFICIAL_021", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "pre_marketing", "in_marketing", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_021", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "开门红个贷回捞精准营销模型", "node_id": "model:OFFICIAL_025", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_025", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "房地产压力测试", "node_id": "model:OFFICIAL_023", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management"], "domain": "operation_management", "model_id": "OFFICIAL_023", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "房贷按揭客户贷款产品推荐模型", "node_id": "model:OFFICIAL_016", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_016", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "房贷按揭违约概率模型", "node_id": "model:OFFICIAL_044", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_044", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "房贷用户按揭A卡模型", "node_id": "model:OFFICIAL_028", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_028", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "手机银行促活模型", "node_id": "model:OFFICIAL_059", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_059", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "手机银行客户识别预测模型", "node_id": "model:OFFICIAL_035", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "operation_management", "model_id": "OFFICIAL_035", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "扬州重点企业客户贷款营销分析", "node_id": "model:OFFICIAL_018", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "operation_management", "model_id": "OFFICIAL_018", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "收单商户交易反欺诈模型", "node_id": "model:OFFICIAL_045", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_045", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "收单商户价值分层及预授信模型", "node_id": "model:OFFICIAL_019", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "operation_management", "model_id": "OFFICIAL_019", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "收单商户流失预测模型", "node_id": "model:OFFICIAL_033", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_033", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "收单商户贷款营销模型", "node_id": "model:OFFICIAL_020", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "pre_marketing", "in_marketing", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_020", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "智能反诈模型", "node_id": "model:OFFICIAL_005", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_005", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "消费贷授信未用信促提模型", "node_id": "model:OFFICIAL_001", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "operation_management", "model_id": "OFFICIAL_001", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "潜在高价值客户挖掘模型", "node_id": "model:OFFICIAL_058", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_058", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "潜客挖掘消费贷营销模型", "node_id": "model:OFFICIAL_004", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_004", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "理财产品综合评价模型", "node_id": "model:OFFICIAL_011", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["daily_operation"], "domain": "operation_management", "model_id": "OFFICIAL_011", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "理财响应度预测模型", "node_id": "model:OFFICIAL_057", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing", "risk_management", "compliance"], "domain": "customer_marketing", "model_id": "OFFICIAL_057", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "经营贷款贷前准入模型", "node_id": "model:OFFICIAL_043", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_043", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "财富产品个性化推荐模型", "node_id": "model:OFFICIAL_052", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing", "risk_management", "compliance"], "domain": "customer_marketing", "model_id": "OFFICIAL_052", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "贷款中介挖掘模型", "node_id": "model:OFFICIAL_012", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_012", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "贷款产品综合评价模型", "node_id": "model:OFFICIAL_060", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing", "risk_management"], "domain": "operation_management", "model_id": "OFFICIAL_060", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "贷记卡固定额度调整模型", "node_id": "model:OFFICIAL_017", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "in_loan", "post_loan", "risk_management"], "domain": "customer_marketing", "model_id": "OFFICIAL_017", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "贷记卡联动贷款营销模型", "node_id": "model:OFFICIAL_053", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_053", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "贷记卡账单分期营销模型", "node_id": "model:OFFICIAL_030", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_030", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "贷记卡违约概率模型", "node_id": "model:OFFICIAL_029", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_029", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "长尾客群潜在机制挖掘模型", "node_id": "model:OFFICIAL_056", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_056", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "阳光E贷贷前准入模型", "node_id": "model:OFFICIAL_039", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_loan", "in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_039", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "零售个人违约概率B卡模型", "node_id": "model:OFFICIAL_038", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["in_loan", "post_loan", "risk_management"], "domain": "credit_risk", "model_id": "OFFICIAL_038", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "非法集资模型", "node_id": "model:OFFICIAL_009", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["risk_management", "compliance"], "domain": "credit_risk", "model_id": "OFFICIAL_009", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "高价值存款客户流失预测模型", "node_id": "model:OFFICIAL_031", "node_type": "model", "properties": {"api_available": false, "asset_status": "official_catalog", "business_stage": ["pre_marketing", "in_marketing"], "domain": "customer_marketing", "model_id": "OFFICIAL_031", "permission_scope": "official_catalog_internal", "source": "official"}}
+{"name": "网点客流预测模型", "node_id": "model:OPS_001", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["daily_operation", "resource_planning"], "domain": "operation_management", "model_id": "OPS_001", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "网点智能排班优化模型", "node_id": "model:OPS_002", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["resource_planning", "daily_operation"], "domain": "operation_management", "model_id": "OPS_002", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "网点业务量预测模型", "node_id": "model:OPS_003", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["daily_operation", "resource_planning"], "domain": "operation_management", "model_id": "OPS_003", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "网点布局评估模型", "node_id": "model:OPS_004", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["resource_planning"], "domain": "operation_management", "model_id": "OPS_004", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "网点效能评价模型", "node_id": "model:OPS_005", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["performance_analysis", "daily_operation"], "domain": "operation_management", "model_id": "OPS_005", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "柜面业务分流模型", "node_id": "model:OPS_006", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["daily_operation"], "domain": "operation_management", "model_id": "OPS_006", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "网点动线优化模型", "node_id": "model:OPS_007", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["daily_operation", "resource_planning"], "domain": "operation_management", "model_id": "OPS_007", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "网点设备运维预测模型", "node_id": "model:OPS_008", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["daily_operation"], "domain": "operation_management", "model_id": "OPS_008", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "反洗钱可疑交易识别模型", "node_id": "model:OPS_009", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["risk_management", "compliance"], "domain": "operation_management", "model_id": "OPS_009", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户洗钱风险评级模型", "node_id": "model:OPS_010", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["risk_management", "compliance"], "domain": "operation_management", "model_id": "OPS_010", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "反洗钱团伙挖掘模型", "node_id": "model:OPS_011", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["risk_management", "compliance"], "domain": "operation_management", "model_id": "OPS_011", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "合规制度智能匹配模型", "node_id": "model:OPS_012", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["compliance", "daily_operation"], "domain": "operation_management", "model_id": "OPS_012", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "员工操作风险监测模型", "node_id": "model:OPS_013", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["risk_management", "compliance"], "domain": "operation_management", "model_id": "OPS_013", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "监管报表自动生成模型", "node_id": "model:OPS_014", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["compliance", "performance_analysis"], "domain": "operation_management", "model_id": "OPS_014", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "反欺诈交易实时拦截模型", "node_id": "model:OPS_015", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["risk_management"], "domain": "operation_management", "model_id": "OPS_015", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "贷款审批流程优化模型", "node_id": "model:OPS_016", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["daily_operation", "pre_loan"], "domain": "operation_management", "model_id": "OPS_016", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "开户流程简化评估模型", "node_id": "model:OPS_017", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["daily_operation"], "domain": "operation_management", "model_id": "OPS_017", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "柜面业务授权优化模型", "node_id": "model:OPS_018", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["daily_operation"], "domain": "operation_management", "model_id": "OPS_018", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户投诉分析模型", "node_id": "model:OPS_019", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["daily_operation", "performance_analysis"], "domain": "operation_management", "model_id": "OPS_019", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "智能客服问答匹配模型", "node_id": "model:OPS_020", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["daily_operation"], "domain": "operation_management", "model_id": "OPS_020", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "智能工单分配模型", "node_id": "model:OPS_021", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["daily_operation"], "domain": "operation_management", "model_id": "OPS_021", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "业务流程时序挖掘模型", "node_id": "model:OPS_022", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["daily_operation", "performance_analysis"], "domain": "operation_management", "model_id": "OPS_022", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "流动性风险预测模型", "node_id": "model:OPS_023", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["risk_management"], "domain": "operation_management", "model_id": "OPS_023", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "利率定价评估模型", "node_id": "model:OPS_024", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["performance_analysis"], "domain": "operation_management", "model_id": "OPS_024", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "资产负债配置优化模型", "node_id": "model:OPS_025", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["performance_analysis"], "domain": "operation_management", "model_id": "OPS_025", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "费用预算预测模型", "node_id": "model:OPS_026", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["resource_planning", "performance_analysis"], "domain": "operation_management", "model_id": "OPS_026", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "收单商户风险监测模型", "node_id": "model:OPS_027", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["risk_management", "daily_operation"], "domain": "operation_management", "model_id": "OPS_027", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "渠道服务质量评估模型", "node_id": "model:OPS_028", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["performance_analysis", "daily_operation"], "domain": "operation_management", "model_id": "OPS_028", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户经理绩效预测模型", "node_id": "model:OPS_029", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["performance_analysis", "resource_planning"], "domain": "operation_management", "model_id": "OPS_029", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "员工培训需求分析模型", "node_id": "model:OPS_030", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["resource_planning", "performance_analysis"], "domain": "operation_management", "model_id": "OPS_030", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "人力资源供需预测模型", "node_id": "model:OPS_031", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["resource_planning"], "domain": "operation_management", "model_id": "OPS_031", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "员工异动风险预警模型", "node_id": "model:OPS_032", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["resource_planning"], "domain": "operation_management", "model_id": "OPS_032", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "经营分析报告自动生成模型", "node_id": "model:OPS_033", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["performance_analysis"], "domain": "operation_management", "model_id": "OPS_033", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "数据质量监控模型", "node_id": "model:OPS_034", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["daily_operation", "compliance"], "domain": "operation_management", "model_id": "OPS_034", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "运营成本分析优化模型", "node_id": "model:OPS_035", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["performance_analysis", "resource_planning"], "domain": "operation_management", "model_id": "OPS_035", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "农户小额贷款准入评分模型", "node_id": "model:RISK_001", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_001", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "农户小额贷款反欺诈模型", "node_id": "model:RISK_002", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_002", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "农户小额贷款额度测算模型", "node_id": "model:RISK_003", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_003", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "小微企业贷前准入模型", "node_id": "model:RISK_004", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_004", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "小微企业经营稳定性评分模型", "node_id": "model:RISK_005", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_005", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "小微企业反欺诈模型", "node_id": "model:RISK_006", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_006", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "对公贷款信用评级模型", "node_id": "model:RISK_007", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_007", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "对公贷款逾期风险预测模型", "node_id": "model:RISK_008", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["post_loan"], "domain": "credit_risk", "model_id": "RISK_008", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "对公贷款贷后预警模型", "node_id": "model:RISK_009", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["post_loan"], "domain": "credit_risk", "model_id": "RISK_009", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "个人消费贷申请评分模型", "node_id": "model:RISK_010", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_010", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "个人贷款欺诈识别模型", "node_id": "model:RISK_011", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_011", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "信用卡分期风险评分模型", "node_id": "model:RISK_012", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_012", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "担保圈风险识别模型", "node_id": "model:RISK_013", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan", "in_loan", "post_loan"], "domain": "credit_risk", "model_id": "RISK_013", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "关联企业风险识别模型", "node_id": "model:RISK_014", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["pre_loan", "post_loan"], "domain": "credit_risk", "model_id": "RISK_014", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "贷款用途异常识别模型", "node_id": "model:RISK_015", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["post_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_015", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "多头借贷风险识别模型", "node_id": "model:RISK_016", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_016", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "还款能力评估模型", "node_id": "model:RISK_017", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan", "in_loan", "post_loan"], "domain": "credit_risk", "model_id": "RISK_017", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "违约概率PD预测模型", "node_id": "model:RISK_018", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["pre_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_018", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "损失率LGD估计模型", "node_id": "model:RISK_019", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["post_loan"], "domain": "credit_risk", "model_id": "RISK_019", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "风险定价辅助模型", "node_id": "model:RISK_020", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_020", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "抵质押物价值预警模型", "node_id": "model:RISK_021", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["in_loan", "post_loan"], "domain": "credit_risk", "model_id": "RISK_021", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "贷中交易异常监测模型", "node_id": "model:RISK_022", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["in_loan"], "domain": "credit_risk", "model_id": "RISK_022", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "贷后资金流异常模型", "node_id": "model:RISK_023", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["post_loan"], "domain": "credit_risk", "model_id": "RISK_023", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "逾期客户催收优先级模型", "node_id": "model:RISK_024", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["post_loan"], "domain": "credit_risk", "model_id": "RISK_024", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "不良贷款迁徙预测模型", "node_id": "model:RISK_025", "node_type": "model", "properties": {"api_available": false, "asset_status": "development", "business_stage": ["post_loan"], "domain": "credit_risk", "model_id": "RISK_025", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "客户风险分层模型", "node_id": "model:RISK_026", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan", "in_loan", "post_loan"], "domain": "credit_risk", "model_id": "RISK_026", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "授信复核优先级模型", "node_id": "model:RISK_027", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_027", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "行业风险预警模型", "node_id": "model:RISK_028", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["pre_loan", "in_loan", "post_loan"], "domain": "credit_risk", "model_id": "RISK_028", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "区域风险预警模型", "node_id": "model:RISK_029", "node_type": "model", "properties": {"api_available": false, "asset_status": "staging", "business_stage": ["pre_loan", "in_loan", "post_loan"], "domain": "credit_risk", "model_id": "RISK_029", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "涉农贷款风险评分模型", "node_id": "model:RISK_030", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_030", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "普惠小微风险准入模型", "node_id": "model:RISK_031", "node_type": "model", "properties": {"api_available": true, "asset_status": "production", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_031", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "企业主个人信用辅助模型", "node_id": "model:RISK_032", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_032", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "共同借款人风险识别模型", "node_id": "model:RISK_033", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan", "in_loan"], "domain": "credit_risk", "model_id": "RISK_033", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "贷后检查名单生成模型", "node_id": "model:RISK_034", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["post_loan"], "domain": "credit_risk", "model_id": "RISK_034", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "贷前资料真实性识别模型", "node_id": "model:RISK_035", "node_type": "model", "properties": {"api_available": true, "asset_status": "mock_available", "business_stage": ["pre_loan"], "domain": "credit_risk", "model_id": "RISK_035", "permission_scope": "demo_desensitized", "source": "demo"}}
+{"name": "account_opening_probability", "node_id": "output:account_opening_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "activation_probability", "node_id": "output:activation_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "admission_decision", "node_id": "output:admission_decision", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "admission_suggestion", "node_id": "output:admission_suggestion", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "affected_businesses", "node_id": "output:affected_businesses", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "affected_clients", "node_id": "output:affected_clients", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "affordable_amount", "node_id": "output:affordable_amount", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "alert_level", "node_id": "output:alert_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "alert_reason", "node_id": "output:alert_reason", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "alert_signal", "node_id": "output:alert_signal", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "amount_range", "node_id": "output:amount_range", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "anomaly_pattern", "node_id": "output:anomaly_pattern", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "anomaly_score", "node_id": "output:anomaly_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "anomaly_type", "node_id": "output:anomaly_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "asset_upside_potential", "node_id": "output:asset_upside_potential", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "authenticity_score", "node_id": "output:authenticity_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "best_contact_channel", "node_id": "output:best_contact_channel", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "best_contact_time", "node_id": "output:best_contact_time", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "borrowing_count_est", "node_id": "output:borrowing_count_est", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "business_scale", "node_id": "output:business_scale", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "cashflow_anomaly_score", "node_id": "output:cashflow_anomaly_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "chain_reaction_risk", "node_id": "output:chain_reaction_risk", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "channel_migration_risk", "node_id": "output:channel_migration_risk", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "channel_usage_pattern", "node_id": "output:channel_usage_pattern", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "check_priority", "node_id": "output:check_priority", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "churn_probability", "node_id": "output:churn_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "churn_reason", "node_id": "output:churn_reason", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "churn_risk_level", "node_id": "output:churn_risk_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "circle_members", "node_id": "output:circle_members", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "circle_risk_score", "node_id": "output:circle_risk_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "client_insight", "node_id": "output:client_insight", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "cluster_label", "node_id": "output:cluster_label", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "clustering", "node_id": "output:clustering", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "co_borrower_risk_score", "node_id": "output:co_borrower_risk_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "collateral_coverage", "node_id": "output:collateral_coverage", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "collateral_value_trend", "node_id": "output:collateral_value_trend", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "collection_priority", "node_id": "output:collection_priority", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "combination_score", "node_id": "output:combination_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "community_value_score", "node_id": "output:community_value_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "complexity_level", "node_id": "output:complexity_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "contact_window", "node_id": "output:contact_window", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "contribution_breakdown", "node_id": "output:contribution_breakdown", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "contribution_score", "node_id": "output:contribution_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "conversation_tips", "node_id": "output:conversation_tips", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "conversion_probability", "node_id": "output:conversion_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "credit_rating", "node_id": "output:credit_rating", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "cross_sell_score", "node_id": "output:cross_sell_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "customer_ranking", "node_id": "output:customer_ranking", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "customer_value_score", "node_id": "output:customer_value_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "default_probability", "node_id": "output:default_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "demand_score", "node_id": "output:demand_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "demand_type", "node_id": "output:demand_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "deposit_churn_probability", "node_id": "output:deposit_churn_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "dsr_ratio", "node_id": "output:dsr_ratio", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "early_warning_level", "node_id": "output:early_warning_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "ecommerce_identification", "node_id": "output:ecommerce_identification", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "engagement_strategy", "node_id": "output:engagement_strategy", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "estimated_amount", "node_id": "output:estimated_amount", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "estimated_amount_range", "node_id": "output:estimated_amount_range", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "estimated_contribution", "node_id": "output:estimated_contribution", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "expansion_potential", "node_id": "output:expansion_potential", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "expected_loss", "node_id": "output:expected_loss", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "expected_ltv", "node_id": "output:expected_ltv", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "expected_response", "node_id": "output:expected_response", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "expected_value", "node_id": "output:expected_value", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "explanation_text", "node_id": "output:explanation_text", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "fatigue_score", "node_id": "output:fatigue_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "financial_needs", "node_id": "output:financial_needs", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "financial_product_interest", "node_id": "output:financial_product_interest", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "financing_demand_score", "node_id": "output:financing_demand_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "forecast_value", "node_id": "output:forecast_value", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "forged_items", "node_id": "output:forged_items", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "fraud_label", "node_id": "output:fraud_label", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "fraud_score", "node_id": "output:fraud_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "fraud_type", "node_id": "output:fraud_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "growth_potential", "node_id": "output:growth_potential", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "growth_potential_score", "node_id": "output:growth_potential_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "guarantee_capacity", "node_id": "output:guarantee_capacity", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "industry_risk_index", "node_id": "output:industry_risk_index", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "industry_trend", "node_id": "output:industry_trend", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "influence_score", "node_id": "output:influence_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "inspection_focus", "node_id": "output:inspection_focus", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "inspection_list", "node_id": "output:inspection_list", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "installment_propensity", "node_id": "output:installment_propensity", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "installment_risk_level", "node_id": "output:installment_risk_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "intent_score", "node_id": "output:intent_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "intent_type", "node_id": "output:intent_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "lgd_estimate", "node_id": "output:lgd_estimate", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "lifecycle_stage", "node_id": "output:lifecycle_stage", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "loan_demand_probability", "node_id": "output:loan_demand_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "loan_demand_score", "node_id": "output:loan_demand_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "ltv_ratio", "node_id": "output:ltv_ratio", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "margin_call_alert", "node_id": "output:margin_call_alert", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "match_reason", "node_id": "output:match_reason", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "match_score", "node_id": "output:match_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "max_frequency", "node_id": "output:max_frequency", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "migration_probability", "node_id": "output:migration_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "misuse_score", "node_id": "output:misuse_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "misuse_type", "node_id": "output:misuse_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "multi_head_score", "node_id": "output:multi_head_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "next_stage_prediction", "node_id": "output:next_stage_prediction", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "opportunity_score", "node_id": "output:opportunity_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "optimal_frequency", "node_id": "output:optimal_frequency", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "participation_probability", "node_id": "output:participation_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "pd_confidence_interval", "node_id": "output:pd_confidence_interval", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "pd_level", "node_id": "output:pd_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "pd_score", "node_id": "output:pd_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "personal_credit_score", "node_id": "output:personal_credit_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "potential_outflow_amount", "node_id": "output:potential_outflow_amount", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preference_reason", "node_id": "output:preference_reason", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preference_vector", "node_id": "output:preference_vector", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_activity_type", "node_id": "output:preferred_activity_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_awakening_channel", "node_id": "output:preferred_awakening_channel", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_branch", "node_id": "output:preferred_branch", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_channel", "node_id": "output:preferred_channel", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_function", "node_id": "output:preferred_function", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_installment_type", "node_id": "output:preferred_installment_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_loan_type", "node_id": "output:preferred_loan_type", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_products", "node_id": "output:preferred_products", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "preferred_repayment_schedule", "node_id": "output:preferred_repayment_schedule", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "pricing_reason", "node_id": "output:pricing_reason", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "priority_score", "node_id": "output:priority_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "probability", "node_id": "output:probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "product_combination", "node_id": "output:product_combination", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "product_interest", "node_id": "output:product_interest", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "product_preference_vector", "node_id": "output:product_preference_vector", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "product_ranking", "node_id": "output:product_ranking", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "provision_suggestion", "node_id": "output:provision_suggestion", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "ranked_list", "node_id": "output:ranked_list", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "rate_range", "node_id": "output:rate_range", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "rating_report", "node_id": "output:rating_report", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "rating_score", "node_id": "output:rating_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recommendation_result", "node_id": "output:recommendation_result", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recommended_amount", "node_id": "output:recommended_amount", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recommended_limit", "node_id": "output:recommended_limit", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recommended_products", "node_id": "output:recommended_products", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recommended_renewal_terms", "node_id": "output:recommended_renewal_terms", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recommended_strategy", "node_id": "output:recommended_strategy", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recovery_probability", "node_id": "output:recovery_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "recovery_rate", "node_id": "output:recovery_rate", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "region_risk_index", "node_id": "output:region_risk_index", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "region_trend", "node_id": "output:region_trend", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "related_enterprise_score", "node_id": "output:related_enterprise_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "relationship_risk", "node_id": "output:relationship_risk", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "renewal_probability", "node_id": "output:renewal_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "repayment_capacity_score", "node_id": "output:repayment_capacity_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "response_channel_preference", "node_id": "output:response_channel_preference", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "response_probability", "node_id": "output:response_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "retention_risk", "node_id": "output:retention_risk", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "retention_suggestion", "node_id": "output:retention_suggestion", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "review_priority", "node_id": "output:review_priority", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_adjusted_rate", "node_id": "output:risk_adjusted_rate", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_alert", "node_id": "output:risk_alert", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_contagion_level", "node_id": "output:risk_contagion_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_factor_breakdown", "node_id": "output:risk_factor_breakdown", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_level", "node_id": "output:risk_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_level_match", "node_id": "output:risk_level_match", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_score", "node_id": "output:risk_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_signal", "node_id": "output:risk_signal", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "risk_tier", "node_id": "output:risk_tier", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "score", "node_id": "output:score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "score_breakdown", "node_id": "output:score_breakdown", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "seasonal_demand_pattern", "node_id": "output:seasonal_demand_pattern", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "seasonal_pattern", "node_id": "output:seasonal_pattern", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "stability_level", "node_id": "output:stability_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "stability_score", "node_id": "output:stability_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "stage_probability", "node_id": "output:stage_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "suggested_action", "node_id": "output:suggested_action", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "suggested_interval", "node_id": "output:suggested_interval", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "suggested_product", "node_id": "output:suggested_product", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "suggested_rate", "node_id": "output:suggested_rate", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "suggested_reviewer", "node_id": "output:suggested_reviewer", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "suggested_strategy", "node_id": "output:suggested_strategy", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "synergy_effect", "node_id": "output:synergy_effect", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "target_deposit_amount", "node_id": "output:target_deposit_amount", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "target_products", "node_id": "output:target_products", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "tier_label", "node_id": "output:tier_label", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "time_score", "node_id": "output:time_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "top_products", "node_id": "output:top_products", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "top_recommendations", "node_id": "output:top_recommendations", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "value_breakdown", "node_id": "output:value_breakdown", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "value_potential", "node_id": "output:value_potential", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "value_score", "node_id": "output:value_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "value_tier", "node_id": "output:value_tier", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "wake_probability", "node_id": "output:wake_probability", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "warning_level", "node_id": "output:warning_level", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "white_list_score", "node_id": "output:white_list_score", "node_type": "output", "properties": {"source_field": "output_fields"}}
+{"name": "30-50万中高端客群财富产品维稳增存模型", "node_id": "scenario:30-50万中高端客群财富产品维稳增存模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "ATM/智能柜员机故障预测与运维", "node_id": "scenario:atm_智能柜员机故障预测与运维", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "AUM10-30万客户维稳增存模型", "node_id": "scenario:aum10-30万客户维稳增存模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "AUM10万以上客户流失预警模型", "node_id": "scenario:aum10万以上客户流失预警模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "ETC拓客模型", "node_id": "scenario:etc拓客模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "不良贷款等级迁徙预测", "node_id": "scenario:不良贷款等级迁徙预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "业务流程挖掘与优化", "node_id": "scenario:业务流程挖掘与优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人中间业务推荐模型:E路有我新客促活模型", "node_id": "scenario:个人中间业务推荐模型_e路有我新客促活模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人存款提升预测模型", "node_id": "scenario:个人存款提升预测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人客户保险产品推荐模型", "node_id": "scenario:个人客户保险产品推荐模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人客户理财产品营销模型", "node_id": "scenario:个人客户理财产品营销模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人消费贷款申请评分", "node_id": "scenario:个人消费贷款申请评分", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人经营性贷款营销预测模型", "node_id": "scenario:个人经营性贷款营销预测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人营销风险历史库", "node_id": "scenario:个人营销风险历史库", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个人贷款", "node_id": "scenario:个人贷款", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "个人贷款欺诈识别", "node_id": "scenario:个人贷款欺诈识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个体工商户准入评分卡", "node_id": "scenario:个体工商户准入评分卡", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个贷全流程反欺诈机器学习模型", "node_id": "scenario:个贷全流程反欺诈机器学习模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个贷流失回捞算法模型", "node_id": "scenario:个贷流失回捞算法模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "个贷逾期客群催收模型", "node_id": "scenario:个贷逾期客群催收模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "中小微企业资金流信用信息建模项目", "node_id": "scenario:中小微企业资金流信用信息建模项目", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "中间业务产品营销模型（代扣）", "node_id": "scenario:中间业务产品营销模型_代扣", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "交叉销售", "node_id": "scenario:交叉销售", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "交易欺诈实时识别与拦截", "node_id": "scenario:交易欺诈实时识别与拦截", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "产品营销", "node_id": "scenario:产品营销", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "人力规划", "node_id": "scenario:人力规划", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "人力资源规划与预测", "node_id": "scenario:人力资源规划与预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "人才发展", "node_id": "scenario:人才发展", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "代发低效留存客群营销预测模型", "node_id": "scenario:代发低效留存客群营销预测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "代发工资客户价值转化", "node_id": "scenario:代发工资客户价值转化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "企业主个人信用评估", "node_id": "scenario:企业主个人信用评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "企业客户开户转化", "node_id": "scenario:企业客户开户转化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "信用卡分期业务风险评分", "node_id": "scenario:信用卡分期业务风险评分", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "信用卡分期精准营销", "node_id": "scenario:信用卡分期精准营销", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "信用卡片拓客模型", "node_id": "scenario:信用卡片拓客模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "信用卡贷前反欺诈机器学习模型", "node_id": "scenario:信用卡贷前反欺诈机器学习模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "信用卡贷前申请评分模型_无征信", "node_id": "scenario:信用卡贷前申请评分模型_无征信", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "信用卡贷前申请评分模型_有征信", "node_id": "scenario:信用卡贷前申请评分模型_有征信", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "信贷从业人员风险合规监测模型", "node_id": "scenario:信贷从业人员风险合规监测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "全渠道服务质量评价", "node_id": "scenario:全渠道服务质量评价", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "共同借款人风险识别", "node_id": "scenario:共同借款人风险识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "关联企业风险识别", "node_id": "scenario:关联企业风险识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "农户小额贷款反欺诈识别", "node_id": "scenario:农户小额贷款反欺诈识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "农户小额贷款贷前准入", "node_id": "scenario:农户小额贷款贷前准入", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "农户小额贷款额度测算", "node_id": "scenario:农户小额贷款额度测算", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "农户贷款", "node_id": "scenario:农户贷款", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "农户金融需求预测", "node_id": "scenario:农户金融需求预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "农机经营户贷款需求识别", "node_id": "scenario:农机经营户贷款需求识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "农村电商客群识别与营销", "node_id": "scenario:农村电商客群识别与营销", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "区域风险监测与预警", "node_id": "scenario:区域风险监测与预警", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "厅堂运营", "node_id": "scenario:厅堂运营", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "县域商户拓展", "node_id": "scenario:县域商户拓展", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "县域新客首贷营销", "node_id": "scenario:县域新客首贷营销", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "县域营销", "node_id": "scenario:县域营销", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "反洗钱", "node_id": "scenario:反洗钱", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "反洗钱可疑交易监测", "node_id": "scenario:反洗钱可疑交易监测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "合规制度与业务流程匹配", "node_id": "scenario:合规制度与业务流程匹配", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "合规管理", "node_id": "scenario:合规管理", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "员工培训需求识别", "node_id": "scenario:员工培训需求识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "员工异常操作行为监测", "node_id": "scenario:员工异常操作行为监测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "员工离职风险预测", "node_id": "scenario:员工离职风险预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "垒小户准入评分卡", "node_id": "scenario:垒小户准入评分卡", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "垒小户违约概率模型", "node_id": "scenario:垒小户违约概率模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "多头借贷风险识别", "node_id": "scenario:多头借贷风险识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "存款增长潜力评估", "node_id": "scenario:存款增长潜力评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "存款流失预警", "node_id": "scenario:存款流失预警", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "存量客户交叉销售", "node_id": "scenario:存量客户交叉销售", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "存量经营", "node_id": "scenario:存量经营", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "客户产品偏好分析", "node_id": "scenario:客户产品偏好分析", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户信用风险分层", "node_id": "scenario:客户信用风险分层", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户投诉自动分类与根因分析", "node_id": "scenario:客户投诉自动分类与根因分析", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户洗钱风险等级评定", "node_id": "scenario:客户洗钱风险等级评定", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户流失预警", "node_id": "scenario:客户流失预警", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户渠道偏好分析", "node_id": "scenario:客户渠道偏好分析", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户激活", "node_id": "scenario:客户激活", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "客户生命周期分析", "node_id": "scenario:客户生命周期分析", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户经理绩效预测与辅导", "node_id": "scenario:客户经理绩效预测与辅导", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户经理营销机会推荐", "node_id": "scenario:客户经理营销机会推荐", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户资产规模提升", "node_id": "scenario:客户资产规模提升", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "客户还款能力评估", "node_id": "scenario:客户还款能力评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "对公/个人开户流程优化", "node_id": "scenario:对公_个人开户流程优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "对公客户价值与风险评分模型", "node_id": "scenario:对公客户价值与风险评分模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "对公客户价值评估", "node_id": "scenario:对公客户价值评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "对公贷款信用评级", "node_id": "scenario:对公贷款信用评级", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "对公贷款贷后风险预警", "node_id": "scenario:对公贷款贷后风险预警", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "对公贷款逾期预警", "node_id": "scenario:对公贷款逾期预警", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "对私账户风控机器学习模型", "node_id": "scenario:对私账户风控机器学习模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "小微企业1000万以下客户A卡模型", "node_id": "scenario:小微企业1000万以下客户a卡模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "小微企业经营稳定性评估", "node_id": "scenario:小微企业经营稳定性评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "小微企业融资需求识别", "node_id": "scenario:小微企业融资需求识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "小微企业贷前准入评分", "node_id": "scenario:小微企业贷前准入评分", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "小微企业贷款", "node_id": "scenario:小微企业贷款", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "小微企业贷款反欺诈", "node_id": "scenario:小微企业贷款反欺诈", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "小微企业违约概率B卡模型", "node_id": "scenario:小微企业违约概率b卡模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "小微客户流失预警模型", "node_id": "scenario:小微客户流失预警模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "工单智能路由与分配", "node_id": "scenario:工单智能路由与分配", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "开门红个贷回捞精准营销模型", "node_id": "scenario:开门红个贷回捞精准营销模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "房地产压力测试", "node_id": "scenario:房地产压力测试", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "房贷按揭客户贷款产品推荐模型", "node_id": "scenario:房贷按揭客户贷款产品推荐模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "房贷按揭违约概率模型", "node_id": "scenario:房贷按揭违约概率模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "房贷用户按揭A卡模型", "node_id": "scenario:房贷用户按揭a卡模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "手机银行促活", "node_id": "scenario:手机银行促活", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "手机银行促活模型", "node_id": "scenario:手机银行促活模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "手机银行客户识别预测模型", "node_id": "scenario:手机银行客户识别预测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "扬州重点企业客户贷款营销分析", "node_id": "scenario:扬州重点企业客户贷款营销分析", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "抵质押物价值监控与预警", "node_id": "scenario:抵质押物价值监控与预警", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "担保圈风险识别与分析", "node_id": "scenario:担保圈风险识别与分析", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "授信审批复核优先级排序", "node_id": "scenario:授信审批复核优先级排序", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "收单商户交易反欺诈模型", "node_id": "scenario:收单商户交易反欺诈模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "收单商户交易风险监测", "node_id": "scenario:收单商户交易风险监测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "收单商户价值分层及预授信模型", "node_id": "scenario:收单商户价值分层及预授信模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "收单商户流失预测模型", "node_id": "scenario:收单商户流失预测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "收单商户贷款营销模型", "node_id": "scenario:收单商户贷款营销模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "数据质量自动监控", "node_id": "scenario:数据质量自动监控", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "新客获取", "node_id": "scenario:新客获取", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "新客贷款意向识别", "node_id": "scenario:新客贷款意向识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "普惠小微贷款准入评估", "node_id": "scenario:普惠小微贷款准入评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "普惠金融客户产品匹配", "node_id": "scenario:普惠金融客户产品匹配", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "智能反诈模型", "node_id": "scenario:智能反诈模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "智能客服FAQ匹配", "node_id": "scenario:智能客服faq匹配", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "柜面业务向电子渠道分流", "node_id": "scenario:柜面业务向电子渠道分流", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "柜面业务授权规则优化", "node_id": "scenario:柜面业务授权规则优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "沉睡客户唤醒营销", "node_id": "scenario:沉睡客户唤醒营销", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "洗钱团伙识别与挖掘", "node_id": "scenario:洗钱团伙识别与挖掘", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "流失预警", "node_id": "scenario:流失预警", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "消费贷授信未用信促提模型", "node_id": "scenario:消费贷授信未用信促提模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "涉农贷款风险评分", "node_id": "scenario:涉农贷款风险评分", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "潜在高价值客户挖掘模型", "node_id": "scenario:潜在高价值客户挖掘模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "潜客挖掘消费贷营销模型", "node_id": "scenario:潜客挖掘消费贷营销模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "理财产品精准推荐", "node_id": "scenario:理财产品精准推荐", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "理财产品综合评价模型", "node_id": "scenario:理财产品综合评价模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "理财响应度预测模型", "node_id": "scenario:理财响应度预测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "监管报表数据提取与生成", "node_id": "scenario:监管报表数据提取与生成", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "监管报送", "node_id": "scenario:监管报送", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "社群客户价值评估", "node_id": "scenario:社群客户价值评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "粮食种植户金融需求预测", "node_id": "scenario:粮食种植户金融需求预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "经营分析报告自动生成", "node_id": "scenario:经营分析报告自动生成", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "经营贷款贷前准入模型", "node_id": "scenario:经营贷款贷前准入模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "绩效管理", "node_id": "scenario:绩效管理", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "网点业务量预测", "node_id": "scenario:网点业务量预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "网点厅堂动线设计优化", "node_id": "scenario:网点厅堂动线设计优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "网点客流预测与排班", "node_id": "scenario:网点客流预测与排班", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "网点布局优化评估", "node_id": "scenario:网点布局优化评估", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "网点柜员智能排班", "node_id": "scenario:网点柜员智能排班", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "网点管理", "node_id": "scenario:网点管理", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "网点综合效能评价", "node_id": "scenario:网点综合效能评价", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "营销响应率预测", "node_id": "scenario:营销响应率预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "营销活动参与度预测", "node_id": "scenario:营销活动参与度预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "营销目标客群排序", "node_id": "scenario:营销目标客群排序", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "营销触达最佳时机推荐", "node_id": "scenario:营销触达最佳时机推荐", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "营销频次优化", "node_id": "scenario:营销频次优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "行业风险监测与预警", "node_id": "scenario:行业风险监测与预警", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "设备管理", "node_id": "scenario:设备管理", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "财富产品个性化推荐模型", "node_id": "scenario:财富产品个性化推荐模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷中交易行为异常监测", "node_id": "scenario:贷中交易行为异常监测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷前申请资料真实性核验", "node_id": "scenario:贷前申请资料真实性核验", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷后检查名单自动生成", "node_id": "scenario:贷后检查名单自动生成", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷后资金流向异常监测", "node_id": "scenario:贷后资金流向异常监测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷款中介挖掘模型", "node_id": "scenario:贷款中介挖掘模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷款产品利率定价", "node_id": "scenario:贷款产品利率定价", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷款产品综合评价模型", "node_id": "scenario:贷款产品综合评价模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷款到期续贷营销", "node_id": "scenario:贷款到期续贷营销", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷款审批流程效率优化", "node_id": "scenario:贷款审批流程效率优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷款用途合规性检测", "node_id": "scenario:贷款用途合规性检测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷款风险定价", "node_id": "scenario:贷款风险定价", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷记卡固定额度调整模型", "node_id": "scenario:贷记卡固定额度调整模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷记卡联动贷款营销模型", "node_id": "scenario:贷记卡联动贷款营销模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷记卡账单分期营销模型", "node_id": "scenario:贷记卡账单分期营销模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "贷记卡违约概率模型", "node_id": "scenario:贷记卡违约概率模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "资产负债结构优化", "node_id": "scenario:资产负债结构优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "跨产品组合推荐", "node_id": "scenario:跨产品组合推荐", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "运营成本分析与优化", "node_id": "scenario:运营成本分析与优化", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "违约损失率估计", "node_id": "scenario:违约损失率估计", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "违约概率预测", "node_id": "scenario:违约概率预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "逾期催收优先级排序", "node_id": "scenario:逾期催收优先级排序", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "银行流动性风险预测", "node_id": "scenario:银行流动性风险预测", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "银行费用预算编制", "node_id": "scenario:银行费用预算编制", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "长尾客群潜在机制挖掘模型", "node_id": "scenario:长尾客群潜在机制挖掘模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "阳光E贷贷前准入模型", "node_id": "scenario:阳光e贷贷前准入模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "零售个人违约概率B卡模型", "node_id": "scenario:零售个人违约概率b卡模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "非法集资模型", "node_id": "scenario:非法集资模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "首贷户筛选与白名单推荐", "node_id": "scenario:首贷户筛选与白名单推荐", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "首贷营销", "node_id": "scenario:首贷营销", "node_type": "scenario", "properties": {"source_field": "composition.applicable_scenarios"}}
+{"name": "高价值存款客户流失预测模型", "node_id": "scenario:高价值存款客户流失预测模型", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "高价值客户识别", "node_id": "scenario:高价值客户识别", "node_type": "scenario", "properties": {"source_field": "business_scenario"}}
+{"name": "churned_customer", "node_id": "segment:churned_customer", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "corporate", "node_id": "segment:corporate", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "dormant_customer", "node_id": "segment:dormant_customer", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "elderly", "node_id": "segment:elderly", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "existing_customer", "node_id": "segment:existing_customer", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "farmer", "node_id": "segment:farmer", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "guarantee_circle", "node_id": "segment:guarantee_circle", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "high_net_worth", "node_id": "segment:high_net_worth", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "individual", "node_id": "segment:individual", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "new_customer", "node_id": "segment:new_customer", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "rural_area", "node_id": "segment:rural_area", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "rural_commerce", "node_id": "segment:rural_commerce", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "small_micro_enterprise", "node_id": "segment:small_micro_enterprise", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "young_customer", "node_id": "segment:young_customer", "node_type": "segment", "properties": {"source_field": "customer_segment"}}
+{"name": "获客阶段", "node_id": "stage:acquisition", "node_type": "stage", "properties": {"stage": "acquisition", "template_id": "TMPL_005"}}
+{"name": "compliance", "node_id": "stage:compliance", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "daily_operation", "node_id": "stage:daily_operation", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "成长阶段", "node_id": "stage:growth", "node_type": "stage", "properties": {"stage": "growth", "template_id": "TMPL_005"}}
+{"name": "in_loan", "node_id": "stage:in_loan", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "in_marketing", "node_id": "stage:in_marketing", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "performance_analysis", "node_id": "stage:performance_analysis", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "post_loan", "node_id": "stage:post_loan", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "post_marketing", "node_id": "stage:post_marketing", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "pre_loan", "node_id": "stage:pre_loan", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "pre_marketing", "node_id": "stage:pre_marketing", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "resource_planning", "node_id": "stage:resource_planning", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "留存阶段", "node_id": "stage:retention", "node_type": "stage", "properties": {"stage": "retention", "template_id": "TMPL_005"}}
+{"name": "risk_management", "node_id": "stage:risk_management", "node_type": "stage", "properties": {"source_field": "business_stage"}}
+{"name": "admission_scoring", "node_id": "tag:admission_scoring", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "agricultural_loan", "node_id": "tag:agricultural_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "alert_signal", "node_id": "tag:alert_signal", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "amount_calculation", "node_id": "tag:amount_calculation", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "anomaly_detection", "node_id": "tag:anomaly_detection", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "anti_fraud", "node_id": "tag:anti_fraud", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "anti_money_laundering", "node_id": "tag:anti_money_laundering", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "asset_liability", "node_id": "tag:asset_liability", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "branch_data", "node_id": "tag:branch_data", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "business_data", "node_id": "tag:business_data", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "channel_behavior", "node_id": "tag:channel_behavior", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "churn_prediction", "node_id": "tag:churn_prediction", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "churned_customer", "node_id": "tag:churned_customer", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "compliance", "node_id": "tag:compliance", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "compliance_check", "node_id": "tag:compliance_check", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "consumer_loan", "node_id": "tag:consumer_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "conversion_prediction", "node_id": "tag:conversion_prediction", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "corporate", "node_id": "tag:corporate", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "corporate_loan", "node_id": "tag:corporate_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "credit_card", "node_id": "tag:credit_card", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "credit_rating", "node_id": "tag:credit_rating", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "credit_report", "node_id": "tag:credit_report", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "credit_risk", "node_id": "tag:credit_risk", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "cross_selling", "node_id": "tag:cross_selling", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "customer_marketing", "node_id": "tag:customer_marketing", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "customer_profile", "node_id": "tag:customer_profile", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "daily_operation", "node_id": "tag:daily_operation", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "default_prediction", "node_id": "tag:default_prediction", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "demand_forecasting", "node_id": "tag:demand_forecasting", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "deposit", "node_id": "tag:deposit", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "dormant_customer", "node_id": "tag:dormant_customer", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "early_warning", "node_id": "tag:early_warning", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "elderly", "node_id": "tag:elderly", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "existing_customer", "node_id": "tag:existing_customer", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "farmer", "node_id": "tag:farmer", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "financial_product", "node_id": "tag:financial_product", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "first_loan", "node_id": "tag:first_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "guarantee_circle", "node_id": "tag:guarantee_circle", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "high_net_worth", "node_id": "tag:high_net_worth", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "in_loan", "node_id": "tag:in_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "in_marketing", "node_id": "tag:in_marketing", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "individual", "node_id": "tag:individual", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "lifetime_value", "node_id": "tag:lifetime_value", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "loan_application", "node_id": "tag:loan_application", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "marketing_history", "node_id": "tag:marketing_history", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "mobile_banking", "node_id": "tag:mobile_banking", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "model_audit", "node_id": "tag:model_audit", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "new_customer", "node_id": "tag:new_customer", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "operation_management", "node_id": "tag:operation_management", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "performance_analysis", "node_id": "tag:performance_analysis", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "post_loan", "node_id": "tag:post_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "post_marketing", "node_id": "tag:post_marketing", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "pre_loan", "node_id": "tag:pre_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "pre_marketing", "node_id": "tag:pre_marketing", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "preference_analysis", "node_id": "tag:preference_analysis", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "priority_ranking", "node_id": "tag:priority_ranking", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "probability", "node_id": "tag:probability", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "ranked_list", "node_id": "tag:ranked_list", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "regulatory_reporting", "node_id": "tag:regulatory_reporting", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "repayment_history", "node_id": "tag:repayment_history", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "resource_optimization", "node_id": "tag:resource_optimization", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "resource_planning", "node_id": "tag:resource_planning", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "response_prediction", "node_id": "tag:response_prediction", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "risk_management", "node_id": "tag:risk_management", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "risk_pricing", "node_id": "tag:risk_pricing", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "risk_score", "node_id": "tag:risk_score", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "rural_area", "node_id": "tag:rural_area", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "rural_commerce", "node_id": "tag:rural_commerce", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "segmentation", "node_id": "tag:segmentation", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "small_loan", "node_id": "tag:small_loan", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "small_micro_enterprise", "node_id": "tag:small_micro_enterprise", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "transaction_data", "node_id": "tag:transaction_data", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "value_assessment", "node_id": "tag:value_assessment", "node_type": "tag", "properties": {"source_field": "tags"}}
+{"name": "young_customer", "node_id": "tag:young_customer", "node_type": "tag", "properties": {"source_field": "tags"}}

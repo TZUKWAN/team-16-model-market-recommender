@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_022",
+  "model_name": "贷中交易异常监测模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "贷中交易行为异常监测"
+  ],
+  "business_stage": [
+    "in_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "early_warning"
+  ],
+  "input_fields_required": [
+    "transaction_flow",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "repayment_history"
+  ],
+  "output_fields": [
+    "anomaly_score",
+    "anomaly_type",
+    "alert_level",
+    "alert_reason"
+  ],
+  "performance_metrics": {
+    "auc": 0.85,
+    "precision": 0.74,
+    "recall": 0.8,
+    "f1": 0.77
+  },
+  "applicable_conditions": "适用于贷款存续期间客户交易行为的异常监测；支持消费贷和经营贷场景。",
+  "unsuitable_conditions": "不适用于已处于逾期状态的贷款；不适用于不通过银行账户流转的贷款。",
+  "compliance_boundary": "交易监测需符合《反洗钱法》相关要求；异常交易数据保存至少5年。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行风控中心",
+      "description": "实时监测线上贷款客户的交易行为变化。",
+      "effect": "提前发现异常交易信号，干预后减少不良形成约500万元。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "in_loan",
+    "individual",
+    "small_micro_enterprise",
+    "anomaly_detection",
+    "early_warning"
+  ],
+  "description": "基于客户历史交易行为画像，识别交易频次、金额、对手等方面的异常变化，采用孤立森林和时序异常检测算法。"
+}

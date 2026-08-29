@@ -1,0 +1,62 @@
+{
+  "model_id": "RISK_025",
+  "model_name": "不良贷款迁徙预测模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "不良贷款等级迁徙预测"
+  ],
+  "business_stage": [
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "default_prediction",
+    "early_warning"
+  ],
+  "input_fields_required": [
+    "repayment_history",
+    "loan_application",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "transaction_flow",
+    "business_income"
+  ],
+  "output_fields": [
+    "migration_probability",
+    "expected_loss",
+    "provision_suggestion"
+  ],
+  "performance_metrics": {
+    "auc": 0.81,
+    "accuracy": 0.74,
+    "migration_mae": 0.18
+  },
+  "applicable_conditions": "适用于贷款五级分类（正常/关注/次级/可疑/损失）的迁徙预测；支持季度和年度预测。",
+  "unsuitable_conditions": "不适用于已核销贷款；不适用于贷款组合层面的宏观迁徙预测（需组合模型）。",
+  "compliance_boundary": "迁徙预测需符合《贷款风险分类指引》的五级分类标准；拨备建议需符合监管拨备覆盖率要求。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行风险管理部",
+      "description": "用于预测贷款质量变化趋势。",
+      "effect": "不良贷款预测准确率达到80%，辅助拨备决策。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "default_prediction",
+    "early_warning"
+  ],
+  "description": "基于马尔可夫链和迁移矩阵的贷款等级迁徙模型，结合宏观经济因子调整迁移概率。"
+}

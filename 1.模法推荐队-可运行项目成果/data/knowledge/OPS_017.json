@@ -1,0 +1,57 @@
+{
+  "model_id": "OPS_017",
+  "model_name": "开户流程简化评估模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "对公/个人开户流程优化"
+  ],
+  "business_stage": [
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "compliance_check",
+    "resource_optimization"
+  ],
+  "input_fields_required": [
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "branch_data"
+  ],
+  "output_fields": [
+    "risk_score",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "process_simplification_rate": 0.45,
+    "compliance_rate": 0.97
+  },
+  "applicable_conditions": "适用于个人和对公开户流程的简化和自动化评估；识别可合并、可省略或可后补的业务环节。",
+  "unsuitable_conditions": "不适用于涉及反洗钱高风险客户的简化评估；不适用于跨境开户场景。",
+  "compliance_boundary": "流程简化不得违反反洗钱、客户身份识别等监管要求；需保留必要的客户尽职调查环节。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行运营部",
+      "description": "个人开户流程再造。",
+      "effect": "开户时间从25分钟缩短至12分钟，客户满意度提升30%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "compliance_check",
+    "resource_optimization"
+  ],
+  "description": "基于流程挖掘和合规规则的开户流程简化评估模型，通过分析历史开户流程中的冗余环节提出优化建议。"
+}

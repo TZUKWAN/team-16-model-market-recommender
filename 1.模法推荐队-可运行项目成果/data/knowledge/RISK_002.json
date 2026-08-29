@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_002",
+  "model_name": "农户小额贷款反欺诈模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "农户小额贷款反欺诈识别"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "farmer",
+    "rural_area"
+  ],
+  "model_capability": [
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "fraud_score",
+    "fraud_label",
+    "risk_alert"
+  ],
+  "performance_metrics": {
+    "auc": 0.89,
+    "precision": 0.85,
+    "recall": 0.78,
+    "f1": 0.81
+  },
+  "applicable_conditions": "适用于农户小额贷款申请环节的欺诈风险识别；支持线上和线下进件渠道的实时反欺诈检测。",
+  "unsuitable_conditions": "不适用于中大型企业贷款的反欺诈场景；不适用于已进入贷后阶段的存量贷款。",
+  "compliance_boundary": "反欺诈决策涉及客户行为分析，需在客户授权范围内使用数据；不得利用敏感个人信息进行画像分析。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农村信用社",
+      "description": "上线反欺诈模块后，农户贷款申请欺诈识别率提升至92%。",
+      "effect": "日均拦截可疑申请15+笔，减少潜在损失约200万元/年。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "farmer",
+    "rural_area",
+    "anti_fraud",
+    "anomaly_detection",
+    "agricultural_loan"
+  ],
+  "description": "基于设备指纹、行为序列和社交网络分析的反欺诈模型，利用梯度提升树和图算法识别团伙欺诈和身份冒用。"
+}

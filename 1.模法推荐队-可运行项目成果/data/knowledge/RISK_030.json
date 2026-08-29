@@ -1,0 +1,69 @@
+{
+  "model_id": "RISK_030",
+  "model_name": "涉农贷款风险评分模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "涉农贷款风险评分"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "farmer",
+    "rural_area",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "credit_rating",
+    "admission_scoring",
+    "default_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "collateral_info",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "admission_suggestion",
+    "score_breakdown"
+  ],
+  "performance_metrics": {
+    "auc": 0.8,
+    "ks": 0.36,
+    "precision": 0.74,
+    "recall": 0.73
+  },
+  "applicable_conditions": "适用于种植、养殖、农产品加工等涉农贷款的风险评分；支持50万元以下涉农贷款。",
+  "unsuitable_conditions": "不适用于大型农业产业化龙头企业；不适用于非农业用途的农村贷款。",
+  "compliance_boundary": "涉农贷款需符合三农金融服务工作的指导意见；评分结果需考虑农业生产的季节性和周期特征。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农业银行三农金融部",
+      "description": "用于涉农贷款的自动化风险评分。",
+      "effect": "涉农贷款审批效率提升50%，不良率控制在行业平均水平以下。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "farmer",
+    "rural_area",
+    "small_micro_enterprise",
+    "credit_rating",
+    "admission_scoring",
+    "default_prediction",
+    "agricultural_loan"
+  ],
+  "description": "针对涉农贷款特性的专属风险评分模型，考虑农业生产的季节性、自然风险和政策补贴等因素。"
+}

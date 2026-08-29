@@ -1,0 +1,60 @@
+{
+  "model_id": "OPS_034",
+  "model_name": "数据质量监控模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "数据质量自动监控"
+  ],
+  "business_stage": [
+    "daily_operation",
+    "compliance"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "compliance_check"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "branch_data"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "alert_signal",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "detection_rate": 0.93,
+    "false_positive_rate": 0.05,
+    "coverage_rate": 0.98
+  },
+  "applicable_conditions": "适用于银行核心系统、信贷系统等关键业务系统的数据质量监控；覆盖完整性、准确性、一致性和及时性四个维度。",
+  "unsuitable_conditions": "不适用于非结构化数据（如文档、影像）的质量监控；不适用于实时流式数据的质量检测。",
+  "compliance_boundary": "数据质量监控需符合监管数据质量要求；监控结果应及时反馈给数据治理部门；涉及客户数据问题需按数据安全规定处理。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行数据治理部",
+      "description": "数据质量监控平台。",
+      "effect": "数据质量问题发现率提升3倍，整改周期从平均15天缩短至3天。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "compliance",
+    "individual",
+    "corporate",
+    "anomaly_detection",
+    "compliance_check"
+  ],
+  "description": "基于数据质量规则引擎和异常检测的数据质量监控模型，自动检测数据完整性、准确性、一致性和时效性问题。"
+}

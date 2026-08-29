@@ -1,0 +1,63 @@
+{
+  "model_id": "MKT_013",
+  "model_name": "对公客户综合贡献度模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "对公客户价值评估"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "post_marketing"
+  ],
+  "customer_segment": [
+    "corporate"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "lifetime_value",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "transaction_flow",
+    "product_holdings",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "business_income",
+    "asset_liability",
+    "credit_report"
+  ],
+  "output_fields": [
+    "contribution_score",
+    "contribution_breakdown",
+    "value_tier",
+    "growth_potential"
+  ],
+  "performance_metrics": {
+    "r2": 0.76,
+    "mae": 0.15,
+    "ranking_accuracy": 0.82
+  },
+  "applicable_conditions": "适用于评估对公客户对银行的综合贡献度；涵盖存贷汇、中间业务、供应链金融等多产品贡献。",
+  "unsuitable_conditions": "不适用于同业客户；不适用于仅办理低收益业务的政策性客户。",
+  "compliance_boundary": "贡献度评估结果用于内部资源配置；不得向客户披露贡献度评分。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行公司金融部",
+      "description": "用于对公客户分级管理。",
+      "effect": "前20%贡献度客户实现了全行对公利润的75%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "post_marketing",
+    "corporate",
+    "value_assessment",
+    "lifetime_value",
+    "segmentation"
+  ],
+  "description": "综合收入贡献、资金沉淀、风险成本、交叉持有等多维度的对公客户贡献度评估模型。"
+}

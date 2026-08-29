@@ -1,0 +1,69 @@
+{
+  "model_id": "MKT_017",
+  "model_name": "理财产品偏好模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "理财产品精准推荐"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "high_net_worth"
+  ],
+  "model_capability": [
+    "preference_analysis",
+    "cross_selling",
+    "conversion_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "product_holdings",
+    "risk_preference"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "income_expense",
+    "channel_behavior",
+    "demographics"
+  ],
+  "output_fields": [
+    "product_preference_vector",
+    "top_recommendations",
+    "risk_level_match",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "precision_at_5": 0.72,
+    "recall_at_5": 0.65,
+    "ndcg": 0.75
+  },
+  "applicable_conditions": "适用于向客户推荐合适的理财产品；支持理财、基金、保险、结构性存款等产品推荐。",
+  "unsuitable_conditions": "不适用于不满足理财购买条件的客户；不适用于风险测评过期客户。",
+  "compliance_boundary": "理财推荐需符合《商业银行理财业务监督管理办法》投资者适当性管理要求；不得向客户推荐超出风险承受能力的产品。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行财富管理部",
+      "description": "手机银行理财推荐系统。",
+      "effect": "理财产品匹配度提升40%，理财销量增长30%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "high_net_worth",
+    "preference_analysis",
+    "cross_selling",
+    "conversion_prediction",
+    "financial_product"
+  ],
+  "description": "基于客户风险测评、资产状况、投资历史和浏览行为的理财产品偏好模型，采用双塔DNN结构。"
+}

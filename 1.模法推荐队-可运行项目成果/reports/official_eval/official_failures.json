@@ -1,0 +1,1552 @@
+[
+ {
+  "query_id": "val_0003",
+  "split": "val",
+  "query": "信用卡与消费贷款的联动交叉营销用什么模型？",
+  "gold_model_ids": [
+   "OFFICIAL_053"
+  ],
+  "gold_model_names": [
+   "贷记卡联动贷款营销模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_004",
+   "OFFICIAL_053",
+   "OFFICIAL_001",
+   "OFFICIAL_049",
+   "OFFICIAL_047"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_004",
+    "model_name": "潜客挖掘消费贷营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_053",
+    "model_name": "贷记卡联动贷款营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_001",
+    "model_name": "消费贷授信未用信促提模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_049",
+    "model_name": "信用卡贷前反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_047",
+    "model_name": "信用卡贷前申请评分模型_有征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '贷记卡联动贷款营销模型' (OFFICIAL_053) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0005",
+  "split": "val",
+  "query": "垒小户B卡模型和准入评分卡配套使用，用来追踪客户放款后的风险变化，这个B卡模型具体是哪个？",
+  "gold_model_ids": [
+   "OFFICIAL_042"
+  ],
+  "gold_model_names": [
+   "垒小户违约概率模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_040",
+   "OFFICIAL_051",
+   "OFFICIAL_043",
+   "OFFICIAL_028",
+   "OFFICIAL_008"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_040",
+    "model_name": "垒小户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_043",
+    "model_name": "经营贷款贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_028",
+    "model_name": "房贷用户按揭A卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_008",
+    "model_name": "小微企业违约概率B卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": false,
+  "failure_type": "unknown",
+  "failure_scope": "top5_miss",
+  "reason": "Gold model '垒小户违约概率模型' (OFFICIAL_042) is not in the returned top5 under the current competition_dense pipeline.",
+  "suggested_fix": "Review query-gold alignment and retrieval coverage for this case; do not tune against the test split."
+ },
+ {
+  "query_id": "val_0006",
+  "split": "val",
+  "query": "理财产品新客营销，降低获客成本用什么模型？",
+  "gold_model_ids": [
+   "OFFICIAL_014"
+  ],
+  "gold_model_names": [
+   "个人客户理财产品营销模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_022",
+   "OFFICIAL_007",
+   "OFFICIAL_008",
+   "OFFICIAL_014",
+   "OFFICIAL_004"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_022",
+    "model_name": "中小微企业资金流信用信息建模项目",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_007",
+    "model_name": "小微企业1000万以下客户A卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_008",
+    "model_name": "小微企业违约概率B卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_014",
+    "model_name": "个人客户理财产品营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_004",
+    "model_name": "潜客挖掘消费贷营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top3_miss",
+  "reason": "Gold model '个人客户理财产品营销模型' (OFFICIAL_014) appears at rank 4 (outside top3) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0007",
+  "split": "val",
+  "query": "针对贷款余额在1000万以下、多头用信的垒小户客户，用什么模型来做贷前准入评分？",
+  "gold_model_ids": [
+   "OFFICIAL_040"
+  ],
+  "gold_model_names": [
+   "垒小户准入评分卡"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_007",
+   "OFFICIAL_043",
+   "OFFICIAL_040",
+   "OFFICIAL_039",
+   "OFFICIAL_051"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_007",
+    "model_name": "小微企业1000万以下客户A卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_043",
+    "model_name": "经营贷款贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_040",
+    "model_name": "垒小户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_039",
+    "model_name": "阳光E贷贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '垒小户准入评分卡' (OFFICIAL_040) appears at rank 3 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0013",
+  "split": "val",
+  "query": "针对个人消费贷款流失客户进行回捞营销，用哪个模型？",
+  "gold_model_ids": [
+   "OFFICIAL_025"
+  ],
+  "gold_model_names": [
+   "开门红个贷回捞精准营销模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_055",
+   "OFFICIAL_025",
+   "OFFICIAL_004",
+   "OFFICIAL_053",
+   "OFFICIAL_001"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_055",
+    "model_name": "个贷流失回捞算法模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_025",
+    "model_name": "开门红个贷回捞精准营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_004",
+    "model_name": "潜客挖掘消费贷营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_053",
+    "model_name": "贷记卡联动贷款营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_001",
+    "model_name": "消费贷授信未用信促提模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '开门红个贷回捞精准营销模型' (OFFICIAL_025) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0027",
+  "split": "val",
+  "query": "业务人员找经营贷目标客户效率低，需要一个模型快速定位高意向个体工商户，推荐哪个？",
+  "gold_model_ids": [
+   "OFFICIAL_032"
+  ],
+  "gold_model_names": [
+   "个人经营性贷款营销预测模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_051",
+   "OFFICIAL_032",
+   "OFFICIAL_043",
+   "OFFICIAL_022",
+   "OFFICIAL_020"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_032",
+    "model_name": "个人经营性贷款营销预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_043",
+    "model_name": "经营贷款贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_022",
+    "model_name": "中小微企业资金流信用信息建模项目",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_020",
+    "model_name": "收单商户贷款营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '个人经营性贷款营销预测模型' (OFFICIAL_032) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0035",
+  "split": "val",
+  "query": "针对发生过用款行为的个体工商户经营贷客户，如何通过准入评分卡提高审批准确性？",
+  "gold_model_ids": [
+   "OFFICIAL_043"
+  ],
+  "gold_model_names": [
+   "经营贷款贷前准入模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_051",
+   "OFFICIAL_043",
+   "OFFICIAL_040",
+   "OFFICIAL_007",
+   "OFFICIAL_039"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_043",
+    "model_name": "经营贷款贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_040",
+    "model_name": "垒小户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_007",
+    "model_name": "小微企业1000万以下客户A卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_039",
+    "model_name": "阳光E贷贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '经营贷款贷前准入模型' (OFFICIAL_043) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0043",
+  "split": "val",
+  "query": "省公安通报的电信诈骗线索中有很多个人账户，需要一个模型在前端就拦截可疑交易，推荐哪个？",
+  "gold_model_ids": [
+   "OFFICIAL_050"
+  ],
+  "gold_model_names": [
+   "对私账户风控机器学习模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_009",
+   "OFFICIAL_045",
+   "OFFICIAL_050",
+   "OFFICIAL_006",
+   "OFFICIAL_049"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_009",
+    "model_name": "非法集资模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_045",
+    "model_name": "收单商户交易反欺诈模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_050",
+    "model_name": "对私账户风控机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_006",
+    "model_name": "个人客户保险产品推荐模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_049",
+    "model_name": "信用卡贷前反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '对私账户风控机器学习模型' (OFFICIAL_050) appears at rank 3 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0054",
+  "split": "val",
+  "query": "网贷产品审批速度快，需要配套一个高效准确的准入风控模型，用什么模型来评估申请人的违约风险？",
+  "gold_model_ids": [
+   "OFFICIAL_039"
+  ],
+  "gold_model_names": [
+   "阳光E贷贷前准入模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_047",
+   "OFFICIAL_051",
+   "OFFICIAL_029",
+   "OFFICIAL_041",
+   "OFFICIAL_048"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_047",
+    "model_name": "信用卡贷前申请评分模型_有征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_029",
+    "model_name": "贷记卡违约概率模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_041",
+    "model_name": "个人营销风险历史库",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_048",
+    "model_name": "信用卡贷前申请评分模型_无征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": false,
+  "failure_type": "unknown",
+  "failure_scope": "top5_miss",
+  "reason": "Gold model '阳光E贷贷前准入模型' (OFFICIAL_039) is not in the returned top5 under the current competition_dense pipeline.",
+  "suggested_fix": "Review query-gold alignment and retrieval coverage for this case; do not tune against the test split."
+ },
+ {
+  "query_id": "val_0058",
+  "split": "val",
+  "query": "怎么挽回那些审批通过了但迟迟不借款的沉睡客户？",
+  "gold_model_ids": [
+   "OFFICIAL_001"
+  ],
+  "gold_model_names": [
+   "消费贷授信未用信促提模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_051",
+   "OFFICIAL_043",
+   "OFFICIAL_040",
+   "OFFICIAL_039",
+   "OFFICIAL_059"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_043",
+    "model_name": "经营贷款贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_040",
+    "model_name": "垒小户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_039",
+    "model_name": "阳光E贷贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_059",
+    "model_name": "手机银行促活模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": false,
+  "failure_type": "unknown",
+  "failure_scope": "top5_miss",
+  "reason": "Gold model '消费贷授信未用信促提模型' (OFFICIAL_001) is not in the returned top5 under the current competition_dense pipeline.",
+  "suggested_fix": "Review query-gold alignment and retrieval coverage for this case; do not tune against the test split."
+ },
+ {
+  "query_id": "val_0060",
+  "split": "val",
+  "query": "如何通过知识图谱和机器学习发现电信诈骗涉案账户？",
+  "gold_model_ids": [
+   "OFFICIAL_005"
+  ],
+  "gold_model_names": [
+   "智能反诈模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_049",
+   "OFFICIAL_050",
+   "OFFICIAL_046",
+   "OFFICIAL_005",
+   "OFFICIAL_045"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_049",
+    "model_name": "信用卡贷前反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_050",
+    "model_name": "对私账户风控机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_046",
+    "model_name": "个贷全流程反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_005",
+    "model_name": "智能反诈模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_045",
+    "model_name": "收单商户交易反欺诈模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top3_miss",
+  "reason": "Gold model '智能反诈模型' (OFFICIAL_005) appears at rank 4 (outside top3) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "val_0064",
+  "split": "val",
+  "query": "小微企业贷款客户还完款就不续贷了，需要模型在还款期结束前预测流失概率，用什么模型？",
+  "gold_model_ids": [
+   "OFFICIAL_021"
+  ],
+  "gold_model_names": [
+   "小微客户流失预警模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_022",
+   "OFFICIAL_007",
+   "OFFICIAL_008",
+   "OFFICIAL_021",
+   "OFFICIAL_032"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_022",
+    "model_name": "中小微企业资金流信用信息建模项目",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_007",
+    "model_name": "小微企业1000万以下客户A卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_008",
+    "model_name": "小微企业违约概率B卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_021",
+    "model_name": "小微客户流失预警模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_032",
+    "model_name": "个人经营性贷款营销预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top3_miss",
+  "reason": "Gold model '小微客户流失预警模型' (OFFICIAL_021) appears at rank 4 (outside top3) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0004",
+  "split": "test",
+  "query": "针对房贷申请人做风险评估，预测违约风险，用哪个模型？",
+  "gold_model_ids": [
+   "OFFICIAL_028"
+  ],
+  "gold_model_names": [
+   "房贷用户按揭A卡模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_054",
+   "OFFICIAL_029",
+   "OFFICIAL_044",
+   "OFFICIAL_047",
+   "OFFICIAL_041"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_054",
+    "model_name": "对公客户价值与风险评分模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_029",
+    "model_name": "贷记卡违约概率模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_044",
+    "model_name": "房贷按揭违约概率模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_047",
+    "model_name": "信用卡贷前申请评分模型_有征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_041",
+    "model_name": "个人营销风险历史库",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": false,
+  "failure_type": "unknown",
+  "failure_scope": "top5_miss",
+  "reason": "Gold model '房贷用户按揭A卡模型' (OFFICIAL_028) is not in the returned top5 under the current competition_dense pipeline.",
+  "suggested_fix": "Review query-gold alignment and retrieval coverage for this case; do not tune against the test split."
+ },
+ {
+  "query_id": "test_0005",
+  "split": "test",
+  "query": "保险代销业务需要精准获客，排除高风险客户后筛选30-60岁高意向客户，用什么模型？",
+  "gold_model_ids": [
+   "OFFICIAL_006"
+  ],
+  "gold_model_names": [
+   "个人客户保险产品推荐模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_020",
+   "OFFICIAL_041",
+   "OFFICIAL_055",
+   "OFFICIAL_006",
+   "OFFICIAL_057"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_020",
+    "model_name": "收单商户贷款营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_041",
+    "model_name": "个人营销风险历史库",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_055",
+    "model_name": "个贷流失回捞算法模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_006",
+    "model_name": "个人客户保险产品推荐模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_057",
+    "model_name": "理财响应度预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top3_miss",
+  "reason": "Gold model '个人客户保险产品推荐模型' (OFFICIAL_006) appears at rank 4 (outside top3) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0006",
+  "split": "test",
+  "query": "之前出现过信贷人员违规操作的案例，需要一个主动预警系统来预测潜在风险人员，用什么模型？",
+  "gold_model_ids": [
+   "OFFICIAL_024"
+  ],
+  "gold_model_names": [
+   "信贷从业人员风险合规监测模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_041",
+   "OFFICIAL_029",
+   "OFFICIAL_024",
+   "OFFICIAL_049",
+   "OFFICIAL_050"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_041",
+    "model_name": "个人营销风险历史库",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_029",
+    "model_name": "贷记卡违约概率模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_024",
+    "model_name": "信贷从业人员风险合规监测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_049",
+    "model_name": "信用卡贷前反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_050",
+    "model_name": "对私账户风控机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '信贷从业人员风险合规监测模型' (OFFICIAL_024) appears at rank 3 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0007",
+  "split": "test",
+  "query": "想构建一个结合业务经验的理财产品指标加权评分模型，用于产品推荐排序，选哪个？",
+  "gold_model_ids": [
+   "OFFICIAL_011"
+  ],
+  "gold_model_names": [
+   "理财产品综合评价模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_054",
+   "OFFICIAL_011",
+   "OFFICIAL_051",
+   "OFFICIAL_048",
+   "OFFICIAL_047"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_054",
+    "model_name": "对公客户价值与风险评分模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_011",
+    "model_name": "理财产品综合评价模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_048",
+    "model_name": "信用卡贷前申请评分模型_无征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_047",
+    "model_name": "信用卡贷前申请评分模型_有征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '理财产品综合评价模型' (OFFICIAL_011) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0008",
+  "split": "test",
+  "query": "高净值客户的流失预警和挽留策略，需要什么模型支持？",
+  "gold_model_ids": [
+   "OFFICIAL_027"
+  ],
+  "gold_model_names": [
+   "AUM10万以上客户流失预警模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_031",
+   "OFFICIAL_021",
+   "OFFICIAL_027",
+   "OFFICIAL_055",
+   "OFFICIAL_033"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_031",
+    "model_name": "高价值存款客户流失预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_021",
+    "model_name": "小微客户流失预警模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_027",
+    "model_name": "AUM10万以上客户流失预警模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_055",
+    "model_name": "个贷流失回捞算法模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_033",
+    "model_name": "收单商户流失预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model 'AUM10万以上客户流失预警模型' (OFFICIAL_027) appears at rank 3 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0013",
+  "split": "test",
+  "query": "52家法人机构的个贷流失客户数量庞大，需要模型精准识别其中的可回捞客户，选哪个？",
+  "gold_model_ids": [
+   "OFFICIAL_025"
+  ],
+  "gold_model_names": [
+   "开门红个贷回捞精准营销模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_055",
+   "OFFICIAL_025",
+   "OFFICIAL_032",
+   "OFFICIAL_031",
+   "OFFICIAL_021"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_055",
+    "model_name": "个贷流失回捞算法模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_025",
+    "model_name": "开门红个贷回捞精准营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_032",
+    "model_name": "个人经营性贷款营销预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_031",
+    "model_name": "高价值存款客户流失预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_021",
+    "model_name": "小微客户流失预警模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '开门红个贷回捞精准营销模型' (OFFICIAL_025) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0018",
+  "split": "test",
+  "query": "理财拓新成本太高了，需要一个模型精准定位高转化率的潜在理财客户，推荐哪个？",
+  "gold_model_ids": [
+   "OFFICIAL_014"
+  ],
+  "gold_model_names": [
+   "个人客户理财产品营销模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_022",
+   "OFFICIAL_008",
+   "OFFICIAL_007",
+   "OFFICIAL_052",
+   "OFFICIAL_016"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_022",
+    "model_name": "中小微企业资金流信用信息建模项目",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_008",
+    "model_name": "小微企业违约概率B卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_007",
+    "model_name": "小微企业1000万以下客户A卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_052",
+    "model_name": "财富产品个性化推荐模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_016",
+    "model_name": "房贷按揭客户贷款产品推荐模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": false,
+  "failure_type": "unknown",
+  "failure_scope": "top5_miss",
+  "reason": "Gold model '个人客户理财产品营销模型' (OFFICIAL_014) is not in the returned top5 under the current competition_dense pipeline.",
+  "suggested_fix": "Review query-gold alignment and retrieval coverage for this case; do not tune against the test split."
+ },
+ {
+  "query_id": "test_0020",
+  "split": "test",
+  "query": "排除房贷、信用卡和助贷后的个人对私贷款，如何建立模型追踪客户全生命周期的风险变化？",
+  "gold_model_ids": [
+   "OFFICIAL_038"
+  ],
+  "gold_model_names": [
+   "零售个人违约概率B卡模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_049",
+   "OFFICIAL_047",
+   "OFFICIAL_041",
+   "OFFICIAL_038",
+   "OFFICIAL_054"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_049",
+    "model_name": "信用卡贷前反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_047",
+    "model_name": "信用卡贷前申请评分模型_有征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_041",
+    "model_name": "个人营销风险历史库",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_038",
+    "model_name": "零售个人违约概率B卡模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_054",
+    "model_name": "对公客户价值与风险评分模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": false,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top3_miss",
+  "reason": "Gold model '零售个人违约概率B卡模型' (OFFICIAL_038) appears at rank 4 (outside top3) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0026",
+  "split": "test",
+  "query": "怎么从存量客户中挖掘他行有钱但本行资产不高的高潜力客户？",
+  "gold_model_ids": [
+   "OFFICIAL_034"
+  ],
+  "gold_model_names": [
+   "个人存款提升预测模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_037",
+   "OFFICIAL_057",
+   "OFFICIAL_034",
+   "OFFICIAL_032",
+   "OFFICIAL_058"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_037",
+    "model_name": "ETC拓客模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_057",
+    "model_name": "理财响应度预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_034",
+    "model_name": "个人存款提升预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_032",
+    "model_name": "个人经营性贷款营销预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_058",
+    "model_name": "潜在高价值客户挖掘模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '个人存款提升预测模型' (OFFICIAL_034) appears at rank 3 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0031",
+  "split": "test",
+  "query": "AUM低于1万但有房产评级的长尾客户中，怎么挖掘高价值客户？",
+  "gold_model_ids": [
+   "OFFICIAL_056"
+  ],
+  "gold_model_names": [
+   "长尾客群潜在机制挖掘模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_058",
+   "OFFICIAL_056",
+   "OFFICIAL_027",
+   "OFFICIAL_031",
+   "OFFICIAL_054"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_058",
+    "model_name": "潜在高价值客户挖掘模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_056",
+    "model_name": "长尾客群潜在机制挖掘模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_027",
+    "model_name": "AUM10万以上客户流失预警模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_031",
+    "model_name": "高价值存款客户流失预测模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_054",
+    "model_name": "对公客户价值与风险评分模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '长尾客群潜在机制挖掘模型' (OFFICIAL_056) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0037",
+  "split": "test",
+  "query": "结合用卡频次、用信额度和B卡评分来调整信用卡额度，用什么模型？",
+  "gold_model_ids": [
+   "OFFICIAL_017"
+  ],
+  "gold_model_names": [
+   "贷记卡固定额度调整模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_047",
+   "OFFICIAL_017",
+   "OFFICIAL_048",
+   "OFFICIAL_049",
+   "OFFICIAL_051"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_047",
+    "model_name": "信用卡贷前申请评分模型_有征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_017",
+    "model_name": "贷记卡固定额度调整模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_048",
+    "model_name": "信用卡贷前申请评分模型_无征信",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_049",
+    "model_name": "信用卡贷前反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_051",
+    "model_name": "个体工商户准入评分卡",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '贷记卡固定额度调整模型' (OFFICIAL_017) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0044",
+  "split": "test",
+  "query": "信用卡客户是消费贷营销的优质目标群体，需要模型筛选出未来6个月可能办理消费贷的贷记卡客户，选哪个？",
+  "gold_model_ids": [
+   "OFFICIAL_053"
+  ],
+  "gold_model_names": [
+   "贷记卡联动贷款营销模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_004",
+   "OFFICIAL_053",
+   "OFFICIAL_030",
+   "OFFICIAL_001",
+   "OFFICIAL_036"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_004",
+    "model_name": "潜客挖掘消费贷营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_053",
+    "model_name": "贷记卡联动贷款营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_030",
+    "model_name": "贷记卡账单分期营销模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_001",
+    "model_name": "消费贷授信未用信促提模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_036",
+    "model_name": "信用卡片拓客模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '贷记卡联动贷款营销模型' (OFFICIAL_053) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ },
+ {
+  "query_id": "test_0060",
+  "split": "test",
+  "query": "零售业务贷前准入中的反欺诈筛查，用什么模型？",
+  "gold_model_ids": [
+   "OFFICIAL_046"
+  ],
+  "gold_model_names": [
+   "个贷全流程反欺诈机器学习模型"
+  ],
+  "recommended_top5": [
+   "OFFICIAL_043",
+   "OFFICIAL_046",
+   "OFFICIAL_039",
+   "OFFICIAL_049",
+   "OFFICIAL_045"
+  ],
+  "recommended_models": [
+   {
+    "model_id": "OFFICIAL_043",
+    "model_name": "经营贷款贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_046",
+    "model_name": "个贷全流程反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_039",
+    "model_name": "阳光E贷贷前准入模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_049",
+    "model_name": "信用卡贷前反欺诈机器学习模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   },
+   {
+    "model_id": "OFFICIAL_045",
+    "model_name": "收单商户交易反欺诈模型",
+    "score": 0.0,
+    "matched_keywords": [],
+    "source_type": "official_dataset"
+   }
+  ],
+  "top1_hit": false,
+  "top3_hit": true,
+  "top5_hit": true,
+  "failure_type": "confused_model",
+  "failure_scope": "top1_miss",
+  "reason": "Gold model '个贷全流程反欺诈机器学习模型' (OFFICIAL_046) appears at rank 2 (not top1) under the current competition_dense pipeline.",
+  "suggested_fix": "Improve inter-class discrimination for near-neighbor official models."
+ }
+]

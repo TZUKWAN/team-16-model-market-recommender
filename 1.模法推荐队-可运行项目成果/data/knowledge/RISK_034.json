@@ -1,0 +1,65 @@
+{
+  "model_id": "RISK_034",
+  "model_name": "贷后检查名单生成模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "贷后检查名单自动生成"
+  ],
+  "business_stage": [
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise",
+    "corporate",
+    "farmer"
+  ],
+  "model_capability": [
+    "priority_ranking",
+    "early_warning"
+  ],
+  "input_fields_required": [
+    "loan_application",
+    "repayment_history",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "credit_report",
+    "business_income"
+  ],
+  "output_fields": [
+    "inspection_list",
+    "check_priority",
+    "inspection_focus",
+    "suggested_action"
+  ],
+  "performance_metrics": {
+    "precision": 0.81,
+    "recall": 0.76,
+    "coverage": 0.95
+  },
+  "applicable_conditions": "适用于定期贷后检查名单的自动生成和排序；支持差异化检查频率和检查重点。",
+  "unsuitable_conditions": "不适用于已进入不良处置阶段的贷款；不适用于即将结清的贷款。",
+  "compliance_boundary": "贷后检查需符合《商业银行授信工作尽职指引》要求；检查频率不得低于监管最低要求。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行贷后管理部",
+      "description": "自动生成月度贷后检查名单。",
+      "effect": "贷后检查覆盖率从70%提升至98%，高风险客户检查频率提升2倍。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "individual",
+    "small_micro_enterprise",
+    "corporate",
+    "farmer",
+    "priority_ranking",
+    "early_warning"
+  ],
+  "description": "基于客户风险等级、贷款特征、历史检查记录和近期风险信号，自动生成差异化的贷后检查名单。"
+}

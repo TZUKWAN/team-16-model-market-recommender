@@ -1,0 +1,57 @@
+{
+  "model_id": "OPS_035",
+  "model_name": "运营成本分析优化模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "运营成本分析与优化"
+  ],
+  "business_stage": [
+    "performance_analysis",
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "resource_optimization"
+  ],
+  "input_fields_required": [
+    "branch_data"
+  ],
+  "input_fields_optional": [
+    "transaction_data"
+  ],
+  "output_fields": [
+    "ranked_list",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "cost_reduction_rate": 0.12,
+    "analysis_coverage": 0.9
+  },
+  "applicable_conditions": "适用于银行网点运营成本和部门运营成本的分析与优化；支持人力成本、场地成本、设备成本和运营费用的分类分析。",
+  "unsuitable_conditions": "不适用于贷款损失准备等风险成本的分析；不涉及市场推广费用的优化。",
+  "compliance_boundary": "成本分析数据仅用于内部管理；不得将成本优化压力不当地转嫁给一线员工。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行财务部",
+      "description": "运营成本分析系统。",
+      "effect": "网点运营成本降低12%，成本收入比优化3.2个百分点。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "performance_analysis",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "value_assessment",
+    "resource_optimization"
+  ],
+  "description": "基于全成本分摊和活动成本法的运营成本分析模型，通过多维度成本归因分析识别成本优化空间。"
+}

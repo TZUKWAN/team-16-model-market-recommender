@@ -1,0 +1,46 @@
+{
+  "intent_match": 30,
+  "tag_overlap": 25,
+  "scenario_match": 20,
+  "customer_match": 10,
+  "output_match": 10,
+  "deployment_bonus": 5,
+  "semantic_overlap": 10,
+  "rerank_exact_tag_bonus": 8,
+  "cross_domain_penalty": -15,
+  "rerank": {
+    "_comment": "LLM constrained-rerank parameters. candidate_pool caps how many top-scored models are sent to the LLM. llm_weight blends the LLM ranking position score into the final score: final = rule_score*(1-llm_weight) + llm_position_score*llm_weight. The LLM may only reorder the provided candidate IDs (hallucinated IDs are discarded).",
+    "candidate_pool": 30,
+    "llm_weight": 0.35,
+    "repair_attempts": 1,
+    "cache_enabled": true,
+    "required_ranked_count": 10
+  },
+  "hybrid_retrieval": {
+    "_comment": "Light mode uses factual sparse retrieval by default. The competition_dense Docker override enables required, offline, manifest-verified BGE-M3 at the frozen 0.50 weight.",
+    "enabled": true,
+    "rule_weight": 0.1,
+    "retrieval_weight": 0.9,
+    "full_text_weight": 0.72,
+    "title_text_weight": 0.28,
+    "candidate_pool": 30,
+    "dense_enabled": false,
+    "dense_weight": 0.5,
+    "dense_model": "BAAI/bge-m3",
+    "dense_cache_enabled": true,
+    "dense_cache_dir": "data/cache/embeddings",
+    "runtime_mode": "light",
+    "dense_required": false,
+    "dense_offline": false,
+    "dense_expected_dimension": 1024,
+    "dense_expected_revision": "",
+    "dense_manifest_path": "",
+    "dense_verify_manifest": false
+  },
+  "score_blend": {
+    "_comment": "Final score blend coefficients. total = base_total*base + graph_path_match*graph + field_compatibility*field. These three must sum to 1.0 for the score to stay on a 0-100 scale.",
+    "base": 0.93,
+    "graph": 0.04,
+    "field": 0.03
+  }
+}

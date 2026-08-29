@@ -1,0 +1,61 @@
+{
+  "model_id": "OPS_001",
+  "model_name": "网点客流预测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "网点客流预测与排班"
+  ],
+  "business_stage": [
+    "daily_operation",
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "elderly"
+  ],
+  "model_capability": [
+    "demand_forecasting",
+    "resource_optimization"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "forecast_value",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "mae": 12.5,
+    "mape": 0.085,
+    "r2": 0.89
+  },
+  "applicable_conditions": "适用于银行网点日客流和时段客流预测；支持柜员排班和窗口开放的优化决策；历史数据不少于6个月。",
+  "unsuitable_conditions": "不适用于新开业网点（数据不足3个月）；不适用于发生重大公共卫生事件期间的客流预测。",
+  "compliance_boundary": "客流统计不涉及客户个人身份识别信息；数据仅用于内部运营优化，不得用于营销或其他目的。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行总行",
+      "description": "应用于全辖150个网点的客流预测和智能排班。",
+      "effect": "柜面排队时间平均缩短40%，人力成本节约15%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "demand_forecasting",
+    "resource_optimization",
+    "branch_data"
+  ],
+  "description": "基于历史客流数据和时间序列分析的网点客流预测模型，结合节假日、天气等外部因素，提供15分钟粒度客流预测。"
+}

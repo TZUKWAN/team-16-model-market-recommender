@@ -1,0 +1,59 @@
+{
+  "model_id": "OPS_015",
+  "model_name": "反欺诈交易实时拦截模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "交易欺诈实时识别与拦截"
+  ],
+  "business_stage": [
+    "risk_management"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "input_fields_required": [
+    "transaction_data",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "credit_report"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "admission_decision",
+    "alert_signal"
+  ],
+  "performance_metrics": {
+    "precision": 0.85,
+    "recall": 0.9,
+    "response_time_ms": 35
+  },
+  "applicable_conditions": "适用于借记卡、信用卡、手机银行等渠道的交易欺诈实时识别；要求响应时间在100ms以内。",
+  "unsuitable_conditions": "不适用于线下柜面交易的欺诈识别（需柜员人工判断）；不适用于内部人员作案场景。",
+  "compliance_boundary": "交易拦截需确保客户知情权；误拦截需提供便捷的申诉渠道；遵循最小化数据采集原则。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行风控部",
+      "description": "全渠道交易反欺诈系统。",
+      "effect": "年拦截欺诈交易3.2万笔，避免损失1.8亿元，误拦率低于0.1%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "risk_management",
+    "individual",
+    "corporate",
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "description": "基于集成学习和实时特征工程的交易反欺诈模型，在毫秒级完成交易风险评分和决策。"
+}

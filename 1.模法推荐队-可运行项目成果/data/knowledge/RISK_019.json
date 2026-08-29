@@ -1,0 +1,62 @@
+{
+  "model_id": "RISK_019",
+  "model_name": "损失率LGD估计模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "违约损失率估计"
+  ],
+  "business_stage": [
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "default_prediction",
+    "risk_pricing"
+  ],
+  "input_fields_required": [
+    "collateral_info",
+    "loan_application",
+    "repayment_history"
+  ],
+  "input_fields_optional": [
+    "asset_liability",
+    "guarantee_info",
+    "credit_report"
+  ],
+  "output_fields": [
+    "lgd_estimate",
+    "recovery_rate",
+    "collateral_coverage"
+  ],
+  "performance_metrics": {
+    "mae": 0.15,
+    "r2": 0.68,
+    "accuracy_20pct": 0.72
+  },
+  "applicable_conditions": "适用于巴塞尔协议内部评级法下的违约损失率估算；支持有抵押和无抵押贷款。",
+  "unsuitable_conditions": "不适用于无任何担保措施的纯信用贷款（LGD估计方差过大）；不适用于次级债或夹层融资。",
+  "compliance_boundary": "LGD模型需符合监管要求并定期验证；抵质押物估值需有独立评估依据。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行风险计量部",
+      "description": "配合PD模型实施内部评级法。",
+      "effect": "LGD预测误差率控制在18%以内。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "default_prediction",
+    "risk_pricing"
+  ],
+  "description": "基于清收数据和抵质押物回收率的LGD估计模型，采用分位数回归和Beta回归方法。"
+}

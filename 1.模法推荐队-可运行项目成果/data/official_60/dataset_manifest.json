@@ -1,0 +1,19 @@
+{
+  "source": "user_excel_dataset",
+  "source_archive": "16-知识图谱与智能推荐赛道-江苏农商联合银行-大模型驱动的模型市场智能推荐助手研究.zip",
+  "source_archive_committed": false,
+  "excel_file": "data/raw/official_dataset/大模型驱动的模型市场智能推荐助手研究_数据集.xlsx",
+  "model_count": 60,
+  "raw_model_rows": 61,
+  "duplicate_model_rows": 1,
+  "query_count": 417,
+  "split_counts": {
+    "train": 291,
+    "test": 62,
+    "val": 64
+  },
+  "source_type_values": [
+    "official_dataset"
+  ],
+  "generated_at": "2026-07-05T14:14:44.454308+00:00"
+}

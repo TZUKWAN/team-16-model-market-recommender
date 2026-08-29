@@ -1,0 +1,59 @@
+{
+  "model_id": "RISK_011",
+  "model_name": "个人贷款欺诈识别模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "个人贷款欺诈识别"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "individual"
+  ],
+  "model_capability": [
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "credit_report"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "fraud_score",
+    "fraud_label",
+    "alert_reason"
+  ],
+  "performance_metrics": {
+    "auc": 0.92,
+    "precision": 0.87,
+    "recall": 0.85,
+    "f1": 0.86
+  },
+  "applicable_conditions": "适用于个人消费贷、现金贷的欺诈风险识别；支持身份冒用、资料造假、团伙欺诈等模式。",
+  "unsuitable_conditions": "不适用于信用卡套现识别（需专用模型）；不适用于线下传统进件渠道。",
+  "compliance_boundary": "反欺诈数据采集需获得客户授权；生物特征信息需遵循《个人信息保护法》敏感信息处理规定。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行线上贷款事业部",
+      "description": "全量线上个人贷款申请实时反欺诈。",
+      "effect": "欺诈拦截率96%，误杀率控制在1.5%以下。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "individual",
+    "anti_fraud",
+    "anomaly_detection",
+    "consumer_loan"
+  ],
+  "description": "融合设备指纹、生物特征比对、申请行为序列和关联网络的多模态反欺诈模型。"
+}

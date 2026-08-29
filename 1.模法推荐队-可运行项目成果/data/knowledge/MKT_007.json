@@ -1,0 +1,65 @@
+{
+  "model_id": "MKT_007",
+  "model_name": "高价值客户识别模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "高价值客户识别"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "existing_customer",
+    "individual",
+    "high_net_worth"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "segmentation",
+    "lifetime_value"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "product_holdings"
+  ],
+  "input_fields_optional": [
+    "asset_liability",
+    "income_expense",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "value_score",
+    "value_tier",
+    "value_breakdown",
+    "growth_potential"
+  ],
+  "performance_metrics": {
+    "precision": 0.84,
+    "recall": 0.78,
+    "lift": 2.5
+  },
+  "applicable_conditions": "适用于识别当前价值高或潜在价值高的优质客户；支持差异化服务策略和资源配置。",
+  "unsuitable_conditions": "不适用于新客（开户不足6个月）；不适用于睡眠客户。",
+  "compliance_boundary": "客户价值分级不得用于歧视性服务；高净值客户服务需符合《商业银行理财业务监督管理办法》。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行财富管理部",
+      "description": "高净值客户识别和分层管理。",
+      "effect": "高价值客户识别准确率85%，高端客户资产留存率提升15%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "existing_customer",
+    "individual",
+    "high_net_worth",
+    "value_assessment",
+    "segmentation",
+    "lifetime_value"
+  ],
+  "description": "基于RFM模型、客户生命周期价值和增长潜力的高价值客户识别模型，综合考虑当前贡献和未来价值。"
+}

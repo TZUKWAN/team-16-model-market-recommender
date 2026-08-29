@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_003",
+  "model_name": "农户小额贷款额度测算模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "农户小额贷款额度测算"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "farmer",
+    "rural_area"
+  ],
+  "model_capability": [
+    "amount_calculation",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "collateral_info",
+    "credit_report"
+  ],
+  "output_fields": [
+    "recommended_amount",
+    "amount_range",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "mae": 1.2,
+    "r2": 0.76,
+    "accuracy_20pct": 0.82
+  },
+  "applicable_conditions": "适用于有稳定农业经营收入的农户额度测算；适用于10万元以下小额贷款场景；支持种植、养殖、加工等农业业态。",
+  "unsuitable_conditions": "不适用于无经营收入的纯消费贷款；不适用于大型农业企业或合作社大额贷款。",
+  "compliance_boundary": "额度测算结果需结合人工复核；不得仅依据模型结果单独授信；需符合银保监会关于农户贷款额度管理的相关规定。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX村镇银行",
+      "description": "辅助客户经理进行农户贷款额度评估，替代传统经验估算方式。",
+      "effect": "额度测算准确率提升35%，客户满意度提升20%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "farmer",
+    "rural_area",
+    "amount_calculation",
+    "small_loan",
+    "agricultural_loan"
+  ],
+  "description": "基于收入倍数法、现金流分析和行业基准对比的额度测算模型，结合多目标优化算法给出推荐额度范围。"
+}

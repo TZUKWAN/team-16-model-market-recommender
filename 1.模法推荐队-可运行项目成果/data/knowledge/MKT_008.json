@@ -1,0 +1,68 @@
+{
+  "model_id": "MKT_008",
+  "model_name": "沉睡客户唤醒模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "沉睡客户唤醒营销"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "dormant_customer",
+    "existing_customer",
+    "individual"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "response_prediction",
+    "churn_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "product_holdings"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "marketing_contact_history",
+    "demographics"
+  ],
+  "output_fields": [
+    "wake_probability",
+    "preferred_awakening_channel",
+    "suggested_product",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.8,
+    "precision": 0.72,
+    "recall": 0.69,
+    "f1": 0.7
+  },
+  "applicable_conditions": "适用于唤醒长期未交易的沉睡客户（一般6个月以上无交易）；支持差异化唤醒策略和产品推荐。",
+  "unsuitable_conditions": "不适用于已销户客户；不适用于因特殊原因（如出国）临时静默的客户。",
+  "compliance_boundary": "唤醒触达需遵守客户意愿；需提供明确的退订渠道。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "批量唤醒睡眠信用卡客户。",
+      "effect": "沉睡客户唤醒率18%，新增交易笔数5万+/月。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "dormant_customer",
+    "existing_customer",
+    "individual",
+    "conversion_prediction",
+    "response_prediction",
+    "churn_prediction"
+  ],
+  "description": "分析沉睡原因、交易历史和渠道偏好，预测客户唤醒可能性和最优唤醒策略的模型。"
+}

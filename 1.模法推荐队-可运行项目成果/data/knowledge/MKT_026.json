@@ -1,0 +1,68 @@
+{
+  "model_id": "MKT_026",
+  "model_name": "普惠客户产品匹配模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "普惠金融客户产品匹配"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise",
+    "farmer",
+    "rural_area"
+  ],
+  "model_capability": [
+    "cross_selling",
+    "preference_analysis",
+    "conversion_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "product_holdings",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "business_income",
+    "credit_report",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "match_score",
+    "recommended_products",
+    "match_reason",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "precision_at_3": 0.68,
+    "recall_at_3": 0.6,
+    "ndcg": 0.7
+  },
+  "applicable_conditions": "适用于普惠金融客户（小微企业、农户、个体工商户）的产品匹配；支持贷款、存款、结算等产品组合推荐。",
+  "unsuitable_conditions": "不适用于大型企业客户；不适用于高净值个人客户。",
+  "compliance_boundary": "产品推荐需符合普惠金融政策导向；不得向客户推荐明显不适当的产品。",
+  "deployment_status": "staging",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行普惠金融事业部",
+      "description": "普惠客户产品智能匹配。",
+      "effect": "客户产品匹配度提升35%，交叉销售率提升20%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "small_micro_enterprise",
+    "farmer",
+    "rural_area",
+    "cross_selling",
+    "preference_analysis",
+    "conversion_prediction",
+    "small_loan"
+  ],
+  "description": "面向普惠客户的个性化产品匹配模型，基于客户画像和产品特性进行语义匹配。"
+}

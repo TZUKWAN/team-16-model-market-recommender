@@ -1,0 +1,63 @@
+{
+  "model_id": "RISK_020",
+  "model_name": "风险定价辅助模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "贷款风险定价"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise",
+    "corporate"
+  ],
+  "model_capability": [
+    "risk_pricing",
+    "amount_calculation"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "credit_report"
+  ],
+  "input_fields_optional": [
+    "business_income",
+    "collateral_info",
+    "repayment_history"
+  ],
+  "output_fields": [
+    "suggested_rate",
+    "risk_adjusted_rate",
+    "rate_range",
+    "pricing_reason"
+  ],
+  "performance_metrics": {
+    "mae_rate": 0.35,
+    "r2": 0.74,
+    "pricing_accuracy": 0.78
+  },
+  "applicable_conditions": "适用于基于客户风险水平的差异化贷款定价；支持零售和对公贷款定价建议。",
+  "unsuitable_conditions": "不适用于政策指导性贷款（如助学贷款、扶贫贷款）；不适用于固定利率产品。",
+  "compliance_boundary": "定价结果需符合利率市场化要求和民间借贷利率上限规定；不得对特定群体实施歧视性定价。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行资产负债部",
+      "description": "用于普惠小微贷款的差异化定价。",
+      "effect": "风险定价覆盖率提升至90%，价格-风险匹配度提高35%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "individual",
+    "small_micro_enterprise",
+    "corporate",
+    "risk_pricing",
+    "amount_calculation"
+  ],
+  "description": "基于RAROC和风险调整后定价理论，综合资金成本、运营成本、风险成本和目标收益率的定价建议模型。"
+}

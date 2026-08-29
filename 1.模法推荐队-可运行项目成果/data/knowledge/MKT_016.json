@@ -1,0 +1,67 @@
+{
+  "model_id": "MKT_016",
+  "model_name": "信用卡分期营销模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "信用卡分期精准营销"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "response_prediction",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "credit_report"
+  ],
+  "input_fields_optional": [
+    "repayment_history",
+    "channel_behavior",
+    "product_holdings"
+  ],
+  "output_fields": [
+    "installment_propensity",
+    "preferred_installment_type",
+    "suggested_rate",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.83,
+    "precision": 0.76,
+    "recall": 0.72,
+    "lift": 2.2
+  },
+  "applicable_conditions": "适用于信用卡客户的分期产品精准营销；支持账单分期、消费分期和现金分期场景。",
+  "unsuitable_conditions": "不适用于无信用卡客户；不适用于已逾期客户。",
+  "compliance_boundary": "分期营销需充分披露分期费用和年化利率；不得诱导客户过度分期。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行信用卡中心",
+      "description": "分期产品精准推荐。",
+      "effect": "分期营销响应率提升3倍，分期交易额增长45%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "conversion_prediction",
+    "response_prediction",
+    "preference_analysis",
+    "credit_card"
+  ],
+  "description": "基于持卡人消费行为、还款习惯和历史分期偏好的分期营销模型，预测客户对分期产品的兴趣。"
+}

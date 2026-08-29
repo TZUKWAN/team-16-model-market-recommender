@@ -1,0 +1,63 @@
+{
+  "model_id": "MKT_003",
+  "model_name": "存量客户交叉销售模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "存量客户交叉销售"
+  ],
+  "business_stage": [
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "existing_customer",
+    "individual"
+  ],
+  "model_capability": [
+    "cross_selling",
+    "preference_analysis",
+    "conversion_prediction"
+  ],
+  "input_fields_required": [
+    "product_holdings",
+    "customer_profile",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "credit_report",
+    "marketing_contact_history"
+  ],
+  "output_fields": [
+    "cross_sell_score",
+    "recommended_products",
+    "product_ranking",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "auc": 0.79,
+    "precision_at_3": 0.65,
+    "recall_at_3": 0.58
+  },
+  "applicable_conditions": "适用于已持有银行产品的存量客户的交叉销售推荐；支持存贷汇、理财、信用卡等产品交叉。",
+  "unsuitable_conditions": "不适用于新客户（开户不足1个月）；不适用于已持有全部产品的客户。",
+  "compliance_boundary": "交叉推荐需符合《商业银行理财业务监督管理办法》要求；不得向客户推荐不适当的产品。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "在手机银行和客户经理端嵌入交叉推荐。",
+      "effect": "交叉销售成功率提升25%，户均产品数从2.3提升至3.1。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "in_marketing",
+    "existing_customer",
+    "individual",
+    "cross_selling",
+    "preference_analysis",
+    "conversion_prediction"
+  ],
+  "description": "基于协同过滤和关联规则分析的交叉销售模型，结合客户产品持有和交易行为推荐最相关的银行产品。"
+}

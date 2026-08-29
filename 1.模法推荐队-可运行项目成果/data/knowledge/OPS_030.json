@@ -1,0 +1,58 @@
+{
+  "model_id": "OPS_030",
+  "model_name": "员工培训需求分析模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "员工培训需求识别"
+  ],
+  "business_stage": [
+    "resource_planning",
+    "performance_analysis"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "segmentation",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "branch_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile",
+    "transaction_data"
+  ],
+  "output_fields": [
+    "ranked_list",
+    "clustering",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "need_identification_accuracy": 0.81,
+    "training_effectiveness": 0.68
+  },
+  "applicable_conditions": "适用于银行各岗位员工的培训需求识别；按岗位类别、绩效缺口和技能短板推荐个性化培训课程。",
+  "unsuitable_conditions": "不适用于管理层和高级专业技术人员的培训需求分析；不涉及外部培训机构和课程的评估。",
+  "compliance_boundary": "培训需求分析需符合员工隐私保护要求；分析结果仅用于员工发展，不与晋升或薪酬直接挂钩。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行人力资源部",
+      "description": "培训需求智能分析。",
+      "effect": "培训针对性提升40%，培训后绩效提升率从35%提升至62%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "resource_planning",
+    "performance_analysis",
+    "individual",
+    "corporate",
+    "segmentation",
+    "value_assessment"
+  ],
+  "description": "基于员工绩效数据和岗位能力模型的培训需求分析模型，使用聚类和差距分析识别员工的共性培训需求和个性化培训需求。"
+}

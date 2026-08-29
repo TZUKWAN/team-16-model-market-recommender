@@ -1,0 +1,3 @@
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，客户号、产品偏好和渠道行为均为构造样例，不代表真实客户。","customer_id_masked":"CUST_MKT_0001","product":"首贷产品","conversion_probability":0.82,"priority":"P1","touch_channel":"客户经理企微"}
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，客户号、产品偏好和渠道行为均为构造样例，不代表真实客户。","customer_id_masked":"CUST_MKT_0002","product":"财富增存产品","conversion_probability":0.74,"priority":"P2","touch_channel":"手机银行弹窗"}
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，客户号、产品偏好和渠道行为均为构造样例，不代表真实客户。","customer_id_masked":"CUST_MKT_0003","product":"贷记卡分期","conversion_probability":0.61,"priority":"P3","touch_channel":"短信触达"}

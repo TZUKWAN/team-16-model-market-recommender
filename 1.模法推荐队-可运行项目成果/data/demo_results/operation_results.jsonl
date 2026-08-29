@@ -1,0 +1,3 @@
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，主体编号、网点、设备和预警信息均为构造样例。","subject_masked":"BRANCH_DEMO_0001","warning_type":"网点客流高峰","probability":0.88,"suggested_action":"建议增开弹性窗口并提前安排大堂分流。"}
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，主体编号、网点、设备和预警信息均为构造样例。","subject_masked":"ATM_DEMO_0002","warning_type":"自助设备故障风险","probability":0.73,"suggested_action":"建议在营业前完成巡检并准备备机。"}
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，主体编号、网点、设备和预警信息均为构造样例。","subject_masked":"MERCHANT_DEMO_0003","warning_type":"交易异常波动","probability":0.69,"suggested_action":"建议运营人员核查交易时段和商户类型。"}

@@ -1,0 +1,428 @@
+{
+  "changed_id_count": 57,
+  "entries": [
+    {
+      "canonical_name": "30-50万中高端客群财富产品维稳增存模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_001",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_015"
+    },
+    {
+      "canonical_name": "AUM10-30万客户维稳增存模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_002",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_002"
+    },
+    {
+      "canonical_name": "AUM10万以上客户流失预警模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_003",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_027"
+    },
+    {
+      "canonical_name": "ETC拓客模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_004",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_037"
+    },
+    {
+      "canonical_name": "个人中间业务推荐模型:E路有我新客促活模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_005",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_026"
+    },
+    {
+      "canonical_name": "个人存款提升预测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_006",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_034"
+    },
+    {
+      "canonical_name": "个人客户保险产品推荐模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_007",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_006"
+    },
+    {
+      "canonical_name": "个人客户理财产品营销模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_008",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_014"
+    },
+    {
+      "canonical_name": "个人经营性贷款营销预测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_009",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_032"
+    },
+    {
+      "canonical_name": "个人营销风险历史库",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_010",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_041"
+    },
+    {
+      "canonical_name": "个体工商户准入评分卡",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_011",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_051"
+    },
+    {
+      "canonical_name": "个贷全流程反欺诈机器学习模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_012",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_046"
+    },
+    {
+      "canonical_name": "个贷流失回捞算法模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_013",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_055"
+    },
+    {
+      "canonical_name": "个贷逾期客群催收模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_014",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_013"
+    },
+    {
+      "canonical_name": "中小微企业资金流信用信息建模项目",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_015",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_022"
+    },
+    {
+      "canonical_name": "中间业务产品营销模型（代扣）",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_016",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_003"
+    },
+    {
+      "canonical_name": "代发低效留存客群营销预测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_017",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_010"
+    },
+    {
+      "canonical_name": "信用卡片拓客模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_018",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_036"
+    },
+    {
+      "canonical_name": "信用卡贷前反欺诈机器学习模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_019",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_049"
+    },
+    {
+      "canonical_name": "信用卡贷前申请评分模型_无征信",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_020",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_048"
+    },
+    {
+      "canonical_name": "信用卡贷前申请评分模型_有征信",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_021",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_047"
+    },
+    {
+      "canonical_name": "信贷从业人员风险合规监测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_022",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_024"
+    },
+    {
+      "canonical_name": "垒小户准入评分卡",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_023",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_040"
+    },
+    {
+      "canonical_name": "垒小户违约概率模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_024",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_042"
+    },
+    {
+      "canonical_name": "对公客户价值与风险评分模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_025",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_054"
+    },
+    {
+      "canonical_name": "对私账户风控机器学习模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_026",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_050"
+    },
+    {
+      "canonical_name": "小微企业1000万以下客户A卡模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_027",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_007"
+    },
+    {
+      "canonical_name": "小微企业违约概率B卡模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_028",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_008"
+    },
+    {
+      "canonical_name": "小微客户流失预警模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_029",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_021"
+    },
+    {
+      "canonical_name": "开门红个贷回捞精准营销模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_030",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_025"
+    },
+    {
+      "canonical_name": "房地产压力测试",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_031",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_023"
+    },
+    {
+      "canonical_name": "房贷按揭客户贷款产品推荐模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_032",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_016"
+    },
+    {
+      "canonical_name": "房贷按揭违约概率模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_033",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_044"
+    },
+    {
+      "canonical_name": "房贷用户按揭A卡模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_034",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_028"
+    },
+    {
+      "canonical_name": "手机银行促活模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_035",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_059"
+    },
+    {
+      "canonical_name": "手机银行客户识别预测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_036",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_035"
+    },
+    {
+      "canonical_name": "扬州重点企业客户贷款营销分析",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_037",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_018"
+    },
+    {
+      "canonical_name": "收单商户交易反欺诈模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_038",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_045"
+    },
+    {
+      "canonical_name": "收单商户价值分层及预授信模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_039",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_019"
+    },
+    {
+      "canonical_name": "收单商户流失预测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_040",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_033"
+    },
+    {
+      "canonical_name": "收单商户贷款营销模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_041",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_020"
+    },
+    {
+      "canonical_name": "智能反诈模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_042",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_005"
+    },
+    {
+      "canonical_name": "消费贷授信未用信促提模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_043",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_001"
+    },
+    {
+      "canonical_name": "潜在高价值客户挖掘模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_044",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_058"
+    },
+    {
+      "canonical_name": "潜客挖掘消费贷营销模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_045",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_004"
+    },
+    {
+      "canonical_name": "理财产品综合评价模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_046",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_011"
+    },
+    {
+      "canonical_name": "理财响应度预测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_047",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_057"
+    },
+    {
+      "canonical_name": "经营贷款贷前准入模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_048",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_043"
+    },
+    {
+      "canonical_name": "财富产品个性化推荐模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_049",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_052"
+    },
+    {
+      "canonical_name": "贷款中介挖掘模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_050",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_012"
+    },
+    {
+      "canonical_name": "贷款产品综合评价模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_051",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_060"
+    },
+    {
+      "canonical_name": "贷记卡固定额度调整模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_052",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_017"
+    },
+    {
+      "canonical_name": "贷记卡联动贷款营销模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_053",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_053"
+    },
+    {
+      "canonical_name": "贷记卡账单分期营销模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_054",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_030"
+    },
+    {
+      "canonical_name": "贷记卡违约概率模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_055",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_029"
+    },
+    {
+      "canonical_name": "长尾客群潜在机制挖掘模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_056",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_056"
+    },
+    {
+      "canonical_name": "阳光E贷贷前准入模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_057",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_039"
+    },
+    {
+      "canonical_name": "零售个人违约概率B卡模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_058",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_038"
+    },
+    {
+      "canonical_name": "非法集资模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_059",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_009"
+    },
+    {
+      "canonical_name": "高价值存款客户流失预测模型",
+      "from_catalog": "feature-v1",
+      "from_id": "OFFICIAL_060",
+      "to_catalog": "official-v1",
+      "to_id": "OFFICIAL_031"
+    }
+  ],
+  "from_catalog": "feature-v1",
+  "model_count": 60,
+  "to_catalog": "official-v1"
+}

@@ -1,0 +1,64 @@
+{
+  "model_id": "OPS_028",
+  "model_name": "渠道服务质量评估模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "全渠道服务质量评价"
+  ],
+  "business_stage": [
+    "performance_analysis",
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "elderly",
+    "young_customer"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "channel_behavior",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "branch_data",
+    "transaction_data"
+  ],
+  "output_fields": [
+    "risk_score",
+    "ranked_list",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "evaluation_coverage": 0.95,
+    "consistency_score": 0.86
+  },
+  "applicable_conditions": "适用于银行柜面、手机银行、网上银行、客服等渠道的服务质量评估；覆盖满意度、响应速度、解决率等维度。",
+  "unsuitable_conditions": "不适用于第三方合作渠道的服务质量评估；不涉及渠道安全性能评价。",
+  "compliance_boundary": "服务质量评估结果仅用于内部提升；客户满意度调查需匿名且自愿参与。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行渠道部",
+      "description": "全渠道服务质量监控。",
+      "effect": "客户满意度从82%提升至91%，渠道服务一致性显著改善。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "performance_analysis",
+    "daily_operation",
+    "individual",
+    "corporate",
+    "elderly",
+    "young_customer",
+    "value_assessment",
+    "segmentation"
+  ],
+  "description": "基于多渠道客户反馈和运营数据的服务质量评估模型，使用层次分析法综合评估各渠道的服务水平。"
+}

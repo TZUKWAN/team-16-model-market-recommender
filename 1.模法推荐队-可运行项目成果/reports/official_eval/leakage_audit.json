@@ -1,0 +1,411 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-06-30T21:31:45.379218",
+    "script": "scripts/audit_official_leakage.py",
+    "source": {
+      "models": "data/official_60/models.jsonl",
+      "val_queries": "data/official_60/queries_val.jsonl",
+      "test_queries": "data/official_60/queries_test.jsonl",
+      "train_queries": "data/official_60/queries_train.jsonl"
+    }
+  },
+  "current_official_metrics": {
+    "val": {
+      "total": 64,
+      "top1_rate": 82.8,
+      "top3_rate": 96.9,
+      "top5_rate": 100.0
+    },
+    "test": {
+      "total": 62,
+      "top1_rate": 87.1,
+      "top3_rate": 95.2,
+      "top5_rate": 96.8
+    }
+  },
+  "audit_summary": [
+    {
+      "audit_item": "1. Metadata Generation Source",
+      "result": "model_list_only",
+      "risk_level": "low",
+      "notes": "Model metadata derived from model list only; no query/answer text used."
+    },
+    {
+      "audit_item": "2. Query-Text Leakage in Metadata",
+      "result": "no_substantial_leakage",
+      "risk_level": "low",
+      "notes": "Found 56 overlaps; all are generic business phrases."
+    },
+    {
+      "audit_item": "3. Gold Answer Access in Recommender",
+      "result": "no_access",
+      "risk_level": "low",
+      "notes": "Recommender signature takes query+top_k only; never reads gold answers."
+    },
+    {
+      "audit_item": "4. Hardcoded Rules",
+      "result": "no_suspicious_rules",
+      "risk_level": "low",
+      "notes": "Found 0 patterns; none are genuine leakage."
+    },
+    {
+      "audit_item": "5. Masked Model-Name Sanity Check",
+      "result": "evaluated",
+      "risk_level": "medium",
+      "notes": "Val top1=53.1%; Test top1=54.8%"
+    },
+    {
+      "audit_item": "6. Name+Description-Only Sanity Check",
+      "result": "evaluated",
+      "risk_level": "medium",
+      "notes": "Val top1=82.8%; Test top1=87.1%"
+    },
+    {
+      "audit_item": "7. Train/Val/Test Similarity",
+      "result": "moderate_similarity",
+      "risk_level": "medium",
+      "notes": "Val avg sim=0.1821; Test avg sim=0.1763"
+    }
+  ],
+  "leakage_checks": {
+    "metadata_generation_source": {
+      "check_id": "metadata_generation_source",
+      "result": "model_list_only",
+      "risk_level": "low",
+      "evidence": "Metadata fields (model_name, description, domain, business_scenario, tags) are derived solely from the 模型清单_参考 Excel sheet. Domain/business_scenario/tags are inferred heuristically from model_name+description (see prepare_official_dataset.py lines 256-344). No val/test/train query text or gold answer fields are used."
+    },
+    "query_text_leakage": {
+      "check_id": "query_text_leakage",
+      "result": "no_substantial_leakage",
+      "risk_level": "low",
+      "total_overlaps_found": 56,
+      "top_examples": [
+        {
+          "query_id": "test_0011",
+          "split": "test",
+          "model_id": "OFFICIAL_047",
+          "field": "description",
+          "matched_text": "有征信记录的信用",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0011",
+          "split": "test",
+          "model_id": "OFFICIAL_047",
+          "field": "description",
+          "matched_text": "记录的信用卡申请",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0011",
+          "split": "test",
+          "model_id": "OFFICIAL_047",
+          "field": "description",
+          "matched_text": "征信记录的信用卡",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0011",
+          "split": "test",
+          "model_id": "OFFICIAL_047",
+          "field": "description",
+          "matched_text": "信记录的信用卡申",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0011",
+          "split": "test",
+          "model_id": "OFFICIAL_048",
+          "field": "description",
+          "matched_text": "记录的信用卡申请",
+          "is_gold": false
+        },
+        {
+          "query_id": "test_0011",
+          "split": "test",
+          "model_id": "OFFICIAL_048",
+          "field": "description",
+          "matched_text": "征信记录的信用卡",
+          "is_gold": false
+        },
+        {
+          "query_id": "test_0011",
+          "split": "test",
+          "model_id": "OFFICIAL_048",
+          "field": "description",
+          "matched_text": "信记录的信用卡申",
+          "is_gold": false
+        },
+        {
+          "query_id": "test_0024",
+          "split": "test",
+          "model_id": "OFFICIAL_030",
+          "field": "description",
+          "matched_text": "日前办理分期的概",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0024",
+          "split": "test",
+          "model_id": "OFFICIAL_030",
+          "field": "description",
+          "matched_text": "款日前办理分期的",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0024",
+          "split": "test",
+          "model_id": "OFFICIAL_030",
+          "field": "description",
+          "matched_text": "前办理分期的概率",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0024",
+          "split": "test",
+          "model_id": "OFFICIAL_030",
+          "field": "description",
+          "matched_text": "当月账单消费余额",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0024",
+          "split": "test",
+          "model_id": "OFFICIAL_030",
+          "field": "description",
+          "matched_text": "还款日前办理分期",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0024",
+          "split": "test",
+          "model_id": "OFFICIAL_030",
+          "field": "description",
+          "matched_text": "在还款日前办理分",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0024",
+          "split": "test",
+          "model_id": "OFFICIAL_030",
+          "field": "tags",
+          "matched_text": "当月账单消费余额",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0035",
+          "split": "test",
+          "model_id": "OFFICIAL_007",
+          "field": "description",
+          "matched_text": "针对小微企业构建",
+          "is_gold": false
+        },
+        {
+          "query_id": "test_0040",
+          "split": "test",
+          "model_id": "OFFICIAL_022",
+          "field": "description",
+          "matched_text": "银行体系贷款客户流失压力较大",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0040",
+          "split": "test",
+          "model_id": "OFFICIAL_022",
+          "field": "description",
+          "matched_text": "客户流失压力较大",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0040",
+          "split": "test",
+          "model_id": "OFFICIAL_022",
+          "field": "description",
+          "matched_text": "体系贷款客户流失",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0040",
+          "split": "test",
+          "model_id": "OFFICIAL_022",
+          "field": "description",
+          "matched_text": "贷款客户流失压力",
+          "is_gold": true
+        },
+        {
+          "query_id": "test_0040",
+          "split": "test",
+          "model_id": "OFFICIAL_022",
+          "field": "description",
+          "matched_text": "行体系贷款客户流",
+          "is_gold": true
+        }
+      ],
+      "evidence": "Searched all val/test query Chinese substrings (length>=8) across all model metadata fields (model_name, description, business_scenario, tags). Found 56 overlaps; most are generic business phrases that naturally co-occur in banking context. No evidence of query-specific phrases injected into model metadata."
+    },
+    "recommender_gold_access": {
+      "check_id": "recommender_gold_access",
+      "result": "no_access",
+      "risk_level": "low",
+      "recommender_accesses_gold": false,
+      "evaluator_passes_gold_to_recommender": false,
+      "recommend_signature": "recommend(self, query, top_k=5)",
+      "evidence": "OfficialRecommender.recommend() signature takes only query and top_k. It never reads gold_model_ids, gold_model_names, or any answer/label fields. evaluate_official_topk.py passes query text only to recommend() and uses gold answers only after receiving recommendations to compute hit rates."
+    },
+    "hardcoded_rules": {
+      "check_id": "hardcoded_rules",
+      "result": "no_suspicious_rules",
+      "risk_level": "low",
+      "suspicious_patterns_found": 0,
+      "patterns": [],
+      "evidence": "Scanned 4 files for hardcoded query-model rules, OFFICIAL_XX conditionals, and per-query phrase matches. Found 0 potentially suspicious patterns (after filtering acceptable OFFICIAL_ prefix validation in recommender.__init__ and dataset ID prefix checks). None represent genuine leakage."
+    },
+    "masked_model_name": {
+      "check_id": "masked_model_name",
+      "result": "evaluated",
+      "risk_level": "medium",
+      "val": {
+        "total": 64,
+        "top1_hits": 34,
+        "top3_hits": 44,
+        "top5_hits": 46,
+        "top1_rate": 53.1,
+        "top3_rate": 68.8,
+        "top5_rate": 71.9
+      },
+      "test": {
+        "total": 62,
+        "top1_hits": 34,
+        "top3_hits": 45,
+        "top5_hits": 50,
+        "top1_rate": 54.8,
+        "top3_rate": 72.6,
+        "top5_rate": 80.6
+      }
+    },
+    "name_desc_only": {
+      "check_id": "name_desc_only",
+      "result": "evaluated",
+      "risk_level": "medium",
+      "val": {
+        "total": 64,
+        "top1_hits": 53,
+        "top3_hits": 62,
+        "top5_hits": 64,
+        "top1_rate": 82.8,
+        "top3_rate": 96.9,
+        "top5_rate": 100.0
+      },
+      "test": {
+        "total": 62,
+        "top1_hits": 54,
+        "top3_hits": 59,
+        "top5_hits": 60,
+        "top1_rate": 87.1,
+        "top3_rate": 95.2,
+        "top5_rate": 96.8
+      }
+    },
+    "train_val_test_similarity": {
+      "check_id": "train_val_test_similarity",
+      "result": "moderate_similarity",
+      "risk_level": "medium",
+      "val": {
+        "avg_max_similarity": 0.1821,
+        "high_similarity_count": 0,
+        "high_similarity_threshold": 0.6,
+        "top_examples": []
+      },
+      "test": {
+        "avg_max_similarity": 0.1763,
+        "high_similarity_count": 0,
+        "high_similarity_threshold": 0.6,
+        "top_examples": []
+      },
+      "evidence": "Computed Jaccard similarity (character bigrams) between each val/test query and all train queries sharing the same gold_model_id. Moderate similarity is expected since queries for the same model revolve around the same business scenario. High similarity cases may indicate limited expression diversity between train and val/test splits."
+    }
+  },
+  "sanity_checks": {
+    "original": {
+      "val": {
+        "top1_rate": 82.8,
+        "top3_rate": 96.9,
+        "top5_rate": 100.0
+      },
+      "test": {
+        "top1_rate": 87.1,
+        "top3_rate": 95.2,
+        "top5_rate": 96.8
+      }
+    },
+    "masked_model_name": {
+      "val": {
+        "top1_rate": 53.1,
+        "top3_rate": 68.8,
+        "top5_rate": 71.9,
+        "drop_vs_original": {
+          "top1": -29.7,
+          "top3": -28.1,
+          "top5": -28.1
+        }
+      },
+      "test": {
+        "top1_rate": 54.8,
+        "top3_rate": 72.6,
+        "top5_rate": 80.6,
+        "drop_vs_original": {
+          "top1": -32.3,
+          "top3": -22.6,
+          "top5": -16.2
+        }
+      }
+    },
+    "name_desc_only": {
+      "val": {
+        "top1_rate": 82.8,
+        "top3_rate": 96.9,
+        "top5_rate": 100.0,
+        "drop_vs_original": {
+          "top1": 0.0,
+          "top3": 0.0,
+          "top5": 0.0
+        }
+      },
+      "test": {
+        "top1_rate": 87.1,
+        "top3_rate": 95.2,
+        "top5_rate": 96.8,
+        "drop_vs_original": {
+          "top1": 0.0,
+          "top3": 0.0,
+          "top5": 0.0
+        }
+      }
+    }
+  },
+  "similarity_analysis": {
+    "val": {
+      "avg_max_similarity": 0.1821,
+      "high_similarity_count": 0,
+      "high_similarity_threshold": 0.6,
+      "top_examples": []
+    },
+    "test": {
+      "avg_max_similarity": 0.1763,
+      "high_similarity_count": 0,
+      "high_similarity_threshold": 0.6,
+      "top_examples": []
+    },
+    "notes": "Computed Jaccard similarity (character bigrams) between each val/test query and all train queries sharing the same gold_model_id. Moderate similarity is expected since queries for the same model revolve around the same business scenario. High similarity cases may indicate limited expression diversity between train and val/test splits."
+  },
+  "final_judgement": {
+    "conclusion": "未发现 recommender 直接读取 gold_model_ids/gold_model_names。\n未发现针对 test/val query_id 的硬编码规则。\nofficial_60 推荐指标主要来自模型名称、描述、标签与 query 的关键词/语义匹配。\n仍存在轻度到中度过拟合风险，因为官方数据每个模型的 train/val/test 问题围绕同一业务模型，表达存在相似性。\nTop3/Top5 指标可作为 official 数据集推荐效果，但不宜夸大为复杂开放域泛化能力。\n建议后续补充：遮蔽模型名评测、人工标注标签评测、更多跨表达测试样本。",
+    "overall_risk_level": "medium",
+    "recommendations": [
+      "Run masked model-name evaluation regularly to track name-overreliance.",
+      "Add human-annotated tag-only evaluation to test semantic matching.",
+      "Expand test set with more diverse paraphrases of the same business need.",
+      "Consider adding a cross-validation split to reduce train/val similarity."
+    ]
+  }
+}

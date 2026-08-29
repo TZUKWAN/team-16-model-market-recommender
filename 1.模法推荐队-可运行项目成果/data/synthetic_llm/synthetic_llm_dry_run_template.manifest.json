@@ -1,0 +1,22 @@
+{
+  "actual_total": 4,
+  "annotation_version": "synthetic_v2_llm_assisted",
+  "generated_at": "2026-07-06T11:07:34.785613+00:00",
+  "generation_mode": "template_dry_run",
+  "limitations": [
+    "Live records require an externally configured LLM_API_KEY and are still synthetic development data.",
+    "Dry-run records are template data and must not be described as LLM-generated.",
+    "All records are isolated from official evaluation metrics.",
+    "needs_review and local_validation support manual spot checks before training or demos."
+  ],
+  "max_records_per_model": 2,
+  "min_records_per_model": 2,
+  "official_model_coverage": 2,
+  "requested_per_model": 2,
+  "source_counts": {
+    "synthetic_llm_template_dry_run": 4
+  },
+  "validation_passed_counts": {
+    "True": 4
+  }
+}

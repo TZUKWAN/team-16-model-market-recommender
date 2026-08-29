@@ -1,0 +1,63 @@
+{
+  "model_id": "RISK_016",
+  "model_name": "多头借贷风险识别模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "多头借贷风险识别"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "default_prediction",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "credit_report",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "debt_ratio"
+  ],
+  "output_fields": [
+    "multi_head_score",
+    "borrowing_count_est",
+    "risk_level"
+  ],
+  "performance_metrics": {
+    "auc": 0.87,
+    "ks": 0.44,
+    "precision": 0.82,
+    "recall": 0.79
+  },
+  "applicable_conditions": "适用于识别在多家金融机构同时借贷的高风险客户；支持个人和企业主多头借贷识别。",
+  "unsuitable_conditions": "不适用于正规金融机构间正常转贷行为；不适用于已结清的历史多头借贷。",
+  "compliance_boundary": "征信查询需获得客户授权；多头借贷数据使用需符合征信管理规定。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售信贷部",
+      "description": "作为贷前审批的多头借贷筛查工具。",
+      "effect": "多头借贷客户识别率91%，拒绝率高负债客户后不良率下降0.5个百分点。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "individual",
+    "small_micro_enterprise",
+    "anomaly_detection",
+    "default_prediction",
+    "credit_rating"
+  ],
+  "description": "基于征信报告和行内数据的多头借贷识别模型，通过分析借贷机构数、总负债率和近期申请频次评估多头风险。"
+}

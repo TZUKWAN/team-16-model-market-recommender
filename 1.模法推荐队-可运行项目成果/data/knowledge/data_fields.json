@@ -1,0 +1,312 @@
+{
+  "fields": [
+    {
+      "field_key": "customer_profile",
+      "name": "客户基础画像",
+      "category": "客户基础信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：脱敏年龄范围/性别/学历/职业/婚姻状态，无真实姓名和身份证号"
+    },
+    {
+      "field_key": "contact_info",
+      "name": "客户联系方式",
+      "category": "客户基础信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：使用 1380000xxxx 格式脱敏手机号，无真实号码"
+    },
+    {
+      "field_key": "address_info",
+      "name": "地址信息",
+      "category": "客户基础信息",
+      "sensitivity": "medium",
+      "mock_note": "模拟：仅到省/市/县级别，无详细街道和门牌号"
+    },
+    {
+      "field_key": "demographics",
+      "name": "人口统计信息",
+      "category": "客户基础信息",
+      "sensitivity": "low",
+      "mock_note": "模拟：年龄段/区域/职业分类等统计级数据"
+    },
+    {
+      "field_key": "customer_lifecycle",
+      "name": "客户生命周期信息",
+      "category": "客户画像",
+      "sensitivity": "low",
+      "mock_note": "模拟：开户日期/最近活跃日期/生命周期阶段标签"
+    },
+    {
+      "field_key": "customer_value_score",
+      "name": "客户价值评分",
+      "category": "客户画像",
+      "sensitivity": "low",
+      "mock_note": "模拟：基于交易行为的价值评分，无真实金额"
+    },
+    {
+      "field_key": "risk_preference",
+      "name": "风险偏好",
+      "category": "客户画像",
+      "sensitivity": "low",
+      "mock_note": "模拟：保守/稳健/进取等风险偏好等级"
+    },
+    {
+      "field_key": "product_holdings",
+      "name": "持有产品列表",
+      "category": "客户画像",
+      "sensitivity": "medium",
+      "mock_note": "模拟：持有产品类型和数量，无具体账户号"
+    },
+    {
+      "field_key": "credit_report",
+      "name": "征信报告数据",
+      "category": "征信信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：脱敏征信评分/逾期次数/负债率，无真实征信报告"
+    },
+    {
+      "field_key": "credit_history",
+      "name": "信用历史",
+      "category": "征信信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：信用卡张数/最长账龄/信贷产品类型，无具体账户"
+    },
+    {
+      "field_key": "overdue_records",
+      "name": "逾期记录",
+      "category": "征信信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：逾期天数段/逾期次数/最大逾期金额段，无精确值"
+    },
+    {
+      "field_key": "debt_ratio",
+      "name": "负债率",
+      "category": "征信信息",
+      "sensitivity": "medium",
+      "mock_note": "模拟：负债收入比区间值"
+    },
+    {
+      "field_key": "transaction_flow",
+      "name": "交易流水",
+      "category": "交易流水",
+      "sensitivity": "high",
+      "mock_note": "模拟：交易金额段/交易频次/交易对手类型，无真实对手信息和精确金额"
+    },
+    {
+      "field_key": "income_expense",
+      "name": "收支流水",
+      "category": "交易流水",
+      "sensitivity": "high",
+      "mock_note": "模拟：月收入段/月支出段/结余比例"
+    },
+    {
+      "field_key": "transaction_category",
+      "name": "交易分类统计",
+      "category": "交易流水",
+      "sensitivity": "low",
+      "mock_note": "模拟：消费/转账/理财等大类交易频次和金额分布"
+    },
+    {
+      "field_key": "repayment_history",
+      "name": "还款记录",
+      "category": "还款记录",
+      "sensitivity": "high",
+      "mock_note": "模拟：还款方式/还款准时率/提前还款次数，无具体还款金额"
+    },
+    {
+      "field_key": "repayment_behavior",
+      "name": "还款行为特征",
+      "category": "还款记录",
+      "sensitivity": "medium",
+      "mock_note": "模拟：还款日偏好/还款渠道/还款金额波动率"
+    },
+    {
+      "field_key": "loan_application",
+      "name": "贷款申请信息",
+      "category": "贷款申请信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：申请金额段/申请期限/用途分类，无具体金额"
+    },
+    {
+      "field_key": "loan_purpose",
+      "name": "贷款用途",
+      "category": "贷款申请信息",
+      "sensitivity": "low",
+      "mock_note": "模拟：购车/装修/经营/消费等标准用途分类"
+    },
+    {
+      "field_key": "collateral_info",
+      "name": "抵质押物信息",
+      "category": "贷款申请信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：抵质押物类型/估值区间/权属状态，无具体地址和权证号"
+    },
+    {
+      "field_key": "guarantee_info",
+      "name": "担保信息",
+      "category": "贷款申请信息",
+      "sensitivity": "medium",
+      "mock_note": "模拟：担保方式/担保人关系/担保金额段"
+    },
+    {
+      "field_key": "business_income",
+      "name": "经营收入",
+      "category": "经营信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：年营业收入段/经营年限/行业分类，无具体金额"
+    },
+    {
+      "field_key": "business_cashflow",
+      "name": "经营现金流",
+      "category": "经营信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：月均现金流段/季节性波动特征"
+    },
+    {
+      "field_key": "supply_chain_data",
+      "name": "供应链数据",
+      "category": "经营信息",
+      "sensitivity": "medium",
+      "mock_note": "模拟：上下游交易频次/结算方式/账期"
+    },
+    {
+      "field_key": "tax_info",
+      "name": "纳税信息",
+      "category": "经营信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：纳税等级/年度纳税区间/纳税连续性"
+    },
+    {
+      "field_key": "employee_info",
+      "name": "员工信息",
+      "category": "经营信息",
+      "sensitivity": "low",
+      "mock_note": "模拟：员工人数段/社保缴纳人数"
+    },
+    {
+      "field_key": "asset_info",
+      "name": "资产信息",
+      "category": "资产负债信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：房产/车辆/存款等资产类型及估值区间"
+    },
+    {
+      "field_key": "liability_info",
+      "name": "负债信息",
+      "category": "资产负债信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：总负债区间/其他机构负债情况"
+    },
+    {
+      "field_key": "net_worth",
+      "name": "净资产",
+      "category": "资产负债信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：净资产区间值"
+    },
+    {
+      "field_key": "marketing_contact_history",
+      "name": "营销触达历史",
+      "category": "营销触达记录",
+      "sensitivity": "medium",
+      "mock_note": "模拟：触达渠道/频次/时间/响应与否，无具体内容"
+    },
+    {
+      "field_key": "campaign_response",
+      "name": "活动响应记录",
+      "category": "营销触达记录",
+      "sensitivity": "low",
+      "mock_note": "模拟：各营销活动参与情况和响应结果"
+    },
+    {
+      "field_key": "channel_preference",
+      "name": "渠道偏好",
+      "category": "渠道行为",
+      "sensitivity": "low",
+      "mock_note": "模拟：偏好渠道/活跃时段/停留时长"
+    },
+    {
+      "field_key": "app_behavior",
+      "name": "APP行为数据",
+      "category": "渠道行为",
+      "sensitivity": "medium",
+      "mock_note": "模拟：登录频次/功能使用/页面停留，无真实位置和设备信息"
+    },
+    {
+      "field_key": "online_activity",
+      "name": "线上活动数据",
+      "category": "渠道行为",
+      "sensitivity": "low",
+      "mock_note": "模拟：活动参与/点击率/浏览路径"
+    },
+    {
+      "field_key": "branch_visit",
+      "name": "到店/网点访问",
+      "category": "网点运营数据",
+      "sensitivity": "low",
+      "mock_note": "模拟：到店频次/办理业务类型/等待时长"
+    },
+    {
+      "field_key": "counter_business",
+      "name": "柜面业务数据",
+      "category": "网点运营数据",
+      "sensitivity": "low",
+      "mock_note": "模拟：业务类型/办理时长/柜员号（脱敏）"
+    },
+    {
+      "field_key": "queue_data",
+      "name": "排队等候数据",
+      "category": "网点运营数据",
+      "sensitivity": "low",
+      "mock_note": "模拟：排队人数/等待时长/窗口开放数"
+    },
+    {
+      "field_key": "atm_usage",
+      "name": "ATM使用数据",
+      "category": "网点运营数据",
+      "sensitivity": "low",
+      "mock_note": "模拟：交易类型/频次/现金存取量段"
+    },
+    {
+      "field_key": "complaint_history",
+      "name": "投诉记录",
+      "category": "网点运营数据",
+      "sensitivity": "medium",
+      "mock_note": "模拟：投诉类型/处理时长/满意度，无具体内容和投诉人"
+    },
+    {
+      "field_key": "staff_workload",
+      "name": "员工工作负荷",
+      "category": "网点运营数据",
+      "sensitivity": "low",
+      "mock_note": "模拟：日均处理笔数/工时利用率/业务类型分布"
+    },
+    {
+      "field_key": "branch_data",
+      "name": "网点运营综合数据",
+      "category": "网点运营数据",
+      "sensitivity": "low",
+      "mock_note": "模拟：网点客流/窗口数/员工数/业务量等网点级聚合数据"
+    },
+    {
+      "field_key": "channel_behavior",
+      "name": "渠道行为数据",
+      "category": "渠道行为数据",
+      "sensitivity": "medium",
+      "mock_note": "模拟：渠道类型/访问频次/停留时长/操作路径等行为特征"
+    },
+    {
+      "field_key": "transaction_data",
+      "name": "交易数据通用",
+      "category": "交易数据",
+      "sensitivity": "high",
+      "mock_note": "模拟：交易金额范围/交易类型/交易频次/交易对手特征等脱敏统计特征"
+    },
+    {
+      "field_key": "asset_liability",
+      "name": "资产负债汇总信息",
+      "category": "资产负债信息",
+      "sensitivity": "high",
+      "mock_note": "模拟：总资产范围/总负债范围/资产负债率区间等汇总级数据"
+    }
+  ]
+}

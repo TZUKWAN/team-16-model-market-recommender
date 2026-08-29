@@ -1,0 +1,68 @@
+{
+  "model_id": "MKT_001",
+  "model_name": "县域新客首贷转化预测模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "县域新客首贷营销"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "new_customer",
+    "rural_area",
+    "individual"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "response_prediction",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "channel_behavior",
+    "product_holdings"
+  ],
+  "output_fields": [
+    "conversion_probability",
+    "customer_ranking",
+    "ranked_list",
+    "score_breakdown"
+  ],
+  "performance_metrics": {
+    "auc": 0.83,
+    "ks": 0.38,
+    "precision": 0.76,
+    "recall": 0.74
+  },
+  "applicable_conditions": "适用于县域新客户的首贷转化营销场景；用于筛选高转化潜力的新客户进行精准营销。",
+  "unsuitable_conditions": "不适用于存量客户的交叉销售；不适用于已有贷款的老客户。",
+  "compliance_boundary": "营销信息发送需符合《金融营销宣传管理办法》；不得对特定群体实施歧视性营销。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行",
+      "description": "筛选县域新客进行首贷营销。",
+      "effect": "转化率从2.3%提升至6.8%，新增首贷户1200+户。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "new_customer",
+    "rural_area",
+    "individual",
+    "conversion_prediction",
+    "response_prediction",
+    "segmentation",
+    "first_loan"
+  ],
+  "description": "基于客户画像、交易行为和渠道行为的转化预测模型，使用LightGBM算法识别高潜力首贷客群。"
+}

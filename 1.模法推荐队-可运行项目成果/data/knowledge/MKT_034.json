@@ -1,0 +1,67 @@
+{
+  "model_id": "MKT_034",
+  "model_name": "农机经营户贷款需求模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "农机经营户贷款需求识别"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "farmer",
+    "rural_area",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "preference_analysis",
+    "amount_calculation"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "product_holdings",
+    "credit_report",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "loan_demand_score",
+    "estimated_amount",
+    "preferred_repayment_schedule",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.78,
+    "precision": 0.7,
+    "recall": 0.68,
+    "lift": 1.8
+  },
+  "applicable_conditions": "适用于农机经营户、农机合作社等主体的农机购置和经营贷款需求识别；支持农机分期、经营贷等产品。",
+  "unsuitable_conditions": "不适用于已购买农机且无新增需求的客户；不适用于非农机相关的农业经营户。",
+  "compliance_boundary": "农机贷款产品需符合农机购置补贴政策配套要求；不得强制搭售农机保险等产品。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行",
+      "description": "农机经营户贷款需求精准识别。",
+      "effect": "农机贷款投放增长55%，不良率控制在1%以内。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "farmer",
+    "rural_area",
+    "small_micro_enterprise",
+    "conversion_prediction",
+    "preference_analysis",
+    "amount_calculation",
+    "agricultural_loan"
+  ],
+  "description": "基于农机购置记录、经营规模和农时特征的农机经营户贷款需求预测模型。"
+}

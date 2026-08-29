@@ -1,0 +1,61 @@
+{
+  "model_id": "MKT_012",
+  "model_name": "小微企业融资需求预测模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "小微企业融资需求识别"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "tax_info",
+    "supply_chain_data",
+    "product_holdings"
+  ],
+  "output_fields": [
+    "financing_demand_score",
+    "demand_type",
+    "estimated_amount_range",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.8,
+    "precision": 0.73,
+    "recall": 0.71,
+    "f1": 0.72
+  },
+  "applicable_conditions": "适用于识别有潜在融资需求的小微企业客户；支持经营性贷款、票据贴现、供应链融资等需求预测。",
+  "unsuitable_conditions": "不适用于大型企业；不适用于已处于破产清算阶段的企业。",
+  "compliance_boundary": "融资需求识别不得影响企业正常获取金融服务；预测结果仅用于营销参考。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行普惠金融部",
+      "description": "识别有潜在融资需求的存量小微企业。",
+      "effect": "主动营销转化率28%，新增小微贷款客户500+户。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "small_micro_enterprise",
+    "conversion_prediction",
+    "preference_analysis",
+    "small_loan"
+  ],
+  "description": "基于企业经营流水、纳税数据、行业特性等信息的融资需求预测模型，识别融资需求时点。"
+}

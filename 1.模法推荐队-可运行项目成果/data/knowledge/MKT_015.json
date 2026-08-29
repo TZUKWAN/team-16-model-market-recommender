@@ -1,0 +1,69 @@
+{
+  "model_id": "MKT_015",
+  "model_name": "手机银行活跃度提升模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "手机银行促活"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "dormant_customer"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "churn_prediction",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "channel_behavior",
+    "customer_profile",
+    "product_holdings"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "demographics",
+    "marketing_contact_history"
+  ],
+  "output_fields": [
+    "activation_probability",
+    "preferred_function",
+    "engagement_strategy",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.81,
+    "precision": 0.74,
+    "recall": 0.7,
+    "f1": 0.72
+  },
+  "applicable_conditions": "适用于提升手机银行客户的活跃度和使用频次；支持新客激活、老客促活和沉睡唤醒。",
+  "unsuitable_conditions": "不适用于已非常活跃的客户（月活跃天数>20）；不适用于无法使用手机银行的老年客群。",
+  "compliance_boundary": "APP推送需符合客户意愿设置；不得过度推送影响客户体验。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行数字金融部",
+      "description": "手机银行活跃度提升专项。",
+      "effect": "月活跃用户数增长25%，人均使用时长增长15%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "dormant_customer",
+    "conversion_prediction",
+    "churn_prediction",
+    "preference_analysis",
+    "mobile_banking"
+  ],
+  "description": "分析手机银行用户行为路径和使用偏好，预测客户流失风险并推荐个性化促活策略。"
+}

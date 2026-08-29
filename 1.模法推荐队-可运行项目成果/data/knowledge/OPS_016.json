@@ -1,0 +1,59 @@
+{
+  "model_id": "OPS_016",
+  "model_name": "贷款审批流程优化模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "贷款审批流程效率优化"
+  ],
+  "business_stage": [
+    "daily_operation",
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "resource_optimization",
+    "priority_ranking"
+  ],
+  "input_fields_required": [
+    "loan_application",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "transaction_data"
+  ],
+  "output_fields": [
+    "ranked_list",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "processing_time_reduction": 0.35,
+    "approval_accuracy": 0.82
+  },
+  "applicable_conditions": "适用于个人和小微企业贷款的审批流程优化；支持自动分配审批任务和优先级排序。",
+  "unsuitable_conditions": "不适用于对公大额贷款的审批流程（需人工专业审批）；不适用于政策性和补贴性贷款。",
+  "compliance_boundary": "审批流程优化不得降低风险控制标准；自动化分配需公平公正，避免偏见。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行信贷部",
+      "description": "贷款审批任务智能分配。",
+      "effect": "平均审批时间从3天缩短至1.5天，审批效率提升50%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "pre_loan",
+    "individual",
+    "small_micro_enterprise",
+    "resource_optimization",
+    "priority_ranking"
+  ],
+  "description": "基于贷款申请复杂度和审批人员专长的智能任务分配模型，优化审批流程中的任务分配和优先级排序。"
+}

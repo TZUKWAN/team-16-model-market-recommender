@@ -1,0 +1,69 @@
+{
+  "model_id": "MKT_035",
+  "model_name": "客户活动参与预测模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "营销活动参与度预测"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "young_customer"
+  ],
+  "model_capability": [
+    "response_prediction",
+    "conversion_prediction",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "campaign_response",
+    "channel_behavior"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "product_holdings",
+    "demographics",
+    "marketing_contact_history"
+  ],
+  "output_fields": [
+    "participation_probability",
+    "preferred_activity_type",
+    "expected_response",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.8,
+    "precision": 0.72,
+    "recall": 0.69,
+    "lift": 2.0
+  },
+  "applicable_conditions": "适用于预测客户对各种营销活动（如返现、抽奖、积分兑换、利率优惠等）的参与度；支持活动策划和客群筛选。",
+  "unsuitable_conditions": "不适用于对营销活动有固定参与习惯的客户；不适用于被动参与型活动。",
+  "compliance_boundary": "活动规则需透明公开；不得设置虚假或误导性活动条款。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行市场部",
+      "description": "营销活动目标客户筛选。",
+      "effect": "活动参与率提升50%，营销ROI提升1.5倍。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "young_customer",
+    "response_prediction",
+    "conversion_prediction",
+    "preference_analysis"
+  ],
+  "description": "基于客户历史活动参与行为、偏好类型和活跃度特征的活动参与度预测模型。"
+}

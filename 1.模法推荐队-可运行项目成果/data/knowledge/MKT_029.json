@@ -1,0 +1,63 @@
+{
+  "model_id": "MKT_029",
+  "model_name": "跨产品协同推荐模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "跨产品组合推荐"
+  ],
+  "business_stage": [
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer"
+  ],
+  "model_capability": [
+    "cross_selling",
+    "preference_analysis",
+    "conversion_prediction"
+  ],
+  "input_fields_required": [
+    "product_holdings",
+    "customer_profile",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "risk_preference",
+    "demographics"
+  ],
+  "output_fields": [
+    "product_combination",
+    "combination_score",
+    "synergy_effect",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "precision_at_3": 0.66,
+    "recall_at_3": 0.58,
+    "combination_acceptance": 0.45
+  },
+  "applicable_conditions": "适用于推荐跨产品组合（如存款+理财+信用卡）；支持产品套餐式营销。",
+  "unsuitable_conditions": "不适用于只推荐单一产品的场景；不适用于客户已持有全部推荐产品的情况。",
+  "compliance_boundary": "组合推荐不得涉及强制搭售；需确保产品组合的合规性。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "产品组合套餐推荐。",
+      "effect": "套餐接受率35%，户均产品数提升0.8个。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "cross_selling",
+    "preference_analysis",
+    "conversion_prediction"
+  ],
+  "description": "基于关联规则和协同过滤的跨产品组合推荐模型，发现产品之间的协同效应并推荐最优组合。"
+}

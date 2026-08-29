@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-07-10T09:35:13.547775+00:00",
+  "source_split": "train",
+  "source_case_count": 291,
+  "pair_count": 795,
+  "negatives_per_case": 3,
+  "gold_missing_top20_count": 2,
+  "negative_outranks_positive_count": 88,
+  "dense_available_case_count": 291,
+  "model_count": 165,
+  "intended_use": "training_or_validation_design_only_not_official_metric_evidence",
+  "source_file_sha256": "85dd43fad1e0b9ae58b3b384307063c50ca8f1299e1af3e436bd55505087743d",
+  "output_file_sha256": "59552d5723aeb2a00e4e40763848de6e7e325aeaf107be7444e4ec110faf854b"
+}

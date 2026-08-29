@@ -1,0 +1,57 @@
+{
+  "model_id": "OPS_003",
+  "model_name": "网点业务量预测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "网点业务量预测"
+  ],
+  "business_stage": [
+    "daily_operation",
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "demand_forecasting"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "forecast_value",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "mape": 0.072,
+    "mae": 8.3,
+    "r2": 0.91
+  },
+  "applicable_conditions": "适用于网点各类柜面业务量的日粒度预测；支持按业务类型分项预测；需要至少12个月历史数据。",
+  "unsuitable_conditions": "不适用于纯线上业务量的预测；不涉及电子渠道业务量预测。",
+  "compliance_boundary": "业务量统计仅用于内部运营管理，不包含客户个人信息。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行运营管理部",
+      "description": "指导网点业务窗口配置。",
+      "effect": "窗口利用率提升22%，客户等待时间减少30%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "demand_forecasting"
+  ],
+  "description": "基于历史业务量数据和季节性分析的网点业务量预测模型，支持柜面、智能柜员机等多渠道业务量预测。"
+}

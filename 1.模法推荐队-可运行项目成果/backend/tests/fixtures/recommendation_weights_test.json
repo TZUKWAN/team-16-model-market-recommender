@@ -1,0 +1,11 @@
+{
+  "intent_match": 30,
+  "tag_overlap": 25,
+  "scenario_match": 20,
+  "customer_match": 10,
+  "output_match": 10,
+  "deployment_bonus": 5,
+  "semantic_overlap": 10,
+  "rerank_exact_tag_bonus": 8,
+  "cross_domain_penalty": -15
+}

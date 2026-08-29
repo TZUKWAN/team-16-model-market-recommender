@@ -1,0 +1,91 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: runtime-light
+    container_name: model-market-backend
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    environment:
+      ENABLE_MOCK: "${ENABLE_MOCK:-true}"
+      LOG_LEVEL: "${LOG_LEVEL:-INFO}"
+      DEBUG: "${DEBUG:-false}"
+      DATA_DIR: "/app/data"
+      RUNTIME_DB_PATH: "/app/data/runtime/runtime.db"
+      AUTH_MODE: "${AUTH_MODE:-demo}"
+      AUTH_ADAPTER: "${AUTH_ADAPTER:-demo}"
+      AUTH_JWT_ISSUER: "${AUTH_JWT_ISSUER:-}"
+      AUTH_JWT_AUDIENCE: "${AUTH_JWT_AUDIENCE:-}"
+      AUTH_JWT_PUBLIC_KEY: "${AUTH_JWT_PUBLIC_KEY:-}"
+      AUTH_JWKS_URL: "${AUTH_JWKS_URL:-}"
+      AUTH_JWT_ALGORITHMS: "${AUTH_JWT_ALGORITHMS:-RS256}"
+      MODEL_ASSET_VERSION: "${MODEL_ASSET_VERSION:-}"
+      MODEL_ASSET_CATALOG_DIR: "/app/data/model_catalog"
+      MODEL_MARKET_ADAPTER: "${MODEL_MARKET_ADAPTER:-demo}"
+      MODEL_MARKET_BASE_URL: "${MODEL_MARKET_BASE_URL:-}"
+      MODEL_MARKET_API_KEY: "${MODEL_MARKET_API_KEY:-}"
+      MODEL_MARKET_TIMEOUT_SECONDS: "${MODEL_MARKET_TIMEOUT_SECONDS:-30}"
+      LLM_PROVIDER: "${LLM_PROVIDER:-mock}"
+      LLM_BASE_URL: "${LLM_BASE_URL:-}"
+      LLM_MODEL: "${LLM_MODEL:-}"
+      LLM_API_KEY: "${LLM_API_KEY:-}"
+      LLM_TIMEOUT_SECONDS: "${LLM_TIMEOUT_SECONDS:-60}"
+      LLM_CONNECT_TIMEOUT_SECONDS: "${LLM_CONNECT_TIMEOUT_SECONDS:-10}"
+      LLM_READ_TIMEOUT_SECONDS: "${LLM_READ_TIMEOUT_SECONDS:-60}"
+      LLM_TOTAL_TIMEOUT_SECONDS: "${LLM_TOTAL_TIMEOUT_SECONDS:-90}"
+      LLM_MAX_RETRIES: "${LLM_MAX_RETRIES:-2}"
+      LLM_CIRCUIT_FAILURE_THRESHOLD: "${LLM_CIRCUIT_FAILURE_THRESHOLD:-3}"
+      LLM_CIRCUIT_OPEN_SECONDS: "${LLM_CIRCUIT_OPEN_SECONDS:-30}"
+      LLM_CACHE_ENABLED: "${LLM_CACHE_ENABLED:-true}"
+      LLM_CACHE_TTL_SECONDS: "${LLM_CACHE_TTL_SECONDS:-300}"
+      RECOMMEND_CACHE_TTL_SECONDS: "${RECOMMEND_CACHE_TTL_SECONDS:-2}"
+      LLM_TEMPERATURE: "${LLM_TEMPERATURE:-0.1}"
+      LLM_TRACE_ENABLED: "${LLM_TRACE_ENABLED:-true}"
+      LLM_TRACE_DIR: "/app/data/llm_traces"
+      CORS_ORIGINS: "${CORS_ORIGINS:-http://localhost:3000,http://127.0.0.1:3000,http://localhost:5173}"
+      RETRIEVAL_RUNTIME_MODE: "${RETRIEVAL_RUNTIME_MODE:-light}"
+      HYBRID_RETRIEVAL_ENABLED: "${HYBRID_RETRIEVAL_ENABLED:-true}"
+      HYBRID_DENSE_ENABLED: "${HYBRID_DENSE_ENABLED:-false}"
+      HYBRID_DENSE_WEIGHT: "${HYBRID_DENSE_WEIGHT:-0.50}"
+      HYBRID_DENSE_MODEL: "${HYBRID_DENSE_MODEL:-BAAI/bge-m3}"
+      HYBRID_DENSE_REQUIRED: "${HYBRID_DENSE_REQUIRED:-false}"
+      HYBRID_DENSE_OFFLINE: "${HYBRID_DENSE_OFFLINE:-false}"
+      HYBRID_DENSE_EXPECTED_DIMENSION: "${HYBRID_DENSE_EXPECTED_DIMENSION:-1024}"
+      HYBRID_DENSE_EXPECTED_REVISION: "${HYBRID_DENSE_EXPECTED_REVISION:-}"
+      HYBRID_DENSE_MANIFEST: "${HYBRID_DENSE_MANIFEST:-}"
+      HYBRID_DENSE_VERIFY_MANIFEST: "${HYBRID_DENSE_VERIFY_MANIFEST:-false}"
+      HYBRID_DENSE_CACHE_ENABLED: "${HYBRID_DENSE_CACHE_ENABLED:-true}"
+      HYBRID_DENSE_CACHE_DIR: "${HYBRID_DENSE_CACHE_DIR:-/app/data/cache/embeddings}"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; exit(0 if urllib.request.urlopen('http://localhost:8000/api/v1/health').status == 200 else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: "${VITE_API_BASE_URL:-http://localhost:8000}"
+        VITE_USE_MOCK: "${VITE_USE_MOCK:-false}"
+    container_name: model-market-frontend
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

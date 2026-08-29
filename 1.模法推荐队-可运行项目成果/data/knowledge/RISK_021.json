@@ -1,0 +1,65 @@
+{
+  "model_id": "RISK_021",
+  "model_name": "抵质押物价值预警模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "抵质押物价值监控与预警"
+  ],
+  "business_stage": [
+    "in_loan",
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise",
+    "corporate"
+  ],
+  "model_capability": [
+    "early_warning",
+    "anomaly_detection",
+    "amount_calculation"
+  ],
+  "input_fields_required": [
+    "collateral_info",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "asset_info",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "collateral_value_trend",
+    "ltv_ratio",
+    "margin_call_alert",
+    "suggested_action"
+  ],
+  "performance_metrics": {
+    "mae_value": 0.08,
+    "alert_precision": 0.82,
+    "alert_recall": 0.76
+  },
+  "applicable_conditions": "适用于有抵质押物的贷款价值持续监控；支持房产、土地、设备、存货等抵质押物类型。",
+  "unsuitable_conditions": "不适用于无抵质押物的信用贷款；不适用于价值波动极小的抵质押物（如定期存单质押）。",
+  "compliance_boundary": "抵质押物估值需定期重估；模型预警不能替代线下实地核查；LTV比率监控需符合监管底线要求。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行信贷部",
+      "description": "监控全行抵质押物价值变化。",
+      "effect": "及时预警抵押物价值不足案例80+起，追加担保合计超2亿元。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "in_loan",
+    "post_loan",
+    "individual",
+    "small_micro_enterprise",
+    "corporate",
+    "early_warning",
+    "anomaly_detection",
+    "amount_calculation"
+  ],
+  "description": "基于市场指数、区域房价指数和个案特征的多因子抵质押物价值评估模型，按月更新价值估值并计算LTV比率。"
+}

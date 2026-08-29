@@ -1,0 +1,105 @@
+{"test_id": "TAG_001", "query": "农户小额贷款准入评估", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "small_loan", "agricultural_loan", "admission_scoring", "credit_rating", "amount_calculation", "admission_decision", "recommended_amount"], "difficulty": "medium"}
+{"test_id": "TAG_002", "query": "小微企业流水真实性核验", "expected_tags": ["credit_risk", "pre_loan", "small_micro_enterprise", "anti_fraud", "credit_rating"], "difficulty": "medium"}
+{"test_id": "TAG_003", "query": "对公客户信用等级评定", "expected_tags": ["credit_risk", "pre_loan", "corporate", "credit_rating", "risk_level"], "difficulty": "medium"}
+{"test_id": "TAG_004", "query": "信用卡逾期风险预测", "expected_tags": ["credit_risk", "in_loan", "risk_management", "default_prediction", "credit_card", "individual"], "difficulty": "medium"}
+{"test_id": "TAG_005", "query": "担保圈关联风险分析", "expected_tags": ["credit_risk", "in_loan", "risk_management", "guarantee_circle", "corporate", "small_micro_enterprise", "early_warning", "default_prediction"], "difficulty": "medium"}
+{"test_id": "TAG_006", "query": "新开户客户首贷营销", "expected_tags": ["customer_marketing", "pre_marketing", "new_customer", "first_loan", "conversion_prediction", "response_prediction", "segmentation", "customer_profile", "channel_behavior"], "difficulty": "medium"}
+{"test_id": "TAG_007", "query": "存量客户理财推荐", "expected_tags": ["customer_marketing", "existing_customer", "cross_selling", "preference_analysis", "financial_product"], "difficulty": "medium"}
+{"test_id": "TAG_008", "query": "客户流失预警与挽留", "expected_tags": ["operation_management", "post_loan", "churn_prediction", "early_warning", "existing_customer", "churned_customer"], "difficulty": "medium"}
+{"test_id": "TAG_009", "query": "网点客流预测与排班", "expected_tags": ["operation_management", "resource_planning", "demand_forecasting", "resource_optimization", "branch_data"], "difficulty": "medium"}
+{"test_id": "TAG_010", "query": "反洗钱可疑交易监测", "expected_tags": ["operation_management", "post_loan", "risk_management", "compliance", "anti_money_laundering", "anomaly_detection", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_011", "query": "小微企业经营稳定性评分", "expected_tags": ["credit_risk", "pre_loan", "small_micro_enterprise", "risk_score"], "difficulty": "medium"}
+{"test_id": "TAG_012", "query": "手机银行活跃度提升", "expected_tags": ["customer_marketing", "mobile_banking", "segmentation", "preference_analysis"], "difficulty": "medium"}
+{"test_id": "TAG_013", "query": "智能客服FAQ机器人", "expected_tags": ["daily_operation", "operation_management"], "difficulty": "medium"}
+{"test_id": "TAG_014", "query": "贷款审批任务自动分配", "expected_tags": ["operation_management", "pre_loan", "resource_optimization"], "difficulty": "medium"}
+{"test_id": "TAG_015", "query": "理财产品偏好分析", "expected_tags": ["customer_marketing", "preference_analysis", "segmentation", "cross_selling"], "difficulty": "medium"}
+{"test_id": "TAG_016", "query": "农户经营周期性资金需求", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "agricultural_loan", "demand_forecasting"], "difficulty": "medium"}
+{"test_id": "TAG_017", "query": "监管报表数据质量监控", "expected_tags": ["compliance", "regulatory_reporting", "anomaly_detection", "operation_management"], "difficulty": "medium"}
+{"test_id": "TAG_018", "query": "客户综合贡献度评估", "expected_tags": ["customer_marketing", "value_assessment", "segmentation", "lifetime_value", "cross_selling"], "difficulty": "medium"}
+{"test_id": "TAG_019", "query": "贷款资金流向异常监控", "expected_tags": ["credit_risk", "post_loan", "risk_management", "compliance", "anti_money_laundering", "anomaly_detection", "early_warning"], "difficulty": "medium"}
+{"test_id": "TAG_020", "query": "员工离职风险预测", "expected_tags": ["operation_management", "daily_operation", "resource_planning", "performance_analysis", "churn_prediction", "personal_info_protection"], "difficulty": "medium"}
+{"test_id": "TAG_021", "query": "农户贷款准入评分", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "agricultural_loan", "admission_scoring", "risk_score", "risk_level", "admission_decision"], "difficulty": "medium"}
+{"test_id": "TAG_022", "query": "小微企业反欺诈检测", "expected_tags": ["credit_risk", "pre_loan", "risk_management", "small_micro_enterprise", "anti_fraud", "risk_score", "risk_level", "probability", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_023", "query": "对公客户贷后逾期预警", "expected_tags": ["credit_risk", "post_loan", "corporate", "corporate_loan", "default_prediction", "early_warning", "risk_management", "alert_signal", "risk_level"], "difficulty": "medium"}
+{"test_id": "TAG_024", "query": "个人消费贷申请评分", "expected_tags": ["credit_risk", "pre_loan", "individual", "consumer_loan", "admission_scoring", "credit_rating", "risk_score", "admission_decision", "personal_info_protection", "fair_lending"], "difficulty": "medium"}
+{"test_id": "TAG_025", "query": "信用卡客户风险分层", "expected_tags": ["credit_risk", "in_loan", "risk_management", "credit_card", "risk_level", "risk_score"], "difficulty": "medium"}
+{"test_id": "TAG_026", "query": "高净值客户理财推荐", "expected_tags": ["customer_marketing", "high_net_worth", "financial_product", "cross_selling", "preference_analysis"], "difficulty": "medium"}
+{"test_id": "TAG_027", "query": "老年客群存款营销", "expected_tags": ["customer_marketing", "elderly", "deposit", "pre_marketing", "in_marketing", "post_marketing"], "difficulty": "medium"}
+{"test_id": "TAG_028", "query": "网点柜面业务量预测", "expected_tags": ["operation_management", "resource_planning", "demand_forecasting", "branch_data"], "difficulty": "medium"}
+{"test_id": "TAG_029", "query": "大额交易反洗钱筛查", "expected_tags": ["operation_management", "post_loan", "risk_management", "compliance", "anti_money_laundering", "anomaly_detection", "alert_signal", "risk_level"], "difficulty": "medium"}
+{"test_id": "TAG_030", "query": "员工离职风险预测", "expected_tags": ["operation_management", "daily_operation", "resource_planning", "churn_prediction", "personal_info_protection"], "difficulty": "medium"}
+{"test_id": "TAG_031", "query": "农户贷款准入评分", "expected_tags": ["credit_risk", "pre_loan", "farmer", "agricultural_loan", "admission_scoring", "risk_score", "risk_level", "admission_decision"], "difficulty": "medium"}
+{"test_id": "TAG_032", "query": "小微企业反欺诈检测", "expected_tags": ["credit_risk", "pre_loan", "risk_management", "small_micro_enterprise", "anti_fraud"], "difficulty": "medium"}
+{"test_id": "TAG_033", "query": "对公客户贷后逾期预警", "expected_tags": ["credit_risk", "post_loan", "corporate", "corporate_loan", "default_prediction", "early_warning", "alert_signal", "risk_level"], "difficulty": "medium"}
+{"test_id": "TAG_034", "query": "个人消费贷申请评分", "expected_tags": ["credit_risk", "pre_loan", "risk_management", "individual", "consumer_loan", "admission_scoring", "credit_rating"], "difficulty": "medium"}
+{"test_id": "TAG_035", "query": "信用卡分期客户风险分层", "expected_tags": ["credit_risk", "in_loan", "risk_management", "risk_level", "credit_card", "existing_customer", "individual"], "difficulty": "medium"}
+{"test_id": "TAG_036", "query": "乡镇企业流动资金信用评估", "expected_tags": ["credit_risk", "pre_loan", "small_micro_enterprise", "rural_area", "credit_rating", "risk_level"], "difficulty": "medium"}
+{"test_id": "TAG_037", "query": "高净值客户理财推荐", "expected_tags": ["customer_marketing", "high_net_worth", "financial_product", "preference_analysis", "cross_selling"], "difficulty": "medium"}
+{"test_id": "TAG_038", "query": "老年客群存款营销", "expected_tags": ["customer_marketing", "elderly", "deposit", "pre_marketing", "in_marketing", "post_marketing"], "difficulty": "medium"}
+{"test_id": "TAG_039", "query": "Z世代手机银行活跃度提升", "expected_tags": ["customer_marketing", "young_customer", "mobile_banking", "preference_analysis", "segmentation"], "difficulty": "medium"}
+{"test_id": "TAG_040", "query": "供应链核心企业上下游营销", "expected_tags": ["customer_marketing", "supply_chain", "corporate", "cross_selling", "segmentation"], "difficulty": "medium"}
+{"test_id": "TAG_041", "query": "代发工资客户交叉销售", "expected_tags": ["customer_marketing", "cross_selling", "existing_customer", "transaction_data", "customer_profile"], "difficulty": "medium"}
+{"test_id": "TAG_042", "query": "县域商户收单业务营销", "expected_tags": ["customer_marketing", "pre_marketing", "rural_area", "small_micro_enterprise", "rural_commerce"], "difficulty": "medium"}
+{"test_id": "TAG_043", "query": "农村电商客群贷款需求识别", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "small_micro_enterprise", "rural_commerce", "agricultural_loan", "small_loan", "admission_scoring", "segmentation", "demand_forecasting"], "difficulty": "medium"}
+{"test_id": "TAG_044", "query": "客户流失挽回策略推荐", "expected_tags": ["customer_marketing", "post_loan", "churned_customer", "churn_prediction", "priority_ranking"], "difficulty": "medium"}
+{"test_id": "TAG_045", "query": "财富客户综合贡献度评估", "expected_tags": ["customer_marketing", "high_net_worth", "value_assessment", "cross_selling", "segmentation"], "difficulty": "medium"}
+{"test_id": "TAG_046", "query": "网点柜面业务量预测排班", "expected_tags": ["operation_management", "resource_planning", "demand_forecasting", "resource_optimization"], "difficulty": "medium"}
+{"test_id": "TAG_047", "query": "厅堂智能排队叫号优化", "expected_tags": ["operation_management", "daily_operation", "resource_optimization", "branch_data"], "difficulty": "medium"}
+{"test_id": "TAG_048", "query": "ATM现钞需求预测调配", "expected_tags": ["demand_forecasting", "resource_optimization", "daily_operation", "operation_management"], "difficulty": "medium"}
+{"test_id": "TAG_049", "query": "柜员操作风险实时监测", "expected_tags": ["operation_management", "daily_operation", "risk_management", "anomaly_detection", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_050", "query": "大额交易反洗钱筛查", "expected_tags": ["operation_management", "post_loan", "compliance", "anti_money_laundering", "anomaly_detection", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_051", "query": "客户身份识别异常报警", "expected_tags": ["operation_management", "post_loan", "risk_management", "compliance", "anti_fraud", "anomaly_detection", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_052", "query": "监管报表自动生成和校验", "expected_tags": ["operation_management", "compliance", "regulatory_reporting"], "difficulty": "medium"}
+{"test_id": "TAG_053", "query": "内部操作合规性自动审查", "expected_tags": ["operation_management", "compliance", "compliance_check", "anomaly_detection"], "difficulty": "medium"}
+{"test_id": "TAG_054", "query": "员工离职风险预测预警", "expected_tags": ["operation_management", "daily_operation", "risk_management", "early_warning", "personal_info_protection", "data_minimization"], "difficulty": "medium"}
+{"test_id": "TAG_055", "query": "对公客户资金归集预测", "expected_tags": ["operation_management", "post_loan", "corporate", "demand_forecasting"], "difficulty": "medium"}
+{"test_id": "TAG_056", "query": "涉农贷款风险监控与预警", "expected_tags": ["credit_risk", "in_loan", "risk_management", "farmer", "rural_area", "small_micro_enterprise", "agricultural_loan", "early_warning", "default_prediction", "risk_score", "risk_level", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_057", "query": "小微企业票据贴现需求预测", "expected_tags": ["credit_risk", "pre_loan", "small_micro_enterprise", "demand_forecasting"], "difficulty": "medium"}
+{"test_id": "TAG_058", "query": "信用卡套现行为识别模型", "expected_tags": ["credit_risk", "in_loan", "anti_fraud", "credit_card", "anomaly_detection", "risk_management", "compliance", "anti_money_laundering"], "difficulty": "medium"}
+{"test_id": "TAG_059", "query": "农户种植周期资金缺口预测", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "agricultural_loan", "default_prediction", "amount_calculation", "demand_forecasting"], "difficulty": "medium"}
+{"test_id": "TAG_060", "query": "担保圈风险传染路径分析", "expected_tags": ["credit_risk", "post_loan", "risk_management", "guarantee_circle", "corporate"], "difficulty": "medium"}
+{"test_id": "TAG_061", "query": "不良贷款清收优先级排序", "expected_tags": ["credit_risk", "post_loan", "risk_management", "priority_ranking", "ranked_list"], "difficulty": "medium"}
+{"test_id": "TAG_062", "query": "银行网点转型选址评估", "expected_tags": ["operation_management", "resource_planning", "branch_data"], "difficulty": "medium"}
+{"test_id": "TAG_063", "query": "客户活动参与意愿度预测", "expected_tags": ["customer_marketing", "pre_marketing", "response_prediction", "probability"], "difficulty": "medium"}
+{"test_id": "TAG_064", "query": "小微企业主个人信用辅助评估", "expected_tags": ["credit_risk", "pre_loan", "small_micro_enterprise", "individual", "credit_rating", "risk_score", "risk_level", "admission_decision", "personal_info_protection", "fair_lending"], "difficulty": "medium"}
+{"test_id": "TAG_065", "query": "存款产品客户需求匹配", "expected_tags": ["customer_marketing", "pre_marketing", "individual", "existing_customer", "deposit", "preference_analysis", "cross_selling"], "difficulty": "medium"}
+{"test_id": "TAG_066", "query": "对公客户行业风险敞口分析", "expected_tags": ["credit_risk", "post_loan", "risk_management", "corporate"], "difficulty": "medium"}
+{"test_id": "TAG_067", "query": "手机银行渠道客户分流策略", "expected_tags": ["operation_management", "mobile_banking", "segmentation", "resource_optimization"], "difficulty": "medium"}
+{"test_id": "TAG_068", "query": "农村承包经营权抵押贷款评估", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "agricultural_loan", "guarantee_loan", "risk_management", "credit_rating", "amount_calculation", "risk_score", "risk_level", "admission_decision", "recommended_amount", "customer_profile", "credit_report", "transaction_data", "repayment_history", "loan_application", "business_data", "asset_liability"], "difficulty": "medium"}
+{"test_id": "TAG_069", "query": "银发客群养老金融产品推荐", "expected_tags": ["customer_marketing", "pre_marketing", "elderly", "pension_finance", "segmentation", "preference_analysis", "cross_selling"], "difficulty": "medium"}
+{"test_id": "TAG_070", "query": "信贷审批流程时效分析优化", "expected_tags": ["operation_management", "in_loan", "performance_analysis", "resource_optimization"], "difficulty": "medium"}
+{"test_id": "TAG_071", "query": "客户满意度影响因素分析", "expected_tags": ["customer_marketing", "post_loan", "performance_analysis", "existing_customer"], "difficulty": "medium"}
+{"test_id": "TAG_072", "query": "银行员工绩效智能评估模型", "expected_tags": ["operation_management", "performance_analysis", "personal_info_protection", "fair_lending", "model_audit"], "difficulty": "medium"}
+{"test_id": "TAG_073", "query": "新客开户后金融产品推荐", "expected_tags": ["customer_marketing", "pre_marketing", "new_customer", "financial_product", "cross_selling", "preference_analysis"], "difficulty": "medium"}
+{"test_id": "TAG_074", "query": "客户生命周期阶段活跃度预测", "expected_tags": ["customer_marketing", "marketing", "segmentation", "churn_prediction", "existing_customer"], "difficulty": "medium"}
+{"test_id": "TAG_075", "query": "信用卡客户消费行为分类", "expected_tags": ["customer_marketing", "segmentation", "credit_card", "existing_customer"], "difficulty": "medium"}
+{"test_id": "TAG_076", "query": "企业税务信息与贷款风险评估", "expected_tags": ["credit_risk", "pre_loan", "corporate", "corporate_loan", "risk_score", "risk_level", "recommended_amount"], "difficulty": "medium"}
+{"test_id": "TAG_077", "query": "区域经济指标与银行贷款策略", "expected_tags": ["credit_risk", "pre_loan", "risk_management"], "difficulty": "medium"}
+{"test_id": "TAG_078", "query": "线上贷款产品反欺诈模型", "expected_tags": ["credit_risk", "pre_loan", "anti_fraud", "risk_management", "admission_scoring"], "difficulty": "medium"}
+{"test_id": "TAG_079", "query": "客户主动还款意愿度分析", "expected_tags": ["credit_risk", "in_loan", "risk_management", "default_prediction", "early_warning", "risk_score", "risk_level", "alert_signal", "repayment_history", "customer_profile", "transaction_data"], "difficulty": "medium"}
+{"test_id": "TAG_080", "query": "对公客户财务报表智能解读", "expected_tags": ["credit_risk", "pre_loan", "corporate", "corporate_loan", "risk_management", "credit_rating", "early_warning", "anomaly_detection", "explanation_text", "asset_liability", "operation_management"], "difficulty": "medium"}
+{"test_id": "TAG_081", "query": "农户经营收益波动预测", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "agricultural_loan", "default_prediction", "early_warning"], "difficulty": "medium"}
+{"test_id": "TAG_082", "query": "银行自助设备故障预测维护", "expected_tags": ["operation_management", "daily_operation", "anomaly_detection", "resource_optimization"], "difficulty": "medium"}
+{"test_id": "TAG_083", "query": "客户流失前行为特征识别", "expected_tags": ["operation_management", "post_loan", "churn_prediction", "early_warning", "existing_customer", "churned_customer"], "difficulty": "medium"}
+{"test_id": "TAG_084", "query": "千企万户走访普惠营销名单排序", "expected_tags": ["customer_marketing", "pre_marketing", "priority_ranking", "small_micro_enterprise", "rural_area", "agricultural_loan", "small_loan"], "difficulty": "medium"}
+{"test_id": "TAG_085", "query": "银行中间业务收入增长点预测", "expected_tags": ["operation_management", "demand_forecasting", "performance_analysis"], "difficulty": "medium"}
+{"test_id": "TAG_086", "query": "客户投诉自动分类和路由", "expected_tags": ["operation_management", "post_loan", "daily_operation", "compliance"], "difficulty": "medium"}
+{"test_id": "TAG_087", "query": "抵质押品动态价值监测", "expected_tags": ["credit_risk", "in_loan", "risk_management", "early_warning"], "difficulty": "medium"}
+{"test_id": "TAG_088", "query": "企业上下游产业链交易分析", "expected_tags": ["credit_risk", "pre_loan", "supply_chain", "corporate", "small_micro_enterprise"], "difficulty": "medium"}
+{"test_id": "TAG_089", "query": "粮食种植户贷款需求季节预测", "expected_tags": ["credit_risk", "pre_loan", "farmer", "rural_area", "agricultural_loan", "demand_forecasting"], "difficulty": "medium"}
+{"test_id": "TAG_090", "query": "社保公积金数据信贷评估应用", "expected_tags": ["credit_risk", "pre_loan", "individual", "credit_rating", "amount_calculation", "risk_level", "personal_info_protection"], "difficulty": "medium"}
+{"test_id": "TAG_091", "query": "外贸企业汇率风险与信贷风险", "expected_tags": ["credit_risk", "pre_loan", "corporate", "risk_management", "early_warning", "credit_rating", "risk_level", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_092", "query": "县域银行服务点布局优化", "expected_tags": ["operation_management", "resource_optimization", "rural_area"], "difficulty": "medium"}
+{"test_id": "TAG_093", "query": "银行客户之声舆情监测分析", "expected_tags": ["operation_management", "daily_operation", "risk_management"], "difficulty": "medium"}
+{"test_id": "TAG_094", "query": "科技型企业知识产权质押评估", "expected_tags": ["credit_risk", "pre_loan", "corporate", "small_micro_enterprise", "risk_management", "value_assessment"], "difficulty": "medium"}
+{"test_id": "TAG_095", "query": "零售客户AUM增长预测", "expected_tags": ["customer_marketing", "pre_marketing", "individual", "existing_customer", "financial_product", "deposit", "demand_forecasting", "segmentation", "value_assessment", "customer_profile", "transaction_data", "asset_liability"], "difficulty": "medium"}
+{"test_id": "TAG_096", "query": "不良资产清收效果预测", "expected_tags": ["credit_risk", "post_loan", "default_prediction", "risk_management"], "difficulty": "medium"}
+{"test_id": "TAG_097", "query": "银行厅堂营销互动转化分析", "expected_tags": ["customer_marketing", "in_marketing", "performance_analysis", "conversion_prediction", "segmentation"], "difficulty": "medium"}
+{"test_id": "TAG_098", "query": "企业ESG评分与信用风险关联", "expected_tags": ["credit_risk", "pre_loan", "corporate", "credit_rating", "default_prediction", "risk_score", "risk_level"], "difficulty": "medium"}
+{"test_id": "TAG_099", "query": "睡眠户激活营销活动设计", "expected_tags": ["customer_marketing", "dormant_customer", "deposit", "pre_marketing", "in_marketing", "post_marketing"], "difficulty": "medium"}
+{"test_id": "TAG_100", "query": "银行网点无纸化转型效果分析", "expected_tags": ["operation_management", "performance_analysis"], "difficulty": "medium"}
+{"test_id": "TAG_101", "query": "公积金缴存客户消费贷预授信", "expected_tags": ["credit_risk", "pre_loan", "consumer_loan", "individual", "existing_customer", "credit_rating", "amount_calculation"], "difficulty": "medium"}
+{"test_id": "TAG_102", "query": "客户经理包片营销任务分配", "expected_tags": ["customer_marketing", "pre_marketing", "resource_planning", "segmentation"], "difficulty": "medium"}
+{"test_id": "TAG_103", "query": "银行IT系统运行异常预警", "expected_tags": ["operation_management", "daily_operation", "anomaly_detection", "alert_signal"], "difficulty": "medium"}
+{"test_id": "TAG_104", "query": "对公客户存款流失前兆识别", "expected_tags": ["operation_management", "post_loan", "corporate", "deposit", "churn_prediction", "early_warning", "anomaly_detection"], "difficulty": "medium"}
+{"test_id": "TAG_105", "query": "县域特色产业金融服务方案", "expected_tags": ["customer_marketing", "rural_area", "farmer", "small_micro_enterprise", "agricultural_loan", "preference_analysis", "segmentation"], "difficulty": "medium"}

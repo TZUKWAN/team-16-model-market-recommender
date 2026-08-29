@@ -1,0 +1,62 @@
+{
+  "model_id": "OPS_019",
+  "model_name": "客户投诉分析模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "客户投诉自动分类与根因分析"
+  ],
+  "business_stage": [
+    "daily_operation",
+    "performance_analysis"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "elderly",
+    "young_customer"
+  ],
+  "model_capability": [
+    "segmentation",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "transaction_data",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "clustering",
+    "risk_level",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "classification_accuracy": 0.89,
+    "root_cause_hit_rate": 0.76
+  },
+  "applicable_conditions": "适用于银行客户投诉的自动分类、优先级排序和根因分析；覆盖服务态度、业务差错、系统故障等投诉类型。",
+  "unsuitable_conditions": "不适用于涉及法律诉讼的客户投诉；不适用于需要实时处理的紧急投诉。",
+  "compliance_boundary": "投诉处理需符合《银行业保险业消费投诉处理管理办法》；客户投诉信息严格保密。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行客服中心",
+      "description": "投诉自动分类与分析。",
+      "effect": "投诉处理时效提升60%，一次性解决率从55%提升至78%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "performance_analysis",
+    "individual",
+    "corporate",
+    "elderly",
+    "young_customer",
+    "segmentation",
+    "preference_analysis"
+  ],
+  "description": "基于NLP文本分类和主题建模的客户投诉分析模型，自动对投诉内容进行分类、归因和优先级排序。"
+}

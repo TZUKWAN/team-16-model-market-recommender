@@ -1,0 +1,7 @@
+# CPU-only dense retrieval runtime used by the competition_dense image.
+# Keep direct dependencies exact; regenerate requirements-embeddings-lock.txt
+# with Python 3.11 whenever either version changes.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+torch==2.13.0+cpu
+sentence-transformers==5.6.0

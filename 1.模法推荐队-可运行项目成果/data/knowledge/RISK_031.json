@@ -1,0 +1,66 @@
+{
+  "model_id": "RISK_031",
+  "model_name": "普惠小微风险准入模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "普惠小微贷款准入评估"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise",
+    "rural_area"
+  ],
+  "model_capability": [
+    "admission_scoring",
+    "credit_rating",
+    "amount_calculation"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "business_income",
+    "tax_info"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "supply_chain_data",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "admission_decision",
+    "recommended_amount"
+  ],
+  "performance_metrics": {
+    "auc": 0.84,
+    "ks": 0.4,
+    "precision": 0.79,
+    "recall": 0.76
+  },
+  "applicable_conditions": "适用于普惠型小微企业贷款（单户授信1000万元以下）的准入评估；支持信用贷款和担保贷款。",
+  "unsuitable_conditions": "不适用于中型以上企业；不适用于房地产、金融投资类企业。",
+  "compliance_boundary": "普惠小微贷款需符合两增两控监管要求；不得对小微企业收取不合理费用。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行普惠金融事业部",
+      "description": "全行普惠小微贷款线上审批核心模型。",
+      "effect": "普惠小微贷款审批时效从2天缩短至2小时，客户数增长40%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "small_micro_enterprise",
+    "rural_area",
+    "admission_scoring",
+    "credit_rating",
+    "amount_calculation",
+    "small_loan"
+  ],
+  "description": "基于税务数据、经营流水、征信信息的普惠小微专属准入模型，兼顾风险控制和业务发展。"
+}

@@ -1,0 +1,68 @@
+{
+  "model_id": "MKT_027",
+  "model_name": "贷款续贷营销模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "贷款到期续贷营销"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "existing_customer",
+    "small_micro_enterprise",
+    "individual"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "churn_prediction",
+    "response_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "repayment_history",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "business_income",
+    "credit_report"
+  ],
+  "output_fields": [
+    "renewal_probability",
+    "recommended_renewal_terms",
+    "retention_risk",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.83,
+    "precision": 0.76,
+    "recall": 0.73,
+    "lift": 2.0
+  },
+  "applicable_conditions": "适用于贷款即将到期的客户的续贷营销；支持到期前30-60天的提前营销。",
+  "unsuitable_conditions": "不适用于即将结清不再续贷的客户；不适用于已出现逾期的客户。",
+  "compliance_boundary": "续贷营销需遵守监管关于无还本续贷的相关规定；不得强制搭售产品。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售信贷部",
+      "description": "贷款到期客户的续贷营销。",
+      "effect": "续贷率提升25%，客户流失率下降18%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "existing_customer",
+    "small_micro_enterprise",
+    "individual",
+    "conversion_prediction",
+    "churn_prediction",
+    "response_prediction"
+  ],
+  "description": "基于客户还款表现、经营状况变化和续贷意愿信号的续贷营销模型。"
+}

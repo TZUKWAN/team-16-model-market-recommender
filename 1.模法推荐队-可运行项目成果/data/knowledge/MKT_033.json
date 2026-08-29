@@ -1,0 +1,65 @@
+{
+  "model_id": "MKT_033",
+  "model_name": "粮食种植户金融需求模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "粮食种植户金融需求预测"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "farmer",
+    "rural_area"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "preference_analysis",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "product_holdings",
+    "demographics",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "loan_demand_probability",
+    "seasonal_pattern",
+    "preferred_loan_type",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.77,
+    "precision": 0.69,
+    "recall": 0.72,
+    "lift": 1.7
+  },
+  "applicable_conditions": "适用于粮食种植大户、家庭农场等新型农业经营主体的金融需求预测；支持春耕、夏管、秋收等季节性金融产品。",
+  "unsuitable_conditions": "不适用于非种植业农户；不适用于小规模自给型种植户。",
+  "compliance_boundary": "涉农信息使用需保护农户隐私；金融产品需符合三农金融服务政策。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农业银行三农事业部",
+      "description": "粮食种植户春耕贷款精准营销。",
+      "effect": "春耕贷款投放增长40%，客户覆盖率提升25%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "farmer",
+    "rural_area",
+    "conversion_prediction",
+    "preference_analysis",
+    "segmentation",
+    "agricultural_loan"
+  ],
+  "description": "结合种植面积、作物类型、农资采购记录和季节性特征的粮食种植户金融需求预测模型。"
+}

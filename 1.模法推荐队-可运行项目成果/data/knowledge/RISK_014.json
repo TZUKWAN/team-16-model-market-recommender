@@ -1,0 +1,62 @@
+{
+  "model_id": "RISK_014",
+  "model_name": "关联企业风险识别模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "关联企业风险识别"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "post_loan"
+  ],
+  "customer_segment": [
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "supply_chain_data"
+  ],
+  "input_fields_optional": [
+    "business_income",
+    "credit_report"
+  ],
+  "output_fields": [
+    "related_enterprise_score",
+    "risk_contagion_level",
+    "alert_reason"
+  ],
+  "performance_metrics": {
+    "auc": 0.84,
+    "precision": 0.79,
+    "recall": 0.74
+  },
+  "applicable_conditions": "适用于识别通过股权、高管、亲属等关联关系形成的企业风险集团；适用于集团客户统一授信管理。",
+  "unsuitable_conditions": "不适用于无关联关系的独立企业；不适用于个人贷款。",
+  "compliance_boundary": "关联关系识别需符合《商业银行集团客户授信业务风险管理指引》；涉及第三方企业信息需合规获取。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行信贷管理部",
+      "description": "搭建关联企业风险图谱，覆盖全行对公授信客户。",
+      "effect": "发现未识别关联集团50+个，避免集中授信风险超10亿元。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "post_loan",
+    "corporate",
+    "small_micro_enterprise",
+    "anomaly_detection",
+    "credit_rating",
+    "corporate_loan"
+  ],
+  "description": "基于工商股权、人员交叉、担保关联等多维数据构建企业关联图谱，通过图神经网络识别隐性关联关系。"
+}

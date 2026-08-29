@@ -1,0 +1,60 @@
+{
+  "model_id": "OPS_024",
+  "model_name": "利率定价评估模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "贷款产品利率定价"
+  ],
+  "business_stage": [
+    "performance_analysis"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise",
+    "corporate"
+  ],
+  "model_capability": [
+    "risk_pricing",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "loan_application",
+    "customer_profile",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "asset_liability"
+  ],
+  "output_fields": [
+    "recommended_amount",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "pricing_accuracy": 0.82,
+    "acceptance_rate": 0.74
+  },
+  "applicable_conditions": "适用于个人消费贷、经营贷和小微企业贷款的利率定价；基于客户信用风险、资金成本和市场竞争情况给出建议利率。",
+  "unsuitable_conditions": "不适用于政策性和补贴性贷款的利率定价；不适用于大额对公贷款的议价场景。",
+  "compliance_boundary": "利率定价需符合《商业银行法》和央行利率管理规定；不得有价格歧视行为；需确保利率信息透明。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行信贷部",
+      "description": "贷款定价辅助系统。",
+      "effect": "利率定价合理性提升30%，优质客户留存率提升15%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "performance_analysis",
+    "individual",
+    "small_micro_enterprise",
+    "corporate",
+    "risk_pricing",
+    "value_assessment"
+  ],
+  "description": "基于风险成本、资金成本和市场竞争的贷款利率定价模型，使用风险调整后收益率（RAROC）框架计算建议利率。"
+}

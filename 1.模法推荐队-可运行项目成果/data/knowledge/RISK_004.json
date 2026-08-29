@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_004",
+  "model_name": "小微企业贷前准入模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "小微企业贷前准入评分"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "admission_scoring",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "tax_info",
+    "supply_chain_data"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "admission_decision"
+  ],
+  "performance_metrics": {
+    "auc": 0.85,
+    "ks": 0.42,
+    "precision": 0.8,
+    "recall": 0.76
+  },
+  "applicable_conditions": "适用于小微企业（年营收5000万元以下）的贷款准入评估；适用于信用贷款和担保贷款场景。",
+  "unsuitable_conditions": "不适用于大型企业或集团客户；不适用于房地产行业客户；不适用于经营不足1年的新设企业。",
+  "compliance_boundary": "需符合《商业银行小微企业金融服务监管评价办法》；评分结果不得作为唯一的审批依据；涉及企业主个人信用信息需获得授权。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行普惠金融部",
+      "description": "作为微贷自动审批流程的核心准入模型，覆盖全国26个分行。",
+      "effect": "小微企业贷款审批时效从3天缩短至15分钟，通过率提升18%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "small_micro_enterprise",
+    "admission_scoring",
+    "credit_rating",
+    "small_loan"
+  ],
+  "description": "综合企业工商、税务、征信、经营流水的多维度准入评分模型，采用XGBoost算法，兼顾模型区分度和可解释性。"
+}

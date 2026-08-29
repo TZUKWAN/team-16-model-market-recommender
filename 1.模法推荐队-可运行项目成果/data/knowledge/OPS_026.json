@@ -1,0 +1,57 @@
+{
+  "model_id": "OPS_026",
+  "model_name": "费用预算预测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "银行费用预算编制"
+  ],
+  "business_stage": [
+    "resource_planning",
+    "performance_analysis"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "demand_forecasting",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "branch_data"
+  ],
+  "input_fields_optional": [
+    "transaction_data"
+  ],
+  "output_fields": [
+    "forecast_value",
+    "risk_score",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "budget_accuracy": 0.88,
+    "variance_reduction": 0.35
+  },
+  "applicable_conditions": "适用于银行部门预算和网点费用的预测和编制；支持按成本中心、费用类型和时间维度进行分析。",
+  "unsuitable_conditions": "不适用于战略性和一次性重大投资的预算预测；不涉及绩效薪酬的预算管理。",
+  "compliance_boundary": "预算数据仅用于内部管理；涉及费用支出的合规性需由财务部门审核。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行财务部",
+      "description": "费用预算预测系统。",
+      "effect": "预算编制效率提升60%，预算偏差率从12%降至7%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "resource_planning",
+    "performance_analysis",
+    "individual",
+    "corporate",
+    "demand_forecasting",
+    "value_assessment"
+  ],
+  "description": "基于历史费用数据和业务增长预测的费用预算模型，使用时间序列和回归分析方法预测下期费用支出。"
+}

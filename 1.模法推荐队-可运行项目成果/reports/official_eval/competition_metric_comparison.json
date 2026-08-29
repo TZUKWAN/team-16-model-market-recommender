@@ -1,0 +1,173 @@
+{
+  "report_metadata": {
+    "title": "竞赛指标对比报告",
+    "generated_at": "2026-06-30T20:52:12",
+    "comparison": "官方评测集（official_60） vs 旧 Baseline（105 模型）",
+    "source_files": {
+      "official_topk_summary": "reports/official_eval/official_topk_summary.json",
+      "official_failures": "reports/official_eval/official_failures.json",
+      "old_baseline_eval": "reports/examples/eval_results.json",
+      "old_baseline_failures": "reports/examples/topk_failures.json"
+    }
+  },
+  "evaluation_goal": "对比两套评估体系下的模型推荐性能差异，识别官方评测集的改进空间和潜在风险。",
+  "official_metrics": {
+    "val": {
+      "description": "验证集结果，64 条 query",
+      "total_queries": 64,
+      "top1_hits": 53,
+      "top1_rate": 82.8,
+      "top3_hits": 62,
+      "top3_rate": 96.9,
+      "top5_hits": 64,
+      "top5_rate": 100.0
+    },
+    "test": {
+      "description": "测试集结果，62 条 query",
+      "total_queries": 62,
+      "top1_hits": 54,
+      "top1_rate": 87.1,
+      "top3_hits": 59,
+      "top3_rate": 95.2,
+      "top5_hits": 60,
+      "top5_rate": 96.8
+    }
+  },
+  "old_baseline_metrics": {
+    "description": "旧 Baseline 评估结果，基于 105 个模型的多维度评估",
+    "intent_evaluation": {
+      "metric": "intent_accuracy",
+      "total": 110,
+      "correct": 74,
+      "accuracy_pct": 67.27
+    },
+    "tag_evaluation": {
+      "metric": "tag_extraction",
+      "total": 105,
+      "avg_precision": 0.5601,
+      "avg_recall": 0.3619,
+      "avg_f1": 0.4052
+    },
+    "topk_evaluation": {
+      "metric": "topk_hit_rate",
+      "total": 105,
+      "top3_hits": 28,
+      "top3_hit_rate_pct": 26.67,
+      "top5_hits": 34,
+      "top5_hit_rate_pct": 32.38
+    },
+    "explanation_evaluation": {
+      "metric": "explanation_comprehensibility",
+      "overall_rate_pct": 93.3,
+      "target": 90,
+      "status": "pass"
+    },
+    "composition_evaluation": {
+      "metric": "composition_fit",
+      "total": 3,
+      "avg_score": 79.13
+    }
+  },
+  "comparison_table": [
+    {
+      "dimension": "Top3 命中率",
+      "official_val": "96.9%",
+      "official_test": "95.2%",
+      "old_baseline": "26.67%",
+      "delta_val_vs_baseline_pp": 70.23,
+      "delta_test_vs_baseline_pp": 68.53,
+      "notes": "官方评测在 Top3 上远超旧 Baseline"
+    },
+    {
+      "dimension": "Top5 命中率",
+      "official_val": "100.0%",
+      "official_test": "96.8%",
+      "old_baseline": "32.38%",
+      "delta_val_vs_baseline_pp": 67.62,
+      "delta_test_vs_baseline_pp": 64.42,
+      "notes": "官方评测在 Top5 上远超旧 Baseline"
+    }
+  ],
+  "key_findings": [
+    "官方 TopK 命中率显著高于旧 Baseline，Top3 和 Top5 差距在 64-70 个百分点之间",
+    "旧 Baseline 的多维度评估更丰富，覆盖意图、标签、解释、组合编排",
+    "旧 Baseline 的标签提取 avg_f1 仅 0.4052，精确率高于召回率，说明提取偏保守",
+    "两套体系在数据集、推荐引擎、评估维度上差异显著，直接对比仅供参考"
+  ],
+  "failure_attribution": {
+    "official": {
+      "total_failures": 19,
+      "by_type": {
+        "confused_model": {
+          "count": 17,
+          "percentage": 89.5,
+          "description": "模型混淆，推荐了名称或关键词高度相似但业务范围不同的模型"
+        },
+        "business_scenario_mismatch": {
+          "count": 1,
+          "percentage": 5.3,
+          "description": "推荐结果与业务场景明显不匹配"
+        },
+        "unknown": {
+          "count": 1,
+          "percentage": 5.3,
+          "description": "无法明确归因，需人工分析"
+        }
+      },
+      "by_split": {
+        "val": {
+          "total": 11,
+          "confused_model": 11,
+          "business_scenario_mismatch": 0,
+          "unknown": 0
+        },
+        "test": {
+          "total": 8,
+          "confused_model": 6,
+          "business_scenario_mismatch": 1,
+          "unknown": 1
+        }
+      }
+    },
+    "old_baseline": {
+      "total_failures_estimated": 71,
+      "top5_miss_rate_pct": 67.62,
+      "main_causes": [
+        "意图分类错误：意图准确率仅 67.27%",
+        "标签提取不完整：avg_recall 仅 0.3619",
+        "模型元数据覆盖不足，关键词匹配难以区分相似模型"
+      ]
+    }
+  },
+  "risks_and_recommendations": {
+    "risks": [
+      {
+        "risk": "模型混淆是高优待修复项",
+        "detail": "89.5% 的失败归因于模型混淆，细粒度区分能力不足",
+        "severity": "high"
+      },
+      {
+        "risk": "旧 Baseline 与官方评测差距过大",
+        "detail": "旧 Baseline Top5 命中率仅 32.38%，无法作为官方评测的性能参考基线",
+        "severity": "medium"
+      },
+      {
+        "risk": "官方评测维度不完整",
+        "detail": "仅覆盖 TopK 命中率，缺少意图、标签、解释、组合编排评估",
+        "severity": "medium"
+      },
+      {
+        "risk": "测试集仍有完全未命中 case",
+        "detail": "2 条 query 无法推荐到任何目标模型（Top5 外）",
+        "severity": "medium"
+      }
+    ],
+    "recommendations": [
+      "引入场景级匹配，减少同名不同业务模型之间的混淆",
+      "将旧 Baseline 的多维评估迁移到官方评测集",
+      "修复 business_scenario_mismatch 类型失败，增加场景-模型映射规则",
+      "人工分析 unknown 失败 case（test_0018），确认根因",
+      "将官方评测结果设为新基线，后续每次更新后重新评估"
+    ]
+  }
+}

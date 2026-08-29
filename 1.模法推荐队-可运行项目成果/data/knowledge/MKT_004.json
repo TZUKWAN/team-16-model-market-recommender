@@ -1,0 +1,67 @@
+{
+  "model_id": "MKT_004",
+  "model_name": "客户产品偏好模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "客户产品偏好分析"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "new_customer"
+  ],
+  "model_capability": [
+    "preference_analysis",
+    "segmentation",
+    "cross_selling"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "product_holdings",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "demographics",
+    "risk_preference"
+  ],
+  "output_fields": [
+    "preference_vector",
+    "top_products",
+    "preference_reason",
+    "cluster_label"
+  ],
+  "performance_metrics": {
+    "precision_at_5": 0.68,
+    "recall_at_5": 0.62,
+    "ndcg": 0.72
+  },
+  "applicable_conditions": "适用于分析客户对存款、理财、贷款、信用卡等各类银行产品的偏好；支持个性化产品推荐。",
+  "unsuitable_conditions": "不适用于数据不足的新客户（开户不足3个月）；不适用于风险偏好极端的客户。",
+  "compliance_boundary": "偏好分析需符合《个人信息保护法》自动化决策相关规定；客户有权拒绝基于画像的个性化推荐。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行数字银行部",
+      "description": "千人千面产品推荐的基础模型。",
+      "effect": "产品推荐点击率提升3倍。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "new_customer",
+    "preference_analysis",
+    "segmentation",
+    "cross_selling"
+  ],
+  "description": "基于客户交易行为和产品持有的深度神经网络偏好学习模型，输出客户对各类银行产品的偏好评分。"
+}

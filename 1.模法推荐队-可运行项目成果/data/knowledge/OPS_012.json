@@ -1,0 +1,53 @@
+{
+  "model_id": "OPS_012",
+  "model_name": "合规制度智能匹配模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "合规制度与业务流程匹配"
+  ],
+  "business_stage": [
+    "compliance",
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "compliance_check"
+  ],
+  "input_fields_required": [
+    "customer_profile"
+  ],
+  "input_fields_optional": [],
+  "output_fields": [
+    "risk_level",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "matching_accuracy": 0.88,
+    "coverage_rate": 0.92
+  },
+  "applicable_conditions": "适用于银行业务操作与内外部合规制度的自动匹配检查；覆盖央行、银保监会和行内制度要求。",
+  "unsuitable_conditions": "不适用于法律法规尚未明确的创新业务领域；不涉及跨境合规制度匹配。",
+  "compliance_boundary": "匹配结果供合规审查参考，不替代法务和合规部门专业判断；制度库需定期更新维护。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行合规部",
+      "description": "合规制度智能匹配系统。",
+      "effect": "合规审查效率提升3倍，制度覆盖率从60%提升至95%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "compliance",
+    "daily_operation",
+    "individual",
+    "corporate",
+    "compliance_check",
+    "model_audit"
+  ],
+  "description": "基于NLP语义匹配的合规制度智能检索模型，将业务操作描述与合规制度条款进行语义相似度匹配。"
+}

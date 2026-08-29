@@ -1,0 +1,3 @@
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，客户号、证件号、联系方式和机构信息均非真实生产数据。","customer_id_masked":"CUST_RISK_0001","risk_score":0.91,"risk_level":"高风险","reason_code":"OVERDUE_HISTORY_AND_HIGH_DEBT","suggested_action":"建议进入人工复核并补充还款能力证明。"}
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，客户号、证件号、联系方式和机构信息均非真实生产数据。","customer_id_masked":"CUST_RISK_0002","risk_score":0.78,"risk_level":"中高风险","reason_code":"MULTI_PLATFORM_BORROWING","suggested_action":"建议降低授信额度并加强贷后跟踪。"}
+{"demo_data":true,"desensitized_notice":"脱敏演示数据，客户号、证件号、联系方式和机构信息均非真实生产数据。","customer_id_masked":"CUST_RISK_0003","risk_score":0.32,"risk_level":"低风险","reason_code":"STABLE_REPAYMENT_AND_LOW_LEVERAGE","suggested_action":"可进入自动审批候选池，保留常规抽检。"}

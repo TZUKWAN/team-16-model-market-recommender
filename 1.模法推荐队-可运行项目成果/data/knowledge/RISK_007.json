@@ -1,0 +1,62 @@
+{
+  "model_id": "RISK_007",
+  "model_name": "对公贷款信用评级模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "对公贷款信用评级"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "corporate"
+  ],
+  "model_capability": [
+    "credit_rating",
+    "default_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "business_income",
+    "asset_liability",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "supply_chain_data",
+    "tax_info"
+  ],
+  "output_fields": [
+    "credit_rating",
+    "rating_score",
+    "rating_report"
+  ],
+  "performance_metrics": {
+    "auc": 0.87,
+    "ks": 0.45,
+    "accuracy": 0.82
+  },
+  "applicable_conditions": "适用于中大型企业客户的信用等级评定；适用于年度评级审查和授信审批参考。",
+  "unsuitable_conditions": "不适用于金融机构和类金融企业评级；不适用于成立不足2年的新设企业；不适用于ST/*ST上市公司。",
+  "compliance_boundary": "评级结果需符合《商业银行资本管理办法》关于内部评级法的要求；评级流程需经风控委员会审定。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行公司金融部",
+      "description": "替代传统手工评级，实现全行对公客户自动化评级。",
+      "effect": "评级覆盖率从60%提升至98%，评级一致性提升40%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "corporate",
+    "credit_rating",
+    "default_prediction",
+    "corporate_loan"
+  ],
+  "description": "融合财务指标、行业风险、经营实力、外部评级的综合信用评级模型，采用评分卡+机器学习混合架构。"
+}

@@ -1,0 +1,59 @@
+{
+  "model_id": "OPS_020",
+  "model_name": "智能客服问答匹配模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "智能客服FAQ匹配"
+  ],
+  "business_stage": [
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "young_customer",
+    "elderly"
+  ],
+  "model_capability": [
+    "preference_analysis",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "ranked_list",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "top1_accuracy": 0.85,
+    "top3_accuracy": 0.94,
+    "response_time_ms": 50
+  },
+  "applicable_conditions": "适用于银行在线客服和电话客服的FAQ自动问答；覆盖账户查询、转账汇款、贷款业务、信用卡等常见问题。",
+  "unsuitable_conditions": "不适用于需要多轮复杂对话的业务咨询；不涉及专业理财咨询和复杂投诉处理。",
+  "compliance_boundary": "智能客服需明确告知客户为AI服务；涉及产品推荐需符合销售适当性管理要求；重要信息需提示以官方为准。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行客服中心",
+      "description": "在线智能客服系统。",
+      "effect": "FAQ自助解决率从30%提升至68%，人工客服通话时长缩短25%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "individual",
+    "corporate",
+    "young_customer",
+    "elderly",
+    "preference_analysis",
+    "segmentation"
+  ],
+  "description": "基于BERT语义匹配的智能客服问答模型，将客户问题与FAQ知识库进行语义匹配，返回最相关的答案。"
+}

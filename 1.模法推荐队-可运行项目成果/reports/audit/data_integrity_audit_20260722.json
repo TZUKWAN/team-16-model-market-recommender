@@ -1,0 +1,670 @@
+{
+  "report_metadata": {
+    "generated_at": "2026-07-22T15:32:53.970193+00:00",
+    "script": "scripts/audit_dataset_integrity.py",
+    "repository_commit": "cf8061e1563ad8d80f55dcfcc2cefa13bbfdf988",
+    "working_tree_dirty": true,
+    "dirty_file_count": 54,
+    "audited_input_sha256": {
+      "data/official/questions_train.jsonl": "65d2628bdd919a7d27c0c28b016bea3df3c27f71612a6f93ccc367a90dbf011b",
+      "data/official/questions_val.jsonl": "d7900921618c4db166b4d4f5f7b3fed9be059fff907d6fa32fd1def28fe53d65",
+      "data/official/questions_test.jsonl": "c60bb6e627f6e574fdcce7244d429c4b9b9861dc37b22e40fd3936530ca5a465",
+      "data/training/hard_negative_pairs.jsonl": "2f3ca192cc716c69707a9fb9dbb3b934adade38742071a3855a81e91eb444246",
+      "data/config/recommendation_weights.json": "932fd8be0bd8ab81f7b942a6c965c75a55cd86eef5b2088e7f463acf66e8d706"
+    }
+  },
+  "executive_verdict": {
+    "test_used_as_training_data": false,
+    "direct_training_leakage_risk": "low",
+    "test_is_independent_blind_holdout": false,
+    "adaptive_test_overfitting_risk": "medium",
+    "intent_tag_metric_circularity_risk": "high",
+    "official_topk_generalization_risk": "medium",
+    "non_official_field_influence_risk": "medium",
+    "hard_negative_reproducibility_risk": "medium",
+    "overall_risk": "medium_high",
+    "plain_language": "在已检查的运行时代码和困难负例中，未发现把 test 样本直接用于训练；在已检查的项目代码中，也未发现 BGE-M3 微调入口。已知 train/val/test 的 Top-K 差距没有达到 10 个百分点的严重过拟合诊断阈值，但 test 结果在后续算法改动前已经可见，因此不是严格盲测。意图/标签弱标注同时依赖问句和答案模型名，困难负例元数据哈希又已失配，加上部分合成草稿字段参与结构化评分，整体存在中等偏高的证据偏差风险。"
+  },
+  "split_integrity": {
+    "counts": {
+      "train": 291,
+      "val": 64,
+      "test": 62
+    },
+    "split_id_overlap_count": 0,
+    "split_id_overlaps": [],
+    "exact_cross_split_query_count": 0,
+    "exact_cross_split_queries": [],
+    "near_duplicate_threshold": 0.82,
+    "near_duplicate_count": 0,
+    "near_duplicates": [],
+    "manual_review_threshold": 0.55,
+    "manual_review_candidate_count": 3,
+    "manual_review_candidates": [
+      {
+        "left_split": "train",
+        "left_id": "train_0272",
+        "right_split": "val",
+        "right_id": "val_0026",
+        "same_gold_model": false,
+        "sequence_ratio": 0.7407,
+        "bigram_jaccard": 0.4857,
+        "combined": 0.6132,
+        "left_query": "针对个体工商户，怎么预测他们未来首次办理经营贷的概率？",
+        "right_query": "针对22-60岁活跃收单商户，怎么预测他们未来办理经营贷的概率？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0199",
+        "right_split": "test",
+        "right_id": "test_0031",
+        "same_gold_model": true,
+        "sequence_ratio": 0.6957,
+        "bigram_jaccard": 0.4773,
+        "combined": 0.5865,
+        "left_query": "开户超6个月、AUM低于1万但有房讯通房产评级的长尾客户中，如何发现被低估的高价值客户？",
+        "right_query": "AUM低于1万但有房产评级的长尾客户中，怎么挖掘高价值客户？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0184",
+        "right_split": "val",
+        "right_id": "val_0035",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6944,
+        "bigram_jaccard": 0.4286,
+        "combined": 0.5615,
+        "left_query": "针对发生过用款行为的个体工商户客户，如何用准入评分卡来降低获批后的违约风险？",
+        "right_query": "针对发生过用款行为的个体工商户经营贷客户，如何通过准入评分卡提高审批准确性？"
+      }
+    ],
+    "semantic_duplicate_check_performed": false,
+    "near_duplicate_scope": "Character-level SequenceMatcher and bigram Jaccard only. A zero count at the configured threshold does not rule out semantic paraphrases.",
+    "top_cross_split_similarities": [
+      {
+        "left_split": "train",
+        "left_id": "train_0272",
+        "right_split": "val",
+        "right_id": "val_0026",
+        "same_gold_model": false,
+        "sequence_ratio": 0.7407,
+        "bigram_jaccard": 0.4857,
+        "combined": 0.6132,
+        "left_query": "针对个体工商户，怎么预测他们未来首次办理经营贷的概率？",
+        "right_query": "针对22-60岁活跃收单商户，怎么预测他们未来办理经营贷的概率？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0199",
+        "right_split": "test",
+        "right_id": "test_0031",
+        "same_gold_model": true,
+        "sequence_ratio": 0.6957,
+        "bigram_jaccard": 0.4773,
+        "combined": 0.5865,
+        "left_query": "开户超6个月、AUM低于1万但有房讯通房产评级的长尾客户中，如何发现被低估的高价值客户？",
+        "right_query": "AUM低于1万但有房产评级的长尾客户中，怎么挖掘高价值客户？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0184",
+        "right_split": "val",
+        "right_id": "val_0035",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6944,
+        "bigram_jaccard": 0.4286,
+        "combined": 0.5615,
+        "left_query": "针对发生过用款行为的个体工商户客户，如何用准入评分卡来降低获批后的违约风险？",
+        "right_query": "针对发生过用款行为的个体工商户经营贷客户，如何通过准入评分卡提高审批准确性？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0265",
+        "right_split": "val",
+        "right_id": "val_0050",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6667,
+        "bigram_jaccard": 0.3696,
+        "combined": 0.5181,
+        "left_query": "AUM在10-30万区间的客户，我想找出有潜力提升到30万以上的，用什么模型？",
+        "right_query": "针对月AUM在20-30万的客户，想把他们提升到30-50万区间，用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0047",
+        "right_split": "val",
+        "right_id": "val_0036",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6286,
+        "bigram_jaccard": 0.375,
+        "combined": 0.5018,
+        "left_query": "信用卡新客拓展和精准营销模型有哪些？",
+        "right_query": "手机银行新客拓展和精准营销用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0204",
+        "right_split": "test",
+        "right_id": "test_0047",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6197,
+        "bigram_jaccard": 0.38,
+        "combined": 0.4999,
+        "left_query": "针对账龄大于12个月的房贷客户预测未来是否会逾期60天以上，用哪个模型？",
+        "right_query": "针对小微企业做贷款准入评分卡，预测未来15个月是否会逾期60天以上，用哪个模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0207",
+        "right_split": "test",
+        "right_id": "test_0008",
+        "same_gold_model": false,
+        "sequence_ratio": 0.619,
+        "bigram_jaccard": 0.3793,
+        "combined": 0.4992,
+        "left_query": "综合收单商户的流失预警和挽留，用什么模型？",
+        "right_query": "高净值客户的流失预警和挽留策略，需要什么模型支持？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0130",
+        "right_split": "test",
+        "right_id": "test_0018",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6301,
+        "bigram_jaccard": 0.3462,
+        "combined": 0.4881,
+        "left_query": "E路有我平台的获客成本偏高，需要一个模型精准定位高转化潜力的手机银行客户，推荐哪个？",
+        "right_query": "理财拓新成本太高了，需要一个模型精准定位高转化率的潜在理财客户，推荐哪个？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0072",
+        "right_split": "val",
+        "right_id": "val_0040",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6383,
+        "bigram_jaccard": 0.3235,
+        "combined": 0.4809,
+        "left_query": "房贷按揭客户的贷中违约概率预测用到什么模型？",
+        "right_query": "零售个人贷款的贷中行为评分卡和违约概率预测用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0248",
+        "right_split": "val",
+        "right_id": "val_0031",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6038,
+        "bigram_jaccard": 0.3077,
+        "combined": 0.4557,
+        "left_query": "针对个体工商户的经营性贷款线上准入风控，哪个模型支持？",
+        "right_query": "针对个体工商户线上产品的准入风险评估和利率定价，用哪个模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0177",
+        "right_split": "val",
+        "right_id": "val_0013",
+        "same_gold_model": false,
+        "sequence_ratio": 0.625,
+        "bigram_jaccard": 0.2857,
+        "combined": 0.4554,
+        "left_query": "剔除风险客户后对个贷流失客户做精准回捞营销，哪个模型？",
+        "right_query": "针对个人消费贷款流失客户进行回捞营销，用哪个模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0042",
+        "right_split": "test",
+        "right_id": "test_0046",
+        "same_gold_model": true,
+        "sequence_ratio": 0.5846,
+        "bigram_jaccard": 0.3261,
+        "combined": 0.4554,
+        "left_query": "个体工商户申请经营贷款时需要做准入评估，区分抵押和非抵押两种场景分别评分，用什么模型？",
+        "right_query": "经营贷款分抵押和非抵押场景的准入风险评估用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0254",
+        "right_split": "test",
+        "right_id": "test_0060",
+        "same_gold_model": false,
+        "sequence_ratio": 0.5714,
+        "bigram_jaccard": 0.3333,
+        "combined": 0.4524,
+        "left_query": "全量信用卡申请客户的贷前反欺诈筛查用什么模型？",
+        "right_query": "零售业务贷前准入中的反欺诈筛查，用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0099",
+        "right_split": "test",
+        "right_id": "test_0002",
+        "same_gold_model": true,
+        "sequence_ratio": 0.5909,
+        "bigram_jaccard": 0.3125,
+        "combined": 0.4517,
+        "left_query": "个体工商户的贷前准入评分卡模型是什么？",
+        "right_query": "个体工商户申贷客户的违约概率预测和准入评分模型是哪个？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0105",
+        "right_split": "test",
+        "right_id": "test_0048",
+        "same_gold_model": false,
+        "sequence_ratio": 0.6087,
+        "bigram_jaccard": 0.2941,
+        "combined": 0.4514,
+        "left_query": "个体工商户经营贷款的贷前准入评分卡是什么模型？",
+        "right_query": "个体工商户经营性贷款需求挖掘和精准营销用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0027",
+        "right_split": "val",
+        "right_id": "val_0040",
+        "same_gold_model": false,
+        "sequence_ratio": 0.5763,
+        "bigram_jaccard": 0.3256,
+        "combined": 0.4509,
+        "left_query": "垒小户客群的贷中监控需要配套一个行为评分卡来预测违约概率，用什么模型？",
+        "right_query": "零售个人贷款的贷中行为评分卡和违约概率预测用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0107",
+        "right_split": "val",
+        "right_id": "val_0040",
+        "same_gold_model": false,
+        "sequence_ratio": 0.5833,
+        "bigram_jaccard": 0.3143,
+        "combined": 0.4488,
+        "left_query": "垒小户的贷中违约概率预测和风险预警用什么模型？",
+        "right_query": "零售个人贷款的贷中行为评分卡和违约概率预测用什么模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0045",
+        "right_split": "test",
+        "right_id": "test_0045",
+        "same_gold_model": false,
+        "sequence_ratio": 0.5778,
+        "bigram_jaccard": 0.3125,
+        "combined": 0.4451,
+        "left_query": "借记卡用户中，怎么挖掘可能办理信用卡的潜在客户？",
+        "right_query": "行内对私客户中，怎么找到可能办理ETC的潜在客户？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0230",
+        "right_split": "val",
+        "right_id": "val_0044",
+        "same_gold_model": true,
+        "sequence_ratio": 0.6122,
+        "bigram_jaccard": 0.2703,
+        "combined": 0.4413,
+        "left_query": "全行贷款产品的星级评分和标准化评价体系用什么模型？",
+        "right_query": "贷款产品管理中的星级评分和风险吞噬率评价，用哪个模型？"
+      },
+      {
+        "left_split": "train",
+        "left_id": "train_0067",
+        "right_split": "test",
+        "right_id": "test_0046",
+        "same_gold_model": false,
+        "sequence_ratio": 0.56,
+        "bigram_jaccard": 0.3056,
+        "combined": 0.4328,
+        "left_query": "房地产抵押贷款在房价下跌场景下的风险评估用什么模型？",
+        "right_query": "经营贷款分抵押和非抵押场景的准入风险评估用什么模型？"
+      }
+    ],
+    "mirror_consistency": {
+      "train": {
+        "canonical_count": 291,
+        "mirror_count": 291,
+        "exact_match": true,
+        "canonical_only_count": 0,
+        "mirror_only_count": 0
+      },
+      "val": {
+        "canonical_count": 64,
+        "mirror_count": 64,
+        "exact_match": true,
+        "canonical_only_count": 0,
+        "mirror_only_count": 0
+      },
+      "test": {
+        "canonical_count": 62,
+        "mirror_count": 62,
+        "exact_match": true,
+        "canonical_only_count": 0,
+        "mirror_only_count": 0
+      }
+    },
+    "gold_model_coverage": {
+      "train": 60,
+      "val": 60,
+      "test": 60
+    },
+    "gold_models_shared_by_all_splits": 60,
+    "split_strategy": "query-level split; not a model/entity holdout",
+    "mirror_comparison_scope": "question ID + normalized query + gold model ID tuple"
+  },
+  "mirror_files_match": true,
+  "model_name_exposure": {
+    "train": {
+      "total": 291,
+      "full_name_hit_count": 1,
+      "full_name_hit_pct": 0.34,
+      "core_name_hit_count": 6,
+      "core_name_hit_pct": 2.06,
+      "conservative_any_name_hit_count": 7,
+      "conservative_any_name_hit_pct": 2.41,
+      "examples": [
+        {
+          "id": "train_0131",
+          "gold_model_id": "OFFICIAL_051",
+          "gold_model_name": "个体工商户准入评分卡",
+          "query": "目前个体工商户准入评分卡用于老版本决策引擎的额度和利率计算，后续会被替换，但这个现有模型叫什么？"
+        },
+        {
+          "id": "train_0032",
+          "gold_model_id": "OFFICIAL_034",
+          "gold_model_name": "个人存款提升预测模型",
+          "query": "个人存款提升潜力客户的精准挖掘，用什么模型？",
+          "matched_core": "个人存款提升"
+        },
+        {
+          "id": "train_0097",
+          "gold_model_id": "OFFICIAL_009",
+          "gold_model_name": "非法集资模型",
+          "query": "如何利用机器学习从客户身份和交易数据中识别疑似非法集资活动？",
+          "matched_core": "非法集资"
+        },
+        {
+          "id": "train_0154",
+          "gold_model_id": "OFFICIAL_009",
+          "gold_model_name": "非法集资模型",
+          "query": "反洗钱场景中，如何通过交易信息和账户特征监测非法集资行为？",
+          "matched_core": "非法集资"
+        },
+        {
+          "id": "train_0171",
+          "gold_model_id": "OFFICIAL_009",
+          "gold_model_name": "非法集资模型",
+          "query": "非法集资案例分析的人力成本太高了，希望通过模型减少人工筛查工作量，用什么模型？",
+          "matched_core": "非法集资"
+        },
+        {
+          "id": "train_0200",
+          "gold_model_id": "OFFICIAL_009",
+          "gold_model_name": "非法集资模型",
+          "query": "监管对非法集资监测的上报率和时效性要求越来越高，需要什么模型来提升识别效率？",
+          "matched_core": "非法集资"
+        },
+        {
+          "id": "train_0235",
+          "gold_model_id": "OFFICIAL_009",
+          "gold_model_name": "非法集资模型",
+          "query": "需要减少反洗钱案例分析人员的工作压力，提高非法集资上报率，用哪个模型？",
+          "matched_core": "非法集资"
+        }
+      ]
+    },
+    "val": {
+      "total": 64,
+      "full_name_hit_count": 0,
+      "full_name_hit_pct": 0.0,
+      "core_name_hit_count": 1,
+      "core_name_hit_pct": 1.56,
+      "conservative_any_name_hit_count": 1,
+      "conservative_any_name_hit_pct": 1.56,
+      "examples": [
+        {
+          "id": "val_0017",
+          "gold_model_id": "OFFICIAL_009",
+          "gold_model_name": "非法集资模型",
+          "query": "结合客户的身份信息、账户信息和交易行为，如何自动筛查出非法集资可疑客户？",
+          "matched_core": "非法集资"
+        }
+      ]
+    },
+    "test": {
+      "total": 62,
+      "full_name_hit_count": 0,
+      "full_name_hit_pct": 0.0,
+      "core_name_hit_count": 2,
+      "core_name_hit_pct": 3.23,
+      "conservative_any_name_hit_count": 2,
+      "conservative_any_name_hit_pct": 3.23,
+      "examples": [
+        {
+          "id": "test_0025",
+          "gold_model_id": "OFFICIAL_033",
+          "gold_model_name": "收单商户流失预测模型",
+          "query": "收单商户流失率居高不下，需要一个模型提前30天预警即将流失的商户以便及时挽留，用什么模型？",
+          "matched_core": "收单商户流失"
+        },
+        {
+          "id": "test_0058",
+          "gold_model_id": "OFFICIAL_009",
+          "gold_model_name": "非法集资模型",
+          "query": "反洗钱团队每天人工排查可疑交易压力很大，需要模型自动识别非法集资嫌疑账户，推荐哪个？",
+          "matched_core": "非法集资"
+        }
+      ]
+    }
+  },
+  "hard_negative_training_audit": {
+    "pair_count": 795,
+    "unique_source_case_count": 280,
+    "metadata_source_split": "train",
+    "metadata_source_case_count": 291,
+    "non_train_id_count": 0,
+    "non_train_split_marker_count": 0,
+    "query_not_found_in_train_count": 0,
+    "val_test_id_intersection_count": 0,
+    "source_file_is_full_417_eval_file": true,
+    "source_file_sha256_recorded": "85dd43fad1e0b9ae58b3b384307063c50ca8f1299e1af3e436bd55505087743d",
+    "source_file_sha256_actual": "16b9431a76c00010deb2a86ef402a76124da856a5609d191f90de9337c463159",
+    "source_file_sha256_matches_metadata": false,
+    "output_file_sha256_recorded": "59552d5723aeb2a00e4e40763848de6e7e325aeaf107be7444e4ec110faf854b",
+    "output_file_sha256_actual": "2f3ca192cc716c69707a9fb9dbb3b934adade38742071a3855a81e91eb444246",
+    "output_file_sha256_matches_metadata": false,
+    "provenance_hashes_match": false,
+    "reproducibility_status": "metadata_hashes_stale_current_pairs_need_regeneration_or_migration_record",
+    "selection_behavior": "The input file contains all 417 cases, but mine_hard_negatives.py filters train_ rows before mining and rejects any non-train row passed to mine().",
+    "direct_test_training_leakage_found": false,
+    "finding": "All current pair IDs and queries resolve to the train split, so no direct val/test leakage was found. Hash mismatches, when present, mean the checked-in metadata no longer proves byte-for-byte reproducibility."
+  },
+  "runtime_gold_access_audit": {
+    "scanned_paths": [
+      "backend/app/services/recommender.py",
+      "backend/app/services/demand_parser.py",
+      "backend/app/services/hybrid_retriever.py",
+      "data/config/recommendation_weights.json",
+      "data/config/keyword_rules.json",
+      "data/config/synonyms.json"
+    ],
+    "forbidden_reference_count": 0,
+    "hits": [],
+    "runtime_recommender_reads_gold_or_split_files": false,
+    "scope_limitation": "Static substring scan of the listed runtime ranking files only; this is evidence of no reference in the inspected path, not a proof about every future code path."
+  },
+  "bge_training_code_audit": {
+    "scanned_python_file_count": 129,
+    "training_marker_count": 0,
+    "training_marker_hits": [],
+    "project_finetuning_evidence_found": false,
+    "finding": "No common SentenceTransformers fine-tuning entry point was found in backend/app or scripts. The repository code loads BGE-M3 for encode-only inference. This is a bounded code scan, not a statement about activities outside the repository."
+  },
+  "weak_label_audit": {
+    "total_cases": 417,
+    "needs_review_true_count": 417,
+    "annotation_versions": {
+      "1.0_weak": 417
+    },
+    "expected_tags_derived_from_query_and_gold_name": true,
+    "intent_task_derived_from_query_and_gold_name": true,
+    "finding": "TopK gold model names come from the official Excel answer column. Intent/task/tag labels are local weak annotations derived from both the query and the gold answer model name, and remain marked needs_review. Intent/tag accuracy therefore has direct label-dependency risk and is not independent human-labelled generalization evidence.",
+    "risk_by_metric": {
+      "topk": "medium",
+      "intent_accuracy": "high",
+      "tag_accuracy": "high"
+    }
+  },
+  "synthetic_lineage_audit": {
+    "generator_uses_official_questions_all": true,
+    "questions_all_contains_test": true,
+    "questions_all_split_values": [
+      "test",
+      "train",
+      "val"
+    ],
+    "runtime_ranking_reference_count": 0,
+    "runtime_ranking_references": [],
+    "currently_used_for_runtime_training_or_ranking": false,
+    "documentation_warns_against_training_use": true,
+    "train_only_lineage_guard_enforced": false,
+    "future_use_warning": "The synthetic corpus is derived from questions_all (train+val+test). It is not used by the current runtime ranker, but it must be regenerated from train-only source questions before any future parser/ranker training or tuning."
+  },
+  "model_field_provenance_audit": {
+    "official_raw_verified_fields": [
+      "canonical_name",
+      "description"
+    ],
+    "deterministic_inference_fields": [
+      "domain",
+      "customer_segment",
+      "input_schema",
+      "result_schema"
+    ],
+    "synthetic_draft_fields": [
+      "historical_cases",
+      "performance_metrics"
+    ],
+    "synthetic_draft_verified_count": {
+      "performance_metrics": 0,
+      "historical_cases": 0
+    },
+    "runtime_ranking_uses_performance_metrics": true,
+    "runtime_ranking_uses_historical_cases": true,
+    "finding": "Synthetic-draft performance metrics and historical cases are not official bank evidence. The current structured score reads both fields, so they can influence the small structured-score portion of ranking and must be labelled or disabled before making production-evidence claims.",
+    "risk_level": "medium"
+  },
+  "test_exposure_timeline": {
+    "first_checked_in_test_result": {
+      "commit": "90dc33d5ca3de212290f4321d54de0bab87b5307",
+      "date": "2026-06-30T19:22:49+08:00",
+      "subject": "feat: evaluate official topk recommendations"
+    },
+    "test_result_commit_count": 9,
+    "algorithm_change_count_after_first_test_result": 6,
+    "algorithm_changes_after_first_test_result": [
+      {
+        "commit": "904a9e3615c539b7f2044bd6234295c87f02a6c4",
+        "date": "2026-07-07T19:11:55+08:00",
+        "subject": "feat: 大模型驱动升级 - 四方向联动 + 任务文档"
+      },
+      {
+        "commit": "73a6a8029ace3566df5fc9001f24948b21ddb92e",
+        "date": "2026-07-07T22:56:29+08:00",
+        "subject": "feat: roadmap 收尾 - G1-G3 缺口修复 + F1-F5 创新功能"
+      },
+      {
+        "commit": "0b89fbee1dc572abec652dcf20b6017e0df847f4",
+        "date": "2026-07-11T20:54:42+08:00",
+        "subject": "feat: complete governed model recommendation system"
+      },
+      {
+        "commit": "0276de32c91c6b18c4065f0c43bc5ce31c83d37c",
+        "date": "2026-07-14T22:40:56+08:00",
+        "subject": "merge: integrate llm upgrade with official catalog"
+      },
+      {
+        "commit": "f926ddfc82eab9a95e5ce0686919225a7ecb97c2",
+        "date": "2026-07-15T11:27:14+08:00",
+        "subject": "feat: add demo references after official recommendations"
+      },
+      {
+        "commit": "cd26874e84596c9cf34ea06bfd056364688aa651",
+        "date": "2026-07-15T13:31:50+08:00",
+        "subject": "feat: make bge-m3 competition runtime reproducible"
+      }
+    ],
+    "dense_calibration_declared_test_cases_read_for_selection": 0,
+    "dense_calibration_declared_retuning_after_test": false,
+    "dense_calibration_scope_finding": "The July dense-weight experiment documents val-only selection and no retuning after its final test run. This is valid for that bounded experiment.",
+    "global_blind_holdout_status": "not_blind",
+    "finding": "The official test result was checked in before later parser/ranker/config changes. This proves chronological exposure, not intentional tuning on test errors. Accordingly, the test split was not directly trained on, but it is no longer an untouched blind holdout and carries adaptive selection bias risk."
+  },
+  "generalization_gap_audit": {
+    "source": "current_20260722",
+    "metrics": {
+      "train": {
+        "path": "reports/audit/official_eval_train_20260722.json",
+        "total": 291,
+        "top3_hit_rate_pct": 94.16,
+        "top5_hit_rate_pct": 97.59,
+        "macro_top3_pct": 94.25,
+        "macro_top5_pct": 97.67
+      },
+      "val": {
+        "path": "reports/audit/official_eval_val_20260722.json",
+        "total": 64,
+        "top3_hit_rate_pct": 90.62,
+        "top5_hit_rate_pct": 95.31,
+        "macro_top3_pct": 90.0,
+        "macro_top5_pct": 95.0
+      },
+      "test": {
+        "path": "reports/audit/official_eval_test_20260722.json",
+        "total": 62,
+        "top3_hit_rate_pct": 93.55,
+        "top5_hit_rate_pct": 96.77,
+        "macro_top3_pct": 93.33,
+        "macro_top5_pct": 96.67
+      }
+    },
+    "gaps": {
+      "val": {
+        "train_minus_top3_points": 3.54,
+        "train_minus_top5_points": 2.28
+      },
+      "test": {
+        "train_minus_top3_points": 0.61,
+        "train_minus_top5_points": 0.82
+      }
+    },
+    "large_gap_threshold_points": 10.0,
+    "large_train_holdout_gap_found": false,
+    "finding": "The known splits do not show a train-to-holdout drop above the declared 10-point diagnostic threshold. This reduces evidence for severe classical overfitting, but the exposed test split cannot establish blind generalization."
+  },
+  "blind_set_audit": {
+    "protocol_exists": true,
+    "readme_exists": true,
+    "checked_in_blind_case_file_count": 0,
+    "checked_in_blind_case_files": [],
+    "independent_blind_evidence_available": false
+  },
+  "required_claim_boundaries": [
+    "TopK 仅表示对已知官方 60 模型目录和已公开 417 问题分布的检索命中率。",
+    "Intent/Tag 指标不得描述为独立人工标注集上的泛化准确率。",
+    "当前 test 不得描述为从未查看的最终盲测集。",
+    "困难负例元数据哈希失配前，不得宣称该制品可按现有 metadata 逐字节复现。",
+    "performance_metrics 与 historical_cases 为 synthetic_draft，不是银行生产验收证据。",
+    "规则/LLM 合成数据不得与官方样本或真实银行生产数据混称。"
+  ],
+  "recommended_controls": [
+    "建立全新外部盲测集：由未参与开发人员保管标签，冻结代码后一次性评测。",
+    "重新从 train-only 官方问题生成任何用于训练/调参的合成语料；禁止 questions_all 进入训练生成链。",
+    "对 intent/tag 建立人工复核标签集，并与当前弱标注指标分开展示。",
+    "重新生成困难负例或补充可审计的 ID 迁移记录，并更新来源/输出 SHA-256。",
+    "官方排序默认禁用或显式降权 synthetic_draft 性能指标与案例，除非完成来源核验。",
+    "同时报告模型名遮蔽、跨表达和跨机构场景结果，避免只报原始 Top3/Top5。"
+  ]
+}

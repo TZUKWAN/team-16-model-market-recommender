@@ -1,0 +1,65 @@
+{
+  "model_id": "MKT_011",
+  "model_name": "农户金融服务需求预测模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "农户金融需求预测"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "farmer",
+    "rural_area"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "preference_analysis",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "product_holdings",
+    "demographics",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "demand_score",
+    "financial_product_interest",
+    "seasonal_demand_pattern",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.78,
+    "precision": 0.7,
+    "recall": 0.73,
+    "f1": 0.71
+  },
+  "applicable_conditions": "适用于预测农户在不同季节的金融服务需求；支持贷款、存款、理财等多种金融产品需求预测。",
+  "unsuitable_conditions": "不适用于非农业人口的个人客户；不适用于大型农业企业。",
+  "compliance_boundary": "金融需求预测需尊重客户意愿；不得基于预测进行诱导式营销。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行三农金融部",
+      "description": "春耕秋收等农业季节的金融需求预测。",
+      "effect": "农贷投放节奏匹配度提升40%，资金使用效率提高。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "farmer",
+    "rural_area",
+    "conversion_prediction",
+    "preference_analysis",
+    "segmentation",
+    "agricultural_loan"
+  ],
+  "description": "结合农业日历、气象数据、农产品价格和农户历史交易的季节性金融需求预测模型。"
+}

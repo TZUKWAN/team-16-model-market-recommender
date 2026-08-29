@@ -1,0 +1,64 @@
+{
+  "model_id": "MKT_019",
+  "model_name": "存款增长潜力模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "存款增长潜力评估"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "conversion_prediction",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "transaction_flow",
+    "income_expense",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "product_holdings",
+    "channel_behavior",
+    "demographics"
+  ],
+  "output_fields": [
+    "growth_potential_score",
+    "target_deposit_amount",
+    "suggested_product",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "mae": 0.18,
+    "r2": 0.72,
+    "ranking_accuracy": 0.78
+  },
+  "applicable_conditions": "适用于识别具有存款提升潜力的客户；支持定存、通知存款、大额存单等产品营销。",
+  "unsuitable_conditions": "不适用于已最大化存款配置的客户；不适用于企业客户。",
+  "compliance_boundary": "存款营销需符合利率市场化相关规定；不得虚假宣传或误导客户。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行个人金融部",
+      "description": "存款增长潜力客户筛选。",
+      "effect": "目标客户定期存款转化率22%，新增存款3亿元。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "individual",
+    "existing_customer",
+    "value_assessment",
+    "conversion_prediction",
+    "segmentation",
+    "deposit"
+  ],
+  "description": "基于客户收入水平、消费模式、资产配置和存款习惯的存款增长潜力评估模型。"
+}

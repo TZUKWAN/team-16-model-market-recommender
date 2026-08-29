@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_001",
+  "model_name": "农户小额贷款准入评分模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "农户小额贷款贷前准入"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "farmer",
+    "rural_area"
+  ],
+  "model_capability": [
+    "admission_scoring",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "business_income"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "admission_decision"
+  ],
+  "performance_metrics": {
+    "auc": 0.82,
+    "ks": 0.38,
+    "precision": 0.78,
+    "recall": 0.81
+  },
+  "applicable_conditions": "适用于农户经营性小额贷款（10万元以下）的贷前准入评分；申请人年龄18-65周岁；有稳定农业经营收入来源。",
+  "unsuitable_conditions": "不适用于无稳定收入来源的纯信用贷款；不适用于企业大额贷款（100万元以上）；不适用于非农业生产经营贷款场景。",
+  "compliance_boundary": "评分结果仅作为授信参考，不构成最终审批决定；客户个人信息处理需符合《个人信息保护法》；评分结果保留期限不超过贷款存续期+5年。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行",
+      "description": "应用于农户小额贷款线上审批流程，日均处理申请300+笔。",
+      "effect": "审批效率提升60%，不良率控制在1.2%以内。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "farmer",
+    "rural_area",
+    "admission_scoring",
+    "small_loan",
+    "agricultural_loan"
+  ],
+  "description": "基于客户基本信息、经营数据和征信记录的准入评分模型，采用逻辑回归+特征交叉方法，对农户小额贷款申请进行自动化评分和分级。"
+}

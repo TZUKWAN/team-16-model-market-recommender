@@ -1,0 +1,69 @@
+{
+  "model_id": "RISK_026",
+  "model_name": "客户风险分层模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "客户信用风险分层"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan",
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise",
+    "corporate"
+  ],
+  "model_capability": [
+    "segmentation",
+    "credit_rating",
+    "priority_ranking"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "credit_report",
+    "repayment_history"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "income_expense",
+    "asset_liability"
+  ],
+  "output_fields": [
+    "risk_tier",
+    "tier_label",
+    "risk_factor_breakdown",
+    "suggested_strategy"
+  ],
+  "performance_metrics": {
+    "silhouette_score": 0.38,
+    "calinski_harabasz": 320,
+    "tier_stability": 0.85
+  },
+  "applicable_conditions": "适用于对全量零售和对公客户进行风险分层管理；支持差异化风险策略制定。",
+  "unsuitable_conditions": "不适用于新开户不足3个月的客户（数据不足）；不适用于特殊政策客群。",
+  "compliance_boundary": "风险分层不得用于歧视性定价或服务拒绝；分层标准需定期评估和调整。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "全量零售客户风险分层。",
+      "effect": "实现客户分层精细化管理，高风险客户识别准确率85%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "post_loan",
+    "individual",
+    "small_micro_enterprise",
+    "corporate",
+    "segmentation",
+    "credit_rating",
+    "priority_ranking"
+  ],
+  "description": "融合信用评分、行为评分和外部数据的无监督+有监督混合分层模型，将客户划分为5个风险等级。"
+}

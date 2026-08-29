@@ -1,0 +1,53 @@
+{
+  "model_id": "OPS_018",
+  "model_name": "柜面业务授权优化模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "柜面业务授权规则优化"
+  ],
+  "business_stage": [
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "resource_optimization",
+    "compliance_check"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "transaction_data"
+  ],
+  "input_fields_optional": [],
+  "output_fields": [
+    "risk_score",
+    "score_breakdown"
+  ],
+  "performance_metrics": {
+    "authorization_reduction": 0.4,
+    "risk_coverage": 0.95
+  },
+  "applicable_conditions": "适用于柜面业务授权规则的分析和优化；覆盖金额授权、权限授权和特殊业务授权三种场景。",
+  "unsuitable_conditions": "不适用于高风险业务的授权优化；不涉及系统级权限管理。",
+  "compliance_boundary": "授权优化不得削弱内部控制力度；需保证双人复核等合规要求；优化方案需经内审部门确认。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行运营部",
+      "description": "柜面授权规则优化。",
+      "effect": "授权次数减少40%，业务办理效率提升25%，风险事件零增长。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "individual",
+    "corporate",
+    "resource_optimization",
+    "compliance_check"
+  ],
+  "description": "基于历史授权数据和风险事件分析的柜面授权规则优化模型，在维持风险控制水平的前提下减少不必要的授权环节。"
+}

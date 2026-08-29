@@ -1,0 +1,65 @@
+{
+  "model_id": "RISK_029",
+  "model_name": "区域风险预警模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "区域风险监测与预警"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan",
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise",
+    "farmer"
+  ],
+  "model_capability": [
+    "early_warning",
+    "default_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "business_income",
+    "credit_report"
+  ],
+  "output_fields": [
+    "region_risk_index",
+    "region_trend",
+    "risk_signal",
+    "affected_businesses"
+  ],
+  "performance_metrics": {
+    "precision": 0.78,
+    "recall": 0.73,
+    "lead_time_months": 3
+  },
+  "applicable_conditions": "适用于区域经济风险和信贷风险的监测；支持以省、市、县为单位的区域风险分析。",
+  "unsuitable_conditions": "不适用于全国性大型企业（区域关联度低）；不适用于纯线上渠道获客的贷款。",
+  "compliance_boundary": "区域风险分析需基于统计级数据，不得涉及特定客户信息；结果用于信贷政策参考而非自动决策。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行信贷政策部",
+      "description": "用于区域信贷政策制定参考。",
+      "effect": "区域不良率预测误差在15%以内。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "post_loan",
+    "individual",
+    "small_micro_enterprise",
+    "farmer",
+    "early_warning",
+    "default_prediction"
+  ],
+  "description": "融合区域GDP、产业结构、人口流动、信贷质量、自然灾害等多维数据的区域风险预警模型。"
+}

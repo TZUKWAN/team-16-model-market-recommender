@@ -1,0 +1,62 @@
+{
+  "model_id": "RISK_033",
+  "model_name": "共同借款人风险识别模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "共同借款人风险识别"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anti_fraud",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "credit_report"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "income_expense"
+  ],
+  "output_fields": [
+    "co_borrower_risk_score",
+    "relationship_risk",
+    "alert_reason"
+  ],
+  "performance_metrics": {
+    "auc": 0.85,
+    "precision": 0.8,
+    "recall": 0.74,
+    "f1": 0.77
+  },
+  "applicable_conditions": "适用于存在共同借款人、担保人的贷款场景；支持识别虚假共同借款人、关联异常等风险。",
+  "unsuitable_conditions": "不适用于单人借款无担保场景；不适用于机构担保业务。",
+  "compliance_boundary": "共同借款人信息需获得其本人授权；不得将模型结果作为拒绝共同借款人的唯一依据。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售信贷部",
+      "description": "审核个人贷款中的共同借款人关系。",
+      "effect": "识别异常共同借款人关系150+例。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "individual",
+    "small_micro_enterprise",
+    "anti_fraud",
+    "credit_rating"
+  ],
+  "description": "分析共同借款人之间的关联关系、信用差异和历史行为，识别异常共同借款人模式。"
+}

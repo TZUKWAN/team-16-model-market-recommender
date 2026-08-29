@@ -1,0 +1,60 @@
+{
+  "model_id": "OPS_027",
+  "model_name": "收单商户风险监测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "收单商户交易风险监测"
+  ],
+  "business_stage": [
+    "risk_management",
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise",
+    "corporate"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "anti_fraud"
+  ],
+  "input_fields_required": [
+    "transaction_data",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "credit_report"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "alert_signal",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "precision": 0.78,
+    "recall": 0.84,
+    "auc": 0.83
+  },
+  "applicable_conditions": "适用于收单（POS、扫码）商户的交易风险监测；覆盖套现、二清、虚假交易等风险类型。",
+  "unsuitable_conditions": "不适用于线上电商平台商户的风险监测；不适用于跨境收单商户。",
+  "compliance_boundary": "商户风险监测需符合《银行卡收单业务管理办法》；商户信息保密，风险处置需合规流程。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行卡部",
+      "description": "收单商户风险监测。",
+      "effect": "高风险商户识别率提升至85%，年减少风险交易约3000万元。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "risk_management",
+    "daily_operation",
+    "small_micro_enterprise",
+    "corporate",
+    "anomaly_detection",
+    "anti_fraud"
+  ],
+  "description": "基于商户交易行为图谱和异常检测算法的收单商户风险监测模型，实时识别套现、二清等违规交易行为。"
+}

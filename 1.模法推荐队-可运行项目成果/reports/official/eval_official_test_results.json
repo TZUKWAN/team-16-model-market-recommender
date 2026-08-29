@@ -1,0 +1,2515 @@
+{
+  "evaluation_metadata": {
+    "generated_at": "2026-07-10T16:23:21.081338",
+    "split": "test",
+    "llm_mode": "off",
+    "keyword_rules": false,
+    "hybrid_retrieval": true
+  },
+  "topk_evaluation": {
+    "metric": "topk_hit_rate",
+    "total": 62,
+    "top3_hits": 54,
+    "top5_hits": 57,
+    "top3_hit_rate_pct": 87.1,
+    "top5_hit_rate_pct": 91.94,
+    "split": "test",
+    "pipeline": {
+      "use_llm_requested": false,
+      "llm_available": true,
+      "use_keyword_rules": false,
+      "use_hybrid_retrieval": true
+    },
+    "llm_evidence": {
+      "parser_llm_count": 0,
+      "parser_fallback_count": 0,
+      "rerank_attempt_count": 0,
+      "rerank_success_count": 0,
+      "trace_case_count": 0,
+      "trace_case_coverage_pct": 0.0,
+      "unique_trace_count": 0
+    },
+    "details": [
+      {
+        "test_id": "test_0001",
+        "query": "阳光E贷的线上自动化审批依赖贷前准入模型来量化风险和控制不良率，选哪个模型？",
+        "gold_id": "OFFICIAL_057",
+        "gold_name": "阳光E贷贷前准入模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_057",
+          "OFFICIAL_048",
+          "OFFICIAL_010",
+          "OFFICIAL_023",
+          "OFFICIAL_011"
+        ],
+        "recommended_top5_names": [
+          "阳光E贷贷前准入模型",
+          "经营贷款贷前准入模型",
+          "个人营销风险历史库",
+          "垒小户准入评分卡",
+          "个体工商户准入评分卡"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0002",
+        "query": "个体工商户申贷客户的违约概率预测和准入评分模型是哪个？",
+        "gold_id": "OFFICIAL_011",
+        "gold_name": "个体工商户准入评分卡",
+        "recommended_top5_ids": [
+          "OFFICIAL_011",
+          "OFFICIAL_048",
+          "OFFICIAL_028",
+          "OFFICIAL_025",
+          "OFFICIAL_027"
+        ],
+        "recommended_top5_names": [
+          "个体工商户准入评分卡",
+          "经营贷款贷前准入模型",
+          "小微企业违约概率B卡模型",
+          "对公客户价值与风险评分模型",
+          "小微企业1000万以下客户A卡模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0003",
+        "query": "收单商户的涉赌涉诈、洗钱、套现和虚假交易怎么识别？",
+        "gold_id": "OFFICIAL_038",
+        "gold_name": "收单商户交易反欺诈模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_038",
+          "OFFICIAL_041",
+          "OFFICIAL_040",
+          "OFFICIAL_019",
+          "OFFICIAL_039"
+        ],
+        "recommended_top5_names": [
+          "收单商户交易反欺诈模型",
+          "收单商户贷款营销模型",
+          "收单商户流失预测模型",
+          "信用卡贷前反欺诈机器学习模型",
+          "收单商户价值分层及预授信模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0004",
+        "query": "针对房贷申请人做风险评估，预测违约风险，用哪个模型？",
+        "gold_id": "OFFICIAL_034",
+        "gold_name": "房贷用户按揭A卡模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_010",
+          "OFFICIAL_025",
+          "OFFICIAL_055",
+          "OFFICIAL_021",
+          "OFFICIAL_019"
+        ],
+        "recommended_top5_names": [
+          "个人营销风险历史库",
+          "对公客户价值与风险评分模型",
+          "贷记卡违约概率模型",
+          "信用卡贷前申请评分模型_有征信",
+          "信用卡贷前反欺诈机器学习模型"
+        ],
+        "top3_hit": false,
+        "top5_hit": false,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0005",
+        "query": "保险代销业务需要精准获客，排除高风险客户后筛选30-60岁高意向客户，用什么模型？",
+        "gold_id": "OFFICIAL_007",
+        "gold_name": "个人客户保险产品推荐模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_010",
+          "OFFICIAL_013",
+          "OFFICIAL_041",
+          "OFFICIAL_055",
+          "OFFICIAL_007"
+        ],
+        "recommended_top5_names": [
+          "个人营销风险历史库",
+          "个贷流失回捞算法模型",
+          "收单商户贷款营销模型",
+          "贷记卡违约概率模型",
+          "个人客户保险产品推荐模型"
+        ],
+        "top3_hit": false,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0006",
+        "query": "之前出现过信贷人员违规操作的案例，需要一个主动预警系统来预测潜在风险人员，用什么模型？",
+        "gold_id": "OFFICIAL_022",
+        "gold_name": "信贷从业人员风险合规监测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_010",
+          "OFFICIAL_055",
+          "OFFICIAL_041",
+          "OFFICIAL_013",
+          "OFFICIAL_025"
+        ],
+        "recommended_top5_names": [
+          "个人营销风险历史库",
+          "贷记卡违约概率模型",
+          "收单商户贷款营销模型",
+          "个贷流失回捞算法模型",
+          "对公客户价值与风险评分模型"
+        ],
+        "top3_hit": false,
+        "top5_hit": false,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0007",
+        "query": "想构建一个结合业务经验的理财产品指标加权评分模型，用于产品推荐排序，选哪个？",
+        "gold_id": "OFFICIAL_046",
+        "gold_name": "理财产品综合评价模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_025",
+          "OFFICIAL_011",
+          "OFFICIAL_046",
+          "OFFICIAL_027",
+          "OFFICIAL_021"
+        ],
+        "recommended_top5_names": [
+          "对公客户价值与风险评分模型",
+          "个体工商户准入评分卡",
+          "理财产品综合评价模型",
+          "小微企业1000万以下客户A卡模型",
+          "信用卡贷前申请评分模型_有征信"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0008",
+        "query": "高净值客户的流失预警和挽留策略，需要什么模型支持？",
+        "gold_id": "OFFICIAL_003",
+        "gold_name": "AUM10万以上客户流失预警模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_029",
+          "OFFICIAL_060",
+          "OFFICIAL_013",
+          "OFFICIAL_003",
+          "OFFICIAL_010"
+        ],
+        "recommended_top5_names": [
+          "小微客户流失预警模型",
+          "高价值存款客户流失预测模型",
+          "个贷流失回捞算法模型",
+          "AUM10万以上客户流失预警模型",
+          "个人营销风险历史库"
+        ],
+        "top3_hit": false,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0009",
+        "query": "产品管理、客户营销和风险管理都需要一个统一的贷款产品评价模型，推荐哪个？",
+        "gold_id": "OFFICIAL_051",
+        "gold_name": "贷款产品综合评价模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_051",
+          "OFFICIAL_032",
+          "OFFICIAL_010",
+          "OFFICIAL_047",
+          "OFFICIAL_013"
+        ],
+        "recommended_top5_names": [
+          "贷款产品综合评价模型",
+          "房贷按揭客户贷款产品推荐模型",
+          "个人营销风险历史库",
+          "理财响应度预测模型",
+          "个贷流失回捞算法模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0010",
+        "query": "房贷按揭客户中有大量低风险客户，如何预测哪些人未来3个月会产生新增借据？",
+        "gold_id": "OFFICIAL_032",
+        "gold_name": "房贷按揭客户贷款产品推荐模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_032",
+          "OFFICIAL_033",
+          "OFFICIAL_010",
+          "OFFICIAL_048",
+          "OFFICIAL_055"
+        ],
+        "recommended_top5_names": [
+          "房贷按揭客户贷款产品推荐模型",
+          "房贷按揭违约概率模型",
+          "个人营销风险历史库",
+          "经营贷款贷前准入模型",
+          "贷记卡违约概率模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0011",
+        "query": "有征信记录的信用卡申请人，怎么做贷前申请评分来预测M2+逾期？",
+        "gold_id": "OFFICIAL_021",
+        "gold_name": "信用卡贷前申请评分模型_有征信",
+        "recommended_top5_ids": [
+          "OFFICIAL_021",
+          "OFFICIAL_020",
+          "OFFICIAL_048",
+          "OFFICIAL_023",
+          "OFFICIAL_019"
+        ],
+        "recommended_top5_names": [
+          "信用卡贷前申请评分模型_有征信",
+          "信用卡贷前申请评分模型_无征信",
+          "经营贷款贷前准入模型",
+          "垒小户准入评分卡",
+          "信用卡贷前反欺诈机器学习模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0012",
+        "query": "房地产市场持续低迷，需要评估抵押物贬值对银行贷款资产质量的影响，用什么模型来做压力测试？",
+        "gold_id": "OFFICIAL_031",
+        "gold_name": "房地产压力测试",
+        "recommended_top5_ids": [
+          "OFFICIAL_031",
+          "OFFICIAL_051",
+          "OFFICIAL_032",
+          "OFFICIAL_037",
+          "OFFICIAL_048"
+        ],
+        "recommended_top5_names": [
+          "房地产压力测试",
+          "贷款产品综合评价模型",
+          "房贷按揭客户贷款产品推荐模型",
+          "扬州重点企业客户贷款营销分析",
+          "经营贷款贷前准入模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0013",
+        "query": "52家法人机构的个贷流失客户数量庞大，需要模型精准识别其中的可回捞客户，选哪个？",
+        "gold_id": "OFFICIAL_030",
+        "gold_name": "开门红个贷回捞精准营销模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_013",
+          "OFFICIAL_030",
+          "OFFICIAL_060",
+          "OFFICIAL_009",
+          "OFFICIAL_029"
+        ],
+        "recommended_top5_names": [
+          "个贷流失回捞算法模型",
+          "开门红个贷回捞精准营销模型",
+          "高价值存款客户流失预测模型",
+          "个人经营性贷款营销预测模型",
+          "小微客户流失预警模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0014",
+        "query": "中高端客群是银行利润的主要来源，如何通过机器学习减少这部分客户的存款流失？",
+        "gold_id": "OFFICIAL_001",
+        "gold_name": "30-50万中高端客群财富产品维稳增存模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_001",
+          "OFFICIAL_060",
+          "OFFICIAL_013",
+          "OFFICIAL_029",
+          "OFFICIAL_040"
+        ],
+        "recommended_top5_names": [
+          "30-50万中高端客群财富产品维稳增存模型",
+          "高价值存款客户流失预测模型",
+          "个贷流失回捞算法模型",
+          "小微客户流失预警模型",
+          "收单商户流失预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0015",
+        "query": "财富管理场景下，基于客户画像的智能产品匹配用什么模型？",
+        "gold_id": "OFFICIAL_049",
+        "gold_name": "财富产品个性化推荐模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_049",
+          "OFFICIAL_044",
+          "OFFICIAL_032",
+          "OFFICIAL_047",
+          "OFFICIAL_007"
+        ],
+        "recommended_top5_names": [
+          "财富产品个性化推荐模型",
+          "潜在高价值客户挖掘模型",
+          "房贷按揭客户贷款产品推荐模型",
+          "理财响应度预测模型",
+          "个人客户保险产品推荐模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0016",
+        "query": "催收资源有限，需要一个模型识别出表现期内最可能恶化为后四类的客户并优先处置，推荐哪个？",
+        "gold_id": "OFFICIAL_014",
+        "gold_name": "个贷逾期客群催收模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_007",
+          "OFFICIAL_032",
+          "OFFICIAL_047",
+          "OFFICIAL_049",
+          "OFFICIAL_005"
+        ],
+        "recommended_top5_names": [
+          "个人客户保险产品推荐模型",
+          "房贷按揭客户贷款产品推荐模型",
+          "理财响应度预测模型",
+          "财富产品个性化推荐模型",
+          "个人中间业务推荐模型:E路有我新客促活模型"
+        ],
+        "top3_hit": false,
+        "top5_hit": false,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0017",
+        "query": "个人账户交易行为的反诈风控，输出高/中/低风险等级，用什么模型？",
+        "gold_id": "OFFICIAL_026",
+        "gold_name": "对私账户风控机器学习模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_010",
+          "OFFICIAL_026",
+          "OFFICIAL_055",
+          "OFFICIAL_013",
+          "OFFICIAL_007"
+        ],
+        "recommended_top5_names": [
+          "个人营销风险历史库",
+          "对私账户风控机器学习模型",
+          "贷记卡违约概率模型",
+          "个贷流失回捞算法模型",
+          "个人客户保险产品推荐模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0018",
+        "query": "理财拓新成本太高了，需要一个模型精准定位高转化率的潜在理财客户，推荐哪个？",
+        "gold_id": "OFFICIAL_008",
+        "gold_name": "个人客户理财产品营销模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_015",
+          "OFFICIAL_028",
+          "OFFICIAL_027",
+          "OFFICIAL_011",
+          "OFFICIAL_005"
+        ],
+        "recommended_top5_names": [
+          "中小微企业资金流信用信息建模项目",
+          "小微企业违约概率B卡模型",
+          "小微企业1000万以下客户A卡模型",
+          "个体工商户准入评分卡",
+          "个人中间业务推荐模型:E路有我新客促活模型"
+        ],
+        "top3_hit": false,
+        "top5_hit": false,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0019",
+        "query": "客户经理触达客户前想知道这个客户会不会响应，需要模型辅助做客户优先级排序，推荐哪个？",
+        "gold_id": "OFFICIAL_047",
+        "gold_name": "理财响应度预测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_047",
+          "OFFICIAL_013",
+          "OFFICIAL_010",
+          "OFFICIAL_032",
+          "OFFICIAL_007"
+        ],
+        "recommended_top5_names": [
+          "理财响应度预测模型",
+          "个贷流失回捞算法模型",
+          "个人营销风险历史库",
+          "房贷按揭客户贷款产品推荐模型",
+          "个人客户保险产品推荐模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0020",
+        "query": "排除房贷、信用卡和助贷后的个人对私贷款，如何建立模型追踪客户全生命周期的风险变化？",
+        "gold_id": "OFFICIAL_058",
+        "gold_name": "零售个人违约概率B卡模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_019",
+          "OFFICIAL_010",
+          "OFFICIAL_021",
+          "OFFICIAL_025",
+          "OFFICIAL_058"
+        ],
+        "recommended_top5_names": [
+          "信用卡贷前反欺诈机器学习模型",
+          "个人营销风险历史库",
+          "信用卡贷前申请评分模型_有征信",
+          "对公客户价值与风险评分模型",
+          "零售个人违约概率B卡模型"
+        ],
+        "top3_hit": false,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0021",
+        "query": "提升手机银行月活是今年的考核指标，需要一个模型来确定哪些沉睡客户最值得投入资源唤醒，选哪个？",
+        "gold_id": "OFFICIAL_035",
+        "gold_name": "手机银行促活模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_035",
+          "OFFICIAL_036",
+          "OFFICIAL_047",
+          "OFFICIAL_005",
+          "OFFICIAL_013"
+        ],
+        "recommended_top5_names": [
+          "手机银行促活模型",
+          "手机银行客户识别预测模型",
+          "理财响应度预测模型",
+          "个人中间业务推荐模型:E路有我新客促活模型",
+          "个贷流失回捞算法模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0022",
+        "query": "企业客户的贷前审核需要全面了解其价值和风险水平，什么模型能提供科学的量化评估？",
+        "gold_id": "OFFICIAL_025",
+        "gold_name": "对公客户价值与风险评分模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_025",
+          "OFFICIAL_028",
+          "OFFICIAL_027",
+          "OFFICIAL_010",
+          "OFFICIAL_055"
+        ],
+        "recommended_top5_names": [
+          "对公客户价值与风险评分模型",
+          "小微企业违约概率B卡模型",
+          "小微企业1000万以下客户A卡模型",
+          "个人营销风险历史库",
+          "贷记卡违约概率模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0023",
+        "query": "很多代发工资客户一发薪就转走，留存率太低，需要模型找出可挽回的客户重点营销，用什么模型？",
+        "gold_id": "OFFICIAL_017",
+        "gold_name": "代发低效留存客群营销预测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_017",
+          "OFFICIAL_004",
+          "OFFICIAL_047",
+          "OFFICIAL_009",
+          "OFFICIAL_002"
+        ],
+        "recommended_top5_names": [
+          "代发低效留存客群营销预测模型",
+          "ETC拓客模型",
+          "理财响应度预测模型",
+          "个人经营性贷款营销预测模型",
+          "AUM10-30万客户维稳增存模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0024",
+        "query": "针对当月账单消费余额大于1000元且信用良好的客户，如何预测他们在还款日前办理分期的概率？",
+        "gold_id": "OFFICIAL_054",
+        "gold_name": "贷记卡账单分期营销模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_054",
+          "OFFICIAL_019",
+          "OFFICIAL_018",
+          "OFFICIAL_027",
+          "OFFICIAL_013"
+        ],
+        "recommended_top5_names": [
+          "贷记卡账单分期营销模型",
+          "信用卡贷前反欺诈机器学习模型",
+          "信用卡片拓客模型",
+          "小微企业1000万以下客户A卡模型",
+          "个贷流失回捞算法模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0025",
+        "query": "收单商户流失率居高不下，需要一个模型提前30天预警即将流失的商户以便及时挽留，用什么模型？",
+        "gold_id": "OFFICIAL_040",
+        "gold_name": "收单商户流失预测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_040",
+          "OFFICIAL_013",
+          "OFFICIAL_029",
+          "OFFICIAL_041",
+          "OFFICIAL_003"
+        ],
+        "recommended_top5_names": [
+          "收单商户流失预测模型",
+          "个贷流失回捞算法模型",
+          "小微客户流失预警模型",
+          "收单商户贷款营销模型",
+          "AUM10万以上客户流失预警模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0026",
+        "query": "怎么从存量客户中挖掘他行有钱但本行资产不高的高潜力客户？",
+        "gold_id": "OFFICIAL_006",
+        "gold_name": "个人存款提升预测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_004",
+          "OFFICIAL_047",
+          "OFFICIAL_009",
+          "OFFICIAL_002",
+          "OFFICIAL_044"
+        ],
+        "recommended_top5_names": [
+          "ETC拓客模型",
+          "理财响应度预测模型",
+          "个人经营性贷款营销预测模型",
+          "AUM10-30万客户维稳增存模型",
+          "潜在高价值客户挖掘模型"
+        ],
+        "top3_hit": false,
+        "top5_hit": false,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0027",
+        "query": "聚焦中端财富客户，想通过机器学习找出能提升AUM的目标群体，哪个模型合适？",
+        "gold_id": "OFFICIAL_002",
+        "gold_name": "AUM10-30万客户维稳增存模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_044",
+          "OFFICIAL_013",
+          "OFFICIAL_002",
+          "OFFICIAL_026",
+          "OFFICIAL_012"
+        ],
+        "recommended_top5_names": [
+          "潜在高价值客户挖掘模型",
+          "个贷流失回捞算法模型",
+          "AUM10-30万客户维稳增存模型",
+          "对私账户风控机器学习模型",
+          "个贷全流程反欺诈机器学习模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0028",
+        "query": "针对前两年用信机构数>=4且连续用信的垒小户做准入评估，用哪个模型？",
+        "gold_id": "OFFICIAL_023",
+        "gold_name": "垒小户准入评分卡",
+        "recommended_top5_ids": [
+          "OFFICIAL_023",
+          "OFFICIAL_048",
+          "OFFICIAL_011",
+          "OFFICIAL_024",
+          "OFFICIAL_057"
+        ],
+        "recommended_top5_names": [
+          "垒小户准入评分卡",
+          "经营贷款贷前准入模型",
+          "个体工商户准入评分卡",
+          "垒小户违约概率模型",
+          "阳光E贷贷前准入模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0029",
+        "query": "小微贷款客户的留存和流失预警场景，有什么合适的模型？",
+        "gold_id": "OFFICIAL_029",
+        "gold_name": "小微客户流失预警模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_029",
+          "OFFICIAL_015",
+          "OFFICIAL_028",
+          "OFFICIAL_027",
+          "OFFICIAL_003"
+        ],
+        "recommended_top5_names": [
+          "小微客户流失预警模型",
+          "中小微企业资金流信用信息建模项目",
+          "小微企业违约概率B卡模型",
+          "小微企业1000万以下客户A卡模型",
+          "AUM10万以上客户流失预警模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0030",
+        "query": "房贷按揭的不良率需要严格控制，针对12个月以上账龄的客户做逾期60天以上预警，用什么模型？",
+        "gold_id": "OFFICIAL_033",
+        "gold_name": "房贷按揭违约概率模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_033",
+          "OFFICIAL_010",
+          "OFFICIAL_028",
+          "OFFICIAL_055",
+          "OFFICIAL_058"
+        ],
+        "recommended_top5_names": [
+          "房贷按揭违约概率模型",
+          "个人营销风险历史库",
+          "小微企业违约概率B卡模型",
+          "贷记卡违约概率模型",
+          "零售个人违约概率B卡模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0031",
+        "query": "AUM低于1万但有房产评级的长尾客户中，怎么挖掘高价值客户？",
+        "gold_id": "OFFICIAL_056",
+        "gold_name": "长尾客群潜在机制挖掘模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_044",
+          "OFFICIAL_056",
+          "OFFICIAL_060",
+          "OFFICIAL_025",
+          "OFFICIAL_003"
+        ],
+        "recommended_top5_names": [
+          "潜在高价值客户挖掘模型",
+          "长尾客群潜在机制挖掘模型",
+          "高价值存款客户流失预测模型",
+          "对公客户价值与风险评分模型",
+          "AUM10万以上客户流失预警模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0032",
+        "query": "信用空白人群的信用卡审批是一个难题，需要一个专门针对无征信客户的申请评分模型，是什么？",
+        "gold_id": "OFFICIAL_020",
+        "gold_name": "信用卡贷前申请评分模型_无征信",
+        "recommended_top5_ids": [
+          "OFFICIAL_020",
+          "OFFICIAL_021",
+          "OFFICIAL_025",
+          "OFFICIAL_011",
+          "OFFICIAL_023"
+        ],
+        "recommended_top5_names": [
+          "信用卡贷前申请评分模型_无征信",
+          "信用卡贷前申请评分模型_有征信",
+          "对公客户价值与风险评分模型",
+          "个体工商户准入评分卡",
+          "垒小户准入评分卡"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0033",
+        "query": "手机银行活跃用户中，怎么推荐E路有我平台的商品？",
+        "gold_id": "OFFICIAL_005",
+        "gold_name": "个人中间业务推荐模型:E路有我新客促活模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_005",
+          "OFFICIAL_035",
+          "OFFICIAL_007",
+          "OFFICIAL_032",
+          "OFFICIAL_036"
+        ],
+        "recommended_top5_names": [
+          "个人中间业务推荐模型:E路有我新客促活模型",
+          "手机银行促活模型",
+          "个人客户保险产品推荐模型",
+          "房贷按揭客户贷款产品推荐模型",
+          "手机银行客户识别预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0034",
+        "query": "反诈中心要求银行主动发现涉案账户，不能等公安通报后再处理，需要什么模型来前置识别？",
+        "gold_id": "OFFICIAL_042",
+        "gold_name": "智能反诈模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_026",
+          "OFFICIAL_042",
+          "OFFICIAL_055",
+          "OFFICIAL_021",
+          "OFFICIAL_019"
+        ],
+        "recommended_top5_names": [
+          "对私账户风控机器学习模型",
+          "智能反诈模型",
+          "贷记卡违约概率模型",
+          "信用卡贷前申请评分模型_有征信",
+          "信用卡贷前反欺诈机器学习模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0035",
+        "query": "针对小微企业构建行为评分卡，监测贷中违约概率，用B卡模型可以吗？",
+        "gold_id": "OFFICIAL_028",
+        "gold_name": "小微企业违约概率B卡模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_027",
+          "OFFICIAL_028",
+          "OFFICIAL_011",
+          "OFFICIAL_015",
+          "OFFICIAL_048"
+        ],
+        "recommended_top5_names": [
+          "小微企业1000万以下客户A卡模型",
+          "小微企业违约概率B卡模型",
+          "个体工商户准入评分卡",
+          "中小微企业资金流信用信息建模项目",
+          "经营贷款贷前准入模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0036",
+        "query": "垒小户的信用风险变化快，需要一个模型做动态违约概率预测来支撑贷中预警，选哪个？",
+        "gold_id": "OFFICIAL_024",
+        "gold_name": "垒小户违约概率模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_055",
+          "OFFICIAL_024",
+          "OFFICIAL_023",
+          "OFFICIAL_028",
+          "OFFICIAL_033"
+        ],
+        "recommended_top5_names": [
+          "贷记卡违约概率模型",
+          "垒小户违约概率模型",
+          "垒小户准入评分卡",
+          "小微企业违约概率B卡模型",
+          "房贷按揭违约概率模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0037",
+        "query": "结合用卡频次、用信额度和B卡评分来调整信用卡额度，用什么模型？",
+        "gold_id": "OFFICIAL_052",
+        "gold_name": "贷记卡固定额度调整模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_021",
+          "OFFICIAL_052",
+          "OFFICIAL_020",
+          "OFFICIAL_011",
+          "OFFICIAL_019"
+        ],
+        "recommended_top5_names": [
+          "信用卡贷前申请评分模型_有征信",
+          "贷记卡固定额度调整模型",
+          "信用卡贷前申请评分模型_无征信",
+          "个体工商户准入评分卡",
+          "信用卡贷前反欺诈机器学习模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0038",
+        "query": "有近3年征信报告的个贷流失客户中，哪些人未来3个月可能再次提款？需要模型来预测，选哪个？",
+        "gold_id": "OFFICIAL_013",
+        "gold_name": "个贷流失回捞算法模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_013",
+          "OFFICIAL_060",
+          "OFFICIAL_029",
+          "OFFICIAL_008",
+          "OFFICIAL_040"
+        ],
+        "recommended_top5_names": [
+          "个贷流失回捞算法模型",
+          "高价值存款客户流失预测模型",
+          "小微客户流失预警模型",
+          "个人客户理财产品营销模型",
+          "收单商户流失预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0039",
+        "query": "贷款资金多手流转后最终流向少数几个账户，怎么判断这些账户是不是贷款中介？",
+        "gold_id": "OFFICIAL_050",
+        "gold_name": "贷款中介挖掘模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_050",
+          "OFFICIAL_013",
+          "OFFICIAL_032",
+          "OFFICIAL_053",
+          "OFFICIAL_051"
+        ],
+        "recommended_top5_names": [
+          "贷款中介挖掘模型",
+          "个贷流失回捞算法模型",
+          "房贷按揭客户贷款产品推荐模型",
+          "贷记卡联动贷款营销模型",
+          "贷款产品综合评价模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0040",
+        "query": "银行体系贷款客户流失压力较大，需要通过中小微企业的资金流和信用信息建模来缓解，这个项目叫什么？",
+        "gold_id": "OFFICIAL_015",
+        "gold_name": "中小微企业资金流信用信息建模项目",
+        "recommended_top5_ids": [
+          "OFFICIAL_015",
+          "OFFICIAL_029",
+          "OFFICIAL_028",
+          "OFFICIAL_027",
+          "OFFICIAL_009"
+        ],
+        "recommended_top5_names": [
+          "中小微企业资金流信用信息建模项目",
+          "小微客户流失预警模型",
+          "小微企业违约概率B卡模型",
+          "小微企业1000万以下客户A卡模型",
+          "个人经营性贷款营销预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0041",
+        "query": "每个月都需要对贷记卡账户进行风险等级评估，需要一个能输出违约概率的模型，推荐哪个？",
+        "gold_id": "OFFICIAL_055",
+        "gold_name": "贷记卡违约概率模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_055",
+          "OFFICIAL_052",
+          "OFFICIAL_048",
+          "OFFICIAL_010",
+          "OFFICIAL_028"
+        ],
+        "recommended_top5_names": [
+          "贷记卡违约概率模型",
+          "贷记卡固定额度调整模型",
+          "经营贷款贷前准入模型",
+          "个人营销风险历史库",
+          "小微企业违约概率B卡模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0042",
+        "query": "经营贷款的贷前准入需要预测客户未来15个月的逾期风险，推荐使用哪个模型？",
+        "gold_id": "OFFICIAL_048",
+        "gold_name": "经营贷款贷前准入模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_048",
+          "OFFICIAL_057",
+          "OFFICIAL_011",
+          "OFFICIAL_023",
+          "OFFICIAL_010"
+        ],
+        "recommended_top5_names": [
+          "经营贷款贷前准入模型",
+          "阳光E贷贷前准入模型",
+          "个体工商户准入评分卡",
+          "垒小户准入评分卡",
+          "个人营销风险历史库"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0043",
+        "query": "5万以上存款的高净值客户，怎么预测未来3个月会不会大额流失？",
+        "gold_id": "OFFICIAL_060",
+        "gold_name": "高价值存款客户流失预测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_060",
+          "OFFICIAL_003",
+          "OFFICIAL_013",
+          "OFFICIAL_029",
+          "OFFICIAL_040"
+        ],
+        "recommended_top5_names": [
+          "高价值存款客户流失预测模型",
+          "AUM10万以上客户流失预警模型",
+          "个贷流失回捞算法模型",
+          "小微客户流失预警模型",
+          "收单商户流失预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0044",
+        "query": "信用卡客户是消费贷营销的优质目标群体，需要模型筛选出未来6个月可能办理消费贷的贷记卡客户，选哪个？",
+        "gold_id": "OFFICIAL_053",
+        "gold_name": "贷记卡联动贷款营销模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_045",
+          "OFFICIAL_053",
+          "OFFICIAL_043",
+          "OFFICIAL_054",
+          "OFFICIAL_018"
+        ],
+        "recommended_top5_names": [
+          "潜客挖掘消费贷营销模型",
+          "贷记卡联动贷款营销模型",
+          "消费贷授信未用信促提模型",
+          "贷记卡账单分期营销模型",
+          "信用卡片拓客模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0045",
+        "query": "行内对私客户中，怎么找到可能办理ETC的潜在客户？",
+        "gold_id": "OFFICIAL_004",
+        "gold_name": "ETC拓客模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_004",
+          "OFFICIAL_008",
+          "OFFICIAL_060",
+          "OFFICIAL_041",
+          "OFFICIAL_013"
+        ],
+        "recommended_top5_names": [
+          "ETC拓客模型",
+          "个人客户理财产品营销模型",
+          "高价值存款客户流失预测模型",
+          "收单商户贷款营销模型",
+          "个贷流失回捞算法模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0046",
+        "query": "经营贷款分抵押和非抵押场景的准入风险评估用什么模型？",
+        "gold_id": "OFFICIAL_048",
+        "gold_name": "经营贷款贷前准入模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_048",
+          "OFFICIAL_010",
+          "OFFICIAL_025",
+          "OFFICIAL_023",
+          "OFFICIAL_011"
+        ],
+        "recommended_top5_names": [
+          "经营贷款贷前准入模型",
+          "个人营销风险历史库",
+          "对公客户价值与风险评分模型",
+          "垒小户准入评分卡",
+          "个体工商户准入评分卡"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0047",
+        "query": "针对小微企业做贷款准入评分卡，预测未来15个月是否会逾期60天以上，用哪个模型？",
+        "gold_id": "OFFICIAL_027",
+        "gold_name": "小微企业1000万以下客户A卡模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_011",
+          "OFFICIAL_027",
+          "OFFICIAL_023",
+          "OFFICIAL_028",
+          "OFFICIAL_048"
+        ],
+        "recommended_top5_names": [
+          "个体工商户准入评分卡",
+          "小微企业1000万以下客户A卡模型",
+          "垒小户准入评分卡",
+          "小微企业违约概率B卡模型",
+          "经营贷款贷前准入模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0048",
+        "query": "个体工商户经营性贷款需求挖掘和精准营销用什么模型？",
+        "gold_id": "OFFICIAL_009",
+        "gold_name": "个人经营性贷款营销预测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_009",
+          "OFFICIAL_011",
+          "OFFICIAL_030",
+          "OFFICIAL_015",
+          "OFFICIAL_028"
+        ],
+        "recommended_top5_names": [
+          "个人经营性贷款营销预测模型",
+          "个体工商户准入评分卡",
+          "开门红个贷回捞精准营销模型",
+          "中小微企业资金流信用信息建模项目",
+          "小微企业违约概率B卡模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0049",
+        "query": "信用卡发卡前的欺诈风险识别和预警，用哪个模型？",
+        "gold_id": "OFFICIAL_019",
+        "gold_name": "信用卡贷前反欺诈机器学习模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_019",
+          "OFFICIAL_020",
+          "OFFICIAL_021",
+          "OFFICIAL_010",
+          "OFFICIAL_055"
+        ],
+        "recommended_top5_names": [
+          "信用卡贷前反欺诈机器学习模型",
+          "信用卡贷前申请评分模型_无征信",
+          "信用卡贷前申请评分模型_有征信",
+          "个人营销风险历史库",
+          "贷记卡违约概率模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0050",
+        "query": "为避免向高风险客户营销，在贷前需要接入一个包含征信、预警和黑名单的风险历史库，选哪个模型？",
+        "gold_id": "OFFICIAL_010",
+        "gold_name": "个人营销风险历史库",
+        "recommended_top5_ids": [
+          "OFFICIAL_010",
+          "OFFICIAL_013",
+          "OFFICIAL_041",
+          "OFFICIAL_055",
+          "OFFICIAL_047"
+        ],
+        "recommended_top5_names": [
+          "个人营销风险历史库",
+          "个贷流失回捞算法模型",
+          "收单商户贷款营销模型",
+          "贷记卡违约概率模型",
+          "理财响应度预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0051",
+        "query": "通过对客户特征挖掘预测高价值客户，提高营销效率用哪个模型？",
+        "gold_id": "OFFICIAL_044",
+        "gold_name": "潜在高价值客户挖掘模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_044",
+          "OFFICIAL_056",
+          "OFFICIAL_060",
+          "OFFICIAL_005",
+          "OFFICIAL_006"
+        ],
+        "recommended_top5_names": [
+          "潜在高价值客户挖掘模型",
+          "长尾客群潜在机制挖掘模型",
+          "高价值存款客户流失预测模型",
+          "个人中间业务推荐模型:E路有我新客促活模型",
+          "个人存款提升预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0052",
+        "query": "收单商户的风险管理需要实现线上化智能化，构建多场景的反欺诈模型体系，推荐哪个？",
+        "gold_id": "OFFICIAL_038",
+        "gold_name": "收单商户交易反欺诈模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_038",
+          "OFFICIAL_019",
+          "OFFICIAL_041",
+          "OFFICIAL_025",
+          "OFFICIAL_010"
+        ],
+        "recommended_top5_names": [
+          "收单商户交易反欺诈模型",
+          "信用卡贷前反欺诈机器学习模型",
+          "收单商户贷款营销模型",
+          "对公客户价值与风险评分模型",
+          "个人营销风险历史库"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0053",
+        "query": "需要对活跃收单商户进行价值分层和预授信，用哪个模型？",
+        "gold_id": "OFFICIAL_039",
+        "gold_name": "收单商户价值分层及预授信模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_039",
+          "OFFICIAL_041",
+          "OFFICIAL_025",
+          "OFFICIAL_040",
+          "OFFICIAL_042"
+        ],
+        "recommended_top5_names": [
+          "收单商户价值分层及预授信模型",
+          "收单商户贷款营销模型",
+          "对公客户价值与风险评分模型",
+          "收单商户流失预测模型",
+          "智能反诈模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0054",
+        "query": "借记卡存量客户是信用卡拓客的天然资源池，需要模型筛选未来3个月可能办卡的客户，选哪个？",
+        "gold_id": "OFFICIAL_018",
+        "gold_name": "信用卡片拓客模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_018",
+          "OFFICIAL_004",
+          "OFFICIAL_019",
+          "OFFICIAL_021",
+          "OFFICIAL_020"
+        ],
+        "recommended_top5_names": [
+          "信用卡片拓客模型",
+          "ETC拓客模型",
+          "信用卡贷前反欺诈机器学习模型",
+          "信用卡贷前申请评分模型_有征信",
+          "信用卡贷前申请评分模型_无征信"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0055",
+        "query": "我想从行内借记卡/贷记卡存量客户中找出没办过消费贷但未来可能办理的纯新客，用哪个模型？",
+        "gold_id": "OFFICIAL_045",
+        "gold_name": "潜客挖掘消费贷营销模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_045",
+          "OFFICIAL_004",
+          "OFFICIAL_053",
+          "OFFICIAL_043",
+          "OFFICIAL_054"
+        ],
+        "recommended_top5_names": [
+          "潜客挖掘消费贷营销模型",
+          "ETC拓客模型",
+          "贷记卡联动贷款营销模型",
+          "消费贷授信未用信促提模型",
+          "贷记卡账单分期营销模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0056",
+        "query": "希望通过提升公共事业费代扣签约量来间接拉高活期余额和AUM，哪些客户应该优先触达？",
+        "gold_id": "OFFICIAL_016",
+        "gold_name": "中间业务产品营销模型（代扣）",
+        "recommended_top5_ids": [
+          "OFFICIAL_016",
+          "OFFICIAL_002",
+          "OFFICIAL_013",
+          "OFFICIAL_003",
+          "OFFICIAL_004"
+        ],
+        "recommended_top5_names": [
+          "中间业务产品营销模型（代扣）",
+          "AUM10-30万客户维稳增存模型",
+          "个贷流失回捞算法模型",
+          "AUM10万以上客户流失预警模型",
+          "ETC拓客模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0057",
+        "query": "想提升扬州重点企业的走访成功率和贷款转化率，需要一个策略模型来做企业筛选，选哪个？",
+        "gold_id": "OFFICIAL_037",
+        "gold_name": "扬州重点企业客户贷款营销分析",
+        "recommended_top5_ids": [
+          "OFFICIAL_037",
+          "OFFICIAL_025",
+          "OFFICIAL_009",
+          "OFFICIAL_045",
+          "OFFICIAL_047"
+        ],
+        "recommended_top5_names": [
+          "扬州重点企业客户贷款营销分析",
+          "对公客户价值与风险评分模型",
+          "个人经营性贷款营销预测模型",
+          "潜客挖掘消费贷营销模型",
+          "理财响应度预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0058",
+        "query": "反洗钱团队每天人工排查可疑交易压力很大，需要模型自动识别非法集资嫌疑账户，推荐哪个？",
+        "gold_id": "OFFICIAL_059",
+        "gold_name": "非法集资模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_059",
+          "OFFICIAL_038",
+          "OFFICIAL_049",
+          "OFFICIAL_020",
+          "OFFICIAL_022"
+        ],
+        "recommended_top5_names": [
+          "非法集资模型",
+          "收单商户交易反欺诈模型",
+          "财富产品个性化推荐模型",
+          "信用卡贷前申请评分模型_无征信",
+          "信贷从业人员风险合规监测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0059",
+        "query": "存款账户正常但从未签约手机银行的客户群体很大，如何从中筛选高意向客户做精准营销？",
+        "gold_id": "OFFICIAL_036",
+        "gold_name": "手机银行客户识别预测模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_036",
+          "OFFICIAL_035",
+          "OFFICIAL_030",
+          "OFFICIAL_007",
+          "OFFICIAL_004"
+        ],
+        "recommended_top5_names": [
+          "手机银行客户识别预测模型",
+          "手机银行促活模型",
+          "开门红个贷回捞精准营销模型",
+          "个人客户保险产品推荐模型",
+          "ETC拓客模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0060",
+        "query": "零售业务贷前准入中的反欺诈筛查，用什么模型？",
+        "gold_id": "OFFICIAL_012",
+        "gold_name": "个贷全流程反欺诈机器学习模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_012",
+          "OFFICIAL_057",
+          "OFFICIAL_048",
+          "OFFICIAL_019",
+          "OFFICIAL_011"
+        ],
+        "recommended_top5_names": [
+          "个贷全流程反欺诈机器学习模型",
+          "阳光E贷贷前准入模型",
+          "经营贷款贷前准入模型",
+          "信用卡贷前反欺诈机器学习模型",
+          "个体工商户准入评分卡"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0061",
+        "query": "行内有大量消费贷授信客户未用信，业务部门希望筛选出用信概率高的客户优先触达，用什么模型？",
+        "gold_id": "OFFICIAL_043",
+        "gold_name": "消费贷授信未用信促提模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_043",
+          "OFFICIAL_045",
+          "OFFICIAL_053",
+          "OFFICIAL_039",
+          "OFFICIAL_052"
+        ],
+        "recommended_top5_names": [
+          "消费贷授信未用信促提模型",
+          "潜客挖掘消费贷营销模型",
+          "贷记卡联动贷款营销模型",
+          "收单商户价值分层及预授信模型",
+          "贷记卡固定额度调整模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      },
+      {
+        "test_id": "test_0062",
+        "query": "收单条线今年的贷款营销指标很重，需要一个模型来识别最可能响应贷款推荐的商户，选哪个？",
+        "gold_id": "OFFICIAL_041",
+        "gold_name": "收单商户贷款营销模型",
+        "recommended_top5_ids": [
+          "OFFICIAL_047",
+          "OFFICIAL_041",
+          "OFFICIAL_053",
+          "OFFICIAL_032",
+          "OFFICIAL_009"
+        ],
+        "recommended_top5_names": [
+          "理财响应度预测模型",
+          "收单商户贷款营销模型",
+          "贷记卡联动贷款营销模型",
+          "房贷按揭客户贷款产品推荐模型",
+          "个人经营性贷款营销预测模型"
+        ],
+        "top3_hit": true,
+        "top5_hit": true,
+        "parse_source": "rule",
+        "parser_trace_id": "",
+        "rerank_audit": {},
+        "hybrid_retrieval_audit": {
+          "enabled": true,
+          "candidate_count": 60,
+          "query_nonempty": true,
+          "dense_requested": false,
+          "dense_available": false,
+          "dense_model": "",
+          "dense_weight": 0.0,
+          "full_text_weight": 0.72,
+          "title_text_weight": 0.28,
+          "mode": "sparse",
+          "rule_weight": 0.1,
+          "retrieval_weight": 0.9,
+          "candidate_pool": 30
+        }
+      }
+    ]
+  }
+}

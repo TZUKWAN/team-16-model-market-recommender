@@ -1,0 +1,60 @@
+{
+  "model_id": "MKT_021",
+  "model_name": "营销触达时机模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "营销触达最佳时机推荐"
+  ],
+  "business_stage": [
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer"
+  ],
+  "model_capability": [
+    "response_prediction",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "channel_behavior",
+    "marketing_contact_history"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "demographics",
+    "product_holdings"
+  ],
+  "output_fields": [
+    "best_contact_time",
+    "best_contact_channel",
+    "time_score",
+    "contact_window"
+  ],
+  "performance_metrics": {
+    "response_lift": 2.1,
+    "opt_out_reduction": 0.35
+  },
+  "applicable_conditions": "适用于确定对特定客户的最佳营销触达时间和渠道；支持短信、APP推送、电话等渠道的时机优化。",
+  "unsuitable_conditions": "不适用于即时性营销活动（如限时优惠）；不适用于客户已明确拒绝的时间段。",
+  "compliance_boundary": "营销触达需遵守行业规定的时间限制（如晚上8点后不发送营销短信）；需尊重客户设置的免打扰时段。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行市场部",
+      "description": "优化营销活动触达时间。",
+      "effect": "营销响应率提升40%，退订率下降25%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "response_prediction",
+    "preference_analysis"
+  ],
+  "description": "基于客户历史行为的时间模式分析，预测客户在各时间段对营销触达的响应概率。"
+}

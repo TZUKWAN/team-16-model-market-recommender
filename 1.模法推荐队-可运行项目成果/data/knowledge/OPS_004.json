@@ -1,0 +1,58 @@
+{
+  "model_id": "OPS_004",
+  "model_name": "网点布局评估模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "网点布局优化评估"
+  ],
+  "business_stage": [
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "rural_area"
+  ],
+  "model_capability": [
+    "segmentation",
+    "demand_forecasting"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "transaction_data"
+  ],
+  "output_fields": [
+    "risk_score",
+    "ranked_list",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "recommendation_accuracy": 0.85,
+    "coverage_score": 0.78
+  },
+  "applicable_conditions": "适用于银行网点的新设、迁址和撤并评估；覆盖城市和县域网点布局分析。",
+  "unsuitable_conditions": "不适用于自助银行或离行式ATM的布局评估；不适用于纯线上渠道的布局优化。",
+  "compliance_boundary": "网点布局分析应符合银保监会网点规划要求；不得用于市场垄断或不正当竞争。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行战略部",
+      "description": "指导年度网点优化计划。",
+      "effect": "撤并低效网点12家，新增6家，整体网点效能提升35%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "rural_area",
+    "segmentation",
+    "demand_forecasting"
+  ],
+  "description": "基于人口分布、交通可达性、同业竞争和业务覆盖率的网点布局评估模型，使用多目标优化算法推荐最优布局方案。"
+}

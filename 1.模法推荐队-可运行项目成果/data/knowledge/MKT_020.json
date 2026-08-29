@@ -1,0 +1,64 @@
+{
+  "model_id": "MKT_020",
+  "model_name": "客户渠道偏好模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "客户渠道偏好分析"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "elderly"
+  ],
+  "model_capability": [
+    "preference_analysis",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "channel_behavior",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "demographics",
+    "transaction_flow",
+    "product_holdings"
+  ],
+  "output_fields": [
+    "preferred_channel",
+    "channel_usage_pattern",
+    "channel_migration_risk",
+    "suggested_strategy"
+  ],
+  "performance_metrics": {
+    "accuracy": 0.85,
+    "f1": 0.82,
+    "top1_accuracy": 0.78
+  },
+  "applicable_conditions": "适用于分析客户偏好的业务办理渠道（柜台、网银、手机银行、微信银行、ATM等）；支持渠道策略制定。",
+  "unsuitable_conditions": "不适用于仅使用单一渠道的客户（数据不足）；不适用于机构客户。",
+  "compliance_boundary": "渠道偏好分析不能用于限制客户选择渠道的权利；需保障老年客户的线下服务渠道。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行渠道管理部",
+      "description": "客户渠道偏好分析和渠道策略优化。",
+      "effect": "渠道迁移成功率提升30%，网点柜面业务量下降20%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "elderly",
+    "preference_analysis",
+    "segmentation"
+  ],
+  "description": "基于客户各渠道的使用频率、使用时段、办理业务类型等行为的渠道偏好分析模型。"
+}

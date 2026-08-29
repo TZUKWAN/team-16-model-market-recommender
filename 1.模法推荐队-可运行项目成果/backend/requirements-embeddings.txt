@@ -1,0 +1,3 @@
+# Compatibility entrypoint for local dense-runtime installation.
+# The generated lock pins the actual CPU runtime used by Docker acceptance.
+-r requirements-embeddings-lock.txt

@@ -1,0 +1,59 @@
+{
+  "model_id": "OPS_006",
+  "model_name": "柜面业务分流模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "柜面业务向电子渠道分流"
+  ],
+  "business_stage": [
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "elderly",
+    "young_customer"
+  ],
+  "model_capability": [
+    "segmentation",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "transaction_data",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "ranked_list",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "diversion_success_rate": 0.67,
+    "customer_acceptance": 0.72
+  },
+  "applicable_conditions": "适用于引导柜面可分流客户迁移至智能柜员机、手机银行等电子渠道；需识别客户接受度和操作能力。",
+  "unsuitable_conditions": "不适用于必须柜面办理的特殊业务（如继承、挂失等）；不适用于老年客群的强制分流。",
+  "compliance_boundary": "分流引导应充分尊重客户选择权；不得以任何形式强制客户使用电子渠道；需保留足够的人工服务窗口。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "柜面分流引导系统。",
+      "effect": "柜面可分流业务分流率从45%提升至72%，柜员压力明显缓解。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "individual",
+    "elderly",
+    "young_customer",
+    "segmentation",
+    "preference_analysis"
+  ],
+  "description": "基于客户画像、业务类型和渠道偏好的柜面业务分流模型，识别适合引导至电子渠道的客户和业务。"
+}

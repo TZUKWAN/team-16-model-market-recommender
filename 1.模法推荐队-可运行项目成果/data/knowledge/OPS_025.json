@@ -1,0 +1,58 @@
+{
+  "model_id": "OPS_025",
+  "model_name": "资产负债配置优化模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "资产负债结构优化"
+  ],
+  "business_stage": [
+    "performance_analysis"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "resource_optimization",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "asset_liability",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile"
+  ],
+  "output_fields": [
+    "recommended_amount",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "roa_improvement": 0.12,
+    "risk_adjusted_return": 0.18
+  },
+  "applicable_conditions": "适用于银行的资产负债结构优化；覆盖贷款投放节奏、期限匹配和流动性管理等决策场景。",
+  "unsuitable_conditions": "不适用于极端市场环境下的资产负债管理；不适用于投行业务的资产负债配置。",
+  "compliance_boundary": "资产负债管理需符合《商业银行资产负债管理办法》；配置方案需经资产负债管理委员会审批。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行资产负债部",
+      "description": "资产负债结构优化。",
+      "effect": "净息差提升0.15个百分点，流动性覆盖率优化至监管要求以上。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "performance_analysis",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "resource_optimization",
+    "value_assessment"
+  ],
+  "description": "基于线性规划和情景模拟的资产负债配置优化模型，在流动性、安全性和盈利性约束下寻找最优资产配置方案。"
+}

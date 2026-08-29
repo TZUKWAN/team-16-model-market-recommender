@@ -1,0 +1,10 @@
+{"demand_id":"EVAL_EXP_001","raw_text":"帮我筛一批县域新客做首贷营销，最好能给出转化概率高的名单。","scenario":"customer_marketing","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_002","raw_text":"帮我做农户小额贷款的贷前准入风控，最好能识别欺诈风险并给出额度建议。","scenario":"credit_risk","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_003","raw_text":"我想提前发现对公贷款可能逾期的客户，并给客户经理一个预警名单。","scenario":"credit_risk","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_004","raw_text":"识别小微企业贷款中的欺诈申请，防止骗贷行为。","scenario":"credit_risk","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_005","raw_text":"对存量个人客户做信用卡逾期风险预测。","scenario":"credit_risk","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_006","raw_text":"哪些存量客户最可能响应理财产品推荐？","scenario":"customer_marketing","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_007","raw_text":"帮我找到可能流失的高价值客户，提前做挽留。","scenario":"customer_marketing","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_008","raw_text":"筛选县域新客中可能成为首贷户的白名单。","scenario":"customer_marketing","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_009","raw_text":"预测网点近期的客流趋势，合理排班。","scenario":"operation_management","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}
+{"demand_id":"EVAL_EXP_010","raw_text":"识别交易流水中的异常行为，防范反洗钱风险。","scenario":"operation_management","target_audiences":["business","technical","management"],"note":"Used for explanation comprehensibility evaluation."}

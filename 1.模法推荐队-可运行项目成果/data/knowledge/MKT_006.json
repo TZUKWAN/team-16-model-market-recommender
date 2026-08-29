@@ -1,0 +1,65 @@
+{
+  "model_id": "MKT_006",
+  "model_name": "营销名单排序模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "营销目标客群排序"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "new_customer"
+  ],
+  "model_capability": [
+    "priority_ranking",
+    "conversion_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "marketing_contact_history",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "product_holdings",
+    "demographics"
+  ],
+  "output_fields": [
+    "ranked_list",
+    "priority_score",
+    "expected_value",
+    "score_breakdown"
+  ],
+  "performance_metrics": {
+    "ndcg": 0.78,
+    "precision_at_10": 0.72,
+    "recall_at_10": 0.65
+  },
+  "applicable_conditions": "适用于对营销名单进行优先级排序；支持按转化概率、预期价值、响应率多种排序维度。",
+  "unsuitable_conditions": "不适用于需要随机分组的A/B测试场景；不适用于全员营销活动。",
+  "compliance_boundary": "名单排序不得基于种族、宗教信仰等敏感特征；需考虑营销频次限制。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行市场部",
+      "description": "多轮营销活动的名单排序工具。",
+      "effect": "Top20%名单贡献了60%的营销转化。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "new_customer",
+    "priority_ranking",
+    "conversion_prediction"
+  ],
+  "description": "基于多目标优化的营销名单排序模型，综合转化概率、客户价值和营销成本进行排序。"
+}

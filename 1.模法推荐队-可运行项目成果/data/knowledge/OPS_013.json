@@ -1,0 +1,58 @@
+{
+  "model_id": "OPS_013",
+  "model_name": "员工操作风险监测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "员工异常操作行为监测"
+  ],
+  "business_stage": [
+    "risk_management",
+    "compliance"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "early_warning"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "transaction_data"
+  ],
+  "input_fields_optional": [],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "alert_signal",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "precision": 0.72,
+    "recall": 0.68,
+    "false_positive_rate": 0.08
+  },
+  "applicable_conditions": "适用于监测柜员、客户经理等员工的操作行为异常；覆盖授权异常、交易异常、查询异常等场景。",
+  "unsuitable_conditions": "不适用于员工绩效评估；不适用于管理层人员的操作行为监测（权限较大需单独设计）。",
+  "compliance_boundary": "员工行为监测需符合《个人信息保护法》和劳动法相关规定；监测结果只能用于风险管理和合规审计目的。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行内审部",
+      "description": "员工操作风险实时监测。",
+      "effect": "成功预警12起高风险操作，避免潜在损失约500万元。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "risk_management",
+    "compliance",
+    "individual",
+    "corporate",
+    "anomaly_detection",
+    "early_warning"
+  ],
+  "description": "基于员工操作日志和行为序列的异常操作监测模型，使用孤立森林和LSTM异常检测算法识别异常操作模式。"
+}

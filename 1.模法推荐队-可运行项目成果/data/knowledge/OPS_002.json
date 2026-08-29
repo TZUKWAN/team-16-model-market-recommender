@@ -1,0 +1,58 @@
+{
+  "model_id": "OPS_002",
+  "model_name": "网点智能排班优化模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "网点柜员智能排班"
+  ],
+  "business_stage": [
+    "resource_planning",
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "resource_optimization",
+    "demand_forecasting"
+  ],
+  "input_fields_required": [
+    "branch_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile",
+    "transaction_data"
+  ],
+  "output_fields": [
+    "ranked_list",
+    "score_breakdown"
+  ],
+  "performance_metrics": {
+    "coverage_rate": 0.92,
+    "efficiency_gain": 0.18,
+    "satisfaction_score": 4.2
+  },
+  "applicable_conditions": "适用于10人以上网点柜员排班；支持弹性排班和固定排班两种模式；需对接考勤系统。",
+  "unsuitable_conditions": "不适用于单人网点；不适用于网点装修或临时停业期间。",
+  "compliance_boundary": "排班方案应符合劳动法工时规定；确保员工合理休息时间；排班数据仅内部使用。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行运营管理部",
+      "description": "全辖网点智能排班系统。",
+      "effect": "排班耗时从4小时降至15分钟，员工满意度提升25%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "resource_planning",
+    "daily_operation",
+    "individual",
+    "corporate",
+    "resource_optimization",
+    "demand_forecasting"
+  ],
+  "description": "基于客流预测和业务量数据的智能排班优化模型，使用约束规划和整数规划算法生成最优排班方案。"
+}

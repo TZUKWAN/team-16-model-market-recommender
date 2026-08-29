@@ -1,0 +1,61 @@
+{
+  "model_id": "RISK_012",
+  "model_name": "信用卡分期风险评分模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "信用卡分期业务风险评分"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "individual"
+  ],
+  "model_capability": [
+    "credit_rating",
+    "default_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "credit_report",
+    "repayment_history"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "income_expense"
+  ],
+  "output_fields": [
+    "risk_score",
+    "recommended_limit",
+    "installment_risk_level"
+  ],
+  "performance_metrics": {
+    "auc": 0.79,
+    "ks": 0.34,
+    "precision": 0.7,
+    "recall": 0.73
+  },
+  "applicable_conditions": "适用于信用卡分期业务的风险评估；支持账单分期和消费分期场景。",
+  "unsuitable_conditions": "不适用于现金分期业务；不适用于已逾期账户的分期申请。",
+  "compliance_boundary": "分期利率和费用需符合监管要求；不得诱导客户过度分期。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行信用卡中心",
+      "description": "用于信用卡分期业务的实时风险审批。",
+      "effect": "分期业务不良率下降0.8个百分点，分期通过率合理控制。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "individual",
+    "credit_rating",
+    "default_prediction",
+    "credit_card"
+  ],
+  "description": "基于客户历史用卡行为、还款习惯和征信信息的风险评分模型，动态评估分期业务的信用风险。"
+}

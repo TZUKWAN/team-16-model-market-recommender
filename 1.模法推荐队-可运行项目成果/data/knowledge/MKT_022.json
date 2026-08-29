@@ -1,0 +1,62 @@
+{
+  "model_id": "MKT_022",
+  "model_name": "营销频次优化模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "营销频次优化"
+  ],
+  "business_stage": [
+    "in_marketing",
+    "post_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer"
+  ],
+  "model_capability": [
+    "response_prediction",
+    "churn_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "marketing_contact_history",
+    "channel_behavior"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "product_holdings",
+    "complaint_history"
+  ],
+  "output_fields": [
+    "optimal_frequency",
+    "max_frequency",
+    "fatigue_score",
+    "suggested_interval"
+  ],
+  "performance_metrics": {
+    "response_lift": 1.6,
+    "fatigue_reduction": 0.3
+  },
+  "applicable_conditions": "适用于优化对单个客户的营销触达频次；支持跨渠道频次统一管理和协同控制。",
+  "unsuitable_conditions": "不适用于低频营销场景（如年/季度活动）；不适用于客户主动订阅的资讯服务。",
+  "compliance_boundary": "频次控制需符合行业自律规范；不得因营销频次过高导致客户投诉。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行电子银行部",
+      "description": "统一管控各渠道营销频次。",
+      "effect": "客户投诉率下降40%，营销ROI提升25%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "in_marketing",
+    "post_marketing",
+    "individual",
+    "existing_customer",
+    "response_prediction",
+    "churn_prediction"
+  ],
+  "description": "基于客户对营销频次的敏感度和疲劳度建模，计算个人化的最优营销频次和间隔。"
+}

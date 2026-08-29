@@ -1,0 +1,58 @@
+{
+  "model_id": "OPS_014",
+  "model_name": "监管报表自动生成模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "监管报表数据提取与生成"
+  ],
+  "business_stage": [
+    "compliance",
+    "performance_analysis"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "compliance_check"
+  ],
+  "input_fields_required": [
+    "transaction_data",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "branch_data"
+  ],
+  "output_fields": [
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "accuracy": 0.995,
+    "generation_speed": 0.92,
+    "coverage_rate": 0.98
+  },
+  "applicable_conditions": "适用于银保监会1104报表、央行金融统计报表等常规监管报表的自动生成；需对接行内数据仓库。",
+  "unsuitable_conditions": "不适用于非标准格式的临时报表需求；不适用于跨境监管报表。",
+  "compliance_boundary": "报表数据需经复核后方可报送；数据采集和报送需符合监管数据质量要求；保留数据溯源记录。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行财务部",
+      "description": "监管报表自动化系统。",
+      "effect": "报表编制时间从5天缩短至半天，数据差错率降低90%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "compliance",
+    "performance_analysis",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "compliance_check",
+    "regulatory_reporting"
+  ],
+  "description": "基于规则引擎和数据映射的监管报表自动生成模型，自动从源系统提取数据、校验逻辑并生成标准化监管报表。"
+}

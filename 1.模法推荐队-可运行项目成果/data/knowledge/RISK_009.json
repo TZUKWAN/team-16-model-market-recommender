@@ -1,0 +1,62 @@
+{
+  "model_id": "RISK_009",
+  "model_name": "对公贷款贷后预警模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "对公贷款贷后风险预警"
+  ],
+  "business_stage": [
+    "post_loan"
+  ],
+  "customer_segment": [
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "early_warning",
+    "anomaly_detection"
+  ],
+  "input_fields_required": [
+    "business_income",
+    "transaction_flow",
+    "repayment_history"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "tax_info",
+    "supply_chain_data"
+  ],
+  "output_fields": [
+    "warning_level",
+    "risk_signal",
+    "alert_reason",
+    "suggested_action"
+  ],
+  "performance_metrics": {
+    "auc": 0.84,
+    "precision": 0.72,
+    "recall": 0.83,
+    "f1": 0.77
+  },
+  "applicable_conditions": "适用于贷款发放后全生命周期的风险监控；支持贷后检查频率的动态调整。",
+  "unsuitable_conditions": "不适用于已进入不良处置阶段的贷款；不适用于贸易融资等短期授信产品。",
+  "compliance_boundary": "预警结果需经客户经理核实后方可采取管控措施；不得仅依据模型结果直接冻结额度。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行贷后管理中心",
+      "description": "搭建全行统一贷后预警平台，覆盖对公和普惠客户。",
+      "effect": "预警信号平均提前45天发出，贷后检查效率提升50%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "corporate",
+    "small_micro_enterprise",
+    "early_warning",
+    "anomaly_detection"
+  ],
+  "description": "综合财务指标、税务数据、工商变更、司法诉讼、负面舆情的多源预警模型，采用多任务学习架构。"
+}

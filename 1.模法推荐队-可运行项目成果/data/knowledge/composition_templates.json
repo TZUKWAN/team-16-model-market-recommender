@@ -1,0 +1,262 @@
+[
+  {
+    "template_id": "TMPL_001",
+    "name": "信贷全流程风控模板",
+    "description": "覆盖贷前、贷中、贷后三个环节的标准化风控模型组合模板",
+    "applicable_scenarios": [
+      "个人贷款",
+      "小微企业贷款",
+      "农户贷款"
+    ],
+    "stages": [
+      {
+        "stage": "pre_loan",
+        "name": "贷前",
+        "required_models": [
+          "admission_scoring",
+          "anti_fraud",
+          "amount_calculation"
+        ],
+        "optional_models": [
+          "credit_rating"
+        ]
+      },
+      {
+        "stage": "in_loan",
+        "name": "贷中",
+        "required_models": [
+          "anomaly_detection"
+        ],
+        "optional_models": [
+          "early_warning"
+        ]
+      },
+      {
+        "stage": "post_loan",
+        "name": "贷后",
+        "required_models": [
+          "default_prediction"
+        ],
+        "optional_models": [
+          "early_warning",
+          "priority_ranking"
+        ]
+      }
+    ],
+    "typical_model_count": "4-6",
+    "complexity": "high"
+  },
+  {
+    "template_id": "TMPL_002",
+    "name": "精准营销全链路模板",
+    "description": "从客群筛选、响应预测到渠道触达的标准化营销模型组合模板",
+    "applicable_scenarios": [
+      "产品营销",
+      "客户激活",
+      "交叉销售",
+      "首贷营销",
+      "县域营销"
+    ],
+    "stages": [
+      {
+        "stage": "pre_marketing",
+        "name": "营销前",
+        "required_models": [
+          "segmentation",
+          "response_prediction",
+          "conversion_prediction"
+        ],
+        "optional_models": [
+          "value_assessment"
+        ]
+      },
+      {
+        "stage": "in_marketing",
+        "name": "营销中",
+        "required_models": [
+          "preference_analysis"
+        ],
+        "optional_models": [
+          "cross_selling"
+        ]
+      },
+      {
+        "stage": "post_marketing",
+        "name": "营销后",
+        "required_models": [],
+        "optional_models": [
+          "churn_prediction",
+          "segmentation"
+        ]
+      }
+    ],
+    "typical_model_count": "3-5",
+    "complexity": "medium"
+  },
+  {
+    "template_id": "TMPL_003",
+    "name": "网点运营优化模板",
+    "description": "网点客流、排班、效能和流程优化的标准化运营模型组合模板",
+    "applicable_scenarios": [
+      "网点管理",
+      "厅堂运营",
+      "设备管理"
+    ],
+    "stages": [
+      {
+        "stage": "resource_planning",
+        "name": "资源规划",
+        "required_models": [
+          "demand_forecasting",
+          "resource_optimization"
+        ],
+        "optional_models": []
+      },
+      {
+        "stage": "daily_operation",
+        "name": "日常运营",
+        "required_models": [
+          "priority_ranking"
+        ],
+        "optional_models": [
+          "anomaly_detection"
+        ]
+      },
+      {
+        "stage": "performance_analysis",
+        "name": "绩效分析",
+        "required_models": [
+          "value_assessment"
+        ],
+        "optional_models": [
+          "segmentation"
+        ]
+      }
+    ],
+    "typical_model_count": "3-5",
+    "complexity": "medium"
+  },
+  {
+    "template_id": "TMPL_004",
+    "name": "反洗钱合规管理模板",
+    "description": "反洗钱可疑交易监测、客户洗钱评级和合规管理的标准化模板",
+    "applicable_scenarios": [
+      "反洗钱",
+      "合规管理",
+      "监管报送"
+    ],
+    "stages": [
+      {
+        "stage": "risk_management",
+        "name": "风险管理",
+        "required_models": [
+          "anomaly_detection",
+          "anti_fraud"
+        ],
+        "optional_models": [
+          "early_warning"
+        ]
+      },
+      {
+        "stage": "compliance",
+        "name": "合规管理",
+        "required_models": [
+          "compliance_check"
+        ],
+        "optional_models": []
+      }
+    ],
+    "typical_model_count": "3-4",
+    "complexity": "high"
+  },
+  {
+    "template_id": "TMPL_005",
+    "name": "客户全生命周期经营模板",
+    "description": "从新客获取、交叉销售到流失预警的客户全生命周期模型组合模板",
+    "applicable_scenarios": [
+      "新客获取",
+      "存量经营",
+      "流失预警"
+    ],
+    "stages": [
+      {
+        "stage": "acquisition",
+        "name": "获客阶段",
+        "required_models": [
+          "conversion_prediction",
+          "response_prediction"
+        ],
+        "optional_models": [
+          "segmentation"
+        ]
+      },
+      {
+        "stage": "growth",
+        "name": "成长阶段",
+        "required_models": [
+          "cross_selling",
+          "preference_analysis"
+        ],
+        "optional_models": [
+          "value_assessment",
+          "lifetime_value"
+        ]
+      },
+      {
+        "stage": "retention",
+        "name": "留存阶段",
+        "required_models": [
+          "churn_prediction"
+        ],
+        "optional_models": [
+          "segmentation",
+          "priority_ranking"
+        ]
+      }
+    ],
+    "typical_model_count": "4-6",
+    "complexity": "high"
+  },
+  {
+    "template_id": "TMPL_006",
+    "name": "人力资源管理数字化模板",
+    "description": "绩效预测、培训需求、人力资源规划和离职预警的人力资源管理模型组合",
+    "applicable_scenarios": [
+      "绩效管理",
+      "人才发展",
+      "人力规划"
+    ],
+    "stages": [
+      {
+        "stage": "resource_planning",
+        "name": "资源规划",
+        "required_models": [
+          "demand_forecasting"
+        ],
+        "optional_models": [
+          "resource_optimization"
+        ]
+      },
+      {
+        "stage": "performance_analysis",
+        "name": "绩效分析",
+        "required_models": [
+          "value_assessment"
+        ],
+        "optional_models": []
+      },
+      {
+        "stage": "risk_management",
+        "name": "风险管理",
+        "required_models": [
+          "churn_prediction"
+        ],
+        "optional_models": [
+          "early_warning"
+        ]
+      }
+    ],
+    "typical_model_count": "3-4",
+    "complexity": "medium"
+  }
+]

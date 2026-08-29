@@ -1,0 +1,63 @@
+{
+  "model_id": "RISK_015",
+  "model_name": "贷款用途异常识别模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "贷款用途合规性检测"
+  ],
+  "business_stage": [
+    "post_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "compliance_check"
+  ],
+  "input_fields_required": [
+    "transaction_flow",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "income_expense",
+    "loan_purpose"
+  ],
+  "output_fields": [
+    "misuse_score",
+    "misuse_type",
+    "alert_reason",
+    "suggested_action"
+  ],
+  "performance_metrics": {
+    "auc": 0.88,
+    "precision": 0.76,
+    "recall": 0.82,
+    "f1": 0.79
+  },
+  "applicable_conditions": "适用于贷款发放后的资金流向监控；支持消费贷流入房市、股市、理财等典型异常用途识别。",
+  "unsuitable_conditions": "不适用于现金贷或取现场景（资金流向不可追踪）；不适用于已破产清算客户。",
+  "compliance_boundary": "资金流向监测需符合《贷款通则》和银保监会相关规定；监测结果需经人工核实。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售风控部",
+      "description": "监测个人消费贷资金流向。",
+      "effect": "贷款用途违规率从8%降至3%，配合监管要求完成整改。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "in_loan",
+    "individual",
+    "small_micro_enterprise",
+    "anomaly_detection",
+    "compliance_check",
+    "consumer_loan"
+  ],
+  "description": "基于资金流向图谱和交易对手分类的贷款用途异常检测模型，通过分析资金链路径判断是否存在违规使用。"
+}

@@ -1,0 +1,61 @@
+{
+  "model_id": "RISK_023",
+  "model_name": "贷后资金流异常模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "贷后资金流向异常监测"
+  ],
+  "business_stage": [
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "early_warning",
+    "compliance_check"
+  ],
+  "input_fields_required": [
+    "transaction_flow",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "income_expense",
+    "supply_chain_data"
+  ],
+  "output_fields": [
+    "cashflow_anomaly_score",
+    "anomaly_pattern",
+    "risk_alert"
+  ],
+  "performance_metrics": {
+    "auc": 0.86,
+    "precision": 0.78,
+    "recall": 0.75,
+    "f1": 0.76
+  },
+  "applicable_conditions": "适用于贷后资金流向的持续性监测；支持识别资金回流、挪用、集中转出等异常模式。",
+  "unsuitable_conditions": "不适用于现金交易为主的客群；不适用于贷款金额极小的贷款（如5000元以下）。",
+  "compliance_boundary": "资金流向监测需符合监管资金流向管理要求；异常监测结果不能作为单一冻结依据。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行信贷监控中心",
+      "description": "自动化监测贷后资金流向异常。",
+      "effect": "资金挪用识别率提升至80%，平均发现时间缩短至3天。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "individual",
+    "small_micro_enterprise",
+    "anomaly_detection",
+    "early_warning",
+    "compliance_check"
+  ],
+  "description": "基于资金流向图谱分析，识别贷款发放后资金是否按约定用途使用，检测是否有资金回流、集中转出等异常模式。"
+}

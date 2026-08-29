@@ -1,0 +1,63 @@
+{
+  "model_id": "OPS_011",
+  "model_name": "反洗钱团伙挖掘模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "洗钱团伙识别与挖掘"
+  ],
+  "business_stage": [
+    "risk_management",
+    "compliance"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anomaly_detection",
+    "anti_fraud"
+  ],
+  "input_fields_required": [
+    "transaction_data",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "risk_score",
+    "clustering",
+    "alert_signal",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "precision": 0.42,
+    "recall": 0.78,
+    "group_detection_rate": 0.72
+  },
+  "applicable_conditions": "适用于发现通过多个账户协同操作的洗钱团伙；支持对资金交易网络的图分析和群体挖掘。",
+  "unsuitable_conditions": "不适用于单个账户的简单可疑行为检测；不适用于数据量较小的村镇银行场景。",
+  "compliance_boundary": "团伙挖掘结果需经人工研判确认；涉及多客户关联分析需有明确的法律授权和法律依据。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行合规部",
+      "description": "反洗钱团伙分析系统。",
+      "effect": "成功识别5个洗钱团伙，涉及账户200+个。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "risk_management",
+    "compliance",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "anomaly_detection",
+    "anti_fraud",
+    "anti_money_laundering"
+  ],
+  "description": "基于图分析和社区发现算法的反洗钱团伙挖掘模型，对资金交易网络进行社团划分，识别异常交易团体。"
+}

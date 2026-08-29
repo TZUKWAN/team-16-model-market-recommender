@@ -1,0 +1,65 @@
+{
+  "model_id": "MKT_032",
+  "model_name": "农村电商客群识别模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "农村电商客群识别与营销"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "rural_commerce",
+    "rural_area",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "segmentation",
+    "conversion_prediction",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "supply_chain_data",
+    "product_holdings"
+  ],
+  "output_fields": [
+    "ecommerce_identification",
+    "business_scale",
+    "financial_needs",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "precision": 0.82,
+    "recall": 0.75,
+    "f1": 0.78
+  },
+  "applicable_conditions": "适用于识别从事农村电商（如淘宝村、直播带货、农产品电商）的经营主体；支持特色贷款和结算产品推荐。",
+  "unsuitable_conditions": "不适用于纯线下经营的农村商户；不适用于非经营性的农村个人客户。",
+  "compliance_boundary": "电商交易数据使用需获得客户授权；不得利用交易数据进行不正当竞争。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行三农金融部",
+      "description": "县域电商客户识别和金融支持。",
+      "effect": "识别农村电商客户3000+户，带动贷款投放5000万元。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "rural_commerce",
+    "rural_area",
+    "small_micro_enterprise",
+    "segmentation",
+    "conversion_prediction",
+    "value_assessment"
+  ],
+  "description": "通过交易对手分析、收款渠道识别和行业标签，识别从事农村电商的客户群体并评估其金融需求。"
+}

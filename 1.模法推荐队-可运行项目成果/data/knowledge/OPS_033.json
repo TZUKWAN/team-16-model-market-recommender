@@ -1,0 +1,59 @@
+{
+  "model_id": "OPS_033",
+  "model_name": "经营分析报告自动生成模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "经营分析报告自动生成"
+  ],
+  "business_stage": [
+    "performance_analysis"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "compliance_check"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile",
+    "asset_liability"
+  ],
+  "output_fields": [
+    "explanation_text",
+    "score_breakdown"
+  ],
+  "performance_metrics": {
+    "report_completeness": 0.92,
+    "insight_relevance": 0.85,
+    "generation_time_saving": 0.8
+  },
+  "applicable_conditions": "适用于银行月度、季度和年度经营分析报告的自动生成；覆盖存款、贷款、中间业务、客户、渠道等业务板块。",
+  "unsuitable_conditions": "不适用于监管报送类报告（格式要求严格需专用系统）；不适用于涉及敏感信息的专题分析报告。",
+  "compliance_boundary": "报告中的数据需确保准确性和可追溯性；涉及客户汇总数据不得包含个人身份信息；报告仅供内部管理使用。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行综合部",
+      "description": "月度经营分析报告自动生成。",
+      "effect": "报告撰写时间从3天缩短至2小时，分析深度和一致性显著提升。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "performance_analysis",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "value_assessment",
+    "compliance_check"
+  ],
+  "description": "基于自然语言生成的经营分析报告自动生成模型，从业务数据中提取关键洞察，生成结构化、可读性强的分析报告。"
+}

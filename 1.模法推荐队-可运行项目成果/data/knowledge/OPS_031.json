@@ -1,0 +1,53 @@
+{
+  "model_id": "OPS_031",
+  "model_name": "人力资源供需预测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "人力资源规划与预测"
+  ],
+  "business_stage": [
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "demand_forecasting",
+    "resource_optimization"
+  ],
+  "input_fields_required": [
+    "branch_data"
+  ],
+  "input_fields_optional": [],
+  "output_fields": [
+    "forecast_value",
+    "ranked_list",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "forecast_accuracy": 0.85,
+    "planning_efficiency": 0.78
+  },
+  "applicable_conditions": "适用于银行年度人力资源规划和人员编制预测；覆盖柜员、客户经理、运营支持等岗位类型。",
+  "unsuitable_conditions": "不适用于高管层的人力资源规划；不适用于因并购重组等导致的特殊人力需求变动。",
+  "compliance_boundary": "人力资源预测需符合劳动法和劳动合同法规定；不涉及员工个人的歧视性分析。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行人力资源部",
+      "description": "年度人力资源规划。",
+      "effect": "人员编制预算编制时间缩短70%，人员配置合理性提升25%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "demand_forecasting",
+    "resource_optimization"
+  ],
+  "description": "基于业务量预测和岗位定编标准的人力资源供需预测模型，使用驱动因素法预测未来各岗位的人员需求。"
+}

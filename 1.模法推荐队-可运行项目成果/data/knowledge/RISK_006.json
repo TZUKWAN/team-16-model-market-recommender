@@ -1,0 +1,59 @@
+{
+  "model_id": "RISK_006",
+  "model_name": "小微企业反欺诈模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "小微企业贷款反欺诈"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "transaction_flow",
+    "supply_chain_data"
+  ],
+  "output_fields": [
+    "fraud_score",
+    "fraud_type",
+    "risk_alert"
+  ],
+  "performance_metrics": {
+    "auc": 0.91,
+    "precision": 0.88,
+    "recall": 0.82,
+    "f1": 0.85
+  },
+  "applicable_conditions": "适用于小微企业贷款申请环节的欺诈风险识别；支持法人代表欺诈、包装贷、中介包装等典型欺诈模式。",
+  "unsuitable_conditions": "不适用于个人消费贷反欺诈；不适用于供应链金融的核心企业反欺诈。",
+  "compliance_boundary": "反欺诈数据使用需明确告知客户；不得利用反欺诈结果进行歧视性定价。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行数字金融部",
+      "description": "全量微贷申请均通过反欺诈模型筛查。",
+      "effect": "欺诈识别率94%，年均拦截欺诈申请约500笔，避免损失超3000万元。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "small_micro_enterprise",
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "description": "基于企业关联图谱、法人代表多维信息、申请行为序列的集成反欺诈模型，综合使用GNN和异常检测算法。"
+}

@@ -1,0 +1,60 @@
+{
+  "model_id": "OPS_023",
+  "model_name": "流动性风险预测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "银行流动性风险预测"
+  ],
+  "business_stage": [
+    "risk_management"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "demand_forecasting",
+    "early_warning"
+  ],
+  "input_fields_required": [
+    "transaction_data",
+    "asset_liability"
+  ],
+  "input_fields_optional": [
+    "customer_profile"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "forecast_value",
+    "alert_signal"
+  ],
+  "performance_metrics": {
+    "mape": 0.065,
+    "early_warning_accuracy": 0.88,
+    "auc": 0.85
+  },
+  "applicable_conditions": "适用于银行短期（7天、30天）流动性缺口的预测；需对接资产负债管理系统和支付清算系统。",
+  "unsuitable_conditions": "不适用于极端市场环境下的流动性压力测试（需单独的压力测试模型）；不适用于跨境流动性风险管理。",
+  "compliance_boundary": "流动性风险预测需符合《商业银行流动性风险管理办法》；预测结果供内部风险管理参考。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行资产负债部",
+      "description": "流动性风险预警系统。",
+      "effect": "成功预警2次流动性紧张时段，提前采取措施避免流动性风险。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "risk_management",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "demand_forecasting",
+    "early_warning"
+  ],
+  "description": "基于客户行为和资产负债数据的流动性风险预测模型，使用时序分析和压力测试方法预测短期流动性缺口。"
+}

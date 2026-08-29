@@ -1,0 +1,59 @@
+{
+  "model_id": "RISK_032",
+  "model_name": "企业主个人信用辅助模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "企业主个人信用评估"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "credit_rating",
+    "admission_scoring"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "credit_report",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "asset_liability",
+    "income_expense"
+  ],
+  "output_fields": [
+    "personal_credit_score",
+    "risk_level",
+    "guarantee_capacity"
+  ],
+  "performance_metrics": {
+    "auc": 0.83,
+    "ks": 0.39,
+    "precision": 0.77,
+    "recall": 0.74
+  },
+  "applicable_conditions": "适用于小微企业贷款中需要评估企业主个人信用的场景；支持企业主个人作为共同借款人或担保人的情形。",
+  "unsuitable_conditions": "不适用于企业法人治理完善的大型企业；不适用于企业主个人已提供足额抵质押物的情形。",
+  "compliance_boundary": "企业主个人信息处理需获得单独授权；个人信用评估结果不能用于企业贷款以外的用途。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行小微金融部",
+      "description": "作为小微企业贷款审批的辅助评估工具。",
+      "effect": "企业主信用评估准确率82%，辅助降低小微贷款不良率。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "small_micro_enterprise",
+    "credit_rating",
+    "admission_scoring"
+  ],
+  "description": "基于企业主个人征信、行内资产、历史交易等数据的企业主信用评估模型，评估企业主个人信用水平。"
+}

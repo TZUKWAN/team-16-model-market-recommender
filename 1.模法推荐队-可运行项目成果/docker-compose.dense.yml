@@ -1,0 +1,48 @@
+services:
+  backend:
+    build:
+      target: runtime-dense
+    environment:
+      RETRIEVAL_RUNTIME_MODE: "competition_dense"
+      HYBRID_RETRIEVAL_ENABLED: "true"
+      HYBRID_DENSE_ENABLED: "true"
+      HYBRID_DENSE_WEIGHT: "0.50"
+      HYBRID_DENSE_MODEL: "/app/data/models/bge-m3"
+      HYBRID_DENSE_REQUIRED: "true"
+      HYBRID_DENSE_OFFLINE: "true"
+      HYBRID_DENSE_EXPECTED_DIMENSION: "1024"
+      HYBRID_DENSE_EXPECTED_REVISION: "${BGE_M3_REVISION:-5617a9f61b028005a4858fdac845db406aefb181}"
+      HYBRID_DENSE_MANIFEST: "/app/data/models/bge-m3.manifest.json"
+      HYBRID_DENSE_VERIFY_MANIFEST: "true"
+      HYBRID_DENSE_CACHE_ENABLED: "true"
+      HYBRID_DENSE_CACHE_DIR: "/app/data/cache/embeddings"
+      HF_HUB_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      HF_DATASETS_OFFLINE: "1"
+    healthcheck:
+      start_period: 180s
+
+  dense-model-prepare:
+    profiles: ["prepare"]
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: runtime-dense
+    working_dir: /app/backend
+    command:
+      - python
+      - scripts/prepare_dense_model.py
+      - --repo-id
+      - BAAI/bge-m3
+      - --revision
+      - "${BGE_M3_REVISION:-5617a9f61b028005a4858fdac845db406aefb181}"
+      - --output-dir
+      - /app/data/models/bge-m3
+      - --manifest
+      - /app/data/models/bge-m3.manifest.json
+      - --expected-dimension
+      - "1024"
+    environment:
+      HF_HOME: /tmp/huggingface
+    volumes:
+      - ./data/models:/app/data/models

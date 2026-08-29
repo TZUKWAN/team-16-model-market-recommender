@@ -1,0 +1,66 @@
+{
+  "model_id": "MKT_024",
+  "model_name": "县域商户客群拓展模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "县域商户拓展"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise",
+    "rural_area",
+    "new_customer"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "segmentation",
+    "cross_selling"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "business_income"
+  ],
+  "input_fields_optional": [
+    "supply_chain_data",
+    "product_holdings",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "expansion_potential",
+    "preferred_products",
+    "estimated_contribution",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.79,
+    "precision": 0.72,
+    "recall": 0.68,
+    "lift": 1.9
+  },
+  "applicable_conditions": "适用于县域个体工商户和小微商户的拓展识别；支持收款码、贷款、存款等商户产品推荐。",
+  "unsuitable_conditions": "不适用于纯线上经营的无实体商户；不适用于县城大型企业。",
+  "compliance_boundary": "商户拓展需遵守公平竞争原则；不得采用不正当竞争手段获取商户。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行县域支行",
+      "description": "县域商户拓展名单生成。",
+      "effect": "商户拓展成功率32%，新增商户800+户。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "small_micro_enterprise",
+    "rural_area",
+    "new_customer",
+    "conversion_prediction",
+    "segmentation",
+    "cross_selling"
+  ],
+  "description": "基于县域经济数据、商户交易特征和商圈分析的新商户拓展潜力评估模型。"
+}

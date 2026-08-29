@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+frontend/dist/
+npm-debug.log*
+
+# Git / IDE
+.git/
+.github/
+.idea/
+.vscode/
+*.swp
+
+# Env / Secrets（密钥不能打进镜像）
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reports（数据通过挂载提供，不需要打进镜像）
+reports/

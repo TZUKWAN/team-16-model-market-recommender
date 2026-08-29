@@ -1,0 +1,64 @@
+{
+  "model_id": "MKT_002",
+  "model_name": "新客贷款意向识别模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "新客贷款意向识别"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "new_customer",
+    "individual",
+    "young_customer"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "response_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "product_holdings",
+    "demographics"
+  ],
+  "output_fields": [
+    "intent_score",
+    "intent_type",
+    "product_interest",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.81,
+    "precision": 0.73,
+    "recall": 0.78,
+    "f1": 0.75
+  },
+  "applicable_conditions": "适用于识别新开户客户是否有贷款需求及偏好产品类型；支持新客获取阶段的精准营销。",
+  "unsuitable_conditions": "不适用于已有贷款的老客户；不适用于纯理财客户的需求识别。",
+  "compliance_boundary": "贷款意向识别需在客户授权范围内使用数据；不得基于年龄、性别等特征进行筛选。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "新客开户后自动识别贷款意向。",
+      "effect": "新客贷款转化率提升1.5倍，营销成本降低30%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "new_customer",
+    "individual",
+    "young_customer",
+    "conversion_prediction",
+    "response_prediction",
+    "first_loan"
+  ],
+  "description": "基于开户行为、首笔交易特征和客户画像的新客贷款意向识别模型，预测客户对消费贷、经营贷等产品的兴趣程度。"
+}

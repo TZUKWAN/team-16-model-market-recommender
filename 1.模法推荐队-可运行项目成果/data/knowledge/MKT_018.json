@@ -1,0 +1,69 @@
+{
+  "model_id": "MKT_018",
+  "model_name": "存款流失预警模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "存款流失预警"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "post_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer",
+    "high_net_worth"
+  ],
+  "model_capability": [
+    "churn_prediction",
+    "early_warning",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "transaction_flow",
+    "product_holdings",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "marketing_contact_history",
+    "income_expense"
+  ],
+  "output_fields": [
+    "deposit_churn_probability",
+    "potential_outflow_amount",
+    "churn_reason",
+    "retention_suggestion"
+  ],
+  "performance_metrics": {
+    "auc": 0.84,
+    "precision": 0.77,
+    "recall": 0.74,
+    "f1": 0.75
+  },
+  "applicable_conditions": "适用于识别存款可能流失的客户；支持定期存款到期转存、活期存款流失等场景。",
+  "unsuitable_conditions": "不适用于活期余额极低的客户（500元以下）；不适用于账户即将销户的客户。",
+  "compliance_boundary": "存款流失预警不得用于限制客户正常转出资金；挽留措施需合规。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行资产负债部",
+      "description": "定期存款到期转存预警。",
+      "effect": "大额存款留存率提升20%，减少存款流失约5亿元。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "post_marketing",
+    "individual",
+    "existing_customer",
+    "high_net_worth",
+    "churn_prediction",
+    "early_warning",
+    "value_assessment",
+    "deposit"
+  ],
+  "description": "基于存款变动趋势、资金流出模式、利率敏感度和竞品行为的存款流失预警模型。"
+}

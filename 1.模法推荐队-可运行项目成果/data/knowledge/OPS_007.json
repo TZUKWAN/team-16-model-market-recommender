@@ -1,0 +1,57 @@
+{
+  "model_id": "OPS_007",
+  "model_name": "网点动线优化模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "网点厅堂动线设计优化"
+  ],
+  "business_stage": [
+    "daily_operation",
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "elderly"
+  ],
+  "model_capability": [
+    "resource_optimization"
+  ],
+  "input_fields_required": [
+    "branch_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile",
+    "transaction_data"
+  ],
+  "output_fields": [
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "flow_efficiency": 0.85,
+    "space_utilization": 0.78
+  },
+  "applicable_conditions": "适用于网点厅堂功能分区和客户动线优化设计；支持标准网点和旗舰网点两种类型。",
+  "unsuitable_conditions": "不适用于在装修中的网点；不适用于临时或移动网点。",
+  "compliance_boundary": "动线设计应符合银行安全管理规范；保障客户隐私和财产安全。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行渠道部",
+      "description": "旗舰网点动线设计。",
+      "effect": "客户平均动线长度缩短35%，营销触点曝光提升50%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "daily_operation",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "elderly",
+    "resource_optimization"
+  ],
+  "description": "基于客户行为模拟和空间规划的网点动线优化模型，使用仿真算法评估不同动线方案对客户体验和营销转化率的影响。"
+}

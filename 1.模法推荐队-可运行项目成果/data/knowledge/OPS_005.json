@@ -1,0 +1,58 @@
+{
+  "model_id": "OPS_005",
+  "model_name": "网点效能评价模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "网点综合效能评价"
+  ],
+  "business_stage": [
+    "performance_analysis",
+    "daily_operation"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "segmentation"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "transaction_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile"
+  ],
+  "output_fields": [
+    "risk_score",
+    "ranked_list",
+    "score_breakdown"
+  ],
+  "performance_metrics": {
+    "evaluation_consistency": 0.88,
+    "ranking_stability": 0.82
+  },
+  "applicable_conditions": "适用于银行网点季度和年度效能综合评价；涵盖效益、效率、服务和增长四个维度。",
+  "unsuitable_conditions": "不适用于纯线上渠道的效能评价；不适用于开业不足6个月的新网点。",
+  "compliance_boundary": "评价结果仅用于内部管理参考，不与员工绩效工资直接挂钩；涉及数据的采集和使用需符合内部数据管理规定。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行运营管理部",
+      "description": "季度网点效能排名。",
+      "effect": "后20%网点效能平均提升18%，全行网点效能标准差降低25%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "performance_analysis",
+    "daily_operation",
+    "individual",
+    "corporate",
+    "value_assessment",
+    "segmentation"
+  ],
+  "description": "基于多维度指标体系的网点综合效能评价模型，使用熵权TOPSIS方法计算网点综合得分和排名。"
+}

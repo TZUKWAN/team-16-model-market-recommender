@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Runtime artifacts - evaluation outputs
+reports/analysis/
+reports/runs/
+reports/blind/
+# Local source extraction can contain contact details and machine-specific paths.
+reports/official/requirement_dataset_extract.json
+
+# Blind evaluation gold labels must stay outside version control.
+data/eval_blind/*.private.jsonl
+
+# Runtime session / trace / audit data (may contain user input or call details)
+data/conversations/
+data/llm_traces/
+data/audit/
+data/feedback/
+data/cache/
+data/models/
+data/surveys/
+data/recommendation_versions/
+data/runtime/
+data/runtime_export/
+data/model_catalog/
+logs/
+.delivery/
+dist/
+
+# Local browser validation artifacts
+.playwright-cli/
+output/playwright/
+
+# Temporary ablation intermediate files (prefixed with _)
+reports/ablation/_*
+
+# Orchestration artifacts
+.sisyphus/
+.codex/run/

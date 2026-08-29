@@ -1,0 +1,64 @@
+{
+  "model_id": "RISK_024",
+  "model_name": "逾期客户催收优先级模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "逾期催收优先级排序"
+  ],
+  "business_stage": [
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "farmer",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "priority_ranking",
+    "default_prediction"
+  ],
+  "input_fields_required": [
+    "repayment_history",
+    "customer_profile",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "contact_info",
+    "asset_liability",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "collection_priority",
+    "recovery_probability",
+    "suggested_action",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.82,
+    "precision": 0.76,
+    "recall": 0.71,
+    "top_k_accuracy": 0.8
+  },
+  "applicable_conditions": "适用于逾期1-90天客户的催收优先级排序；支持短信、电话、外访等不同催收策略的差异化匹配。",
+  "unsuitable_conditions": "不适用于已进入法务催收阶段（逾期90天以上）；不适用于已核销贷款。",
+  "compliance_boundary": "催收行为需符合《商业银行信用卡业务监督管理办法》和催收行为规范；不得对债务人进行恐吓、威胁等不当催收。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行资产保全部",
+      "description": "优化催收资源分配，按照优先级分配催收任务。",
+      "effect": "早期催收回收率提升22%，催收人力成本节约15%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "individual",
+    "farmer",
+    "small_micro_enterprise",
+    "priority_ranking",
+    "default_prediction"
+  ],
+  "description": "基于客户还款意愿、还款能力、失联概率和逾期特征的多维度催收优先级模型，采用强化学习优化催收策略。"
+}

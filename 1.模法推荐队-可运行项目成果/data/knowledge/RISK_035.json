@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_035",
+  "model_name": "贷前资料真实性识别模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "贷前申请资料真实性核验"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "credit_report"
+  ],
+  "input_fields_optional": [
+    "business_income",
+    "tax_info"
+  ],
+  "output_fields": [
+    "authenticity_score",
+    "forged_items",
+    "risk_alert"
+  ],
+  "performance_metrics": {
+    "auc": 0.9,
+    "precision": 0.86,
+    "recall": 0.83,
+    "f1": 0.84
+  },
+  "applicable_conditions": "适用于贷前申请资料（收入证明、银行流水、工作证明等）的真实性检测；支持OCR识别后材料的自动化验证。",
+  "unsuitable_conditions": "不适用于需要物理原件核验的场景；不适用于已有公证或第三方认证的材料。",
+  "compliance_boundary": "自动核验结果仅作为参考，不替代人工审核；涉及客户敏感信息需按照最小化原则处理。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行线上贷款事业部",
+      "description": "自动核验线上进件材料的真实性。",
+      "effect": "虚假资料识别率93%，减少人工核验工作量60%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "individual",
+    "small_micro_enterprise",
+    "anti_fraud",
+    "anomaly_detection"
+  ],
+  "description": "综合利用OCR校验、数据交叉验证、逻辑一致性检验和模式识别的申请材料真实性检测模型。"
+}

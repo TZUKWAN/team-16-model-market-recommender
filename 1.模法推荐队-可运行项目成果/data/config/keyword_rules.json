@@ -1,0 +1,684 @@
+{
+    "_comment":  "Keyword alignment rules, externalized from recommender._keyword_alignment_adjustment. Each rule fires when query contains keywords from query groups AND the model text contains keywords from the model group. \u0027applies_to\u0027 controls which eval mode the rule is active in: \u0027demo\u0027 (official eval mode excluded), \u0027all\u0027 (always active). Rewards/penalties are additive and clamped to [-24, 36] in code.",
+    "targeted_rules":  [
+                           {
+                               "id":  "targeted_corporate_loan_post",
+                               "applies_to":  "demo",
+                               "query_group_a":  [
+                                                     "对公",
+                                                     "企业",
+                                                     "小微"
+                                                 ],
+                               "query_group_b":  [
+                                                     "贷后",
+                                                     "逾期",
+                                                     "违约",
+                                                     "预警"
+                                                 ],
+                               "model_group":  [
+                                                   "违约概率",
+                                                   "对公客户价值与风险评分",
+                                                   "贷中预警",
+                                                   "贷后管理",
+                                                   "预警系统"
+                                               ],
+                               "reward":  32.0
+                           },
+                           {
+                               "id":  "targeted_loan_credit_post",
+                               "applies_to":  "demo",
+                               "query_group_a":  [
+                                                     "贷款",
+                                                     "信贷"
+                                                 ],
+                               "query_group_b":  [
+                                                     "贷后",
+                                                     "逾期",
+                                                     "违约",
+                                                     "预警"
+                                                 ],
+                               "model_group":  [
+                                                   "违约概率",
+                                                   "贷中预警",
+                                                   "贷后管理",
+                                                   "预警系统",
+                                                   "风险评分"
+                                               ],
+                               "reward":  24.0
+                           }
+                       ],
+    "pair_rules":  [
+                       {
+                           "id":  "mortgage_pre_screening",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "房贷",
+                                                 "按揭"
+                                             ],
+                           "query_group_b":  [
+                                                 "贷前",
+                                                 "准入",
+                                                 "准入评分",
+                                                 "风险评估",
+                                                 "贷前评分"
+                                             ],
+                           "model_group":  [
+                                               "房贷用户按揭a卡",
+                                               "按揭a卡",
+                                               "a卡模型"
+                                           ],
+                           "reward":  26.0
+                       },
+                       {
+                           "id":  "mortgage_default",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "房贷",
+                                                 "按揭"
+                                             ],
+                           "query_group_b":  [
+                                                 "逾期",
+                                                 "违约",
+                                                 "账龄",
+                                                 "60天"
+                                             ],
+                           "model_group":  [
+                                               "房贷按揭违约概率"
+                                           ],
+                           "reward":  26.0
+                       },
+                       {
+                           "id":  "house_price_stress",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "房价",
+                                                 "压力测试",
+                                                 "抵押折扣",
+                                                 "风险敞口"
+                                             ],
+                           "query_group_b":  [
+                                                 "房价",
+                                                 "压力测试",
+                                                 "下行",
+                                                 "风险敞口"
+                                             ],
+                           "model_group":  [
+                                               "房地产压力测试",
+                                               "压力测试"
+                                           ],
+                           "reward":  30.0
+                       },
+                       {
+                           "id":  "marketing_blacklist",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "营销前",
+                                                 "黑名单",
+                                                 "风险排查",
+                                                 "黑灰"
+                                             ],
+                           "query_group_b":  [
+                                                 "营销",
+                                                 "风险",
+                                                 "黑名单",
+                                                 "过滤"
+                                             ],
+                           "model_group":  [
+                                               "个人营销风险历史库",
+                                               "黑灰名单"
+                                           ],
+                           "reward":  30.0
+                       },
+                       {
+                           "id":  "wealth_acquisition",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "理财",
+                                                 "财富"
+                                             ],
+                           "query_group_b":  [
+                                                 "获客",
+                                                 "拓新",
+                                                 "新客营销",
+                                                 "购买",
+                                                 "营销成本",
+                                                 "高转化"
+                                             ],
+                           "model_group":  [
+                                               "个人客户理财产品营销",
+                                               "购买理财"
+                                           ],
+                           "reward":  28.0
+                       },
+                       {
+                           "id":  "wealth_response",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "理财",
+                                                 "财富"
+                                             ],
+                           "query_group_b":  [
+                                                 "响应",
+                                                 "邀约",
+                                                 "触达"
+                                             ],
+                           "model_group":  [
+                                               "理财响应度预测"
+                                           ],
+                           "reward":  24.0
+                       },
+                       {
+                           "id":  "wealth_personalization",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "理财",
+                                                 "财富"
+                                             ],
+                           "query_group_b":  [
+                                                 "个性化",
+                                                 "风险偏好",
+                                                 "适当性",
+                                                 "投资经验",
+                                                 "产品匹配"
+                                             ],
+                           "model_group":  [
+                                               "财富产品个性化推荐"
+                                           ],
+                           "reward":  26.0
+                       },
+                       {
+                           "id":  "high_end_retain",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "中高端",
+                                                 "20-30万",
+                                                 "30-50万",
+                                                 "aum"
+                                             ],
+                           "query_group_b":  [
+                                                 "竞争对手",
+                                                 "精准维护",
+                                                 "维稳",
+                                                 "增存"
+                                             ],
+                           "model_group":  [
+                                               "30-50万中高端",
+                                               "维稳增存"
+                                           ],
+                           "reward":  30.0
+                       },
+                       {
+                           "id":  "high_net_worth_churn",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "高净值",
+                                                 "aum10万",
+                                                 "aum超过10万"
+                                             ],
+                           "query_group_b":  [
+                                                 "流失",
+                                                 "降级",
+                                                 "预警"
+                                             ],
+                           "model_group":  [
+                                               "aum10万以上客户流失预警"
+                                           ],
+                           "reward":  28.0
+                       },
+                       {
+                           "id":  "sme_churn",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "小微",
+                                                 "小微企业"
+                                             ],
+                           "query_group_b":  [
+                                                 "流失",
+                                                 "留存",
+                                                 "结清"
+                                             ],
+                           "model_group":  [
+                                               "小微客户流失预警"
+                                           ],
+                           "reward":  28.0
+                       },
+                       {
+                           "id":  "yangzhou_enterprise",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "扬州",
+                                                 "重点企业"
+                                             ],
+                           "query_group_b":  [
+                                                 "标签",
+                                                 "走访",
+                                                 "营销意向"
+                                             ],
+                           "model_group":  [
+                                               "扬州重点企业客户贷款营销分析"
+                                           ],
+                           "reward":  32.0
+                       },
+                       {
+                           "id":  "credit_card_cross",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "信用卡",
+                                                 "贷记卡"
+                                             ],
+                           "query_group_b":  [
+                                                 "联动",
+                                                 "消费贷",
+                                                 "交叉营销"
+                                             ],
+                           "model_group":  [
+                                               "贷记卡联动贷款营销"
+                                           ],
+                           "reward":  28.0
+                       },
+                       {
+                           "id":  "other_bank_asset",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "他行有钱",
+                                                 "本行资产不高",
+                                                 "资产不高",
+                                                 "高潜力"
+                                             ],
+                           "query_group_b":  [
+                                                 "存款",
+                                                 "资产",
+                                                 "高潜力",
+                                                 "增长"
+                                             ],
+                           "model_group":  [
+                                               "个人存款提升预测"
+                                           ],
+                           "reward":  28.0
+                       },
+                       {
+                           "id":  "unused_credit",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "授信",
+                                                 "额度"
+                                             ],
+                           "query_group_b":  [
+                                                 "未用信",
+                                                 "不用",
+                                                 "用信概率",
+                                                 "可能用信",
+                                                 "迟迟不借款"
+                                             ],
+                           "model_group":  [
+                                               "消费贷授信未用信促提"
+                                           ],
+                           "reward":  28.0
+                       },
+                       {
+                           "id":  "merchant_antifraud",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "收单商户",
+                                                 "商户"
+                                             ],
+                           "query_group_b":  [
+                                                 "反欺诈",
+                                                 "涉赌",
+                                                 "涉诈",
+                                                 "套现",
+                                                 "虚假交易"
+                                             ],
+                           "model_group":  [
+                                               "收单商户交易反欺诈"
+                                           ],
+                           "reward":  26.0
+                       },
+                       {
+                           "id":  "merchant_value",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "收单商户",
+                                                 "商户"
+                                             ],
+                           "query_group_b":  [
+                                                 "价值分层",
+                                                 "预授信",
+                                                 "推荐利率"
+                                             ],
+                           "model_group":  [
+                                               "收单商户价值分层及预授信"
+                                           ],
+                           "reward":  26.0
+                       },
+                       {
+                           "id":  "merchant_churn",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "收单商户",
+                                                 "商户"
+                                             ],
+                           "query_group_b":  [
+                                                 "流失",
+                                                 "留存",
+                                                 "无交易"
+                                             ],
+                           "model_group":  [
+                                               "收单商户流失预测"
+                                           ],
+                           "reward":  26.0
+                       },
+                       {
+                           "id":  "merchant_loan_marketing",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "收单商户",
+                                                 "商户"
+                                             ],
+                           "query_group_b":  [
+                                                 "贷款营销",
+                                                 "经营贷",
+                                                 "办理意向"
+                                             ],
+                           "model_group":  [
+                                               "收单商户贷款营销"
+                                           ],
+                           "reward":  26.0
+                       },
+                       {
+                           "id":  "high_end_churn_retain",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "中高端",
+                                                 "高价值",
+                                                 "aum",
+                                                 "AUM"
+                                             ],
+                           "query_group_b":  [
+                                                 "流失",
+                                                 "离开",
+                                                 "预警",
+                                                 "客户经理"
+                                             ],
+                           "model_group":  [
+                                               "30-50万中高端",
+                                               "维稳增存"
+                                           ],
+                           "reward":  34
+                       },
+                       {
+                           "id":  "mobile_banking_acquisition",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "手机银行"
+                                             ],
+                           "query_group_b":  [
+                                                 "潜在",
+                                                 "识别",
+                                                 "未办理",
+                                                 "签约"
+                                             ],
+                           "model_group":  [
+                                               "手机银行客户识别预测"
+                                           ],
+                           "reward":  34
+                       },
+                       {
+                           "id":  "online_loan_admission",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "网贷",
+                                                 "阳光e贷",
+                                                 "阳光E贷",
+                                                 "线上产品"
+                                             ],
+                           "query_group_b":  [
+                                                 "准入",
+                                                 "审批",
+                                                 "违约风险",
+                                                 "贷前"
+                                             ],
+                           "model_group":  [
+                                               "阳光e贷",
+                                               "阳光E贷",
+                                               "贷前准入"
+                                           ],
+                           "reward":  34
+                       },
+                       {
+                           "id":  "unused_credit_reactivation",
+                           "applies_to":  "all",
+                           "query_group_a":  [
+                                                 "审批通过",
+                                                 "授信",
+                                                 "用信"
+                                             ],
+                           "query_group_b":  [
+                                                 "迟迟不借款",
+                                                 "挽回",
+                                                 "沉睡客户"
+                                             ],
+                           "model_group":  [
+                                               "消费贷授信未用信促提"
+                                           ],
+                           "reward":  34
+                       }
+                   ],
+    "groups":  [
+                   {
+                       "keywords":  [
+                                        "房贷",
+                                        "按揭"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -10.0
+                   },
+                   {
+                       "keywords":  [
+                                        "代发",
+                                        "工资"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -8.0
+                   },
+                   {
+                       "keywords":  [
+                                        "保险",
+                                        "代销"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -8.0
+                   },
+                   {
+                       "keywords":  [
+                                        "理财",
+                                        "财富"
+                                    ],
+                       "reward":  8.0,
+                       "penalty":  -6.0
+                   },
+                   {
+                       "keywords":  [
+                                        "响应度",
+                                        "响应概率",
+                                        "邀约"
+                                    ],
+                       "reward":  10.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "个性化",
+                                        "风险偏好",
+                                        "适当性",
+                                        "投资经验"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "综合评价",
+                                        "指标",
+                                        "星级",
+                                        "加权"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "反诈",
+                                        "涉诈",
+                                        "诈骗",
+                                        "电信诈骗",
+                                        "知识图谱"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -8.0
+                   },
+                   {
+                       "keywords":  [
+                                        "信贷从业",
+                                        "客户经理",
+                                        "信贷人员",
+                                        "操作风险"
+                                    ],
+                       "reward":  14.0,
+                       "penalty":  -8.0
+                   },
+                   {
+                       "keywords":  [
+                                        "催收",
+                                        "不良记录",
+                                        "不良率"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -6.0
+                   },
+                   {
+                       "keywords":  [
+                                        "对私账户",
+                                        "账户交易",
+                                        "交易行为"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -5.0
+                   },
+                   {
+                       "keywords":  [
+                                        "信用卡",
+                                        "贷记卡"
+                                    ],
+                       "reward":  8.0,
+                       "penalty":  -5.0
+                   },
+                   {
+                       "keywords":  [
+                                        "账单分期",
+                                        "分期意愿"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "固定额度",
+                                        "调额",
+                                        "额度调整"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "收单商户",
+                                        "商户"
+                                    ],
+                       "reward":  10.0,
+                       "penalty":  -5.0
+                   },
+                   {
+                       "keywords":  [
+                                        "贷款中介",
+                                        "中介"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "授信未用信",
+                                        "用信",
+                                        "不用"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "长尾",
+                                        "潜在高价值",
+                                        "增长潜力"
+                                    ],
+                       "reward":  12.0,
+                       "penalty":  -4.0
+                   },
+                   {
+                       "keywords":  [
+                                        "小微",
+                                        "小微企业"
+                                    ],
+                       "reward":  8.0,
+                       "penalty":  -3.0
+                   },
+                   {
+                       "keywords":  [
+                                        "流失",
+                                        "留存",
+                                        "维稳",
+                                        "挽留"
+                                    ],
+                       "reward":  8.0,
+                       "penalty":  -3.0
+                   },
+                   {
+                       "keywords":  [
+                                        "a卡",
+                                        "准入",
+                                        "贷前"
+                                    ],
+                       "reward":  8.0,
+                       "penalty":  -2.0
+                   },
+                   {
+                       "keywords":  [
+                                        "b卡",
+                                        "行为评分",
+                                        "贷中"
+                                    ],
+                       "reward":  10.0,
+                       "penalty":  -2.0
+                   }
+               ],
+    "cross_domain_penalty":  {
+                                 "applies_to":  "demo",
+                                 "intent":  "credit_risk",
+                                 "model_domain":  "customer_marketing",
+                                 "query_keywords":  [
+                                                        "贷后",
+                                                        "逾期",
+                                                        "违约",
+                                                        "不良",
+                                                        "欺诈",
+                                                        "准入",
+                                                        "风控",
+                                                        "风险"
+                                                    ],
+                                 "penalty":  -18.0
+                             },
+    "clamp":  {
+                  "min":  -24.0,
+                  "max":  36.0
+              }
+}

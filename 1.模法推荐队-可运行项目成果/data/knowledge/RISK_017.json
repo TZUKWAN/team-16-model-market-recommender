@@ -1,0 +1,68 @@
+{
+  "model_id": "RISK_017",
+  "model_name": "还款能力评估模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "客户还款能力评估"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan",
+    "post_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "small_micro_enterprise",
+    "farmer"
+  ],
+  "model_capability": [
+    "credit_rating",
+    "default_prediction",
+    "amount_calculation"
+  ],
+  "input_fields_required": [
+    "income_expense",
+    "customer_profile",
+    "debt_ratio"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "asset_liability",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "repayment_capacity_score",
+    "dsr_ratio",
+    "affordable_amount"
+  ],
+  "performance_metrics": {
+    "auc": 0.83,
+    "mae": 0.12,
+    "r2": 0.71
+  },
+  "applicable_conditions": "适用于评估个人和企业客户的真实还款能力；支持贷前准入、贷中监控和贷后评估全流程。",
+  "unsuitable_conditions": "不适用于无稳定收入来源的客户；不适用于完全依赖还款意愿而非能力的场景。",
+  "compliance_boundary": "收入评估需有合理依据；不得仅依据客户自行申报的收入数据；收入覆盖倍数需符合监管要求。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行消费金融部",
+      "description": "嵌入线上贷款审批流程，实时评估还款能力。",
+      "effect": "因过度负债导致的逾期率下降30%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "post_loan",
+    "individual",
+    "small_micro_enterprise",
+    "farmer",
+    "credit_rating",
+    "default_prediction",
+    "amount_calculation"
+  ],
+  "description": "基于收入负债分析和生活支出估算的还款能力评估模型，计算债务收入比（DSR）和可承受贷款金额。"
+}

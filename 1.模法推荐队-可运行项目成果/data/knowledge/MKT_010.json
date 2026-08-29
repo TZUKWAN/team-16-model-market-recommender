@@ -1,0 +1,69 @@
+{
+  "model_id": "MKT_010",
+  "model_name": "客户生命周期阶段识别模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "客户生命周期分析"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "new_customer",
+    "existing_customer",
+    "churned_customer"
+  ],
+  "model_capability": [
+    "segmentation",
+    "lifetime_value",
+    "preference_analysis"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "product_holdings"
+  ],
+  "input_fields_optional": [
+    "channel_behavior",
+    "demographics",
+    "customer_lifecycle"
+  ],
+  "output_fields": [
+    "lifecycle_stage",
+    "stage_probability",
+    "next_stage_prediction",
+    "suggested_strategy"
+  ],
+  "performance_metrics": {
+    "accuracy": 0.82,
+    "f1": 0.78,
+    "confusion_matrix_agreement": 0.8
+  },
+  "applicable_conditions": "适用于识别客户所处的生命周期阶段（引入期/成长期/成熟期/衰退期/流失期）；支持差异化营销策略制定。",
+  "unsuitable_conditions": "不适用于数据不足6个月的新客户；不适用于机构客户。",
+  "compliance_boundary": "生命周期分析结果用于营销策略参考，不得用于影响客户金融服务的可获得性。",
+  "deployment_status": "staging",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "客户生命周期管理和精准营销。",
+      "effect": "客户生命周期管理覆盖率达到70%，交叉销售转化率提升35%。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "new_customer",
+    "existing_customer",
+    "churned_customer",
+    "segmentation",
+    "lifetime_value",
+    "preference_analysis"
+  ],
+  "description": "基于客户开户时长、交易活跃度、产品持有种类、资产规模变化等维度的生命周期阶段分类模型。"
+}

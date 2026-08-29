@@ -1,0 +1,546 @@
+{
+  "domain_tags": [
+    {
+      "key": "credit_risk",
+      "name": "信贷风控",
+      "synonyms": ["风险控制", "信贷风险管理", "信用风险"],
+      "description": "覆盖贷前、贷中、贷后全流程的信用风险识别、评估和监控模型"
+    },
+    {
+      "key": "customer_marketing",
+      "name": "客户营销",
+      "synonyms": ["市场营销", "客户拓展", "精准营销"],
+      "description": "覆盖客户获取、转化、留存、交叉销售等营销场景的模型"
+    },
+    {
+      "key": "operation_management",
+      "name": "运营管理",
+      "synonyms": ["运营优化", "管理分析", "运营效率"],
+      "description": "覆盖网点运营、流程优化、资源配置等运营管理场景的模型"
+    }
+  ],
+  "business_stage_tags": [
+    {
+      "key": "pre_loan",
+      "name": "贷前",
+      "synonyms": ["贷前审批", "准入", "贷前调查"],
+      "description": "贷款申请阶段的准入评估、反欺诈和额度测算"
+    },
+    {
+      "key": "in_loan",
+      "name": "贷中",
+      "synonyms": ["贷中监测", "存续期管理"],
+      "description": "贷款存续期间的交易监测、异常预警"
+    },
+    {
+      "key": "post_loan",
+      "name": "贷后",
+      "synonyms": ["贷后管理", "贷后预警", "催收"],
+      "description": "贷款发放后的风险预警、催收管理和资产处置"
+    },
+    {
+      "key": "pre_marketing",
+      "name": "营销前",
+      "synonyms": ["客群筛选", "营销策划"],
+      "description": "营销活动前的目标客群筛选和策略制定"
+    },
+    {
+      "key": "in_marketing",
+      "name": "营销中",
+      "synonyms": ["营销执行", "触达优化"],
+      "description": "营销活动执行过程中的触达时机、渠道和频次优化"
+    },
+    {
+      "key": "post_marketing",
+      "name": "营销后",
+      "synonyms": ["效果评估", "转化分析"],
+      "description": "营销活动后的效果评估和转化分析"
+    },
+    {
+      "key": "daily_operation",
+      "name": "日常运营",
+      "synonyms": ["网点运营", "日常管理"],
+      "description": "银行网点和渠道的日常运营管理"
+    },
+    {
+      "key": "risk_management",
+      "name": "风险管理",
+      "synonyms": ["风险监测", "合规风险"],
+      "description": "操作风险、合规风险和反洗钱等风险管理场景"
+    },
+    {
+      "key": "compliance",
+      "name": "合规管理",
+      "synonyms": ["合规检查", "监管合规"],
+      "description": "内部合规检查、监管报表和制度执行监控"
+    },
+    {
+      "key": "resource_planning",
+      "name": "资源规划",
+      "synonyms": ["资源配置", "排班规划"],
+      "description": "人力、现金、设备等资源的规划和调度"
+    },
+    {
+      "key": "performance_analysis",
+      "name": "绩效分析",
+      "synonyms": ["绩效考核", "经营分析"],
+      "description": "经营绩效、网点效能和人员绩效分析"
+    }
+  ],
+  "customer_segment_tags": [
+    {
+      "key": "farmer",
+      "name": "农户",
+      "synonyms": ["农民", "农业经营者", "种养殖户"],
+      "description": "从事农业生产经营的个人客户"
+    },
+    {
+      "key": "rural_area",
+      "name": "县域客群",
+      "synonyms": ["县域客户", "农村客户", "下沉市场"],
+      "description": "位于县域及以下地区的个人和经营主体"
+    },
+    {
+      "key": "small_micro_enterprise",
+      "name": "小微企业和个体工商户",
+      "synonyms": ["小微企业", "个体工商户", "小微客户"],
+      "description": "小型、微型企业和个体工商户"
+    },
+    {
+      "key": "corporate",
+      "name": "对公客户/企业",
+      "synonyms": ["企业客户", "公司客户", "法人客户"],
+      "description": "中大型企业、机构等对公客户"
+    },
+    {
+      "key": "individual",
+      "name": "个人客户",
+      "synonyms": ["零售客户", "个人", "自然人"],
+      "description": "银行个人零售客户"
+    },
+    {
+      "key": "high_net_worth",
+      "name": "高净值客户",
+      "synonyms": ["VIP客户", "财富客户", "私行客户"],
+      "description": "高资产净值个人客户"
+    },
+    {
+      "key": "young_customer",
+      "name": "年轻客群",
+      "synonyms": ["青年客户", "Z世代", "学生"],
+      "description": "35岁以下年轻个人客户"
+    },
+    {
+      "key": "elderly",
+      "name": "老年客群",
+      "synonyms": ["银发客群", "退休客户"],
+      "description": "60岁以上老年个人客户"
+    },
+    {
+      "key": "new_customer",
+      "name": "新客",
+      "synonyms": ["新客户", "新开户", "潜在客户"],
+      "description": "尚未建立业务关系或近期新开户的客户"
+    },
+    {
+      "key": "existing_customer",
+      "name": "存量客户",
+      "synonyms": ["老客户", "已有客户"],
+      "description": "已与银行建立业务关系的现有客户"
+    },
+    {
+      "key": "dormant_customer",
+      "name": "沉睡客户",
+      "synonyms": ["静默客户", "不活跃客户"],
+      "description": "长时间未发生交易的休眠客户"
+    },
+    {
+      "key": "churned_customer",
+      "name": "流失客户",
+      "synonyms": ["流失客群", "流失预警"],
+      "description": "已流失或高流失风险的客户"
+    },
+    {
+      "key": "supply_chain",
+      "name": "供应链客群",
+      "synonyms": ["产业链客户", "上下游企业"],
+      "description": "核心企业上下游的供应链客户群体"
+    },
+    {
+      "key": "rural_commerce",
+      "name": "农村电商客群",
+      "synonyms": ["电商经营者", "农村商户"],
+      "description": "从事农村电商业务的经营主体"
+    },
+    {
+      "key": "guarantee_circle",
+      "name": "担保圈客群",
+      "synonyms": ["互保客群", "联保体"],
+      "description": "存在相互担保关系的客户群体"
+    }
+  ],
+  "product_tags": [
+    {
+      "key": "small_loan",
+      "name": "小额贷款",
+      "synonyms": ["小额信贷", "小微贷款", "普惠贷款"],
+      "description": "单笔金额较小的贷款产品"
+    },
+    {
+      "key": "agricultural_loan",
+      "name": "涉农贷款",
+      "synonyms": ["三农贷款", "农业贷款"],
+      "description": "面向农业、农村、农民的贷款产品"
+    },
+    {
+      "key": "first_loan",
+      "name": "首贷",
+      "synonyms": ["首次贷款", "首笔贷款"],
+      "description": "客户在银行的首笔贷款产品"
+    },
+    {
+      "key": "consumer_loan",
+      "name": "消费贷",
+      "synonyms": ["个人消费贷款", "消费信贷"],
+      "description": "用于个人消费的贷款产品"
+    },
+    {
+      "key": "credit_card",
+      "name": "信用卡",
+      "synonyms": ["贷记卡", "信用卡分期"],
+      "description": "信用卡及分期产品"
+    },
+    {
+      "key": "corporate_loan",
+      "name": "对公贷款",
+      "synonyms": ["企业贷款", "公司贷款"],
+      "description": "面向企业的贷款产品"
+    },
+    {
+      "key": "financial_product",
+      "name": "理财产品",
+      "synonyms": ["理财", "财富管理"],
+      "description": "银行理财和财富管理产品"
+    },
+    {
+      "key": "deposit",
+      "name": "存款",
+      "synonyms": ["储蓄", "定期存款"],
+      "description": "银行存款类产品"
+    },
+    {
+      "key": "guarantee_loan",
+      "name": "担保贷款",
+      "synonyms": ["抵押贷款", "保证贷款"],
+      "description": "需要担保措施的贷款产品"
+    },
+    {
+      "key": "pension_finance",
+      "name": "养老金融",
+      "synonyms": ["养老金", "养老理财"],
+      "description": "面向老年客群的养老金融产品"
+    },
+    {
+      "key": "mobile_banking",
+      "name": "手机银行",
+      "synonyms": ["移动银行", "电子渠道"],
+      "description": "手机银行渠道及服务"
+    }
+  ],
+  "capability_tags": [
+    {
+      "key": "admission_scoring",
+      "name": "准入评分",
+      "synonyms": ["入池评分", "准入门槛"],
+      "description": "评估客户是否满足贷款或业务准入条件"
+    },
+    {
+      "key": "anti_fraud",
+      "name": "反欺诈",
+      "synonyms": ["欺诈识别", "欺诈检测", "欺诈评分"],
+      "description": "识别和防范欺诈行为的模型能力"
+    },
+    {
+      "key": "credit_rating",
+      "name": "信用评级",
+      "synonyms": ["信用评分", "信用等级"],
+      "description": "对客户进行信用等级评定的能力"
+    },
+    {
+      "key": "amount_calculation",
+      "name": "额度测算",
+      "synonyms": ["额度计算", "授信测算"],
+      "description": "测算贷款额度和授信上限的能力"
+    },
+    {
+      "key": "default_prediction",
+      "name": "违约预测",
+      "synonyms": ["逾期预测", "违约概率PD", "PD预测"],
+      "description": "预测客户违约或逾期概率的能力"
+    },
+    {
+      "key": "early_warning",
+      "name": "预警监控",
+      "synonyms": ["风险预警", "贷后预警", "异常监测"],
+      "description": "对风险进行早期预警和持续监控的能力"
+    },
+    {
+      "key": "conversion_prediction",
+      "name": "转化预测",
+      "synonyms": ["转化率预估", "购买意向"],
+      "description": "预测客户购买或转化概率的能力"
+    },
+    {
+      "key": "response_prediction",
+      "name": "响应预测",
+      "synonyms": ["响应率预估", "营销响应"],
+      "description": "预测客户对营销活动响应概率的能力"
+    },
+    {
+      "key": "churn_prediction",
+      "name": "流失预测",
+      "synonyms": ["流失预警", "留存预测"],
+      "description": "预测客户流失风险的能力"
+    },
+    {
+      "key": "value_assessment",
+      "name": "价值评估",
+      "synonyms": ["客户价值", "贡献度评估"],
+      "description": "评估客户价值或贡献度的能力"
+    },
+    {
+      "key": "segmentation",
+      "name": "客群分层",
+      "synonyms": ["客户分群", "客户分类", "客群划分"],
+      "description": "对客户进行分群和分层的能力"
+    },
+    {
+      "key": "demand_forecasting",
+      "name": "需求预测",
+      "synonyms": ["业务量预测", "流量预测"],
+      "description": "预测业务量、需求量或流量的能力"
+    },
+    {
+      "key": "anomaly_detection",
+      "name": "异常识别",
+      "synonyms": ["异常检测", "离群检测"],
+      "description": "识别异常交易、行为和模式的能力"
+    },
+    {
+      "key": "risk_pricing",
+      "name": "风险定价",
+      "synonyms": ["利率定价", "风险定价模型"],
+      "description": "基于风险水平进行贷款定价和利率测算的能力"
+    },
+    {
+      "key": "priority_ranking",
+      "name": "优先级排序",
+      "synonyms": ["名单排序", "催收排序", "工单排序"],
+      "description": "对客户、工单或任务进行优先级排序的能力"
+    },
+    {
+      "key": "resource_optimization",
+      "name": "资源优化",
+      "synonyms": ["排班优化", "资源配置"],
+      "description": "对人力、设备等资源进行优化配置的能力"
+    },
+    {
+      "key": "compliance_check",
+      "name": "合规检查",
+      "synonyms": ["合规审核", "制度校验"],
+      "description": "检查业务操作是否符合合规要求的能力"
+    },
+    {
+      "key": "cross_selling",
+      "name": "交叉销售",
+      "synonyms": ["交叉营销", "协同推荐"],
+      "description": "向客户推荐其他银行产品和服务的能力"
+    },
+    {
+      "key": "lifetime_value",
+      "name": "生命周期价值",
+      "synonyms": ["LTV", "客户生命周期"],
+      "description": "评估客户全生命周期价值的能力"
+    },
+    {
+      "key": "preference_analysis",
+      "name": "偏好分析",
+      "synonyms": ["产品偏好", "渠道偏好"],
+      "description": "分析客户产品偏好和渠道偏好的能力"
+    }
+  ],
+  "output_tags": [
+    {
+      "key": "risk_score",
+      "name": "风险评分",
+      "synonyms": ["信用分", "风险分"],
+      "description": "输出数值化的风险评估分数"
+    },
+    {
+      "key": "risk_level",
+      "name": "风险等级",
+      "synonyms": ["风险分类", "风险档位"],
+      "description": "输出等级化的风险评估结果"
+    },
+    {
+      "key": "admission_decision",
+      "name": "准入决策",
+      "synonyms": ["准入结果", "通过与否"],
+      "description": "输出是否准入的二分类决策结果"
+    },
+    {
+      "key": "probability",
+      "name": "概率预测",
+      "synonyms": ["预测概率", "转化概率"],
+      "description": "输出事件发生概率的预测值"
+    },
+    {
+      "key": "recommended_amount",
+      "name": "推荐额度",
+      "synonyms": ["建议额度", "授信金额"],
+      "description": "输出建议的贷款金额或授信额度"
+    },
+    {
+      "key": "ranked_list",
+      "name": "排序名单",
+      "synonyms": ["优先级列表", "排序结果"],
+      "description": "输出按优先级排序的客户或业务名单"
+    },
+    {
+      "key": "clustering",
+      "name": "分群结果",
+      "synonyms": ["客群划分", "类别归属"],
+      "description": "输出客户所属群组或分类标签"
+    },
+    {
+      "key": "alert_signal",
+      "name": "预警信号",
+      "synonyms": ["告警", "风险提示"],
+      "description": "输出风险预警信号或告警信息"
+    },
+    {
+      "key": "score_breakdown",
+      "name": "评分拆解",
+      "synonyms": ["因素分析", "贡献度"],
+      "description": "输出评分的构成因素和贡献度分析"
+    },
+    {
+      "key": "explanation_text",
+      "name": "解释文本",
+      "synonyms": ["推荐理由", "原因说明"],
+      "description": "输出自然语言形式的推荐或决策解释"
+    }
+  ],
+  "data_requirement_tags": [
+    {
+      "key": "customer_profile",
+      "name": "客户画像",
+      "synonyms": ["客户信息", "基本信息"],
+      "description": "客户基础画像数据，包括年龄、性别、职业、学历等"
+    },
+    {
+      "key": "credit_report",
+      "name": "征信报告",
+      "synonyms": ["征信", "人行征信", "信用报告"],
+      "description": "央行征信报告或第三方征信数据"
+    },
+    {
+      "key": "transaction_data",
+      "name": "交易流水",
+      "synonyms": ["交易数据", "银行流水"],
+      "description": "客户的银行交易流水数据"
+    },
+    {
+      "key": "repayment_history",
+      "name": "还款记录",
+      "synonyms": ["还款历史", "还款行为"],
+      "description": "历史还款记录和行为数据"
+    },
+    {
+      "key": "loan_application",
+      "name": "贷款申请信息",
+      "synonyms": ["申请资料", "进件信息"],
+      "description": "贷款申请时提交的基本信息和材料"
+    },
+    {
+      "key": "business_data",
+      "name": "经营数据",
+      "synonyms": ["企业数据", "经营流水"],
+      "description": "企业经营相关的财务和经营数据"
+    },
+    {
+      "key": "asset_liability",
+      "name": "资产负债信息",
+      "synonyms": ["资产负债", "资产负债表"],
+      "description": "客户的资产和负债情况数据"
+    },
+    {
+      "key": "marketing_history",
+      "name": "营销触达记录",
+      "synonyms": ["营销历史", "触达记录"],
+      "description": "历史营销触达的渠道、时间、内容记录"
+    },
+    {
+      "key": "channel_behavior",
+      "name": "渠道行为",
+      "synonyms": ["线上行为", "APP行为"],
+      "description": "客户在电子渠道上的行为数据"
+    },
+    {
+      "key": "branch_data",
+      "name": "网点运营数据",
+      "synonyms": ["网点数据", "柜面数据"],
+      "description": "网点运营相关的客流、业务量、排队等数据"
+    }
+  ],
+  "compliance_tags": [
+    {
+      "key": "personal_info_protection",
+      "name": "个人信息保护合规",
+      "synonyms": ["个保法", "隐私合规"],
+      "description": "符合《个人信息保护法》的数据处理要求"
+    },
+    {
+      "key": "fair_lending",
+      "name": "公平信贷合规",
+      "synonyms": ["公平授信", "反歧视"],
+      "description": "确保模型不因种族、性别、地域等产生歧视性结果"
+    },
+    {
+      "key": "model_audit",
+      "name": "模型可审计",
+      "synonyms": ["模型审计", "可解释性"],
+      "description": "模型决策过程可追溯、可审计、可解释"
+    },
+    {
+      "key": "data_minimization",
+      "name": "数据最小化",
+      "synonyms": ["最少必要", "最小化采集"],
+      "description": "仅采集和存储实现业务目的所必需的最小数据量"
+    },
+    {
+      "key": "regulatory_reporting",
+      "name": "监管报送合规",
+      "synonyms": ["监管报表", "报送合规"],
+      "description": "符合银保监会、央行等监管机构的数据报送要求"
+    },
+    {
+      "key": "cross_border_compliance",
+      "name": "跨境合规",
+      "synonyms": ["跨境数据", "境外合规"],
+      "description": "涉及跨境数据传输时需符合相关法律法规"
+    },
+    {
+      "key": "anti_money_laundering",
+      "name": "反洗钱合规",
+      "synonyms": ["AML", "反洗钱"],
+      "description": "符合反洗钱相关法律法规和监管要求"
+    },
+    {
+      "key": "data_retention",
+      "name": "数据留存合规",
+      "synonyms": ["数据保留", "留存期限"],
+      "description": "符合监管要求的数据保存期限和销毁规定"
+    }
+  ]
+}

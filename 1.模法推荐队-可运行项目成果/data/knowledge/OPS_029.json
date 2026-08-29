@@ -1,0 +1,59 @@
+{
+  "model_id": "OPS_029",
+  "model_name": "客户经理绩效预测模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "客户经理绩效预测与辅导"
+  ],
+  "business_stage": [
+    "performance_analysis",
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "demand_forecasting"
+  ],
+  "input_fields_required": [
+    "branch_data",
+    "customer_profile"
+  ],
+  "input_fields_optional": [
+    "transaction_data"
+  ],
+  "output_fields": [
+    "forecast_value",
+    "ranked_list",
+    "score_breakdown",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "prediction_accuracy": 0.83,
+    "rank_correlation": 0.78
+  },
+  "applicable_conditions": "适用于客户经理的个人绩效考核预测；覆盖存款、贷款、中间业务等主要考核指标。",
+  "unsuitable_conditions": "不适用于新入职客户经理（入职不足3个月）；不适用于管理岗位的绩效预测。",
+  "compliance_boundary": "绩效预测仅供管理参考，不直接作为绩效考核依据；涉及员工个人数据需符合内部数据管理规定。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX农商银行人力资源部",
+      "description": "客户经理绩效辅导系统。",
+      "effect": "低绩效客户经理占比降低30%，人均产能提升15%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "performance_analysis",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "value_assessment",
+    "demand_forecasting"
+  ],
+  "description": "基于历史绩效数据和业务特征的客户经理绩效预测模型，使用梯度提升树预测客户经理的季度绩效产出。"
+}

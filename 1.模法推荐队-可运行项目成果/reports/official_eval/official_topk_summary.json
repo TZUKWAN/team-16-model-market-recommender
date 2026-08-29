@@ -1,0 +1,56 @@
+{
+ "generated_at": "2026-07-24T12:20:09.306343+00:00",
+ "source": {
+  "models": "data/official_60/models.jsonl",
+  "val_queries": "data/official_60/queries_val.jsonl",
+  "test_queries": "data/official_60/queries_test.jsonl",
+  "pipeline": "competition_dense (BGE-M3, 1024-dim, manifest verified) via scripts/run_official_eval.py; converted by scripts/refresh_official_eval_reports.py"
+ },
+ "top1_accuracy": 81.2,
+ "top3_accuracy": 90.6,
+ "top5_accuracy": 95.3,
+ "val": {
+  "total": 64,
+  "top1_hits": 52,
+  "top3_hits": 58,
+  "top5_hits": 61,
+  "top1_rate": 81.2,
+  "top3_rate": 90.6,
+  "top5_rate": 95.3
+ },
+ "test": {
+  "total": 62,
+  "top1_hits": 49,
+  "top3_hits": 58,
+  "top5_hits": 60,
+  "top1_rate": 79.0,
+  "top3_rate": 93.5,
+  "top5_rate": 96.8
+ },
+ "failure_attribution": {
+  "val": {
+   "confused_model": 9,
+   "keyword_missing": 0,
+   "business_scenario_mismatch": 0,
+   "semantic_similar_but_wrong": 0,
+   "metadata_gap": 0,
+   "unknown": 3
+  },
+  "test": {
+   "confused_model": 11,
+   "keyword_missing": 0,
+   "business_scenario_mismatch": 0,
+   "semantic_similar_but_wrong": 0,
+   "metadata_gap": 0,
+   "unknown": 2
+  },
+  "total": {
+   "confused_model": 20,
+   "keyword_missing": 0,
+   "business_scenario_mismatch": 0,
+   "semantic_similar_but_wrong": 0,
+   "metadata_gap": 0,
+   "unknown": 5
+  }
+ }
+}

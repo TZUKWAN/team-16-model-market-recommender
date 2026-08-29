@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_008",
+  "model_name": "对公贷款逾期风险预测模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "对公贷款逾期预警"
+  ],
+  "business_stage": [
+    "post_loan"
+  ],
+  "customer_segment": [
+    "corporate"
+  ],
+  "model_capability": [
+    "default_prediction",
+    "early_warning"
+  ],
+  "input_fields_required": [
+    "business_income",
+    "asset_liability",
+    "repayment_history"
+  ],
+  "input_fields_optional": [
+    "credit_report",
+    "transaction_flow",
+    "tax_info"
+  ],
+  "output_fields": [
+    "default_probability",
+    "risk_level",
+    "early_warning_level"
+  ],
+  "performance_metrics": {
+    "auc": 0.86,
+    "ks": 0.48,
+    "precision": 0.75,
+    "recall": 0.8
+  },
+  "applicable_conditions": "适用于对公贷款发放后6个月内的逾期风险预测；支持按月滚动预测。",
+  "unsuitable_conditions": "不适用于已发生逾期的贷款（应使用催收模型）；不适用于政策性贷款和财政贴息贷款。",
+  "compliance_boundary": "逾期预测结果不能作为催收决策的唯一依据；需结合客户沟通情况综合判断。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行风险管理部",
+      "description": "按月生成对公贷款逾期风险预测报告。",
+      "effect": "逾期预测准确率78%，提前2个月预警准确率达65%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "post_loan",
+    "corporate",
+    "default_prediction",
+    "early_warning",
+    "corporate_loan"
+  ],
+  "description": "基于企业财务指标时序变化、行业景气度、舆情信号的逾期预测模型，使用生存分析和时序Transformer。"
+}

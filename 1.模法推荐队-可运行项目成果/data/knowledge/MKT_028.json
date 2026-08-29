@@ -1,0 +1,65 @@
+{
+  "model_id": "MKT_028",
+  "model_name": "客户资产提升模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "客户资产规模提升"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer"
+  ],
+  "model_capability": [
+    "value_assessment",
+    "conversion_prediction",
+    "cross_selling"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "product_holdings",
+    "transaction_flow"
+  ],
+  "input_fields_optional": [
+    "income_expense",
+    "risk_preference",
+    "channel_behavior"
+  ],
+  "output_fields": [
+    "asset_upside_potential",
+    "recommended_strategy",
+    "target_products",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "mae": 0.22,
+    "r2": 0.68,
+    "uplift": 1.5
+  },
+  "applicable_conditions": "适用于识别具有资产提升潜力的客户并制定提升策略；支持理财、存款、基金等产品推荐。",
+  "unsuitable_conditions": "不适用于已配置高比例金融资产的客户；不适用于资金持续流出的客户。",
+  "compliance_boundary": "资产提升建议需结合客户风险承受能力；不得误导客户购买不适当产品。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行财富管理部",
+      "description": "客户资产提升计划。",
+      "effect": "目标客户户均资产提升28%，AUM增长15亿元。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "value_assessment",
+    "conversion_prediction",
+    "cross_selling"
+  ],
+  "description": "分析客户收入、资产配置和潜在理财需求，预测客户资产提升空间并提供个性化建议。"
+}

@@ -1,0 +1,57 @@
+{
+  "model_id": "OPS_032",
+  "model_name": "员工异动风险预警模型",
+  "domain": "operation_management",
+  "business_scenario": [
+    "员工离职风险预测"
+  ],
+  "business_stage": [
+    "resource_planning"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate"
+  ],
+  "model_capability": [
+    "churn_prediction",
+    "early_warning"
+  ],
+  "input_fields_required": [
+    "branch_data"
+  ],
+  "input_fields_optional": [
+    "customer_profile"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "ranked_list",
+    "explanation_text"
+  ],
+  "performance_metrics": {
+    "precision": 0.72,
+    "recall": 0.68,
+    "auc": 0.79
+  },
+  "applicable_conditions": "适用于银行员工的离职风险预测，特别是关键岗位员工的流失预警；覆盖柜员、客户经理、IT人员等岗位。",
+  "unsuitable_conditions": "不适用于因不可抗力（如网点撤并）导致的批量员工异动；不适用于退休员工。",
+  "compliance_boundary": "离职预测涉及员工隐私，需获得员工知情同意；预测结果仅用于保留策略制定，不得影响员工正常晋升和发展。",
+  "deployment_status": "development",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX农商银行人力资源部",
+      "description": "关键岗位离职预警。",
+      "effect": "核心岗位员工流失率从18%降至11%，关键人才保留成功率提升40%。"
+    }
+  ],
+  "tags": [
+    "operation_management",
+    "resource_planning",
+    "individual",
+    "corporate",
+    "churn_prediction",
+    "early_warning"
+  ],
+  "description": "基于员工在职行为、绩效数据和外部就业市场分析的离职风险预警模型，使用生存分析和随机森林预测员工离职概率。"
+}

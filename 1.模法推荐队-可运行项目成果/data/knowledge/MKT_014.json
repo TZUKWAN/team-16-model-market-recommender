@@ -1,0 +1,66 @@
+{
+  "model_id": "MKT_014",
+  "model_name": "代发客户转化模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "代发工资客户价值转化"
+  ],
+  "business_stage": [
+    "pre_marketing",
+    "in_marketing"
+  ],
+  "customer_segment": [
+    "individual",
+    "existing_customer"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "cross_selling",
+    "value_assessment"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "income_expense"
+  ],
+  "input_fields_optional": [
+    "product_holdings",
+    "channel_behavior",
+    "credit_report"
+  ],
+  "output_fields": [
+    "conversion_probability",
+    "recommended_products",
+    "expected_ltv",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.79,
+    "precision": 0.71,
+    "recall": 0.68,
+    "lift": 1.8
+  },
+  "applicable_conditions": "适用于代发工资客户的深度转化营销；推荐理财、存款、贷款、信用卡等产品。",
+  "unsuitable_conditions": "不适用于非代发客群；不适用于工资代发不足3个月的新代发客户。",
+  "compliance_boundary": "代发客户信息使用需符合《个人信息保护法》；营销产品需适合客户风险承受能力。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售银行部",
+      "description": "代发工资客户专属产品和营销。",
+      "effect": "代发客户金融资产提升35%，产品渗透率从1.8提升至3.2。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "in_marketing",
+    "individual",
+    "existing_customer",
+    "conversion_prediction",
+    "cross_selling",
+    "value_assessment"
+  ],
+  "description": "基于代发工资客户的收入水平、消费模式、资金留存率等特征，预测客户对其他金融产品的接受度。"
+}

@@ -1,0 +1,64 @@
+{
+  "model_id": "RISK_018",
+  "model_name": "违约概率PD预测模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "违约概率预测"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "individual",
+    "corporate",
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "default_prediction",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "credit_report",
+    "loan_application"
+  ],
+  "input_fields_optional": [
+    "transaction_flow",
+    "business_income",
+    "repayment_history"
+  ],
+  "output_fields": [
+    "pd_score",
+    "pd_level",
+    "pd_confidence_interval"
+  ],
+  "performance_metrics": {
+    "auc": 0.88,
+    "ks": 0.52,
+    "brier_score": 0.12
+  },
+  "applicable_conditions": "适用于巴塞尔协议内部评级法下的违约概率测算；支持零售和对公客户。",
+  "unsuitable_conditions": "不适用于账龄不足3个月的新发放贷款；不适用于政策性贷款。",
+  "compliance_boundary": "PD模型需符合《商业银行资本管理办法》关于内部评级法的验证要求；需定期进行模型回检。",
+  "deployment_status": "staging",
+  "api_available": false,
+  "historical_cases": [
+    {
+      "client": "XX银行风险计量部",
+      "description": "作为内部评级法核心模型的一部分。",
+      "effect": "通过监管验收，PD预测区分度（AR值）达到0.45以上。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "individual",
+    "corporate",
+    "small_micro_enterprise",
+    "default_prediction",
+    "credit_rating"
+  ],
+  "description": "基于逻辑回归和生存分析构建的违约概率模型，支持12个月和整个生命周期两种预测时间窗口。"
+}

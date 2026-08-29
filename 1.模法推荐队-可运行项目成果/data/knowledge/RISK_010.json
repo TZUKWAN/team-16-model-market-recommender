@@ -1,0 +1,59 @@
+{
+  "model_id": "RISK_010",
+  "model_name": "个人消费贷申请评分模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "个人消费贷款申请评分"
+  ],
+  "business_stage": [
+    "pre_loan"
+  ],
+  "customer_segment": [
+    "individual"
+  ],
+  "model_capability": [
+    "admission_scoring",
+    "credit_rating"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "loan_application",
+    "credit_report"
+  ],
+  "input_fields_optional": [
+    "income_expense",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "risk_score",
+    "risk_level",
+    "admission_decision"
+  ],
+  "performance_metrics": {
+    "auc": 0.81,
+    "ks": 0.36,
+    "precision": 0.74,
+    "recall": 0.72
+  },
+  "applicable_conditions": "适用于个人消费贷款（30万元以下）的申请评分；支持无抵押信用贷款场景。",
+  "unsuitable_conditions": "不适用于经营性和抵押类贷款；不适用于学生群体贷款申请。",
+  "compliance_boundary": "需符合《个人消费贷款管理办法》相关要求；贷款利率需符合民间借贷利率司法保护上限规定。",
+  "deployment_status": "production",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行零售信贷部",
+      "description": "线上消费贷产品的核心审批模型。",
+      "effect": "实现全自动化审批，平均审批时间3分钟，不良率控制在1.5%以内。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "individual",
+    "admission_scoring",
+    "credit_rating",
+    "consumer_loan"
+  ],
+  "description": "基于人行征信、行内交易数据和申请信息的评分卡模型，采用标准申请评分卡（Application Scorecard）方法论。"
+}

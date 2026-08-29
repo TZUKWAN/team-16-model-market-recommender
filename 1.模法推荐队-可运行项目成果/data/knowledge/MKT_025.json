@@ -1,0 +1,69 @@
+{
+  "model_id": "MKT_025",
+  "model_name": "首贷户白名单推荐模型",
+  "domain": "customer_marketing",
+  "business_scenario": [
+    "首贷户筛选与白名单推荐"
+  ],
+  "business_stage": [
+    "pre_marketing"
+  ],
+  "customer_segment": [
+    "new_customer",
+    "individual",
+    "small_micro_enterprise",
+    "rural_area"
+  ],
+  "model_capability": [
+    "conversion_prediction",
+    "credit_rating",
+    "response_prediction"
+  ],
+  "input_fields_required": [
+    "customer_profile",
+    "transaction_flow",
+    "credit_report"
+  ],
+  "input_fields_optional": [
+    "product_holdings",
+    "channel_behavior",
+    "income_expense"
+  ],
+  "output_fields": [
+    "white_list_score",
+    "recommended_amount",
+    "conversion_probability",
+    "ranked_list"
+  ],
+  "performance_metrics": {
+    "auc": 0.82,
+    "precision": 0.75,
+    "recall": 0.7,
+    "lift": 2.3
+  },
+  "applicable_conditions": "适用于筛选适合作为首贷户营销目标的客户白名单；支持普惠金融首贷户拓展。",
+  "unsuitable_conditions": "不适用于已有贷款记录的老客户；不适用于信用记录严重不良的客户。",
+  "compliance_boundary": "白名单筛选不得存在歧视性；首贷户支持政策需符合监管普惠金融要求。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行普惠金融部",
+      "description": "首贷户白名单生成和精准营销。",
+      "effect": "首贷户转化率15%，新增首贷户2000+户。"
+    }
+  ],
+  "tags": [
+    "customer_marketing",
+    "pre_marketing",
+    "new_customer",
+    "individual",
+    "small_micro_enterprise",
+    "rural_area",
+    "conversion_prediction",
+    "credit_rating",
+    "response_prediction",
+    "first_loan"
+  ],
+  "description": "基于征信数据、行内交易和客户画像的首贷户信用评估和转化潜力预测模型，生成营销白名单。"
+}

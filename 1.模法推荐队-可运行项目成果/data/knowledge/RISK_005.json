@@ -1,0 +1,60 @@
+{
+  "model_id": "RISK_005",
+  "model_name": "小微企业经营稳定性评分模型",
+  "domain": "credit_risk",
+  "business_scenario": [
+    "小微企业经营稳定性评估"
+  ],
+  "business_stage": [
+    "pre_loan",
+    "in_loan"
+  ],
+  "customer_segment": [
+    "small_micro_enterprise"
+  ],
+  "model_capability": [
+    "credit_rating",
+    "default_prediction"
+  ],
+  "input_fields_required": [
+    "business_income",
+    "business_cashflow",
+    "tax_info"
+  ],
+  "input_fields_optional": [
+    "supply_chain_data",
+    "employee_info",
+    "transaction_flow"
+  ],
+  "output_fields": [
+    "stability_score",
+    "stability_level",
+    "risk_alert"
+  ],
+  "performance_metrics": {
+    "auc": 0.83,
+    "accuracy": 0.79,
+    "f1": 0.75
+  },
+  "applicable_conditions": "适用于评估小微企业持续经营能力；适用于贷前准入参考和贷中监控；支持制造业、商贸、服务等行业。",
+  "unsuitable_conditions": "不适用于初创期企业（成立不足2年）；不适用于周期性极强的行业（如房地产、矿业）。",
+  "compliance_boundary": "经营数据采集需获得企业授权；涉及企业主个人账户流水需额外授权。",
+  "deployment_status": "mock_available",
+  "api_available": true,
+  "historical_cases": [
+    {
+      "client": "XX银行风险部",
+      "description": "作为贷中监控的辅助模型，定期扫描存量小微企业客户。",
+      "effect": "提前3个月识别经营恶化信号，预警准确率72%。"
+    }
+  ],
+  "tags": [
+    "credit_risk",
+    "pre_loan",
+    "in_loan",
+    "small_micro_enterprise",
+    "credit_rating",
+    "default_prediction"
+  ],
+  "description": "基于企业经营数据时序分析，从收入稳定性、现金流健康度、纳税连续性、供应链稳定性四个维度计算经营稳定性评分。"
+}

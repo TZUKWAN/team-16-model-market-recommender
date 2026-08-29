@@ -1,0 +1,105 @@
+{"test_id": "TOPK_001", "query": "农户贷款准入评估和反欺诈", "expected_model_ids": ["RISK_001", "RISK_002"], "k": 3, "scenario": "农户贷款"}
+{"test_id": "TOPK_002", "query": "小微企业贷款全流程风控", "expected_model_ids": ["RISK_004", "RISK_005", "RISK_006"], "k": 5, "scenario": "小微贷款"}
+{"test_id": "TOPK_003", "query": "对公客户信用评级和违约预测", "expected_model_ids": ["RISK_007", "RISK_009"], "k": 3, "scenario": "对公风控"}
+{"test_id": "TOPK_004", "query": "个人消费贷信用评分", "expected_model_ids": ["RISK_010", "RISK_011"], "k": 3, "scenario": "消费贷"}
+{"test_id": "TOPK_005", "query": "信用卡逾期风险评分", "expected_model_ids": ["RISK_012", "OPS_015"], "k": 3, "scenario": "信用卡"}
+{"test_id": "TOPK_006", "query": "新客首贷转化营销", "expected_model_ids": ["MKT_001", "MKT_002", "MKT_005"], "k": 5, "scenario": "新客营销"}
+{"test_id": "TOPK_007", "query": "存量客户交叉销售", "expected_model_ids": ["MKT_003", "MKT_004", "MKT_007"], "k": 5, "scenario": "交叉销售"}
+{"test_id": "TOPK_008", "query": "客户流失预测与沉睡唤醒", "expected_model_ids": ["MKT_009", "MKT_008"], "k": 3, "scenario": "客户留存"}
+{"test_id": "TOPK_009", "query": "网点客流预测和智能排班", "expected_model_ids": ["OPS_001", "OPS_002", "OPS_003"], "k": 5, "scenario": "网点运营"}
+{"test_id": "TOPK_010", "query": "反洗钱可疑交易监测", "expected_model_ids": ["OPS_009", "OPS_010", "OPS_011"], "k": 5, "scenario": "反洗钱"}
+{"test_id": "TOPK_011", "query": "精准营销客群筛选和响应预测", "expected_model_ids": ["MKT_005", "MKT_006", "MKT_020"], "k": 5, "scenario": "精准营销"}
+{"test_id": "TOPK_012", "query": "贷后风险排查和预警", "expected_model_ids": ["RISK_017", "RISK_008", "RISK_015"], "k": 5, "scenario": "贷后管理"}
+{"test_id": "TOPK_013", "query": "流动性风险预测", "expected_model_ids": ["OPS_023", "OPS_025"], "k": 3, "scenario": "流动性管理"}
+{"test_id": "TOPK_014", "query": "智能客服和投诉分析", "expected_model_ids": ["OPS_020", "OPS_019", "OPS_021"], "k": 5, "scenario": "客户服务"}
+{"test_id": "TOPK_015", "query": "合规制度匹配和监管报表", "expected_model_ids": ["OPS_012", "OPS_014", "OPS_034"], "k": 5, "scenario": "合规管理"}
+{"test_id": "TOPK_016", "query": "农户贷款准入和反欺诈", "expected_model_ids": ["RISK_001", "RISK_002"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_017", "query": "小微企业贷款全流程风控", "expected_model_ids": ["RISK_004", "RISK_005", "RISK_006"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_018", "query": "对公客户信用评级违约预测", "expected_model_ids": ["RISK_007", "RISK_008"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_019", "query": "个人消费贷信用评分", "expected_model_ids": ["RISK_010", "RISK_011"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_020", "query": "信用卡逾期风险评分", "expected_model_ids": ["RISK_012", "OPS_015"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_021", "query": "新客首贷转化营销", "expected_model_ids": ["MKT_001", "MKT_002", "MKT_005"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_022", "query": "存量客户交叉销售", "expected_model_ids": ["MKT_003", "MKT_004", "MKT_007"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_023", "query": "客户流失预测与沉睡唤醒", "expected_model_ids": ["MKT_009", "MKT_008"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_024", "query": "网点客流预测智能排班", "expected_model_ids": ["OPS_001", "OPS_002", "OPS_003"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_025", "query": "反洗钱可疑交易监测", "expected_model_ids": ["OPS_009", "OPS_010", "OPS_011"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_026", "query": "精准营销客群筛选响应预测", "expected_model_ids": ["MKT_005", "MKT_006", "MKT_020"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_027", "query": "贷后风险排查和预警", "expected_model_ids": ["RISK_017", "RISK_008", "RISK_015"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_028", "query": "流动性风险预测", "expected_model_ids": ["OPS_023", "OPS_025"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_029", "query": "智能客服投诉分析", "expected_model_ids": ["OPS_020", "OPS_019", "OPS_021"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_030", "query": "合规制度匹配监管报表", "expected_model_ids": ["OPS_012", "OPS_014", "OPS_034"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_031", "query": "农户小额贷款反欺诈准入评估", "expected_model_ids": ["RISK_001", "RISK_002", "RISK_003"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_032", "query": "对公贷款贷后监控预警", "expected_model_ids": ["RISK_008", "RISK_009", "RISK_024"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_033", "query": "小微企业贷前准入风控", "expected_model_ids": ["RISK_004", "RISK_005"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_034", "query": "客户营销响应预测名单排序", "expected_model_ids": ["MKT_005", "MKT_006"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_035", "query": "县域新客首贷白名单推荐", "expected_model_ids": ["MKT_001", "MKT_025"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_036", "query": "存量客户价值分层", "expected_model_ids": ["MKT_007", "MKT_010"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_037", "query": "网点运营效率提升", "expected_model_ids": ["OPS_001", "OPS_002", "OPS_005"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_038", "query": "反欺诈和操作风险监测", "expected_model_ids": ["RISK_016", "OPS_008", "OPS_009"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_039", "query": "个人信用卡风险评分", "expected_model_ids": ["RISK_012", "RISK_017"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_040", "query": "存款流失预警和挽回", "expected_model_ids": ["MKT_009", "MKT_018"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_041", "query": "担保圈和关联企业风险", "expected_model_ids": ["RISK_013", "RISK_014"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_042", "query": "普惠小微企业营销", "expected_model_ids": ["MKT_026", "MKT_004"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_043", "query": "员工操作和绩效评估", "expected_model_ids": ["OPS_030", "OPS_016"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_044", "query": "贷款用途异常监控", "expected_model_ids": ["RISK_015", "RISK_023"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_045", "query": "农产品价格波动对还贷影响", "expected_model_ids": ["RISK_030", "RISK_025"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_046", "query": "客户渠道偏好手机银行推荐", "expected_model_ids": ["MKT_020", "MKT_015"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_047", "query": "应急资金准备金优化", "expected_model_ids": ["OPS_023", "OPS_005"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_048", "query": "贷款申请真实性格审核", "expected_model_ids": ["RISK_035", "RISK_002"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_049", "query": "县域商圈商户营销", "expected_model_ids": ["MKT_024", "MKT_032"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_050", "query": "柜面业务异常交易监控", "expected_model_ids": ["OPS_008", "OPS_029"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_051", "query": "企业主个人信用辅助评估", "expected_model_ids": ["RISK_032", "RISK_004"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_052", "query": "理财产品偏好推荐", "expected_model_ids": ["MKT_017", "MKT_004"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_053", "query": "网点选址和资源配置", "expected_model_ids": ["OPS_002", "OPS_004"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_054", "query": "共同借款人多头借贷识别", "expected_model_ids": ["RISK_033", "RISK_016"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_055", "query": "农户季节性融资需求", "expected_model_ids": ["MKT_033", "MKT_011"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_056", "query": "客户身份核验异常检测", "expected_model_ids": ["OPS_027", "RISK_002"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_057", "query": "贷前综合准入评分", "expected_model_ids": ["RISK_001", "RISK_031", "RISK_035"], "k": 5, "scenario": "综合"}
+{"test_id": "TOPK_058", "query": "企业开户营销转化", "expected_model_ids": ["MKT_002", "MKT_031"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_059", "query": "逾期客户催收策略优化", "expected_model_ids": ["RISK_024", "RISK_026"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_060", "query": "大额交易洗钱风险", "expected_model_ids": ["OPS_009", "OPS_026"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_061", "query": "不良贷款预警名单生成", "expected_model_ids": ["RISK_025", "RISK_034"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_062", "query": "员工考勤排班优化", "expected_model_ids": ["OPS_004", "OPS_017"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_063", "query": "小微企业主贷款需求", "expected_model_ids": ["MKT_012", "MKT_034"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_064", "query": "抵押物价值波动风险", "expected_model_ids": ["RISK_021", "RISK_028"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_065", "query": "智能客服工单分配", "expected_model_ids": ["OPS_022", "OPS_019"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_066", "query": "手机银行活跃度提升营销", "expected_model_ids": ["MKT_015", "MKT_022"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_067", "query": "运营管理驾驶舱指标", "expected_model_ids": ["OPS_035", "OPS_025"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_068", "query": "对账异常和风险识别", "expected_model_ids": ["OPS_033", "RISK_016"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_069", "query": "省份区域信贷风险预警", "expected_model_ids": ["RISK_029", "RISK_028"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_070", "query": "农业龙头企业经营风险", "expected_model_ids": ["RISK_030", "RISK_005"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_071", "query": "客户经理销售机会推荐", "expected_model_ids": ["MKT_030", "MKT_029"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_072", "query": "新市民金融服务需求", "expected_model_ids": ["MKT_024", "RISK_031"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_073", "query": "内部流程合规检查自动化", "expected_model_ids": ["OPS_034", "OPS_031"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_074", "query": "信用卡分期营销转化", "expected_model_ids": ["MKT_016", "MKT_021"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_075", "query": "放款审批流程优化", "expected_model_ids": ["OPS_019", "OPS_020"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_076", "query": "跨产品智能推荐引擎", "expected_model_ids": ["MKT_029", "MKT_003"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_077", "query": "客户风险分层管理", "expected_model_ids": ["RISK_026", "RISK_018"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_078", "query": "电子渠道登录异常检测", "expected_model_ids": ["OPS_028", "RISK_002"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_079", "query": "粮食种植户贷款需求", "expected_model_ids": ["MKT_033", "RISK_030"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_080", "query": "存款增长潜力预测", "expected_model_ids": ["MKT_019", "MKT_028"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_081", "query": "供应链金融风险识别", "expected_model_ids": ["RISK_014", "RISK_013"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_082", "query": "反洗钱团伙网络分析", "expected_model_ids": ["OPS_010", "OPS_026"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_083", "query": "客户流失早预警", "expected_model_ids": ["MKT_009", "MKT_010"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_084", "query": "行业系统性风险预警", "expected_model_ids": ["RISK_028", "RISK_014"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_085", "query": "网点金融便民服务优化", "expected_model_ids": ["OPS_001", "OPS_024"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_086", "query": "县域农村电商客群识别", "expected_model_ids": ["MKT_032", "MKT_024"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_087", "query": "不良贷款可回收性评估", "expected_model_ids": ["RISK_019", "RISK_018"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_088", "query": "印章使用风险监控", "expected_model_ids": ["OPS_031", "OPS_008"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_089", "query": "授信审批时效分析", "expected_model_ids": ["OPS_019", "RISK_027"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_090", "query": "客户金融产品联合推荐", "expected_model_ids": ["MKT_003", "MKT_017"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_091", "query": "涉农信用风险综合评估", "expected_model_ids": ["RISK_030", "RISK_001"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_092", "query": "柜面授权审批违规监控", "expected_model_ids": ["OPS_029", "OPS_030"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_093", "query": "首贷户持续关系经营", "expected_model_ids": ["MKT_025", "MKT_027"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_094", "query": "经济波动下贷款损失预测", "expected_model_ids": ["RISK_019", "RISK_025"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_095", "query": "支付交易实时风控拦截", "expected_model_ids": ["RISK_022", "OPS_009"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_096", "query": "社区银行精准服务推荐", "expected_model_ids": ["MKT_023", "MKT_031"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_097", "query": "银行外包人员操作风险", "expected_model_ids": ["OPS_030", "RISK_022"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_098", "query": "银企合作批量获客转化", "expected_model_ids": ["MKT_031", "MKT_013"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_099", "query": "信贷资产质量迁徙分析", "expected_model_ids": ["RISK_025", "RISK_026"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_100", "query": "客户活跃度和睡眠预警", "expected_model_ids": ["MKT_008", "MKT_010"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_101", "query": "互联网金融产品接入评估", "expected_model_ids": ["OPS_013", "RISK_006"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_102", "query": "农民工工资支付风险监控", "expected_model_ids": ["RISK_015", "OPS_033"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_103", "query": "三方支付商户风险评估", "expected_model_ids": ["RISK_006", "OPS_009"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_104", "query": "企业经营连续性压力测试", "expected_model_ids": ["RISK_005", "RISK_028"], "k": 3, "scenario": "综合"}
+{"test_id": "TOPK_105", "query": "网点综合盈利能力评估", "expected_model_ids": ["OPS_024", "OPS_016"], "k": 3, "scenario": "综合"}
